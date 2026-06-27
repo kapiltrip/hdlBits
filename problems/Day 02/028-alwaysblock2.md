@@ -9,11 +9,15 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/alwaysblock2) |
-| Files | [Screenshot](../../images/Day%2002/028-alwaysblock2.png) · [Verilog solution](../../solutions/Day%2002/028-alwaysblock2.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/028-alwaysblock2.png) · [Verilog solution](../../solutions/Day%2002/028-alwaysblock2.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Always blocks (clocked) problem and saved submission](../../images/Day%2002/028-alwaysblock2.png)
+<a href="../../images/Day%2002/028-alwaysblock2.png"><img src="../../images/Day%2002/028-alwaysblock2.png" alt="Always blocks (clocked) question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Describe clocked storage in an always block so the output captures the input on each active clock edge.
 
 ## Saved Verilog solution
 

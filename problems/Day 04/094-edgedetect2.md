@@ -9,11 +9,15 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect2) |
-| Files | [Screenshot](../../images/Day%2004/094-edgedetect2.png) · [Verilog solution](../../solutions/Day%2004/094-edgedetect2.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2004/094-edgedetect2.png) · [Verilog solution](../../solutions/Day%2004/094-edgedetect2.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Detect both edges problem and saved submission](../../images/Day%2004/094-edgedetect2.png)
+<a href="../../images/Day%2004/094-edgedetect2.png"><img src="../../images/Day%2004/094-edgedetect2.png" alt="Detect both edges question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Generate a one-cycle pulse whenever each input bit changes in either direction.
 
 ## Saved Verilog solution
 

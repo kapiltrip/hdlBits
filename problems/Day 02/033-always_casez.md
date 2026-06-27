@@ -9,11 +9,15 @@
 | Attempts | 2 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/always_casez) |
-| Files | [Screenshot](../../images/Day%2002/033-always_casez.png) · [Verilog solution](../../solutions/Day%2002/033-always_casez.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/033-always_casez.png) · [Verilog solution](../../solutions/Day%2002/033-always_casez.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Priority encoder with casez problem and saved submission](../../images/Day%2002/033-always_casez.png)
+<a href="../../images/Day%2002/033-always_casez.png"><img src="../../images/Day%2002/033-always_casez.png" alt="Priority encoder with casez question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Implement the priority encoder compactly with casez patterns and don't-care bits.
 
 ## Saved Verilog solution
 
@@ -21,7 +25,7 @@
 // synthesis verilog_input_version verilog_2001
 module top_module (
     input [7:0] in,
-    output reg [2:0] pos 
+    output reg [2:0] pos
 );
     always @(*)begin
         casez (in)
@@ -34,7 +38,7 @@ module top_module (
             8'b?1000000:pos=3'b110;
             8'b10000000:pos=3'b111;
             default : pos = 3'b000;
-            
+
         endcase
     end
 endmodule

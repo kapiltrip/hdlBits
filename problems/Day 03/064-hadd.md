@@ -9,16 +9,20 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/hadd) |
-| Files | [Screenshot](../../images/Day%2003/064-hadd.png) · [Verilog solution](../../solutions/Day%2003/064-hadd.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/064-hadd.png) · [Verilog solution](../../solutions/Day%2003/064-hadd.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Half adder problem and saved submission](../../images/Day%2003/064-hadd.png)
+<a href="../../images/Day%2003/064-hadd.png"><img src="../../images/Day%2003/064-hadd.png" alt="Half adder question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Implement a half adder that produces a one-bit sum and carry from two input bits.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input a, b,
     output cout, sum
 );

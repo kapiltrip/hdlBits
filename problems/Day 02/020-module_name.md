@@ -9,18 +9,22 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_name) |
-| Files | [Screenshot](../../images/Day%2002/020-module_name.png) · [Verilog solution](../../solutions/Day%2002/020-module_name.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/020-module_name.png) · [Verilog solution](../../solutions/Day%2002/020-module_name.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Connecting ports by name problem and saved submission](../../images/Day%2002/020-module_name.png)
+<a href="../../images/Day%2002/020-module_name.png"><img src="../../images/Day%2002/020-module_name.png" alt="Connecting ports by name question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Instantiate a module and connect its ports by name so each signal is matched explicitly.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module ( 
-    input a, 
-    input b, 
+module top_module (
+    input a,
+    input b,
     input c,
     input d,
     output out1,

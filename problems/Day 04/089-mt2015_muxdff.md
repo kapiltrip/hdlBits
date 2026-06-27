@@ -9,11 +9,15 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_muxdff) |
-| Files | [Screenshot](../../images/Day%2004/089-mt2015_muxdff.png) · [Verilog solution](../../solutions/Day%2004/089-mt2015_muxdff.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2004/089-mt2015_muxdff.png) · [Verilog solution](../../solutions/Day%2004/089-mt2015_muxdff.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Mux and DFF problem and saved submission](../../images/Day%2004/089-mt2015_muxdff.png)
+<a href="../../images/Day%2004/089-mt2015_muxdff.png"><img src="../../images/Day%2004/089-mt2015_muxdff.png" alt="Mux and DFF question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Implement the circuit in which a multiplexer chooses the value captured by a D flip-flop.
 
 ## Saved Verilog solution
 
@@ -25,7 +29,7 @@ module top_module (
     input q_in,
     output reg Q
 );
-    
+
     always @(posedge clk)begin
          Q <= (L)?r_in:q_in;
     end

@@ -9,16 +9,20 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/gates) |
-| Files | [Screenshot](../../images/Day%2003/047-gates.png) · [Verilog solution](../../solutions/Day%2003/047-gates.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/047-gates.png) · [Verilog solution](../../solutions/Day%2003/047-gates.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![More logic gates problem and saved submission](../../images/Day%2003/047-gates.png)
+<a href="../../images/Day%2003/047-gates.png"><img src="../../images/Day%2003/047-gates.png" alt="More logic gates question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Implement several basic gates at once, including bitwise outputs and their logical complements.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input a, b,
     output out_and,
     output out_or,

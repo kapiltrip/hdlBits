@@ -9,11 +9,15 @@
 | Attempts | 8 total: 0 incorrect, 7 compile error, 0 simulation error |
 | Success rate | 13% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector3) |
-| Files | [Screenshot](../../images/Day%2001/014-vector3.png) · [Verilog solution](../../solutions/Day%2001/014-vector3.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2001/014-vector3.png) · [Verilog solution](../../solutions/Day%2001/014-vector3.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Vector concatenation operator problem and saved submission](../../images/Day%2001/014-vector3.png)
+<a href="../../images/Day%2001/014-vector3.png"><img src="../../images/Day%2001/014-vector3.png" alt="Vector concatenation operator question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Use concatenation to regroup the input vectors and assign the requested output vectors in the specified bit order.
 
 ## Saved Verilog solution
 

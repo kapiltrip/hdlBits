@@ -9,11 +9,15 @@
 | Attempts | 4 total: 1 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 25% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_fadd) |
-| Files | [Screenshot](../../images/Day%2002/024-module_fadd.png) · [Verilog solution](../../solutions/Day%2002/024-module_fadd.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/024-module_fadd.png) · [Verilog solution](../../solutions/Day%2002/024-module_fadd.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Adder 2 problem and saved submission](../../images/Day%2002/024-module_fadd.png)
+<a href="../../images/Day%2002/024-module_fadd.png"><img src="../../images/Day%2002/024-module_fadd.png" alt="Adder 2 question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Build a ripple-carry adder from full-adder instances and expose the carry produced by every bit position.
 
 ## Saved Verilog solution
 

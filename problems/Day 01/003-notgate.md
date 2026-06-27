@@ -9,11 +9,15 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/notgate) |
-| Files | [Screenshot](../../images/Day%2001/003-notgate.png) · [Verilog solution](../../solutions/Day%2001/003-notgate.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2001/003-notgate.png) · [Verilog solution](../../solutions/Day%2001/003-notgate.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Inverter problem and saved submission](../../images/Day%2001/003-notgate.png)
+<a href="../../images/Day%2001/003-notgate.png"><img src="../../images/Day%2001/003-notgate.png" alt="Inverter question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Drive the output with the logical inverse of the input, implementing a NOT gate.
 
 ## Saved Verilog solution
 

@@ -9,11 +9,15 @@
 | Attempts | 5 total: 1 incorrect, 3 compile error, 0 simulation error |
 | Success rate | 20% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/ringer) |
-| Files | [Screenshot](../../images/Day%2003/054-ringer.png) · [Verilog solution](../../solutions/Day%2003/054-ringer.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/054-ringer.png) · [Verilog solution](../../solutions/Day%2003/054-ringer.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Ring or vibrate? problem and saved submission](../../images/Day%2003/054-ringer.png)
+<a href="../../images/Day%2003/054-ringer.png"><img src="../../images/Day%2003/054-ringer.png" alt="Ring or vibrate? question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Choose whether a phone should ring or vibrate from the incoming-call and silent-mode control signals.
 
 ## Saved Verilog solution
 

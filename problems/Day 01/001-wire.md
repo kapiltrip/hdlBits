@@ -9,11 +9,15 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/wire) |
-| Files | [Screenshot](../../images/Day%2001/001-wire.png) · [Verilog solution](../../solutions/Day%2001/001-wire.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2001/001-wire.png) · [Verilog solution](../../solutions/Day%2001/001-wire.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Simple wire problem and saved submission](../../images/Day%2001/001-wire.png)
+<a href="../../images/Day%2001/001-wire.png"><img src="../../images/Day%2001/001-wire.png" alt="Simple wire question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Connect the single input directly to the output so the module behaves exactly like a wire.
 
 ## Saved Verilog solution
 

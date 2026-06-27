@@ -9,20 +9,25 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/andgate) |
-| Files | [Screenshot](../../images/Day%2002/004-andgate.png) · [Verilog solution](../../solutions/Day%2002/004-andgate.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/004-andgate.png) · [Verilog solution](../../solutions/Day%2002/004-andgate.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![AND gate problem and saved submission](../../images/Day%2002/004-andgate.png)
+<a href="../../images/Day%2002/004-andgate.png"><img src="../../images/Day%2002/004-andgate.png" alt="AND gate question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Produce an output that is high only when both input signals are high.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
-    input a, 
-    input b, 
-    output out );
-
+module top_module(
+    input a,
+    input b,
+    output out
+);
+    and g1(out ,a , b);
 endmodule
 ```
 

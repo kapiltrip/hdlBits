@@ -9,20 +9,24 @@
 | Attempts | 22 total: 5 incorrect, 16 compile error, 0 simulation error |
 | Success rate | 5% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/popcount255) |
-| Files | [Screenshot](../../images/Day%2002/039-popcount255.png) · [Verilog solution](../../solutions/Day%2002/039-popcount255.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/039-popcount255.png) · [Verilog solution](../../solutions/Day%2002/039-popcount255.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Combinational for-loop: 255-bit population count problem and saved submission](../../images/Day%2002/039-popcount255.png)
+<a href="../../images/Day%2002/039-popcount255.png"><img src="../../images/Day%2002/039-popcount255.png" alt="Combinational for-loop: 255-bit population count question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Count how many bits are high in a 255-bit input vector using combinational accumulation.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input [254:0] in,
-    output [7:0] out 
+    output [7:0] out
 );
-//to count no of ones in the input vector 
+//to count no of ones in the input vector
     integer i ;
     reg [7:0] count;
     always @(*)begin
@@ -33,10 +37,10 @@ module top_module(
     end
     always @(*)begin
         out = count;
-        
+
     end
-    
-    
+
+
 endmodule
 ```
 
