@@ -9,11 +9,15 @@
 | Attempts | 9 total: 0 incorrect, 8 compile error, 0 simulation error |
 | Success rate | 11% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector4) |
-| Files | [Screenshot](../../images/Day%2001/016-vector4.png) · [Verilog solution](../../solutions/Day%2001/016-vector4.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2001/016-vector4.png) · [Verilog solution](../../solutions/Day%2001/016-vector4.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Replication operator problem and saved submission](../../images/Day%2001/016-vector4.png)
+<a href="../../images/Day%2001/016-vector4.png"><img src="../../images/Day%2001/016-vector4.png" alt="Replication operator question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Use the replication operator to repeat a bit pattern and form the required wider output vector.
 
 ## Saved Verilog solution
 

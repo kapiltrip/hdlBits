@@ -9,20 +9,24 @@
 | Attempts | 7 total: 2 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_shift8) |
-| Files | [Screenshot](../../images/Day%2002/022-module_shift8.png) · [Verilog solution](../../solutions/Day%2002/022-module_shift8.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/022-module_shift8.png) · [Verilog solution](../../solutions/Day%2002/022-module_shift8.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Modules and vectors problem and saved submission](../../images/Day%2002/022-module_shift8.png)
+<a href="../../images/Day%2002/022-module_shift8.png"><img src="../../images/Day%2002/022-module_shift8.png" alt="Modules and vectors question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Instantiate the supplied 8-bit module and connect vector signals correctly through the hierarchy.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module ( 
-    input clk, 
-    input [7:0] d, 
-    input [1:0] sel, 
-    output [7:0] q 
+module top_module (
+    input clk,
+    input [7:0] d,
+    input [1:0] sel,
+    output [7:0] q
 );
 
 endmodule

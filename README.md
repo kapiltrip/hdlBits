@@ -6,6 +6,8 @@ Offline study archive for **114 completed HDLBits problems**, from **Simple wire
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The Excel tracker is at [outputs/hdlbits-archive/HDLBits_Tracker.xlsx](outputs/hdlbits-archive/HDLBits_Tracker.xlsx).
 - Every problem has a problem note, screenshot, standalone Verilog solution, source URL, timestamp, and attempt statistics.
+- Every day page now shows each screenshot at full page width, followed by a short explanation of the task and the saved Verilog solution.
+- Select any embedded screenshot to open its original-resolution image.
 
 ## Study days
 

@@ -9,18 +9,22 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/alwaysblock1) |
-| Files | [Screenshot](../../images/Day%2002/027-alwaysblock1.png) · [Verilog solution](../../solutions/Day%2002/027-alwaysblock1.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/027-alwaysblock1.png) · [Verilog solution](../../solutions/Day%2002/027-alwaysblock1.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Always blocks (combinational) problem and saved submission](../../images/Day%2002/027-alwaysblock1.png)
+<a href="../../images/Day%2002/027-alwaysblock1.png"><img src="../../images/Day%2002/027-alwaysblock1.png" alt="Always blocks (combinational) question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Describe the same combinational logic with both a continuous assignment and an always block.
 
 ## Saved Verilog solution
 
 ```verilog
 // synthesis verilog_input_version verilog_2001
 module top_module(
-    input a, 
+    input a,
     input b,
     output wire out_assign,
     output reg out_alwaysblock

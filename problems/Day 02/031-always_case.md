@@ -9,25 +9,29 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/always_case) |
-| Files | [Screenshot](../../images/Day%2002/031-always_case.png) · [Verilog solution](../../solutions/Day%2002/031-always_case.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/031-always_case.png) · [Verilog solution](../../solutions/Day%2002/031-always_case.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Case statement problem and saved submission](../../images/Day%2002/031-always_case.png)
+<a href="../../images/Day%2002/031-always_case.png"><img src="../../images/Day%2002/031-always_case.png" alt="Case statement question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Use a case statement to select one of several input values according to the selector.
 
 ## Saved Verilog solution
 
 ```verilog
 // synthesis verilog_input_version verilog_2001
-module top_module ( 
-    input [2:0] sel, 
+module top_module (
+    input [2:0] sel,
     input [3:0] data0,
     input [3:0] data1,
     input [3:0] data2,
     input [3:0] data3,
     input [3:0] data4,
     input [3:0] data5,
-    output reg [3:0] out   
+    output reg [3:0] out
 );//
 
     always@(*) begin  // This is a combinational circuit

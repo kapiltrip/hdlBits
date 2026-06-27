@@ -9,25 +9,29 @@
 | Attempts | 3 total: 1 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/adder3) |
-| Files | [Screenshot](../../images/Day%2003/066-adder3.png) · [Verilog solution](../../solutions/Day%2003/066-adder3.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/066-adder3.png) · [Verilog solution](../../solutions/Day%2003/066-adder3.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![3-bit binary adder problem and saved submission](../../images/Day%2003/066-adder3.png)
+<a href="../../images/Day%2003/066-adder3.png"><img src="../../images/Day%2003/066-adder3.png" alt="3-bit binary adder question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Chain three full adders to add two 3-bit numbers and expose the intermediate carry signals.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input [2:0] a, b,
     input cin,
     output [2:0] cout,
-    output [2:0] sum 
+    output [2:0] sum
 );
-//4 bit addition 
+//4 bit addition
     wire [3:0] carry;
     assign carry[0]=cin;
-    
+
     genvar i;
     generate
         for(i=0;i<3;i=i+1)begin : generating
@@ -48,7 +52,7 @@ module fa(
 );
     assign sum= a^b^cin;
     assign cout = a&b | b&cin | a &cin ;
-    
+
 endmodule
 ```
 

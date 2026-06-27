@@ -9,11 +9,15 @@
 | Attempts | 3 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 67% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/countslow) |
-| Files | [Screenshot](../../images/Day%2004/100-countslow.png) · [Verilog solution](../../solutions/Day%2004/100-countslow.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2004/100-countslow.png) · [Verilog solution](../../solutions/Day%2004/100-countslow.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Slow decade counter problem and saved submission](../../images/Day%2004/100-countslow.png)
+<a href="../../images/Day%2004/100-countslow.png"><img src="../../images/Day%2004/100-countslow.png" alt="Slow decade counter question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Create a decade counter that advances only when the slow-enable input is asserted.
 
 ## Saved Verilog solution
 
@@ -24,7 +28,7 @@ module top_module (
     input reset,
     output [3:0] q
 );
-//0 to 9 inclusive 
+//0 to 9 inclusive
     reg [3:0] count;
     always @(posedge clk)begin
         if(reset)begin
@@ -34,11 +38,11 @@ module top_module (
                 count<=4'b0000;
             else if(slowena)
                 count<=count+1'b1;
-            
+
         end
     end
     assign q=count ;
-    
+
 endmodule
 ```
 

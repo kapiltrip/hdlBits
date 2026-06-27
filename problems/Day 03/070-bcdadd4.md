@@ -9,24 +9,28 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/bcdadd4) |
-| Files | [Screenshot](../../images/Day%2003/070-bcdadd4.png) · [Verilog solution](../../solutions/Day%2003/070-bcdadd4.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/070-bcdadd4.png) · [Verilog solution](../../solutions/Day%2003/070-bcdadd4.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![4-digit BCD adder problem and saved submission](../../images/Day%2003/070-bcdadd4.png)
+<a href="../../images/Day%2003/070-bcdadd4.png"><img src="../../images/Day%2003/070-bcdadd4.png" alt="4-digit BCD adder question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Chain four BCD full adders to add two four-digit decimal values and propagate decimal carry between digits.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module ( 
+module top_module (
     input [15:0] a, b,
     input cin,
     output cout,
-    output [15:0] sum 
+    output [15:0] sum
 );
     wire [4:0] carry;
     assign carry[0]= cin;
-genvar i ; 
+genvar i ;
     generate
         for(i=0;i<4;i=i+1)begin : callingTheAdder
             bcd_fadd call(

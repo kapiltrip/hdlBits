@@ -9,16 +9,20 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vectorgates) |
-| Files | [Screenshot](../../images/Day%2001/012-vectorgates.png) · [Verilog solution](../../solutions/Day%2001/012-vectorgates.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2001/012-vectorgates.png) · [Verilog solution](../../solutions/Day%2001/012-vectorgates.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Bitwise operators problem and saved submission](../../images/Day%2001/012-vectorgates.png)
+<a href="../../images/Day%2001/012-vectorgates.png"><img src="../../images/Day%2001/012-vectorgates.png" alt="Bitwise operators question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Apply bitwise OR, logical OR, and bitwise inversion to vectors so their different behaviours are visible.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input [2:0] a,
     input [2:0] b,
     output [2:0] out_or_bitwise,

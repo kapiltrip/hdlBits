@@ -9,18 +9,22 @@
 | Attempts | 5 total: 0 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 20% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector5) |
-| Files | [Screenshot](../../images/Day%2002/017-vector5.png) · [Verilog solution](../../solutions/Day%2002/017-vector5.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/017-vector5.png) · [Verilog solution](../../solutions/Day%2002/017-vector5.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![More replication problem and saved submission](../../images/Day%2002/017-vector5.png)
+<a href="../../images/Day%2002/017-vector5.png"><img src="../../images/Day%2002/017-vector5.png" alt="More replication question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Combine replication and concatenation to build widened vectors and compare them bit by bit.
 
 ## Saved Verilog solution
 
 ```verilog
 module top_module (
     input a, b, c, d, e,
-    output [24:0] out 
+    output [24:0] out
 );//
     wire [24:0] top = {5{a,b,c,d,e}};
     wire [24:0] bottom= {{5{a}},{5{b}},{5{c}}, {5{d}}, {5{e}}};

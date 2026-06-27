@@ -3,11 +3,13 @@ import path from "node:path";
 
 const root = process.cwd();
 const manifest = JSON.parse(await fs.readFile(path.join(root, "archive_manifest.json"), "utf8"));
+const explanations = JSON.parse(await fs.readFile(path.join(root, "problem_explanations.json"), "utf8"));
 const failures = [];
 
 if (manifest.length !== 114) failures.push(`Manifest count is ${manifest.length}, expected 114`);
 
 for (const record of manifest) {
+  if (!explanations[record.slug]) failures.push(`Missing explanation: ${record.slug}`);
   for (const relative of [record.problemNotePath, record.screenshotPath, record.solutionPath]) {
     try {
       await fs.access(path.join(root, relative));
@@ -29,8 +31,13 @@ for (const relativeFile of markdownFiles) {
   const absoluteFile = path.join(root, relativeFile);
   const content = await fs.readFile(absoluteFile, "utf8");
   const linkPattern = /!?\[[^\]]*\]\(([^)]+)\)/g;
-  for (const match of content.matchAll(linkPattern)) {
-    const target = match[1].split("#", 1)[0];
+  const htmlLinkPattern = /\b(?:href|src)="([^"]+)"/g;
+  const targets = new Set([
+    ...Array.from(content.matchAll(linkPattern), (match) => match[1]),
+    ...Array.from(content.matchAll(htmlLinkPattern), (match) => match[1]),
+  ]);
+  for (const linkedTarget of targets) {
+    const target = linkedTarget.split("#", 1)[0];
     if (!target || /^https?:\/\//i.test(target) || /^mailto:/i.test(target)) continue;
     const decoded = decodeURIComponent(target);
     const resolved = path.resolve(path.dirname(absoluteFile), decoded);

@@ -9,22 +9,26 @@
 | Attempts | 2 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/xnorgate) |
-| Files | [Screenshot](../../images/Day%2002/006-xnorgate.png) · [Verilog solution](../../solutions/Day%2002/006-xnorgate.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/006-xnorgate.png) · [Verilog solution](../../solutions/Day%2002/006-xnorgate.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![XNOR gate problem and saved submission](../../images/Day%2002/006-xnorgate.png)
+<a href="../../images/Day%2002/006-xnorgate.png"><img src="../../images/Day%2002/006-xnorgate.png" alt="XNOR gate question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Implement an XNOR gate whose output is high when the two inputs have equal values.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
-    input a, 
-    input b, 
-    output out 
+module top_module(
+    input a,
+    input b,
+    output out
 );
-    assign out = ~(a ^b); 
-    
+    assign out = ~(a ^b);
+
 endmodule
 ```
 

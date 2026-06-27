@@ -9,16 +9,20 @@
 | Attempts | 10 total: 7 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 10% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/mux9to1v) |
-| Files | [Screenshot](../../images/Day%2003/061-mux9to1v.png) · [Verilog solution](../../solutions/Day%2003/061-mux9to1v.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/061-mux9to1v.png) · [Verilog solution](../../solutions/Day%2003/061-mux9to1v.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![9-to-1 multiplexer problem and saved submission](../../images/Day%2003/061-mux9to1v.png)
+<a href="../../images/Day%2003/061-mux9to1v.png"><img src="../../images/Day%2003/061-mux9to1v.png" alt="9-to-1 multiplexer question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Select one of nine 16-bit inputs; produce the required default value when the selector is outside the valid range.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input [15:0] a, b, c, d, e, f, g, h, i,
     input [3:0] sel,
     output [15:0] out );

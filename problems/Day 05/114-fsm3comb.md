@@ -9,11 +9,15 @@
 | Attempts | 7 total: 1 incorrect, 5 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3comb) |
-| Files | [Screenshot](../../images/Day%2005/114-fsm3comb.png) · [Verilog solution](../../solutions/Day%2005/114-fsm3comb.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2005/114-fsm3comb.png) · [Verilog solution](../../solutions/Day%2005/114-fsm3comb.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Simple state transitions 3 problem and saved submission](../../images/Day%2005/114-fsm3comb.png)
+<a href="../../images/Day%2005/114-fsm3comb.png"><img src="../../images/Day%2005/114-fsm3comb.png" alt="Simple state transitions 3 question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Write only the combinational next-state logic for the supplied state-transition diagram.
 
 ## Saved Verilog solution
 
@@ -26,12 +30,12 @@ module top_module(
 ); //
 
     parameter A=0, B=1, C=2, D=3;
-    
+
     // State transition logic: next_state = f(state, in)
-  
+
     // Output logic:  out = f(state) for a Moore state machine
     always @(*)begin
-        next_state=state; 
+        next_state=state;
         case (state)
             A:next_state=(in)?B:A;
             B:next_state=(in)?B:C;

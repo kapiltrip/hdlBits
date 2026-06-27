@@ -9,11 +9,15 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_shift) |
-| Files | [Screenshot](../../images/Day%2002/021-module_shift.png) · [Verilog solution](../../solutions/Day%2002/021-module_shift.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/021-module_shift.png) · [Verilog solution](../../solutions/Day%2002/021-module_shift.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Three modules problem and saved submission](../../images/Day%2002/021-module_shift.png)
+<a href="../../images/Day%2002/021-module_shift.png"><img src="../../images/Day%2002/021-module_shift.png" alt="Three modules question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Chain three copies of the provided module so each stage feeds the next stage.
 
 ## Saved Verilog solution
 
@@ -35,7 +39,7 @@ module top_module ( input clk, input d, output q );
         .d(w2),
         .q(q)
     );
-    
+
 endmodule
 ```
 

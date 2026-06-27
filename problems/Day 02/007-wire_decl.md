@@ -9,11 +9,15 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/wire_decl) |
-| Files | [Screenshot](../../images/Day%2002/007-wire_decl.png) · [Verilog solution](../../solutions/Day%2002/007-wire_decl.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/007-wire_decl.png) · [Verilog solution](../../solutions/Day%2002/007-wire_decl.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Declaring wires problem and saved submission](../../images/Day%2002/007-wire_decl.png)
+<a href="../../images/Day%2002/007-wire_decl.png"><img src="../../images/Day%2002/007-wire_decl.png" alt="Declaring wires question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Declare intermediate wires and connect the supplied gates so the module matches the shown circuit diagram.
 
 ## Saved Verilog solution
 
@@ -25,7 +29,7 @@ module top_module(
     input c,
     input d,
     output out,
-    output out_n   ); 
+    output out_n   );
 
 endmodule
 ```

@@ -9,11 +9,15 @@
 | Attempts | 5 total: 3 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 40% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/always_if2) |
-| Files | [Screenshot](../../images/Day%2002/030-always_if2.png) · [Verilog solution](../../solutions/Day%2002/030-always_if2.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/030-always_if2.png) · [Verilog solution](../../solutions/Day%2002/030-always_if2.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![If statement latches problem and saved submission](../../images/Day%2002/030-always_if2.png)
+<a href="../../images/Day%2002/030-always_if2.png"><img src="../../images/Day%2002/030-always_if2.png" alt="If statement latches question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Correct an incomplete combinational if statement by assigning every output on every path and thereby avoiding latches.
 
 ## Saved Verilog solution
 

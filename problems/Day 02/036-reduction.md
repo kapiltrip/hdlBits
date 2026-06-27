@@ -9,11 +9,15 @@
 | Attempts | 2 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/reduction) |
-| Files | [Screenshot](../../images/Day%2002/036-reduction.png) · [Verilog solution](../../solutions/Day%2002/036-reduction.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/036-reduction.png) · [Verilog solution](../../solutions/Day%2002/036-reduction.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Reduction operators problem and saved submission](../../images/Day%2002/036-reduction.png)
+<a href="../../images/Day%2002/036-reduction.png"><img src="../../images/Day%2002/036-reduction.png" alt="Reduction operators question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Compare bitwise and reduction operators by producing per-bit results and single-bit reductions from two vectors.
 
 ## Saved Verilog solution
 
@@ -21,7 +25,7 @@
 module top_module (
     input [7:0] in,
     output parity
-); 
+);
 assign parity= ^in;
 //odd no of ones will be known by this
 endmodule

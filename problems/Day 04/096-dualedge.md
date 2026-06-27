@@ -9,11 +9,15 @@
 | Attempts | 7 total: 4 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/dualedge) |
-| Files | [Screenshot](../../images/Day%2004/096-dualedge.png) · [Verilog solution](../../solutions/Day%2004/096-dualedge.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2004/096-dualedge.png) · [Verilog solution](../../solutions/Day%2004/096-dualedge.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Dual-edge triggered flip-flop problem and saved submission](../../images/Day%2004/096-dualedge.png)
+<a href="../../images/Day%2004/096-dualedge.png"><img src="../../images/Day%2004/096-dualedge.png" alt="Dual-edge triggered flip-flop question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Emulate dual-edge-triggered storage using logic that captures data on both rising and falling clock edges.
 
 ## Saved Verilog solution
 

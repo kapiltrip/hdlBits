@@ -9,11 +9,15 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_cseladd) |
-| Files | [Screenshot](../../images/Day%2002/025-module_cseladd.png) · [Verilog solution](../../solutions/Day%2002/025-module_cseladd.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/025-module_cseladd.png) · [Verilog solution](../../solutions/Day%2002/025-module_cseladd.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Carry-select adder problem and saved submission](../../images/Day%2002/025-module_cseladd.png)
+<a href="../../images/Day%2002/025-module_cseladd.png"><img src="../../images/Day%2002/025-module_cseladd.png" alt="Carry-select adder question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Build a carry-select adder by computing both possible upper sums and selecting the correct one using the lower carry.
 
 ## Saved Verilog solution
 

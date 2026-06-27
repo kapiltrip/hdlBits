@@ -9,11 +9,15 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/dff8ar) |
-| Files | [Screenshot](../../images/Day%2003/083-dff8ar.png) · [Verilog solution](../../solutions/Day%2003/083-dff8ar.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2003/083-dff8ar.png) · [Verilog solution](../../solutions/Day%2003/083-dff8ar.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![DFF with asynchronous reset problem and saved submission](../../images/Day%2003/083-dff8ar.png)
+<a href="../../images/Day%2003/083-dff8ar.png"><img src="../../images/Day%2003/083-dff8ar.png" alt="DFF with asynchronous reset question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Create an 8-bit register with asynchronous reset, allowing reset to change the output without waiting for a clock edge.
 
 ## Saved Verilog solution
 
@@ -27,7 +31,7 @@ module top_module (
     always @(posedge clk or posedge areset)begin
         if(areset)
             q<=8'd0;
-        else 
+        else
             q<=d;
     end
 endmodule

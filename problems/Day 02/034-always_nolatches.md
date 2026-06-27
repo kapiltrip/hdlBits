@@ -9,11 +9,15 @@
 | Attempts | 3 total: 0 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/always_nolatches) |
-| Files | [Screenshot](../../images/Day%2002/034-always_nolatches.png) · [Verilog solution](../../solutions/Day%2002/034-always_nolatches.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/034-always_nolatches.png) · [Verilog solution](../../solutions/Day%2002/034-always_nolatches.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Avoiding latches problem and saved submission](../../images/Day%2002/034-always_nolatches.png)
+<a href="../../images/Day%2002/034-always_nolatches.png"><img src="../../images/Day%2002/034-always_nolatches.png" alt="Avoiding latches question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Complete the combinational case logic with safe defaults so no output retains an old value or infers a latch.
 
 ## Saved Verilog solution
 
@@ -24,8 +28,8 @@ module top_module (
     output reg left,
     output reg down,
     output reg right,
-    output reg up  
-); 
+    output reg up
+);
     always @(*)begin
         left=1'b0;
         right=1'b0;
@@ -36,7 +40,7 @@ module top_module (
             16'he072:down=1;
             16'he074:right=1;
             16'he075:up=1;
-            
+
         endcase
     end
 endmodule

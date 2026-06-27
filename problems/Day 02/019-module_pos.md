@@ -9,18 +9,22 @@
 | Attempts | 2 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_pos) |
-| Files | [Screenshot](../../images/Day%2002/019-module_pos.png) · [Verilog solution](../../solutions/Day%2002/019-module_pos.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/019-module_pos.png) · [Verilog solution](../../solutions/Day%2002/019-module_pos.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Connecting ports by position problem and saved submission](../../images/Day%2002/019-module_pos.png)
+<a href="../../images/Day%2002/019-module_pos.png"><img src="../../images/Day%2002/019-module_pos.png" alt="Connecting ports by position question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Instantiate a module and connect its ports by position, keeping the connection order exactly correct.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module ( 
-    input a, 
-    input b, 
+module top_module (
+    input a,
+    input b,
     input c,
     input d,
     output out1,

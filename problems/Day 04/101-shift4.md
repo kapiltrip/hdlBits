@@ -9,11 +9,15 @@
 | Attempts | 4 total: 3 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 25% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/shift4) |
-| Files | [Screenshot](../../images/Day%2004/101-shift4.png) · [Verilog solution](../../solutions/Day%2004/101-shift4.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2004/101-shift4.png) · [Verilog solution](../../solutions/Day%2004/101-shift4.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![4-bit shift register problem and saved submission](../../images/Day%2004/101-shift4.png)
+<a href="../../images/Day%2004/101-shift4.png"><img src="../../images/Day%2004/101-shift4.png" alt="4-bit shift register question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Build a 4-bit shift register with the specified load/shift controls and expose the requested stage output.
 
 ## Saved Verilog solution
 
@@ -24,7 +28,7 @@ module top_module(
     input load,
     input ena,
     input [3:0] data,
-    output reg [3:0] q); 
+    output reg [3:0] q);
 
 endmodule
 ```

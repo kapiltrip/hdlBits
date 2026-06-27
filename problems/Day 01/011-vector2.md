@@ -9,16 +9,20 @@
 | Attempts | 3 total: 0 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector2) |
-| Files | [Screenshot](../../images/Day%2001/011-vector2.png) · [Verilog solution](../../solutions/Day%2001/011-vector2.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2001/011-vector2.png) · [Verilog solution](../../solutions/Day%2001/011-vector2.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Vector part select problem and saved submission](../../images/Day%2001/011-vector2.png)
+<a href="../../images/Day%2001/011-vector2.png"><img src="../../images/Day%2001/011-vector2.png" alt="Vector part select question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Split a 16-bit input vector into its upper and lower 8-bit halves and route them to separate outputs.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
+module top_module(
     input [31:0] in,
     output [31:0] out );//
 
@@ -28,7 +32,7 @@ module top_module(
     assign b=in[23:16];
     assign c=in[15:8];
     assign d=in[7:0];
-   assign  out ={d,c,b,a};    
+   assign  out ={d,c,b,a};
 endmodule
 ```
 

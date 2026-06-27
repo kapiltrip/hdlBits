@@ -9,11 +9,15 @@
 | Attempts | 7 total: 5 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/edgecapture) |
-| Files | [Screenshot](../../images/Day%2004/095-edgecapture.png) · [Verilog solution](../../solutions/Day%2004/095-edgecapture.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2004/095-edgecapture.png) · [Verilog solution](../../solutions/Day%2004/095-edgecapture.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![Edge capture register problem and saved submission](../../images/Day%2004/095-edgecapture.png)
+<a href="../../images/Day%2004/095-edgecapture.png"><img src="../../images/Day%2004/095-edgecapture.png" alt="Edge capture register question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Set a register bit when a falling edge occurs and keep it set until a synchronous reset clears it.
 
 ## Saved Verilog solution
 

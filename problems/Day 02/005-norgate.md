@@ -9,18 +9,22 @@
 | Attempts | 6 total: 0 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/norgate) |
-| Files | [Screenshot](../../images/Day%2002/005-norgate.png) · [Verilog solution](../../solutions/Day%2002/005-norgate.sv) |
+| Files | [Open screenshot at full resolution](../../images/Day%2002/005-norgate.png) · [Verilog solution](../../solutions/Day%2002/005-norgate.sv) |
 
-## Problem and saved submission
+## Question and submitted solution
 
-![NOR gate problem and saved submission](../../images/Day%2002/005-norgate.png)
+<a href="../../images/Day%2002/005-norgate.png"><img src="../../images/Day%2002/005-norgate.png" alt="NOR gate question and submitted solution" width="100%"></a>
+
+## What the question is asking
+
+Implement a NOR gate: OR the inputs and invert the result.
 
 ## Saved Verilog solution
 
 ```verilog
-module top_module( 
-    input a, 
-    input b, 
+module top_module(
+    input a,
+    input b,
     output out );
 
 endmodule
