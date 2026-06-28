@@ -8,14 +8,14 @@ This report records the second full review performed after the archive expansion
 
 | Area | Scope | Result |
 |---|---:|---|
-| Completed archive | 135 questions | Pass |
+| Completed archive | 140 questions | Pass |
 | Complete HDLBits tracker | 178 questions | Pass |
 | Review queue | 1 attempted + 4 captured counters | Pass |
-| Screenshot boundary audit | 140 images | 140 pass, 0 fail |
-| Strict Verilog elaboration | 135 solutions | 135 pass, 0 fail, 0 warnings |
+| Screenshot boundary audit | 145 images | 145 pass, 0 fail |
+| Strict Verilog elaboration | 140 solutions | 140 pass, 0 fail, 0 warnings |
 | Repository links | Generated archive | 0 broken links |
 | Workbook formula scan | Summary + Tracker | 0 formula errors |
-| Verilog line hygiene | 135 solutions | 0 trailing-whitespace lines; terminal newlines present |
+| Verilog line hygiene | 140 solutions | 0 trailing-whitespace lines; terminal newlines present |
 
 ## Screenshot review
 
@@ -29,15 +29,15 @@ All five queue images also received a separate visual edge review. Two counter c
 
 All standalone solutions were elaborated independently with Icarus Verilog in SystemVerilog mode and warnings enabled. Verification-only models for HDLBits-provided helper modules are kept in [scripts/hdlbits_stubs.sv](scripts/hdlbits_stubs.sv); the reproducible runner is [scripts/verify_solutions.ps1](scripts/verify_solutions.ps1).
 
-The second pass corrected strict-language issues that the HDLBits environment can tolerate or hide, including procedural-output declarations, generated-instance naming, carry-net widths, sized constants, one mixed blocking assignment, and an incomplete synchronous FSM file. The final strict result is **135/135 passing with zero warnings**.
+The second pass corrected strict-language issues that the HDLBits environment can tolerate or hide, including procedural-output declarations, generated-instance naming, carry-net widths, sized constants, one mixed blocking assignment, and an incomplete synchronous FSM file. The final strict result is **140/140 passing with zero warnings**.
 
 ## Structure and presentation review
 
-- All 135 manifest records have a unique number and HDLBits ID, a problem note, a standalone solution, a complete screenshot, a day entry, and a README index entry.
-- The day split is symmetric and reproducible: 12, 34, 42, 19, 12, and 16 completed questions across Days 01-06.
+- All 140 manifest records have a unique number and HDLBits ID, a problem note, a standalone solution, a complete screenshot, a day entry, and a README index entry.
+- The day split is symmetric and reproducible: 12, 34, 42, 19, 12, and 21 completed questions across Days 01-06.
 - Every generated problem note follows the same heading order, metadata layout, image width, explanation structure, and code presentation.
 - Markdown tables use consistent columns and numeric alignment. The repository-wide Verilog pass removed 177 trailing-whitespace defects and enforced terminal newlines.
-- The tracker contains all 178 course questions in course order: **135 Completed**, **1 Review**, and **42 To Do**. The workbook was exported, re-imported, recalculated, and visually inspected on both sheets.
+- The tracker contains all 178 standard course questions in exact website order: **140 Completed**, **1 Review**, and **37 To Do**. A row-by-row HDLBits ID comparison found zero sequence mismatches. The workbook was exported, re-imported, recalculated, and visually inspected on both sheets.
 
 ## Remaining study queue
 

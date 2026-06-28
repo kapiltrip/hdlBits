@@ -1,6 +1,6 @@
 # Day 06 — 2026-06-28
 
-Completed problems: **16**
+Completed problems: **21**
 
 Each screenshot is embedded at the full width of the GitHub page. Select an image to open its original-resolution file.
 
@@ -24,6 +24,11 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 | 14 | 2:46:53 PM | [134](#problem-134) | Build a circuit from a simulation waveform | [Sequential circuit 8](problems/Day%2006/134-sim__circuit8.md) | [Code](solutions/Day%2006/134-sim__circuit8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit8) |
 | 15 | 2:35:52 PM | [135](#problem-135) | Build a circuit from a simulation waveform | [Sequential circuit 9](problems/Day%2006/135-sim__circuit9.md) | [Code](solutions/Day%2006/135-sim__circuit9.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit9) |
 | 16 | 4:28:35 PM | [136](#problem-136) | Build a circuit from a simulation waveform | [Sequential circuit 10](problems/Day%2006/136-sim__circuit10.md) | [Code](solutions/Day%2006/136-sim__circuit10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit10) |
+| 17 | 5:45:53 PM | [137](#problem-137) | Writing Testbenches | [Clock](problems/Day%2006/137-tb__clock.md) | [Code](solutions/Day%2006/137-tb__clock.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/clock) |
+| 18 | 5:51:57 PM | [138](#problem-138) | Writing Testbenches | [Testbench1](problems/Day%2006/138-tb__tb1.md) | [Code](solutions/Day%2006/138-tb__tb1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb1) |
+| 19 | 6:15:10 PM | [139](#problem-139) | Writing Testbenches | [AND gate](problems/Day%2006/139-tb__and.md) | [Code](solutions/Day%2006/139-tb__and.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/and) |
+| 20 | 11:14:42 PM | [140](#problem-140) | Writing Testbenches | [Testbench2](problems/Day%2006/140-tb__tb2.md) | [Code](solutions/Day%2006/140-tb__tb2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb2) |
+| 21 | 6:29:03 PM | [141](#problem-141) | Writing Testbenches | [T flip-flop](problems/Day%2006/141-tb__tff.md) | [Code](solutions/Day%2006/141-tb__tff.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tff) |
 
 ---
 
@@ -678,5 +683,226 @@ module top_module (
         state <= (a & b) | (b & state) | (a & state);
     end
 
+endmodule
+```
+
+---
+
+<a id="problem-137"></a>
+## 137 — Clock
+
+[Problem note](problems/Day%2006/137-tb__clock.md) · [Open screenshot at full resolution](images/Day%2006/137-tb__clock.png) · [Verilog file](solutions/Day%2006/137-tb__clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/clock)
+
+<a href="images/Day%2006/137-tb__clock.png"><img src="images/Day%2006/137-tb__clock.png" alt="Clock question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This exercise moves from describing hardware to controlling simulation time. The top-level testbench has no ports because it is the simulation root. It declares an internal `reg clk`, connects that signal to the supplied `dut` instance, initializes it to zero at time 0, and toggles it every 5 ps.
+
+Two half-periods make the required 10 ps period. Starting from zero means the first scheduled toggle is a rising edge at 5 ps, exactly matching the requested waveform. The `initial` block runs once, while `always #5` repeats forever; these are simulation constructs and are not intended to synthesize into physical logic.
+
+**Timing trace:** `clk=0` at t=0, 1 at t=5, 0 at t=10, 1 at t=15, and so on. A common error is using `#10` for each toggle, which produces a 20 ps full period. Another is leaving the clock uninitialized: negating an unknown `X` still produces `X`, so the clock never becomes usable.
+
+### Saved Verilog solution
+
+```verilog
+module top_module ();
+    reg clk;
+
+    dut dut_instance (
+        .clk(clk)
+    );
+
+    initial
+        clk = 1'b0;
+
+    always #5
+        clk = ~clk;
+endmodule
+```
+
+---
+
+<a id="problem-138"></a>
+## 138 — Testbench1
+
+[Problem note](problems/Day%2006/138-tb__tb1.md) · [Open screenshot at full resolution](images/Day%2006/138-tb__tb1.png) · [Verilog file](solutions/Day%2006/138-tb__tb1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb1)
+
+<a href="images/Day%2006/138-tb__tb1.png"><img src="images/Day%2006/138-tb__tb1.png" alt="Testbench1 question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+The goal is to generate two output waveforms directly from procedural stimulus. Because A and B are assigned inside an `initial` block, the module declares them as `output reg`. Both begin low at time 0, then the delays reproduce each transition in chronological order.
+
+| Simulation time | A | B | Event |
+|---:|---:|---:|---|
+| 0 | 0 | 0 | initialize both outputs |
+| 10 | 1 | 0 | raise A |
+| 15 | 1 | 1 | raise B five time units later |
+| 20 | 0 | 1 | lower A |
+| 40 | 0 | 0 | lower B after its long high interval |
+
+Delay statements are relative to the current process time, not absolute timestamps. Thus `#10 A=1; #5 B=1;` places the second event at t=15. Keeping the entire timeline in one ordered block makes that accumulation explicit and avoids accidental races between several independent stimulus processes.
+
+### Saved Verilog solution
+
+```verilog
+module top_module (
+    output reg A,
+    output reg B
+);
+    initial begin
+        A = 1'b0;
+        B = 1'b0;
+        #10 A = 1'b1;
+        #5 B = 1'b1;
+        #5 A = 1'b0;
+        #20 B = 1'b0;
+    end
+endmodule
+```
+
+---
+
+<a id="problem-139"></a>
+## 139 — AND gate
+
+[Problem note](problems/Day%2006/139-tb__and.md) · [Open screenshot at full resolution](images/Day%2006/139-tb__and.png) · [Verilog file](solutions/Day%2006/139-tb__and.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/and)
+
+<a href="images/Day%2006/139-tb__and.png"><img src="images/Day%2006/139-tb__and.png" alt="AND gate question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This testbench verifies a two-input AND gate exhaustively. The DUT input is a 2-bit procedural register, while the DUT output is a wire because it is driven by the instantiated module. A loop enumerates the four binary input combinations 00, 01, 10, and 11, holding each combination for 10 simulation time units.
+
+Using `in = i[1:0]` makes the mapping from loop counter to stimulus width explicit. The observed output should remain zero for the first three patterns and become one only for `2'b11`. This is exhaustive verification because a two-input combinational circuit has exactly four possible input states.
+
+The important separation is stimulus versus response: the testbench drives `in`, but only observes `out`. Declaring the response as a procedural variable or assigning to it from the testbench would create an additional driver and invalidate the test. For larger circuits, the same enumeration idea scales until the input space becomes too large, at which point constrained or directed vectors are preferable.
+
+### Saved Verilog solution
+
+```verilog
+module top_module ();
+    reg [1:0] in;
+    wire out;
+    integer i;
+
+    andgate dut_instance (
+        .in(in),
+        .out(out)
+    );
+
+    initial begin
+        for (i = 0; i < 4; i = i + 1) begin
+            in = i[1:0];
+            #10;
+        end
+    end
+endmodule
+```
+
+---
+
+<a id="problem-140"></a>
+## 140 — Testbench2
+
+[Problem note](problems/Day%2006/140-tb__tb2.md) · [Open screenshot at full resolution](images/Day%2006/140-tb__tb2.png) · [Verilog file](solutions/Day%2006/140-tb__tb2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb2)
+
+<a href="images/Day%2006/140-tb__tb2.png"><img src="images/Day%2006/140-tb__tb2.png" alt="Testbench2 question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This testbench coordinates two independent timelines: a free-running clock and a directed sequence for `in` and the 3-bit bus `s`. One `initial` block initializes the clock and toggles it every 5 time units, producing a 10-unit period. A second block applies the waveform values at the required boundaries, while the `q7` instance connects all generated signals to the supplied DUT.
+
+| Time interval | in | s |
+|---|---:|---:|
+| 0-10 | 0 | 2 |
+| 10-20 | 0 | 6 |
+| 20-30 | 1 | 2 |
+| 30-40 | 0 | 7 |
+| 40-70 | 1 | 0 |
+| 70 onward | 0 | 0 |
+
+The sequence uses cumulative delays, so each `#10` advances from the preceding event, and `#30` creates the long final high interval for `in`. Changes occur on falling-clock boundaries in this waveform, giving the DUT stable inputs before the following rising edge. A frequent failure is to treat the delay values as absolute times or to forget that concurrent `initial` blocks begin together at t=0.
+
+### Saved Verilog solution
+
+```verilog
+module top_module ();
+    reg clk;
+    reg in;
+    reg [2:0] s;
+    wire out;
+
+    q7 dut_instance (
+        .clk(clk),
+        .in(in),
+        .s(s),
+        .out(out)
+    );
+
+    initial begin
+        clk = 1'b0;
+        forever #5 clk = ~clk;
+    end
+
+    initial begin
+        in = 1'b0;
+        s = 3'd2;
+        #10 s = 3'd6;
+        #10 begin in = 1'b1; s = 3'd2; end
+        #10 begin in = 1'b0; s = 3'd7; end
+        #10 begin in = 1'b1; s = 3'd0; end
+        #30 in = 1'b0;
+    end
+endmodule
+```
+
+---
+
+<a id="problem-141"></a>
+## 141 — T flip-flop
+
+[Problem note](problems/Day%2006/141-tb__tff.md) · [Open screenshot at full resolution](images/Day%2006/141-tb__tff.png) · [Verilog file](solutions/Day%2006/141-tb__tff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tff)
+
+<a href="images/Day%2006/141-tb__tff.png"><img src="images/Day%2006/141-tb__tff.png" alt="T flip-flop question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+The testbench instantiates the supplied T flip-flop and creates separate clock and control processes. The clock starts low and toggles every 5 time units. Reset starts high and `t` starts low, so the first rising edge samples the synchronous reset and forces Q to its reset state. After 10 time units, reset is deasserted and T is asserted; subsequent rising edges toggle Q.
+
+The word *synchronous* is crucial: changing reset does not immediately change Q. Reset only has an effect when a rising edge occurs while reset is high. With this timeline, the rising edge at t=5 performs the reset, reset becomes low at t=10, and the edge at t=15 performs the first toggle.
+
+The DUT output is a wire because the T flip-flop drives it. Clock, reset, and T are registers because the testbench drives them procedurally. Keeping the free-running clock and one-time stimulus in separate `initial` processes is intentional concurrency: both timelines advance together under the simulator's event scheduler.
+
+### Saved Verilog solution
+
+```verilog
+module top_module ();
+    reg clk;
+    reg reset;
+    reg t;
+    wire q;
+
+    tff dut_instance (
+        .clk(clk),
+        .reset(reset),
+        .t(t),
+        .q(q)
+    );
+
+    initial begin
+        clk = 1'b0;
+        forever #5 clk = ~clk;
+    end
+
+    initial begin
+        reset = 1'b1;
+        t = 1'b0;
+        #10 begin
+            reset = 1'b0;
+            t = 1'b1;
+        end
+    end
 endmodule
 ```

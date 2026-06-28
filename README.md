@@ -1,9 +1,9 @@
 # HDLBits Learning Archive
 
-Offline study archive for **135 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series**.
+Offline study archive for **140 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
 
-- Completion boundary: `sim/circuit10` completed; `lemmings2` remains under review.
-- Tracker status: **135 completed**, **1 review**, and **42 to do**.
+- Completion boundary: all five Writing Testbenches exercises through `tb/tff` are completed; `lemmings2` remains under review.
+- Tracker status: **140 completed**, **1 review**, and **37 to do**.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The complete Excel tracker is at [outputs/hdlbits-archive/HDLBits_Tracker.xlsx](outputs/hdlbits-archive/HDLBits_Tracker.xlsx).
 - [Review queue](Review.md) includes the attempted Lemmings problem and all four unfinished counter questions with complete screenshots.
@@ -20,7 +20,7 @@ Offline study archive for **135 completed HDLBits problems**. The Excel tracker 
 | [Day 03](Day%2003.md) | 2026-06-25 | 42 |
 | [Day 04](Day%2004.md) | 2026-06-26 | 19 |
 | [Day 05](Day%2005.md) | 2026-06-27 | 12 |
-| [Day 06](Day%2006.md) | 2026-06-28 | 16 |
+| [Day 06](Day%2006.md) | 2026-06-28 | 21 |
 
 ## Section index
 
@@ -233,3 +233,13 @@ Offline study archive for **135 completed HDLBits problems**. The Excel tracker 
 | 134 | [Sequential circuit 8](problems/Day%2006/134-sim__circuit8.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/134-sim__circuit8.png) | [Code](solutions/Day%2006/134-sim__circuit8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit8) |
 | 135 | [Sequential circuit 9](problems/Day%2006/135-sim__circuit9.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/135-sim__circuit9.png) | [Code](solutions/Day%2006/135-sim__circuit9.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit9) |
 | 136 | [Sequential circuit 10](problems/Day%2006/136-sim__circuit10.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/136-sim__circuit10.png) | [Code](solutions/Day%2006/136-sim__circuit10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit10) |
+
+## Verification: Writing Testbenches
+
+| # | Problem | Day | Date | Screenshot | Solution | Source |
+|---:|---|---|---|---|---|---|
+| 137 | [Clock](problems/Day%2006/137-tb__clock.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/137-tb__clock.png) | [Code](solutions/Day%2006/137-tb__clock.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/clock) |
+| 138 | [Testbench1](problems/Day%2006/138-tb__tb1.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/138-tb__tb1.png) | [Code](solutions/Day%2006/138-tb__tb1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb1) |
+| 139 | [AND gate](problems/Day%2006/139-tb__and.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/139-tb__and.png) | [Code](solutions/Day%2006/139-tb__and.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/and) |
+| 140 | [Testbench2](problems/Day%2006/140-tb__tb2.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/140-tb__tb2.png) | [Code](solutions/Day%2006/140-tb__tb2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb2) |
+| 141 | [T flip-flop](problems/Day%2006/141-tb__tff.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/141-tb__tff.png) | [Code](solutions/Day%2006/141-tb__tff.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tff) |
