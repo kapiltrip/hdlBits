@@ -25,7 +25,7 @@ Write only the combinational next-state logic for the supplied state-transition 
 module top_module(
     input in,
     input [1:0] state,
-    output [1:0] next_state,
+    output reg [1:0] next_state,
     output out
 ); //
 

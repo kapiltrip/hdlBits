@@ -1,5 +1,5 @@
-module top_module( 
+module top_module(
     input a, b, sel,
-    output out ); 
+    output out );
 
 endmodule

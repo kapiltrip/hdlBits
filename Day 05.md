@@ -1,6 +1,6 @@
 # Day 05 — 2026-06-27
 
-Completed problems: **7**
+Completed problems: **12**
 
 Each screenshot is embedded at the full width of the GitHub page. Select an image to open its original-resolution file.
 
@@ -15,6 +15,11 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 | 5 | 1:59:48 AM | [112](#problem-112) | Sequential Logic | [Simple FSM 2 (asynchronous reset)](problems/Day%2005/112-fsm2.md) | [Code](solutions/Day%2005/112-fsm2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2) |
 | 6 | 2:04:20 AM | [113](#problem-113) | Sequential Logic | [Simple FSM 2 (synchronous reset)](problems/Day%2005/113-fsm2s.md) | [Code](solutions/Day%2005/113-fsm2s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2s) |
 | 7 | 2:15:08 AM | [114](#problem-114) | Sequential Logic | [Simple state transitions 3](problems/Day%2005/114-fsm3comb.md) | [Code](solutions/Day%2005/114-fsm3comb.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3comb) |
+| 8 | 4:45:28 PM | [115](#problem-115) | Sequential Logic | [Simple one-hot state transitions 3](problems/Day%2005/115-fsm3onehot.md) | [Code](solutions/Day%2005/115-fsm3onehot.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3onehot) |
+| 9 | 5:05:31 PM | [116](#problem-116) | Sequential Logic | [Simple FSM 3 (asynchronous reset)](problems/Day%2005/116-fsm3.md) | [Code](solutions/Day%2005/116-fsm3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3) |
+| 10 | 5:07:35 PM | [117](#problem-117) | Sequential Logic | [Simple FSM 3 (synchronous reset)](problems/Day%2005/117-fsm3s.md) | [Code](solutions/Day%2005/117-fsm3s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3s) |
+| 11 | 11:58:25 PM | [118](#problem-118) | Sequential Logic | [Design a Moore FSM](problems/Day%2005/118-exams__ece241_2013_q4.md) | [Code](solutions/Day%2005/118-exams__ece241_2013_q4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) |
+| 12 | 6:32:59 PM | [119](#problem-119) | Sequential Logic | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | [Code](solutions/Day%2005/119-lemmings1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
 
 ---
 
@@ -111,7 +116,7 @@ module top_module (
     input enable,
     input S,
     input A, B, C,
-    output Z
+    output reg Z
 );
 //8 bit shift register
     reg [7:0] Q;
@@ -119,7 +124,7 @@ module top_module (
         //S is the input to the shift, reg
         if(enable)begin
             Q[0]<=S;
-            Q[7:1]=Q[6:0];
+            Q[7:1]<=Q[6:0];
         end
     end
     always @(*)begin
@@ -304,25 +309,33 @@ Implement the second FSM with a synchronous reset while preserving the transitio
 ```verilog
 module top_module(
     input clk,
-    input reset,    // Synchronous reset to OFF
+    input reset, // Synchronous reset to OFF
     input j,
     input k,
-    output out); //
+    output out
+);
 
-    parameter OFF=0, ON=1;
+    parameter OFF = 1'b0;
+    parameter ON  = 1'b1;
+
     reg state, next_state;
 
     always @(*) begin
-        // State transition logic
+        case (state)
+            ON:      next_state = k ? OFF : ON;
+            OFF:     next_state = j ? ON : OFF;
+            default: next_state = OFF;
+        endcase
     end
 
     always @(posedge clk) begin
-        // State flip-flops with synchronous reset
+        if (reset)
+            state <= OFF;
+        else
+            state <= next_state;
     end
 
-    // Output logic
-    // assign out = (state == ...);
-
+    assign out = (state == ON);
 endmodule
 ```
 
@@ -345,7 +358,7 @@ Write only the combinational next-state logic for the supplied state-transition 
 module top_module(
     input in,
     input [1:0] state,
-    output [1:0] next_state,
+    output reg [1:0] next_state,
     output out
 ); //
 
@@ -364,5 +377,348 @@ module top_module(
         endcase
     end
     assign out = (state==D);
+endmodule
+```
+
+---
+
+<a id="problem-115"></a>
+## 115 — Simple one-hot state transitions 3
+
+[Problem note](problems/Day%2005/115-fsm3onehot.md) · [Open screenshot at full resolution](images/Day%2005/115-fsm3onehot.png) · [Verilog file](solutions/Day%2005/115-fsm3onehot.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3onehot)
+
+<a href="images/Day%2005/115-fsm3onehot.png"><img src="images/Day%2005/115-fsm3onehot.png" alt="Simple one-hot state transitions 3 question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This problem gives the four-state Moore machine as a transition table, but supplies the current state as a one-hot vector instead of asking for a state register. The implementation therefore derives each bit of `next_state` from the incoming transitions to that state.
+
+For example, state A is reached from A or C only when `in=0`, so `next_state[A] = ~in & (state[A] | state[C])`. State B is reached from A, B, or D when `in=1`; C is reached from B or D when `in=0`; and D is reached only from C when `in=1`. The Moore output is high only in D, so it is simply `state[D]`.
+
+**Why the direct equations matter:** HDLBits deliberately supplies non-one-hot test vectors. A `case` statement that assumes exactly one active state, or logic that forces illegal states back to A, would implement different behaviour. The sum-of-products equations preserve every simultaneously active incoming term.
+
+**Trace example:** with `state=4'b0100` (C), `in=1` asserts only `next_state[D]`; with the same state and `in=0`, only `next_state[A]` is asserted.
+
+### Saved Verilog solution
+
+```verilog
+module top_module(
+    input in,
+    input [3:0] state,
+    output [3:0] next_state,
+    output out
+);
+
+    parameter A = 0, B = 1, C = 2, D = 3;
+
+    // State transition logic: derive an equation for each state flip-flop.
+    assign next_state[A] = ~in & (state[A] | state[C]);
+    assign next_state[B] = in & (state[A] | state[B] | state[D]);
+    assign next_state[C] = ~in & (state[B] | state[D]);
+    assign next_state[D] = in & state[C];
+
+    assign out = state[D];
+
+endmodule
+```
+
+---
+
+<a id="problem-116"></a>
+## 116 — Simple FSM 3 (asynchronous reset)
+
+[Problem note](problems/Day%2005/116-fsm3.md) · [Open screenshot at full resolution](images/Day%2005/116-fsm3.png) · [Verilog file](solutions/Day%2005/116-fsm3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3)
+
+<a href="images/Day%2005/116-fsm3.png"><img src="images/Day%2005/116-fsm3.png" alt="Simple FSM 3 (asynchronous reset) question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This is the complete four-state Moore FSM whose combinational transition table was implemented in the preceding exercises. The design separates three concerns: combinational next-state decoding, the clocked state register, and Moore output decoding.
+
+The transition logic implements A: 0→A/1→B, B: 0→C/1→B, C: 0→A/1→D, and D: 0→C/1→B. A default assignment of `next_state = state` prevents an unintended latch and gives a safe hold value before the `case` overrides it.
+
+The reset is **asynchronous** because `areset` appears in the event control: `always @(posedge clk or posedge areset)`. As soon as reset rises, the state becomes A without waiting for a clock. Ordinary transitions still occur only at a rising clock edge. Since this is a Moore machine, `out` depends only on the registered state and is asserted exactly in D.
+
+**Revision pitfall:** putting reset only inside `always @(posedge clk)` would silently change this into the synchronous-reset version.
+
+### Saved Verilog solution
+
+```verilog
+module top_module(
+    input clk,
+    input in,
+    input areset,
+    output out
+);
+
+    parameter A = 2'b00;
+    parameter B = 2'b01;
+    parameter C = 2'b10;
+    parameter D = 2'b11;
+    reg [1:0] state, next_state;
+
+    always @(*) begin
+        next_state = state;
+        case (state)
+            A: next_state = in ? B : A;
+            B: next_state = in ? B : C;
+            C: next_state = in ? D : A;
+            D: next_state = in ? B : C;
+        endcase
+    end
+
+    always @(posedge clk or posedge areset) begin
+        if (areset)
+            state <= A;
+        else
+            state <= next_state;
+    end
+
+    assign out = (state == D);
+
+endmodule
+```
+
+---
+
+<a id="problem-117"></a>
+## 117 — Simple FSM 3 (synchronous reset)
+
+[Problem note](problems/Day%2005/117-fsm3s.md) · [Open screenshot at full resolution](images/Day%2005/117-fsm3s.png) · [Verilog file](solutions/Day%2005/117-fsm3s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3s)
+
+<a href="images/Day%2005/117-fsm3s.png"><img src="images/Day%2005/117-fsm3s.png" alt="Simple FSM 3 (synchronous reset) question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This exercise uses the same A/B/C/D transition graph and Moore output as `fsm3`, but changes the reset timing. The transition decoder still computes A: 0→A/1→B, B: 0→C/1→B, C: 0→A/1→D, and D: 0→C/1→B, while `out` is high only when the registered state is D.
+
+The state register is sensitive only to `posedge clk`. Consequently, asserting `reset` between edges does not immediately change the state; reset is sampled at the next rising edge and then loads A. This is the defining behaviour of a synchronous reset.
+
+**Cycle trace:** if the machine is in D and reset rises halfway through a cycle, `out` remains high until the next rising clock edge. At that edge state becomes A and `out` falls. In the asynchronous version, state and output would change as soon as reset rose.
+
+**Revision pitfall:** the comment in the submitted starter code mentions an asynchronous reset, but the actual problem and sensitivity list require synchronous reset. The event control, not the comment, determines the hardware.
+
+### Saved Verilog solution
+
+```verilog
+module top_module(
+    input clk,
+    input in,
+    input reset,
+    output out
+);
+
+    parameter A = 2'b00;
+    parameter B = 2'b01;
+    parameter C = 2'b10;
+    parameter D = 2'b11;
+    reg [1:0] state, next_state;
+
+    always @(*) begin
+        next_state = state;
+        case (state)
+            A: next_state = in ? B : A;
+            B: next_state = in ? B : C;
+            C: next_state = in ? D : A;
+            D: next_state = in ? B : C;
+        endcase
+    end
+
+    always @(posedge clk) begin
+        if (reset)
+            state <= A;
+        else
+            state <= next_state;
+    end
+
+    assign out = (state == D);
+
+endmodule
+```
+
+---
+
+<a id="problem-118"></a>
+## 118 — Design a Moore FSM
+
+[Problem note](problems/Day%2005/118-exams__ece241_2013_q4.md) · [Open screenshot at full resolution](images/Day%2005/118-exams__ece241_2013_q4.png) · [Verilog file](solutions/Day%2005/118-exams__ece241_2013_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4)
+
+<a href="images/Day%2005/118-exams__ece241_2013_q4.png"><img src="images/Day%2005/118-exams__ece241_2013_q4.png" alt="Design a Moore FSM question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+This problem is more than a water-level decoder: the outputs depend on both the current sensor pattern and whether the water level was rising or falling. That history requirement makes it a Moore FSM rather than pure combinational logic.
+
+Sensors `s[1]`, `s[2]`, and `s[3]` represent progressively higher levels. The six encoded states distinguish below-sensor-1, between sensors 1–2 while rising or falling, between sensors 2–3 while rising or falling, and above sensor 3. The next-state priority checks the highest asserted sensor first, which maps any valid thermometer-like sensor pattern to the appropriate level band.
+
+The output vector is `{fr3, fr2, fr1, dfr}`. More fill valves are enabled at lower levels. The direction-sensitive `dfr` bit is clear while the level is rising and set while it is falling, preserving the required hysteresis. At the lowest state all four outputs are asserted; above the highest sensor all are clear.
+
+Reset is active-high and synchronous, loading the below-sensor-1 state. The explicit default state and default output also recover deterministically from an unused 3-bit encoding.
+
+**Key lesson:** whenever identical input values require different outputs depending on the path taken to reach them, the path must be stored as state.
+
+### Saved Verilog solution
+
+```verilog
+module top_module (
+    input clk,
+    input reset,
+    input [3:1] s,
+    output reg fr3,
+    output reg fr2,
+    output reg fr1,
+    output reg dfr
+);
+    reg [2:0] state, next_state;
+
+    parameter belows1 = 3'd0;
+    parameter s3s2fall = 3'd1;
+    parameter s3s2rise = 3'd2;
+    parameter s2s1fall = 3'd3;
+    parameter s2s1rise = 3'd4;
+    parameter s3above = 3'd5;
+
+    always @(posedge clk) begin
+        if (reset)
+            state <= belows1;
+        else
+            state <= next_state;
+    end
+
+    always @(*) begin
+        next_state = state;
+        case (state)
+            belows1: begin
+                if (s[3])
+                    next_state = s3above;
+                else if (s[2])
+                    next_state = s3s2rise;
+                else if (s[1])
+                    next_state = s2s1rise;
+                else
+                    next_state = belows1;
+            end
+            s2s1rise: begin
+                if (s[3])
+                    next_state = s3above;
+                else if (s[2])
+                    next_state = s3s2rise;
+                else if (s[1])
+                    next_state = s2s1rise;
+                else
+                    next_state = belows1;
+            end
+            s2s1fall: begin
+                if (s[3])
+                    next_state = s3above;
+                else if (s[2])
+                    next_state = s3s2rise;
+                else if (s[1])
+                    next_state = s2s1fall;
+                else
+                    next_state = belows1;
+            end
+            s3s2rise: begin
+                if (s[3])
+                    next_state = s3above;
+                else if (s[2])
+                    next_state = s3s2rise;
+                else if (s[1])
+                    next_state = s2s1fall;
+                else
+                    next_state = belows1;
+            end
+            s3s2fall: begin
+                if (s[3])
+                    next_state = s3above;
+                else if (s[2])
+                    next_state = s3s2fall;
+                else if (s[1])
+                    next_state = s2s1fall;
+                else
+                    next_state = belows1;
+            end
+            s3above: begin
+                if (s[3])
+                    next_state = s3above;
+                else if (s[2])
+                    next_state = s3s2fall;
+                else if (s[1])
+                    next_state = s2s1fall;
+                else
+                    next_state = belows1;
+            end
+            default: next_state = belows1;
+        endcase
+    end
+
+    always @(*) begin
+        case (state)
+            belows1: {fr3, fr2, fr1, dfr} = 4'b1111;
+            s2s1rise: {fr3, fr2, fr1, dfr} = 4'b0110;
+            s2s1fall: {fr3, fr2, fr1, dfr} = 4'b0111;
+            s3s2rise: {fr3, fr2, fr1, dfr} = 4'b0010;
+            s3s2fall: {fr3, fr2, fr1, dfr} = 4'b0011;
+            s3above: {fr3, fr2, fr1, dfr} = 4'b0000;
+            default: {fr3, fr2, fr1, dfr} = 4'b1111;
+        endcase
+    end
+
+endmodule
+```
+
+---
+
+<a id="problem-119"></a>
+## 119 — Lemmings 1
+
+[Problem note](problems/Day%2005/119-lemmings1.md) · [Open screenshot at full resolution](images/Day%2005/119-lemmings1.png) · [Verilog file](solutions/Day%2005/119-lemmings1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lemmings1)
+
+<a href="images/Day%2005/119-lemmings1.png"><img src="images/Day%2005/119-lemmings1.png" alt="Lemmings 1 question and submitted solution" width="100%"></a>
+
+### What the question is asking
+
+The Lemming has only two Moore states: walking left and walking right. Direction changes occur only when an obstacle is encountered on the side toward which it is currently walking.
+
+In LEFT, `bump_left=1` sends the FSM to RIGHT; otherwise it stays LEFT. In RIGHT, `bump_right=1` sends it to LEFT; otherwise it stays RIGHT. If both bump inputs are high, the relevant condition for either current state is high, so the machine still reverses direction exactly once.
+
+The asynchronous reset is implemented with `posedge areset` in the event control and immediately places the Lemming in LEFT. The two outputs are Moore decodes: `walk_left` is high only in LEFT and `walk_right` only in RIGHT, so they are mutually exclusive for every legal state.
+
+**Trace example:** LEFT + right-side bump only remains LEFT because an obstacle behind the Lemming does not matter. LEFT + left-side bump changes the registered state to RIGHT at the next clock edge.
+
+### Saved Verilog solution
+
+```verilog
+module top_module(
+    input clk,
+    input areset,
+    input bump_left,
+    input bump_right,
+    output walk_left,
+    output walk_right
+);
+
+    reg state, next_state;
+    parameter left = 1'b0;
+    parameter right = 1'b1;
+
+    always @(*) begin
+        next_state = state;
+        case (state)
+            left: next_state = bump_left ? right : left;
+            right: next_state = bump_right ? left : right;
+        endcase
+    end
+
+    always @(posedge clk or posedge areset) begin
+        if (areset)
+            state <= left;
+        else
+            state <= next_state;
+    end
+
+    assign walk_left = (state == left);
+    assign walk_right = (state == right);
+
 endmodule
 ```

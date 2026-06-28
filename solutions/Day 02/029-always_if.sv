@@ -5,6 +5,6 @@ module top_module(
     input sel_b1,
     input sel_b2,
     output wire out_assign,
-    output reg out_always   ); 
+    output reg out_always   );
 
 endmodule

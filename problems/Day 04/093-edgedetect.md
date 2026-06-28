@@ -25,7 +25,7 @@ Generate a one-cycle pulse whenever each input bit makes a 0-to-1 transition.
 module top_module (
     input clk,
     input [7:0] in,
-    output [7:0] pedge
+    output reg [7:0] pedge
 );
     reg [7:0] prev;
     always @(posedge clk)begin

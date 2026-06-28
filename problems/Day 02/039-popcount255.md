@@ -24,7 +24,7 @@ Count how many bits are high in a 255-bit input vector using combinational accum
 ```verilog
 module top_module(
     input [254:0] in,
-    output [7:0] out
+    output reg [7:0] out
 );
 //to count no of ones in the input vector
     integer i ;

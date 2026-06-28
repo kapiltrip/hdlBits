@@ -6,14 +6,14 @@ module top_module(
     wire [15:0] a1Input=a[15:0];
     wire [15:0] b1Input=b[15:0];
     wire [15:0] a2Input=a[31:16];
-    wire [15:0] b2Input=b[31:16];   
-    wire [15:0] coutAdder1;
-    wire [15:0] coutAdder2;
+    wire [15:0] b2Input=b[31:16];
+    wire coutAdder1;
+    wire coutAdder2;
     wire [15:0] sum1,sum2;
     add16 adder1(
         .a(a1Input),
         .b(b1Input),
-        .cin(0),
+        .cin(1'b0),
         .cout(coutAdder1),
         .sum(sum1)
     );

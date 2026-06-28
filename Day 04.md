@@ -77,7 +77,7 @@ Translate the exam's multiplexer-and-DFF schematic into equivalent sequential Ve
 module top_module (
     input clk,
     input w, R, E, L,
-    output Q
+    output reg Q
 );
     always @(posedge clk)begin
         Q<= (L)?R:(E)?w:Q;
@@ -165,7 +165,7 @@ Generate a one-cycle pulse whenever each input bit makes a 0-to-1 transition.
 module top_module (
     input clk,
     input [7:0] in,
-    output [7:0] pedge
+    output reg [7:0] pedge
 );
     reg [7:0] prev;
     always @(posedge clk)begin
@@ -194,7 +194,7 @@ Generate a one-cycle pulse whenever each input bit changes in either direction.
 module top_module (
     input clk,
     input [7:0] in,
-    output [7:0] anyedge
+    output reg [7:0] anyedge
 );
     reg [7:0] positive;
     reg [7:0] negative ;
@@ -515,7 +515,7 @@ Implement the specified 5-bit linear-feedback shift register using the given fee
 module top_module(
     input clk,
     input reset,    // Active-high synchronous reset to 5'h1
-    output [4:0] q
+    output reg [4:0] q
 );
     always @(posedge clk)begin
         if(reset)

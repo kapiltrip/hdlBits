@@ -25,7 +25,7 @@ Generate a one-cycle pulse whenever each input bit changes in either direction.
 module top_module (
     input clk,
     input [7:0] in,
-    output [7:0] anyedge
+    output reg [7:0] anyedge
 );
     reg [7:0] positive;
     reg [7:0] negative ;

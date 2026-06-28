@@ -1,4 +1,4 @@
-module top_module( 
+module top_module(
     input [31:0] in,
     output [31:0] out );//
 
@@ -8,5 +8,5 @@ module top_module(
     assign b=in[23:16];
     assign c=in[15:8];
     assign d=in[7:0];
-   assign  out ={d,c,b,a};    
+   assign  out ={d,c,b,a};
 endmodule

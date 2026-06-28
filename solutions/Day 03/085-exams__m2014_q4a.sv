@@ -1,10 +1,10 @@
 module top_module (
-    input d, 
+    input d,
     input ena,
-    output q
+    output reg q
 );
     always @(*)begin
-        if(ena) 
+        if(ena)
             q<=d;
     end
 endmodule
