@@ -265,6 +265,44 @@ At each rising edge, \`state\` is updated to the majority function \`ab | b·sta
 | 0 | 0 | 1 | 1 | 0 |
 
 The absence of reset means the testbench must establish or tolerate the initial carry state before checking deterministic sequences.`,
+  "tb/clock": `This exercise moves from describing hardware to controlling simulation time. The top-level testbench has no ports because it is the simulation root. It declares an internal \`reg clk\`, connects that signal to the supplied \`dut\` instance, initializes it to zero at time 0, and toggles it every 5 ps.
+
+Two half-periods make the required 10 ps period. Starting from zero means the first scheduled toggle is a rising edge at 5 ps, exactly matching the requested waveform. The \`initial\` block runs once, while \`always #5\` repeats forever; these are simulation constructs and are not intended to synthesize into physical logic.
+
+**Timing trace:** \`clk=0\` at t=0, 1 at t=5, 0 at t=10, 1 at t=15, and so on. A common error is using \`#10\` for each toggle, which produces a 20 ps full period. Another is leaving the clock uninitialized: negating an unknown \`X\` still produces \`X\`, so the clock never becomes usable.`,
+  "tb/tb1": `The goal is to generate two output waveforms directly from procedural stimulus. Because A and B are assigned inside an \`initial\` block, the module declares them as \`output reg\`. Both begin low at time 0, then the delays reproduce each transition in chronological order.
+
+| Simulation time | A | B | Event |
+|---:|---:|---:|---|
+| 0 | 0 | 0 | initialize both outputs |
+| 10 | 1 | 0 | raise A |
+| 15 | 1 | 1 | raise B five time units later |
+| 20 | 0 | 1 | lower A |
+| 40 | 0 | 0 | lower B after its long high interval |
+
+Delay statements are relative to the current process time, not absolute timestamps. Thus \`#10 A=1; #5 B=1;\` places the second event at t=15. Keeping the entire timeline in one ordered block makes that accumulation explicit and avoids accidental races between several independent stimulus processes.`,
+  "tb/and": `This testbench verifies a two-input AND gate exhaustively. The DUT input is a 2-bit procedural register, while the DUT output is a wire because it is driven by the instantiated module. A loop enumerates the four binary input combinations 00, 01, 10, and 11, holding each combination for 10 simulation time units.
+
+Using \`in = i[1:0]\` makes the mapping from loop counter to stimulus width explicit. The observed output should remain zero for the first three patterns and become one only for \`2'b11\`. This is exhaustive verification because a two-input combinational circuit has exactly four possible input states.
+
+The important separation is stimulus versus response: the testbench drives \`in\`, but only observes \`out\`. Declaring the response as a procedural variable or assigning to it from the testbench would create an additional driver and invalidate the test. For larger circuits, the same enumeration idea scales until the input space becomes too large, at which point constrained or directed vectors are preferable.`,
+  "tb/tb2": `This testbench coordinates two independent timelines: a free-running clock and a directed sequence for \`in\` and the 3-bit bus \`s\`. One \`initial\` block initializes the clock and toggles it every 5 time units, producing a 10-unit period. A second block applies the waveform values at the required boundaries, while the \`q7\` instance connects all generated signals to the supplied DUT.
+
+| Time interval | in | s |
+|---|---:|---:|
+| 0-10 | 0 | 2 |
+| 10-20 | 0 | 6 |
+| 20-30 | 1 | 2 |
+| 30-40 | 0 | 7 |
+| 40-70 | 1 | 0 |
+| 70 onward | 0 | 0 |
+
+The sequence uses cumulative delays, so each \`#10\` advances from the preceding event, and \`#30\` creates the long final high interval for \`in\`. Changes occur on falling-clock boundaries in this waveform, giving the DUT stable inputs before the following rising edge. A frequent failure is to treat the delay values as absolute times or to forget that concurrent \`initial\` blocks begin together at t=0.`,
+  "tb/tff": `The testbench instantiates the supplied T flip-flop and creates separate clock and control processes. The clock starts low and toggles every 5 time units. Reset starts high and \`t\` starts low, so the first rising edge samples the synchronous reset and forces Q to its reset state. After 10 time units, reset is deasserted and T is asserted; subsequent rising edges toggle Q.
+
+The word *synchronous* is crucial: changing reset does not immediately change Q. Reset only has an effect when a rising edge occurs while reset is high. With this timeline, the rising edge at t=5 performs the reset, reset becomes low at t=10, and the edge at t=15 performs the first toggle.
+
+The DUT output is a wire because the T flip-flop drives it. Clock, reset, and T are registers because the testbench drives them procedurally. Keeping the free-running clock and one-time stimulus in separate \`initial\` processes is intentional concurrency: both timelines advance together under the simulator's event scheduler.`,
 };
 
 function urlPath(value) {

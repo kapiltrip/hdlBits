@@ -8,8 +8,8 @@ const screenshotAudit = JSON.parse(await fs.readFile(path.join(root, "screenshot
 const failures = [];
 const readText = (relative) => fs.readFile(path.join(root, relative), "utf8");
 
-if (manifest.length !== 135) failures.push(`Manifest count is ${manifest.length}, expected 135`);
-if (screenshotAudit.totals.checked !== 140) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 140`);
+if (manifest.length !== 140) failures.push(`Manifest count is ${manifest.length}, expected 140`);
+if (screenshotAudit.totals.checked !== 145) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 145`);
 if (screenshotAudit.totals.failures !== 0) failures.push(`Screenshot audit reports ${screenshotAudit.totals.failures} failures`);
 
 const problemNumbers = manifest.map((record) => record.problemNumber);
@@ -23,7 +23,7 @@ if (problemNumbers.some((number, index) => index > 0 && number <= problemNumbers
 const completedScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Completed");
 const reviewScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Review");
 const todoScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "To Do");
-if (completedScreenshots.length !== 135) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 135`);
+if (completedScreenshots.length !== 140) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 140`);
 if (reviewScreenshots.length !== 1) failures.push(`Review screenshot count is ${reviewScreenshots.length}, expected 1`);
 if (todoScreenshots.length !== 4) failures.push(`Captured To Do screenshot count is ${todoScreenshots.length}, expected 4`);
 

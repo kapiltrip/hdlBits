@@ -17,7 +17,10 @@ $failures = @()
 $warnings = @()
 
 foreach ($file in $files) {
-    $messages = & $Iverilog -g2012 -Wall -t null -s top_module $stubs $file.FullName 2>&1
+    $defines = @()
+    if ($file.Name -eq "123-bugs_nand3.sv") { $defines += "-DHDL_STUB_ANDGATE5" }
+    if ($file.Name -eq "139-tb__and.sv") { $defines += "-DHDL_STUB_ANDGATE2" }
+    $messages = & $Iverilog -g2012 -Wall -t null -s top_module @defines $stubs $file.FullName 2>&1
     if ($LASTEXITCODE -ne 0) {
         $failures += [pscustomobject]@{ file = $file.FullName.Substring($root.Length + 1); messages = @($messages) }
     }
