@@ -1,13 +1,13 @@
-module top_module( 
+module top_module(
     input [2:0] a, b,
     input cin,
     output [2:0] cout,
-    output [2:0] sum 
+    output [2:0] sum
 );
-//4 bit addition 
+//4 bit addition
     wire [3:0] carry;
     assign carry[0]=cin;
-    
+
     genvar i;
     generate
         for(i=0;i<3;i=i+1)begin : generating
@@ -28,5 +28,5 @@ module fa(
 );
     assign sum= a^b^cin;
     assign cout = a&b | b&cin | a &cin ;
-    
+
 endmodule

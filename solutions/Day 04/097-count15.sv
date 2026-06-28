@@ -8,13 +8,13 @@ module top_module (
         if(reset) begin
             count<=4'b0000;
         end
-        
+
         else begin
             if(count==4'b1111)
                 count<=4'b0000;
-            else 
+            else
                 count<=count+1'b1;
-        end       
+        end
     end
     assign q=count;
 endmodule

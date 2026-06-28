@@ -5,6 +5,6 @@ module top_module(
     input c,
     input d,
     output out,
-    output out_n   ); 
+    output out_n   );
 
 endmodule

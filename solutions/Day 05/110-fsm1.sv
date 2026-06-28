@@ -3,7 +3,7 @@ module top_module(
     input areset,    // Asynchronous reset to state B
     input in,
     output out
-);//  
+);//
 
     parameter A=0, B=1;
     reg state, next_state;
@@ -20,11 +20,11 @@ module top_module(
         // State flip-flops with asynchronous reset
         if(areset)
             state<=A;
-        else 
+        else
             state <=next_state;
     end
 
     // Output logic
     // assign out = (state == ...);
-    assign out = (state == A);    
+    assign out = (state == A);
 endmodule

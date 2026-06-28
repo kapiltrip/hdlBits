@@ -1,13 +1,15 @@
 # HDLBits Learning Archive
 
-Offline study archive for **114 completed HDLBits problems**, from **Simple wire** through **Simple state transitions 3**.
+Offline study archive for **135 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series**.
 
-- Completion boundary: `fsm3comb` completed; `fsm3onehot` attempted but not completed at the final rescan.
+- Completion boundary: `sim/circuit10` completed; `lemmings2` remains under review.
+- Tracker status: **135 completed**, **1 review**, and **42 to do**.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
-- The Excel tracker is at [outputs/hdlbits-archive/HDLBits_Tracker.xlsx](outputs/hdlbits-archive/HDLBits_Tracker.xlsx).
-- Every problem has a problem note, screenshot, standalone Verilog solution, source URL, timestamp, and attempt statistics.
-- Every day page now shows each screenshot at full page width, followed by a short explanation of the task and the saved Verilog solution.
-- Select any embedded screenshot to open its original-resolution image.
+- The complete Excel tracker is at [outputs/hdlbits-archive/HDLBits_Tracker.xlsx](outputs/hdlbits-archive/HDLBits_Tracker.xlsx).
+- [Review queue](Review.md) includes the attempted Lemmings problem and all four unfinished counter questions with complete screenshots.
+- Every completed problem has a deep problem note, complete question-and-solution screenshot, standalone Verilog solution, source URL, timestamp, and attempt statistics.
+- All archived screenshots were recaptured using the measured full problem-content boundary and checked against [screenshot_audit.json](screenshot_audit.json).
+- The second-pass code, screenshot, workbook, link, and formatting checks are recorded in [REPOSITORY_REVIEW.md](REPOSITORY_REVIEW.md).
 
 ## Study days
 
@@ -17,7 +19,8 @@ Offline study archive for **114 completed HDLBits problems**, from **Simple wire
 | [Day 02](Day%2002.md) | 2026-06-24 | 34 |
 | [Day 03](Day%2003.md) | 2026-06-25 | 42 |
 | [Day 04](Day%2004.md) | 2026-06-26 | 19 |
-| [Day 05](Day%2005.md) | 2026-06-27 | 7 |
+| [Day 05](Day%2005.md) | 2026-06-27 | 12 |
+| [Day 06](Day%2006.md) | 2026-06-28 | 16 |
 
 ## Section index
 
@@ -199,3 +202,34 @@ Offline study archive for **114 completed HDLBits problems**, from **Simple wire
 | 112 | [Simple FSM 2 (asynchronous reset)](problems/Day%2005/112-fsm2.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/112-fsm2.png) | [Code](solutions/Day%2005/112-fsm2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2) |
 | 113 | [Simple FSM 2 (synchronous reset)](problems/Day%2005/113-fsm2s.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/113-fsm2s.png) | [Code](solutions/Day%2005/113-fsm2s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2s) |
 | 114 | [Simple state transitions 3](problems/Day%2005/114-fsm3comb.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/114-fsm3comb.png) | [Code](solutions/Day%2005/114-fsm3comb.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3comb) |
+| 115 | [Simple one-hot state transitions 3](problems/Day%2005/115-fsm3onehot.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/115-fsm3onehot.png) | [Code](solutions/Day%2005/115-fsm3onehot.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3onehot) |
+| 116 | [Simple FSM 3 (asynchronous reset)](problems/Day%2005/116-fsm3.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/116-fsm3.png) | [Code](solutions/Day%2005/116-fsm3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3) |
+| 117 | [Simple FSM 3 (synchronous reset)](problems/Day%2005/117-fsm3s.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/117-fsm3s.png) | [Code](solutions/Day%2005/117-fsm3s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3s) |
+| 118 | [Design a Moore FSM](problems/Day%2005/118-exams__ece241_2013_q4.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/118-exams__ece241_2013_q4.png) | [Code](solutions/Day%2005/118-exams__ece241_2013_q4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) |
+| 119 | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/119-lemmings1.png) | [Code](solutions/Day%2005/119-lemmings1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
+| 121 | [Q2b: Another FSM](problems/Day%2006/121-exams__2013_q2bfsm.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/121-exams__2013_q2bfsm.png) | [Code](solutions/Day%2006/121-exams__2013_q2bfsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
+
+## Verification: Reading Simulations → Finding bugs in code
+
+| # | Problem | Day | Date | Screenshot | Solution | Source |
+|---:|---|---|---|---|---|---|
+| 122 | [Mux](problems/Day%2006/122-bugs_mux2.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/122-bugs_mux2.png) | [Code](solutions/Day%2006/122-bugs_mux2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_mux2) |
+| 123 | [NAND](problems/Day%2006/123-bugs_nand3.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/123-bugs_nand3.png) | [Code](solutions/Day%2006/123-bugs_nand3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_nand3) |
+| 124 | [Mux](problems/Day%2006/124-bugs_mux4.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/124-bugs_mux4.png) | [Code](solutions/Day%2006/124-bugs_mux4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_mux4) |
+| 125 | [Add/sub](problems/Day%2006/125-bugs_addsubz.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/125-bugs_addsubz.png) | [Code](solutions/Day%2006/125-bugs_addsubz.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_addsubz) |
+| 126 | [Case statement](problems/Day%2006/126-bugs_case.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/126-bugs_case.png) | [Code](solutions/Day%2006/126-bugs_case.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_case) |
+
+## Verification: Reading Simulations → Build a circuit from a simulation waveform
+
+| # | Problem | Day | Date | Screenshot | Solution | Source |
+|---:|---|---|---|---|---|---|
+| 127 | [Combinational circuit 1](problems/Day%2006/127-sim__circuit1.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/127-sim__circuit1.png) | [Code](solutions/Day%2006/127-sim__circuit1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit1) |
+| 128 | [Combinational circuit 2](problems/Day%2006/128-sim__circuit2.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/128-sim__circuit2.png) | [Code](solutions/Day%2006/128-sim__circuit2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit2) |
+| 129 | [Combinational circuit 3](problems/Day%2006/129-sim__circuit3.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/129-sim__circuit3.png) | [Code](solutions/Day%2006/129-sim__circuit3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit3) |
+| 130 | [Combinational circuit 4](problems/Day%2006/130-sim__circuit4.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/130-sim__circuit4.png) | [Code](solutions/Day%2006/130-sim__circuit4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit4) |
+| 131 | [Combinational circuit 5](problems/Day%2006/131-sim__circuit5.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/131-sim__circuit5.png) | [Code](solutions/Day%2006/131-sim__circuit5.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit5) |
+| 132 | [Combinational circuit 6](problems/Day%2006/132-sim__circuit6.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/132-sim__circuit6.png) | [Code](solutions/Day%2006/132-sim__circuit6.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit6) |
+| 133 | [Sequential circuit 7](problems/Day%2006/133-sim__circuit7.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/133-sim__circuit7.png) | [Code](solutions/Day%2006/133-sim__circuit7.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit7) |
+| 134 | [Sequential circuit 8](problems/Day%2006/134-sim__circuit8.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/134-sim__circuit8.png) | [Code](solutions/Day%2006/134-sim__circuit8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit8) |
+| 135 | [Sequential circuit 9](problems/Day%2006/135-sim__circuit9.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/135-sim__circuit9.png) | [Code](solutions/Day%2006/135-sim__circuit9.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit9) |
+| 136 | [Sequential circuit 10](problems/Day%2006/136-sim__circuit10.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/136-sim__circuit10.png) | [Code](solutions/Day%2006/136-sim__circuit10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit10) |

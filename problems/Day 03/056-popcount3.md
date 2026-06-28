@@ -24,7 +24,7 @@ Count the number of asserted bits in a 3-bit input and return that count as a bi
 ```verilog
 module top_module(
     input [2:0] in,
-    output [1:0] out
+    output reg [1:0] out
 );
     integer i;
     always @(*)begin

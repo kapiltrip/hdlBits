@@ -6,9 +6,9 @@ module top_module (
     output heater,
     output aircon,
     output fan
-); 
+);
     assign heater = mode & too_cold;
     assign aircon = ~mode & too_hot;
     assign fan    = fan_on | heater | aircon;
 endmodule
-//wand , wor to resolve, teh conditions 
+//wand , wor to resolve, teh conditions

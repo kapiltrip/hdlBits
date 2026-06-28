@@ -11,7 +11,7 @@ module top_module (
         end else begin
             if(count>=4'b1001)
                 count<=4'b0000;
-            else 
+            else
                 count<=count+1'b1;
         end
     end

@@ -1,7 +1,7 @@
 // synthesis verilog_input_version verilog_2001
 module top_module (
     input [7:0] in,
-    output reg [2:0] pos 
+    output reg [2:0] pos
 );
     always @(*)begin
         casez (in)
@@ -14,7 +14,7 @@ module top_module (
             8'b?1000000:pos=3'b110;
             8'b10000000:pos=3'b111;
             default : pos = 3'b000;
-            
+
         endcase
     end
 endmodule

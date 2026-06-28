@@ -368,7 +368,7 @@ Count the number of asserted bits in a 3-bit input and return that count as a bi
 ```verilog
 module top_module(
     input [2:0] in,
-    output [1:0] out
+    output reg [1:0] out
 );
     integer i;
     always @(*)begin
@@ -1053,7 +1053,7 @@ Create eight D flip-flops in parallel so an entire 8-bit vector is registered on
 module top_module (
     input clk,
     input [7:0] d,
-    output [7:0] q
+    output reg [7:0] q
 );
     always @(posedge clk)begin
         q<=d;
@@ -1107,7 +1107,7 @@ module top_module (
     input clk,
     input reset,
     input [7:0] d,
-    output [7:0] q
+    output reg [7:0] q
 );
     always @(negedge clk )begin
         if(reset)
@@ -1138,7 +1138,7 @@ module top_module (
     input clk,
     input areset,   // active high asynchronous reset
     input [7:0] d,
-    output [7:0] q
+    output reg [7:0] q
 );
     always @(posedge clk or posedge areset)begin
         if(areset)
@@ -1170,7 +1170,7 @@ module top_module (
     input resetn,
     input [1:0] byteena,
     input [15:0] d,
-    output [15:0] q
+    output reg [15:0] q
 );
     always @(posedge clk)begin
         if(!resetn)begin
@@ -1207,7 +1207,7 @@ Model the level-sensitive D latch shown in the exam circuit.
 module top_module (
     input d,
     input ena,
-    output q
+    output reg q
 );
     always @(*)begin
         if(ena)
@@ -1236,7 +1236,7 @@ module top_module (
     input clk,
     input d,
     input ar,   // asynchronous reset
-    output q
+    output reg q
 );
     always @(posedge clk or posedge ar)begin
         if(ar)begin
@@ -1268,7 +1268,7 @@ module top_module (
     input clk,
     input d,
     input r,   // synchronous reset
-    output q
+    output reg q
 );
     always @(posedge clk)begin
         if(r)
@@ -1298,7 +1298,7 @@ Implement the shown combination of a D flip-flop and combinational gate.
 module top_module (
     input clk,
     input in,
-    output out
+    output reg out
 );
 
     always @(posedge clk)begin

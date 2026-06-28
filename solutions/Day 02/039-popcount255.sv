@@ -1,8 +1,8 @@
-module top_module( 
+module top_module(
     input [254:0] in,
-    output [7:0] out 
+    output reg [7:0] out
 );
-//to count no of ones in the input vector 
+//to count no of ones in the input vector
     integer i ;
     reg [7:0] count;
     always @(*)begin
@@ -13,8 +13,8 @@ module top_module(
     end
     always @(*)begin
         out = count;
-        
+
     end
-    
-    
+
+
 endmodule

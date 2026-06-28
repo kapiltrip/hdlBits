@@ -15,5 +15,5 @@ module top_module ( input clk, input d, output q );
         .d(w2),
         .q(q)
     );
-    
+
 endmodule

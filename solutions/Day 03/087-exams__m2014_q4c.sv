@@ -1,13 +1,13 @@
 module top_module (
     input clk,
-    input d, 
+    input d,
     input r,   // synchronous reset
-    output q
+    output reg q
 );
     always @(posedge clk)begin
         if(r)
             q<=0;
-        else 
+        else
             q<=d;
     end
 endmodule

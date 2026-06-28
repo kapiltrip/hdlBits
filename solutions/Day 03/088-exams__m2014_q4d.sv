@@ -1,7 +1,7 @@
 module top_module (
     input clk,
-    input in, 
-    output out
+    input in,
+    output reg out
 );
 
     always @(posedge clk)begin

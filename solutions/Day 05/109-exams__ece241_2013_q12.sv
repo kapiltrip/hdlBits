@@ -3,15 +3,15 @@ module top_module (
     input enable,
     input S,
     input A, B, C,
-    output Z 
-); 
-//8 bit shift register 
+    output reg Z
+);
+//8 bit shift register
     reg [7:0] Q;
     always @(posedge clk)begin
-        //S is the input to the shift, reg 
+        //S is the input to the shift, reg
         if(enable)begin
             Q[0]<=S;
-            Q[7:1]=Q[6:0];
+            Q[7:1]<=Q[6:0];
         end
     end
     always @(*)begin
@@ -24,6 +24,6 @@ module top_module (
             3'b101:Z=Q[5];
             3'b110:Z=Q[6];
             3'b111:Z=Q[7];
-        endcase 
+        endcase
     end
 endmodule

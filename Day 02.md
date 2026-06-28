@@ -339,13 +339,13 @@ module top_module(
     wire [15:0] b1Input=b[15:0];
     wire [15:0] a2Input=a[31:16];
     wire [15:0] b2Input=b[31:16];
-    wire [15:0] coutAdder1;
-    wire [15:0] coutAdder2;
+    wire coutAdder1;
+    wire coutAdder2;
     wire [15:0] sum1,sum2;
     add16 adder1(
         .a(a1Input),
         .b(b1Input),
-        .cin(0),
+        .cin(1'b0),
         .cout(coutAdder1),
         .sum(sum1)
     );
@@ -866,7 +866,7 @@ Count how many bits are high in a 255-bit input vector using combinational accum
 ```verilog
 module top_module(
     input [254:0] in,
-    output [7:0] out
+    output reg [7:0] out
 );
 //to count no of ones in the input vector
     integer i ;
@@ -915,7 +915,7 @@ module top_module(
 genvar i ;
     generate
         for(i=0;i<100;i=i+1)begin : adder100
-            full_adder(
+            full_adder fa (
                 .a(a[i]),
                 .b(b[i]),
                 .cin(carry[i]),

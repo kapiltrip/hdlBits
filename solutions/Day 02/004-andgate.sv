@@ -1,6 +1,6 @@
-module top_module( 
-    input a, 
-    input b, 
+module top_module(
+    input a,
+    input b,
     output out
 );
     and g1(out ,a , b);

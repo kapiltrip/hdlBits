@@ -4,6 +4,6 @@ module top_module(
     input load,
     input ena,
     input [3:0] data,
-    output reg [3:0] q); 
+    output reg [3:0] q);
 
 endmodule
