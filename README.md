@@ -1,12 +1,12 @@
 # HDLBits Learning Archive
 
-Offline study archive for **140 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
+Offline study archive for **141 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
 
-- Completion boundary: all five Writing Testbenches exercises through `tb/tff` are completed; `lemmings2` remains under review.
-- Tracker status: **140 completed**, **1 review**, and **37 to do**.
+- Latest archived completion: `exams/ece241_2013_q8`; `lemmings2` and `exams/2013_q2afsm` remain under review.
+- Tracker status: **141 completed**, **2 review**, and **35 to do**.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The complete Excel tracker is at [outputs/hdlbits-archive/HDLBits_Tracker.xlsx](outputs/hdlbits-archive/HDLBits_Tracker.xlsx).
-- [Review queue](Review.md) includes the attempted Lemmings problem and all four unfinished counter questions with complete screenshots.
+- [Review queue](Review.md) includes the attempted Lemmings/Q2a FSM problems and all four unfinished counter questions with complete screenshots.
 - Every completed problem has a deep problem note, complete question-and-solution screenshot, standalone Verilog solution, source URL, timestamp, and attempt statistics.
 - All archived screenshots were recaptured using the measured full problem-content boundary and checked against [screenshot_audit.json](screenshot_audit.json).
 - The second-pass code, screenshot, workbook, link, and formatting checks are recorded in [REPOSITORY_REVIEW.md](REPOSITORY_REVIEW.md).
@@ -21,6 +21,7 @@ Offline study archive for **140 completed HDLBits problems**. The Excel tracker 
 | [Day 04](Day%2004.md) | 2026-06-26 | 19 |
 | [Day 05](Day%2005.md) | 2026-06-27 | 12 |
 | [Day 06](Day%2006.md) | 2026-06-28 | 21 |
+| [Day 07](Day%2007.md) | 2026-06-29 | 1 |
 
 ## Section index
 
@@ -208,6 +209,7 @@ Offline study archive for **140 completed HDLBits problems**. The Excel tracker 
 | 118 | [Design a Moore FSM](problems/Day%2005/118-exams__ece241_2013_q4.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/118-exams__ece241_2013_q4.png) | [Code](solutions/Day%2005/118-exams__ece241_2013_q4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) |
 | 119 | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/119-lemmings1.png) | [Code](solutions/Day%2005/119-lemmings1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
 | 121 | [Q2b: Another FSM](problems/Day%2006/121-exams__2013_q2bfsm.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/121-exams__2013_q2bfsm.png) | [Code](solutions/Day%2006/121-exams__2013_q2bfsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
+| 142 | [Q8: Design a Mealy FSM](problems/Day%2007/142-exams__ece241_2013_q8.md) | Day 07 | 2026-06-29 | [Image](images/Day%2007/142-exams__ece241_2013_q8.png) | [Code](solutions/Day%2007/142-exams__ece241_2013_q8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) |
 
 ## Verification: Reading Simulations → Finding bugs in code
 
