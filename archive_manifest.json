@@ -3358,5 +3358,29 @@
     "problemNotePath": "problems/Day 06/141-tb__tff.md",
     "screenshotPath": "images/Day 06/141-tb__tff.png",
     "solutionPath": "solutions/Day 06/141-tb__tff.sv"
+  },
+  {
+    "category": "Circuits",
+    "section": "Sequential Logic",
+    "slug": "exams/ece241_2013_q8",
+    "status": "Completed",
+    "subsection": "Finite State Machines",
+    "title": "Q8: Design a Mealy FSM",
+    "url": "https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8",
+    "problemNumber": 142,
+    "completionDisplay": "6/29/2026, 12:02:40 AM",
+    "compileError": 5,
+    "incorrect": 6,
+    "simulationError": 0,
+    "success": 1,
+    "successRate": "8%",
+    "totalAttempts": 12,
+    "dateKey": "2026-06-29",
+    "time": "12:02:40 AM",
+    "day": "Day 07",
+    "base": "142-exams__ece241_2013_q8",
+    "problemNotePath": "problems/Day 07/142-exams__ece241_2013_q8.md",
+    "screenshotPath": "images/Day 07/142-exams__ece241_2013_q8.png",
+    "solutionPath": "solutions/Day 07/142-exams__ece241_2013_q8.sv"
   }
 ]

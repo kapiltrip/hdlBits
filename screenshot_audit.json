@@ -2,9 +2,9 @@
   "generatedAt": "2026-06-28",
   "method": "Measured #content boundary from the problem heading through the editor and bottom navigation; successful submissions were accepted only after the editor changed from the starter template.",
   "totals": {
-    "checked": 145,
-    "completed": 140,
-    "review": 1,
+    "checked": 147,
+    "completed": 141,
+    "review": 2,
     "todoCaptured": 4,
     "failures": 0
   },
@@ -1900,6 +1900,20 @@
       "complete": true
     },
     {
+      "slug": "exams/ece241_2013_q8",
+      "status": "Completed",
+      "screenshotPath": "images/Day 07/142-exams__ece241_2013_q8.png",
+      "format": "JPEG",
+      "width": 1043,
+      "height": 1478,
+      "bytes": 134727,
+      "containsTitle": true,
+      "containsModuleDeclaration": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "complete": true
+    },
+    {
       "slug": "lemmings2",
       "status": "Review",
       "screenshotPath": "images/Review/120-lemmings2.png",
@@ -1911,6 +1925,20 @@
       "containsModuleDeclaration": true,
       "containsEditor": true,
       "containsLoadedSolution": true,
+      "complete": true
+    },
+    {
+      "slug": "exams/2013_q2afsm",
+      "status": "Review",
+      "screenshotPath": "images/Review/review-exams__2013_q2afsm.png",
+      "format": "JPEG",
+      "width": 1043,
+      "height": 1833,
+      "bytes": 182343,
+      "containsTitle": true,
+      "containsModuleDeclaration": true,
+      "containsEditor": true,
+      "containsLoadedSolution": false,
       "complete": true
     },
     {

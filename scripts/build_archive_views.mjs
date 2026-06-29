@@ -149,6 +149,13 @@ The output vector is \`{fr3, fr2, fr1, dfr}\`. More fill valves are enabled at l
 Reset is active-high and synchronous, loading the below-sensor-1 state. The explicit default state and default output also recover deterministically from an unused 3-bit encoding.
 
 **Key lesson:** whenever identical input values require different outputs depending on the path taken to reach them, the path must be stored as state.`,
+  "exams/ece241_2013_q8": `This is a three-state Mealy sequence detector for the overlapping bit pattern 101. The states store the longest useful prefix of the target sequence that has already been seen: S0 means no useful prefix, S1 means the last bit can serve as the leading 1, and S10 means the input stream currently ends in 10.
+
+The next-state table follows that prefix meaning. From S0, input 1 enters S1 and input 0 stays in S0. From S1, another 1 still leaves a valid leading 1, while 0 advances to S10. From S10, input 1 completes 101 and also becomes the leading 1 of a possible overlapping next match, so the machine goes to S1; input 0 breaks the prefix and returns to S0.
+
+The output is Mealy-style: \`z = (state == S10) && x\`. It asserts during the same cycle that the final 1 arrives, not one clock later. The reset is active-low and asynchronous because the state register is sensitive to \`negedge aresetn\`; when reset is asserted, state returns immediately to S0.
+
+**Trace example:** for input stream 10101, the machine visits S0 -> S1 -> S10, asserts z on the third bit, returns to S1, moves to S10, and asserts z again on the fifth bit. That is the overlapping behavior the problem asks for.`,
   lemmings1: `The Lemming has only two Moore states: walking left and walking right. Direction changes occur only when an obstacle is encountered on the side toward which it is currently walking.
 
 In LEFT, \`bump_left=1\` sends the FSM to RIGHT; otherwise it stays LEFT. In RIGHT, \`bump_right=1\` sends it to LEFT; otherwise it stays RIGHT. If both bump inputs are high, the relevant condition for either current state is high, so the machine still reverses direction exactly once.
