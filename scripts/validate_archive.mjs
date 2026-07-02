@@ -1,15 +1,15 @@
 import fs from "node:fs/promises";
 import path from "node:path";
 
-const root = process.cwd();
+const root = path.resolve(import.meta.dirname, "..");
 const manifest = JSON.parse(await fs.readFile(path.join(root, "archive_manifest.json"), "utf8"));
 const explanations = JSON.parse(await fs.readFile(path.join(root, "problem_explanations.json"), "utf8"));
 const screenshotAudit = JSON.parse(await fs.readFile(path.join(root, "screenshot_audit.json"), "utf8"));
 const failures = [];
 const readText = (relative) => fs.readFile(path.join(root, relative), "utf8");
 
-if (manifest.length !== 141) failures.push(`Manifest count is ${manifest.length}, expected 141`);
-if (screenshotAudit.totals.checked !== 147) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 147`);
+if (manifest.length !== 149) failures.push(`Manifest count is ${manifest.length}, expected 149`);
+if (screenshotAudit.totals.checked !== 151) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 151`);
 if (screenshotAudit.totals.failures !== 0) failures.push(`Screenshot audit reports ${screenshotAudit.totals.failures} failures`);
 
 const problemNumbers = manifest.map((record) => record.problemNumber);
@@ -23,9 +23,9 @@ if (problemNumbers.some((number, index) => index > 0 && number <= problemNumbers
 const completedScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Completed");
 const reviewScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Review");
 const todoScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "To Do");
-if (completedScreenshots.length !== 141) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 141`);
+if (completedScreenshots.length !== 149) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 149`);
 if (reviewScreenshots.length !== 2) failures.push(`Review screenshot count is ${reviewScreenshots.length}, expected 2`);
-if (todoScreenshots.length !== 4) failures.push(`Captured To Do screenshot count is ${todoScreenshots.length}, expected 4`);
+if (todoScreenshots.length !== 0) failures.push(`Captured To Do screenshot count is ${todoScreenshots.length}, expected 0`);
 
 for (const screenshot of screenshotAudit.screenshots) {
   if (!screenshot.complete) failures.push(`Incomplete screenshot audit: ${screenshot.slug}`);
@@ -67,7 +67,7 @@ for (const record of manifest) {
   }
 }
 
-for (const day of Array.from({ length: 7 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}`)) {
+for (const day of Array.from({ length: 9 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}`)) {
   const dayPage = await readText(`${day}.md`);
   for (const record of manifest.filter((item) => item.day === day)) {
     if (!dayPage.includes(path.basename(record.problemNotePath))) failures.push(`${day}.md is missing ${record.problemNotePath}`);
@@ -79,10 +79,6 @@ for (const requiredFile of [
   "outputs/hdlbits-archive/HDLBits_Tracker.xlsx",
   "images/Review/120-lemmings2.png",
   "images/Review/review-exams__2013_q2afsm.png",
-  "images/Review/todo-exams__ece241_2014_q7a.png",
-  "images/Review/todo-exams__ece241_2014_q7b.png",
-  "images/Review/todo-countbcd.png",
-  "images/Review/todo-count_clock.png",
 ]) {
   try {
     await fs.access(path.join(root, requiredFile));
@@ -95,7 +91,7 @@ const markdownFiles = [
   "README.md",
   "Review.md",
   "REPOSITORY_REVIEW.md",
-  ...Array.from({ length: 7 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}.md`),
+  ...Array.from({ length: 9 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}.md`),
   ...manifest.map((record) => record.problemNotePath),
 ];
 

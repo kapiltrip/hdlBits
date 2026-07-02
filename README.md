@@ -1,12 +1,12 @@
 # HDLBits Learning Archive
 
-Offline study archive for **141 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
+Offline study archive for **149 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
 
-- Latest archived completion: `exams/ece241_2013_q8`; `lemmings2` and `exams/2013_q2afsm` remain under review.
-- Tracker status: **141 completed**, **2 review**, and **35 to do**.
+- Latest archived completion: `exams/review2015_fsmshift`; `lemmings2` and `exams/2013_q2afsm` remain under review.
+- Tracker status: **149 completed**, **2 review**, and **27 to do**.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The complete Excel tracker is at [outputs/hdlbits-archive/HDLBits_Tracker.xlsx](outputs/hdlbits-archive/HDLBits_Tracker.xlsx).
-- [Review queue](Review.md) includes the attempted Lemmings/Q2a FSM problems and all four unfinished counter questions with complete screenshots.
+- [Review queue](Review.md) contains only the attempted Lemmings 2 and Q2a FSM problems; all four counter questions are now completed and archived.
 - Every completed problem has a deep problem note, complete question-and-solution screenshot, standalone Verilog solution, source URL, timestamp, and attempt statistics.
 - All archived screenshots were recaptured using the measured full problem-content boundary and checked against [screenshot_audit.json](screenshot_audit.json).
 - The second-pass code, screenshot, workbook, link, and formatting checks are recorded in [REPOSITORY_REVIEW.md](REPOSITORY_REVIEW.md).
@@ -22,6 +22,8 @@ Offline study archive for **141 completed HDLBits problems**. The Excel tracker 
 | [Day 05](Day%2005.md) | 2026-06-27 | 12 |
 | [Day 06](Day%2006.md) | 2026-06-28 | 21 |
 | [Day 07](Day%2007.md) | 2026-06-29 | 1 |
+| [Day 08](Day%2008.md) | 2026-06-30 | 1 |
+| [Day 09](Day%2009.md) | 2026-07-02 | 7 |
 
 ## Section index
 
@@ -179,6 +181,10 @@ Offline study archive for **141 completed HDLBits problems**. The Excel tracker 
 | 098 | [Decade counter](problems/Day%2004/098-count10.md) | Day 04 | 2026-06-26 | [Image](images/Day%2004/098-count10.png) | [Code](solutions/Day%2004/098-count10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count10) |
 | 099 | [Decade counter again](problems/Day%2004/099-count1to10.md) | Day 04 | 2026-06-26 | [Image](images/Day%2004/099-count1to10.png) | [Code](solutions/Day%2004/099-count1to10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count1to10) |
 | 100 | [Slow decade counter](problems/Day%2004/100-countslow.md) | Day 04 | 2026-06-26 | [Image](images/Day%2004/100-countslow.png) | [Code](solutions/Day%2004/100-countslow.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/countslow) |
+| 143 | [Counter 1-12](problems/Day%2008/143-exams__ece241_2014_q7a.md) | Day 08 | 2026-06-30 | [Image](images/Day%2008/143-exams__ece241_2014_q7a.png) | [Code](solutions/Day%2008/143-exams__ece241_2014_q7a.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7a) |
+| 144 | [Counter 1000](problems/Day%2009/144-exams__ece241_2014_q7b.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/144-exams__ece241_2014_q7b.png) | [Code](solutions/Day%2009/144-exams__ece241_2014_q7b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7b) |
+| 145 | [4-digit decimal counter](problems/Day%2009/145-countbcd.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/145-countbcd.png) | [Code](solutions/Day%2009/145-countbcd.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/countbcd) |
+| 146 | [12-hour clock](problems/Day%2009/146-count_clock.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/146-count_clock.png) | [Code](solutions/Day%2009/146-count_clock.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count_clock) |
 
 ## Circuits → Sequential Logic → Shift Registers
 
@@ -210,6 +216,15 @@ Offline study archive for **141 completed HDLBits problems**. The Excel tracker 
 | 119 | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/119-lemmings1.png) | [Code](solutions/Day%2005/119-lemmings1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
 | 121 | [Q2b: Another FSM](problems/Day%2006/121-exams__2013_q2bfsm.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/121-exams__2013_q2bfsm.png) | [Code](solutions/Day%2006/121-exams__2013_q2bfsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
 | 142 | [Q8: Design a Mealy FSM](problems/Day%2007/142-exams__ece241_2013_q8.md) | Day 07 | 2026-06-29 | [Image](images/Day%2007/142-exams__ece241_2013_q8.png) | [Code](solutions/Day%2007/142-exams__ece241_2013_q8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) |
+
+## Circuits → Building Larger Circuits
+
+| # | Problem | Day | Date | Screenshot | Solution | Source |
+|---:|---|---|---|---|---|---|
+| 147 | [Counter with period 1000](problems/Day%2009/147-exams__review2015_count1k.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/147-exams__review2015_count1k.png) | [Code](solutions/Day%2009/147-exams__review2015_count1k.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_count1k) |
+| 148 | [4-bit shift register and down counter](problems/Day%2009/148-exams__review2015_shiftcount.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/148-exams__review2015_shiftcount.png) | [Code](solutions/Day%2009/148-exams__review2015_shiftcount.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount) |
+| 149 | [FSM: Sequence 1101 recognizer](problems/Day%2009/149-exams__review2015_fsmseq.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/149-exams__review2015_fsmseq.png) | [Code](solutions/Day%2009/149-exams__review2015_fsmseq.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) |
+| 150 | [FSM: Enable shift register](problems/Day%2009/150-exams__review2015_fsmshift.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/150-exams__review2015_fsmshift.png) | [Code](solutions/Day%2009/150-exams__review2015_fsmshift.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift) |
 
 ## Verification: Reading Simulations → Finding bugs in code
 

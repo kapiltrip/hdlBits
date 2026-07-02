@@ -35,6 +35,24 @@ module bcd_fadd(input [3:0] a, input [3:0] b, input cin, output cout, output [3:
     assign sum = cout ? value - 10 : value[3:0];
 endmodule
 
+module count4(input clk, input enable, input load, input [3:0] d, output reg [3:0] Q);
+    always @(posedge clk) begin
+        if (load)
+            Q <= d;
+        else if (enable)
+            Q <= Q + 1'b1;
+    end
+endmodule
+
+module bcdcount(input clk, input reset, input enable, output reg [3:0] Q);
+    always @(posedge clk) begin
+        if (reset)
+            Q <= 4'd0;
+        else if (enable)
+            Q <= (Q == 4'd9) ? 4'd0 : Q + 1'b1;
+    end
+endmodule
+
 module dut(input clk);
 endmodule
 

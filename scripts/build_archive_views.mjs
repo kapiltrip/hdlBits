@@ -105,6 +105,56 @@ const explanations = {
   count10: "Implement a decade counter that counts from 0 through 9 and then wraps to 0.",
   count1to10: "Implement the specified 1-to-10 decade count sequence with the required reset and enable behaviour.",
   countslow: "Create a decade counter that advances only when the slow-enable input is asserted.",
+  "exams/ece241_2014_q7a": `This problem does not ask for a new counter datapath. HDLBits supplies a four-bit counter and asks for the control signals that make it behave as a synchronous 1-through-12 counter. The datapath always loads the constant 1, so \`c_d = 4'd1\`. Its enable input follows the external enable, while its load input is asserted for either reset or the enabled rollover condition at Q=12.
+
+Load has higher priority than enable inside the supplied \`count4\`. Therefore, when Q is 12 and enable is high, the same rising edge loads 1 instead of incrementing to 13. When Q is 12 and enable is low, neither load nor counting occurs, so the counter correctly holds 12. Reset forces \`c_load\` high independently of enable and synchronously loads 1 at the next rising edge.
+
+**Control trace:** reset=1 loads 1; Q=7 with enable=1 advances to 8; Q=12 with enable=1 loads 1; Q=12 with enable=0 remains 12. A common error is making rollover depend only on Q=12, which would reload continuously even while the counter is disabled.`,
+  "exams/ece241_2014_q7b": `The 1000 Hz input is divided by cascading three synchronous decade counters. Every counter receives the same clock; the hierarchy is created entirely with enable pulses, so this is a synchronous design rather than a ripple-clock chain.
+
+The least-significant decade runs every cycle, making \`c_enable[0]=1\`. The middle decade advances only while the least-significant digit is 9, and the most-significant decade advances only while both lower digits are 9. On the 999th terminal state all three enable conditions are active. The next rising edge rolls the digits to 000, so the terminal decode \`msb==9 && middle==9 && lsb==9\` is high for exactly one 1000 Hz cycle before that edge.
+
+That one-cycle terminal decode is the requested \`OneHertz\` pulse. It repeats every 1000 input cycles, or once per second. The important design rule is that carry enables are combinational functions of the pre-edge digit values; registering them would delay the carry and corrupt the decimal sequence.`,
+  countbcd: `This is a four-digit synchronous BCD counter. Each four-bit digit stores only 0 through 9, and every digit is clocked by the same rising edge. The ones digit advances on every enabled cycle of the overall design. Each higher digit advances only when every less-significant digit is currently 9.
+
+The enable outputs expose those carry conditions: \`ena[1]\` is high at x9, \`ena[2]\` at x99, and \`ena[3]\` at x999. Because nonblocking assignments evaluate their right-hand sides from the old state, the same edge that changes 0099 to 0100 sees both lower digits at 9, clears them, and increments the hundreds digit.
+
+The output concatenation \`{digit3,digit2,digit1,digit0}\` places the thousands nibble in q[15:12] and the ones nibble in q[3:0]. Reset is synchronous and clears all four digits together. The key pitfall is checking an already-updated lower digit; synchronous carry must be derived from the values present immediately before the active edge.`,
+  count_clock: `The clock contains six BCD digits plus one AM/PM state bit. The outer enable gates the entire time update, while synchronous reset has priority and loads the required 12:00:00 AM state. If enable is low, every register retains its previous value.
+
+Seconds normally increment their ones nibble. At x9, the ones nibble clears and the tens nibble increments; at 59, the complete seconds byte clears and the same edge advances minutes. Minutes use the identical BCD rollover pattern. Only when both seconds and minutes are 59 does the hour update.
+
+Hours require a non-decimal sequence: 01 through 12. The 09-to-10 transition uses the BCD nibble carry, 11 advances to 12 and toggles PM, and 12 rolls to 01 without toggling PM. This places the AM/PM transition at 11:59:59 to 12:00:00, not at 12:59:59 to 01:00:00.
+
+All state changes use nonblocking assignments in one clocked process, so each decision observes the same pre-edge time. That property lets the nested terminal-count tests propagate a one-cycle carry from seconds through minutes into hours without generating derived clocks.`,
+  "exams/review2015_count1k": `This design is a modulo-1000 synchronous counter. Its legal sequence is 0, 1, 2, ... 999, then back to 0, which gives exactly 1000 distinct states and therefore a period of 1000 clock cycles. Ten bits are required because nine bits can represent only 0 through 511, while ten bits can represent the terminal value 999.
+
+The clocked process gives synchronous reset the highest priority. When reset is sampled high on a rising edge, the register becomes zero. Otherwise, the terminal-count comparison is evaluated using the old value: 999 loads zero, and every other value increments by one. A nonblocking assignment is appropriate because q represents registered state and changes only after the active clock edge.
+
+The explicit terminal comparison is essential. Letting a 10-bit binary register overflow naturally would produce a modulo-1024 counter, so values 1000 through 1023 would incorrectly appear in the sequence. The separate internal register is connected continuously to q, although q could equivalently be declared as a register and updated directly.
+
+**Boundary trace:** 998 advances to 999; 999 advances to 0; asserting reset while the count is 417 loads 0 at the next rising edge.`,
+  "exams/review2015_shiftcount": `One four-bit register performs two different operations. When shift_ena is asserted, the existing bits move toward the most-significant end and the serial data bit enters bit 0 through {register[2:0], data}. Supplying a four-bit word most-significant bit first therefore reconstructs that word after four enabled shifts.
+
+When count_ena is asserted, the same storage acts as a modulo-16 down counter. Values 15 through 1 decrement normally, while 0 explicitly wraps to 15. Four-bit subtraction would also wrap naturally, but the terminal branch makes the intended rollover unambiguous.
+
+The specification guarantees that shift_ena and count_ena are never high together, so their relative priority is intentionally irrelevant. The saved solution uses two independent if statements to reflect that contract. If both controls were asserted despite the contract, the later nonblocking assignment would win; a production interface without the guarantee should instead define priority explicitly with if/else if.
+
+With both controls low, no assignment occurs and the register holds its value. There is no reset input, so the environment must shift in a complete value before relying on the state.`,
+  "exams/review2015_fsmseq": `This Moore finite-state machine recognizes the serial bit pattern 1101 and then latches a permanent command to begin shifting. States S0 through S3 record how much of the target prefix has been matched: no useful prefix, 1, 11, and 110. DONE means the complete 1101 sequence has appeared.
+
+The transitions preserve useful overlap. From S2 (the suffix 11), another 1 remains in S2 because the newest two bits are still 11; a 0 advances to S3. From S3, a 1 completes 1101 and enters DONE, while a 0 has no useful suffix and returns to S0. Earlier mismatches similarly return to the correct prefix state.
+
+DONE is absorbing: both possible data values leave the machine in DONE. Therefore start_shifting, decoded solely from the registered state, stays asserted forever after recognition and can be cleared only by reset. Reset is synchronous because it is tested inside an always @(posedge clk) process rather than included in the sensitivity list.
+
+**Example trace:** after reset, inputs 1,1,0,1 move S0→S1→S2→S3→DONE. The output becomes high after the edge accepting the final 1 and remains high on all later edges.`,
+  "exams/review2015_fsmshift": `This control circuit produces a pulse window measured in clock cycles rather than detecting a data pattern. A three-bit saturating counter records how many post-reset rising edges have occurred. Synchronous reset loads zero; while the value is below four, each later edge increments it; after reaching four, the missing assignment deliberately holds the state.
+
+shift_ena is a Moore-style combinational decode of the registered count. It is high for count values 0, 1, 2, and 3, giving exactly four complete clock intervals, and becomes low when the fourth post-reset edge changes the count to 4. Saturation prevents the counter from wrapping back to zero and accidentally reasserting the enable after eight cycles.
+
+Reset timing matters. Because reset is synchronous, asserting it between clock edges does not immediately modify count or the output. The next rising edge loads zero, after which the output is high and the four-cycle window starts again. No explicit else count <= count assignment is needed in clocked logic: when no branch assigns the register, the flip-flops retain their previous value.
+
+**Cycle trace:** reset edge→0/high, then successive edges produce 1/high, 2/high, 3/high, 4/low, followed by 4/low indefinitely until another reset edge.`,
   shift4: "Build a 4-bit shift register with the specified load/shift controls and expose the requested stage output.",
   rotate100: "Build a 100-bit register that can hold, load, rotate left, or rotate right according to the controls.",
   shift18: "Build a 64-bit register that can load or perform left/right arithmetic shifts by either 1 or 8 positions.",
