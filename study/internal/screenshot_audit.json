@@ -1,9 +1,9 @@
 {
   "generatedAt": "2026-07-04",
-  "method": "Measured the complete problem page from the heading through the editor, successful compile/simulation result, and bottom navigation; completed captures require the submitted answer and an authoritative success state.",
+  "method": "Measured the complete problem page from the heading through the editor and bottom navigation; completed captures require the submitted answer plus either a visible success result or the authoritative Last success submission-history entry.",
   "totals": {
-    "checked": 155,
-    "completed": 153,
+    "checked": 159,
+    "completed": 157,
     "review": 2,
     "todoCaptured": 0,
     "failures": 0
@@ -2121,6 +2121,64 @@
       "containsModuleDeclaration": true,
       "containsEditor": true,
       "containsLoadedSolution": true,
+      "complete": true
+    },
+    {
+      "slug": "step_one",
+      "status": "Completed",
+      "screenshotPath": "images/Day 09/151-step_one-solution.png",
+      "format": "JPEG",
+      "width": 1535,
+      "height": 742,
+      "bytes": 49804,
+      "containsTitle": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "containsSuccessHistory": true,
+      "complete": true
+    },
+    {
+      "slug": "zero",
+      "status": "Completed",
+      "screenshotPath": "images/Day 09/152-zero.png",
+      "format": "JPEG",
+      "width": 1535,
+      "height": 742,
+      "bytes": 52023,
+      "containsTitle": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "containsSuccessHistory": true,
+      "complete": true
+    },
+    {
+      "slug": "exams/review2015_fsm",
+      "status": "Completed",
+      "screenshotPath": "images/Day 09/153-exams__review2015_fsm-question-and-successful-submission.png",
+      "format": "PNG",
+      "width": 1216,
+      "height": 2850,
+      "bytes": 1221838,
+      "containsTitle": true,
+      "containsModuleDeclaration": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "containsSuccessHistory": true,
+      "complete": true
+    },
+    {
+      "slug": "exams/review2015_fancytimer",
+      "status": "Completed",
+      "screenshotPath": "images/Day 09/154-exams__review2015_fancytimer-question-and-successful-submission.png",
+      "format": "PNG",
+      "width": 1230,
+      "height": 3591,
+      "bytes": 1626144,
+      "containsTitle": true,
+      "containsModuleDeclaration": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "containsSuccessHistory": true,
       "complete": true
     },
     {

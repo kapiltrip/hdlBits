@@ -436,7 +436,9 @@ The logged-in HDLBits page confirms one successful attempt at 9:12:38 PM with no
 <a id="problem-153"></a>
 ## 153 — FSM: The complete FSM
 
-[Problem note](problems/Day%2009/153-exams__review2015_fsm.md) · [Verilog file](solutions/Day%2009/153-exams__review2015_fsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm)
+[Problem note](problems/Day%2009/153-exams__review2015_fsm.md) · [Open screenshot at full resolution](images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png) · [Verilog file](solutions/Day%2009/153-exams__review2015_fsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm)
+
+<a href="images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png"><img src="images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png" alt="Complete FSM question and loaded successful submission" width="100%"></a>
 
 ### What the question is asking
 
@@ -453,7 +455,9 @@ The editable implementation is in [153-exams__review2015_fsm.sv](solutions/Day%2
 <a id="problem-154"></a>
 ## 154 — The complete timer
 
-[Problem note with wrong-attempt discussion](problems/Day%2009/154-exams__review2015_fancytimer.md) · [Verilog file](solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer)
+[Problem note with wrong-attempt discussion](problems/Day%2009/154-exams__review2015_fancytimer.md) · [Open successful-submission screenshot](images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) · [Verilog file](solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer)
+
+<a href="images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png"><img src="images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png" alt="Complete timer question and loaded successful submission" width="100%"></a>
 
 ### What the question is asking
 

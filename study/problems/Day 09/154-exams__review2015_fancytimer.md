@@ -10,7 +10,9 @@
 | Success rate | 100% |
 | Verification | Confirmed from the logged-in HDLBits statistics and saved successful submission |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
-| Files | [Verilog solution](../../solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [Mistake log](../../Mistakes.md#13-the-complete-timer-separate-control-state-and-datapath-state) |
+| Files | [Successful-submission screenshot](../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) · [Verilog solution](../../solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [Mistake log](../../Mistakes.md#13-the-complete-timer-separate-control-state-and-datapath-state) |
+
+<a href="../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png"><img src="../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png" alt="Complete timer question and loaded successful submission" width="100%"></a>
 
 ## What the question is asking
 
