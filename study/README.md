@@ -5,12 +5,12 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 - Latest archived completion: `exams/m2014_q6c`.
 - Review queue: `lemmings2` and `exams/2013_q2afsm`.
 - Study status: **157 completed**, **2 review**, and **19 to do**, matching the live HDLBits solved count.
-- Workbook note: the root tracker still reflects the previous **153/2/23** snapshot; the four Day 10 completions and new `study/` link prefix require a workbook refresh when the spreadsheet authoring runtime is available.
+- Workbook status: the root tracker is current at **157 completed / 2 review / 19 to do**, uses the correct `study/` repository links, and maps all 21 remaining questions to Day 11.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The complete Excel tracker is the single root-level file [HDLBits_Tracker.xlsx](../HDLBits_Tracker.xlsx).
 - [Review queue](Review.md) contains only the two genuinely unfinished problems.
 - Every completed problem has a deep problem note, standalone Verilog solution, and source URL. The logged-in HDLBits record verified the exact timestamps and attempt totals for problems 151–154; the complete-timer wrong-attempt screenshots remain integrated with its discussion.
-- The original full-page archive captures were checked against the internal [screenshot audit](internal/screenshot_audit.json). The new `step_one` and `zero` inline screenshots were separately inspected for readable problem, timestamp, and successful-solution content.
+- All 157 completed records are covered by the internal [screenshot audit](internal/screenshot_audit.json). Problems 153 and 154 now include full question, successful-submission history, and complete loaded-answer captures; the earlier mistake images remain available for revision.
 - The second-pass code, screenshot, workbook, link, and formatting checks are recorded in the internal [repository review](internal/REPOSITORY_REVIEW.md).
 
 ## Study days
@@ -26,7 +26,8 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 | [Day 07](Day%2007.md) | 2026-06-29 | 1 |
 | [Day 08](Day%2008.md) | 2026-06-30 | 1 |
 | [Day 09](Day%2009.md) | 2026-07-02 | 11 |
-| [Day 10](Day%2010.md) | 2026-07-03 to 2026-07-04 | 4 |
+| [Day 10](Day%2010.md) | 2026-07-03 | 4 |
+| [Day 11](Day%2011.md) | 2026-07-04 | 0 completed / 21 planned |
 
 ## Section index
 
@@ -239,8 +240,8 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 | 148 | [4-bit shift register and down counter](problems/Day%2009/148-exams__review2015_shiftcount.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/148-exams__review2015_shiftcount.png) | [Code](solutions/Day%2009/148-exams__review2015_shiftcount.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount) |
 | 149 | [FSM: Sequence 1101 recognizer](problems/Day%2009/149-exams__review2015_fsmseq.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/149-exams__review2015_fsmseq.png) | [Code](solutions/Day%2009/149-exams__review2015_fsmseq.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) |
 | 150 | [FSM: Enable shift register](problems/Day%2009/150-exams__review2015_fsmshift.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/150-exams__review2015_fsmshift.png) | [Code](solutions/Day%2009/150-exams__review2015_fsmshift.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift) |
-| 153 | [FSM: The complete FSM](problems/Day%2009/153-exams__review2015_fsm.md) | Day 09 | 2026-07-02 | — | [Code](solutions/Day%2009/153-exams__review2015_fsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
-| 154 | [The complete timer](problems/Day%2009/154-exams__review2015_fancytimer.md) | Day 09 | 2026-07-02 | [Wrong attempt](images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png) | [Code](solutions/Day%2009/154-exams__review2015_fancytimer.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
+| 153 | [FSM: The complete FSM](problems/Day%2009/153-exams__review2015_fsm.md) | Day 09 | 2026-07-02 | [Question + successful submission](images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png) | [Code](solutions/Day%2009/153-exams__review2015_fsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
+| 154 | [The complete timer](problems/Day%2009/154-exams__review2015_fancytimer.md) | Day 09 | 2026-07-02 | [Question + successful submission](images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) | [Code](solutions/Day%2009/154-exams__review2015_fancytimer.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
 
 ## Verification: Reading Simulations → Finding bugs in code
 

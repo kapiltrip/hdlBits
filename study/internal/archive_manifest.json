@@ -3644,7 +3644,7 @@
     "day": "Day 09",
     "base": "153-exams__review2015_fsm",
     "problemNotePath": "problems/Day 09/153-exams__review2015_fsm.md",
-    "screenshotPath": null,
+    "screenshotPath": "images/Day 09/153-exams__review2015_fsm-question-and-successful-submission.png",
     "solutionPath": "solutions/Day 09/153-exams__review2015_fsm.sv"
   },
   {
@@ -3668,7 +3668,7 @@
     "day": "Day 09",
     "base": "154-exams__review2015_fancytimer",
     "problemNotePath": "problems/Day 09/154-exams__review2015_fancytimer.md",
-    "screenshotPath": "images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png",
+    "screenshotPath": "images/Day 09/154-exams__review2015_fancytimer-question-and-successful-submission.png",
     "solutionPath": "solutions/Day 09/154-exams__review2015_fancytimer.sv"
   },
   {

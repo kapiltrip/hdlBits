@@ -9,12 +9,12 @@ This report records the second full review performed after the archive expansion
 | Area | Scope | Result |
 |---|---:|---|
 | Completed archive | 157 questions | Pass |
-| Complete HDLBits tracker | 178 questions | Day 10 refresh pending |
+| Complete HDLBits tracker | 178 questions | Pass — current through Day 11 plan |
 | Review queue | 2 attempted questions | Pass |
-| Screenshot boundary audit | 155 images | 155 pass, 0 fail |
+| Screenshot boundary audit | 159 images | 159 pass, 0 fail |
 | Strict Verilog elaboration | 157 solutions | 157 pass, 0 fail |
 | Repository links | Generated archive | 0 broken links |
-| Workbook formula scan | Summary + Tracker | Not rerun; spreadsheet authoring runtime unavailable |
+| Workbook formula scan | Summary + Tracker | Pass — 0 formula errors |
 | Verilog line hygiene | 157 solutions | 0 trailing-whitespace lines; terminal newlines present |
 
 ## Screenshot review
@@ -23,7 +23,7 @@ Every completed screenshot was recaptured from the live HDLBits page using the m
 
 The attempted `lemmings2` and `exams/2013_q2afsm` pages preserve review context for unsolved work. The four requested counters and four Building Larger Circuits exercises now have successful-submission captures and are part of the completed archive. Machine-readable dimensions and content-marker results are stored in [screenshot_audit.json](screenshot_audit.json).
 
-The two review images and all eight newly completed captures received a separate visual edge review. Earlier counter captures that ended before the lower controls/navigation were rejected; every accepted image now includes the complete lower boundary. Five additional wrong-attempt/review screenshots for `exams/review2015_fancytimer` were manually inspected, renamed, and embedded with their technical explanation. They are evidence images rather than successful-submission captures.
+The two review images and all newly completed captures received a separate visual edge review. Earlier counter captures that ended before the lower controls/navigation were rejected; every accepted image now includes the required problem and answer boundary. Problems 153 and 154 now have complete question and loaded `Last success` captures, while the five additional complete-timer mistake screenshots remain embedded as revision evidence.
 
 Four Day 10 problems—`exams/2014_q3fsm`, `exams/2014_q3bfsm`, `exams/2014_q3c`, and `exams/m2014_q6c`—were verified through live successful HDLBits submissions. Each now has a full-page capture containing the complete question, submitted answer, and visible success result. The earlier cropped, handwritten, partial-attempt, and ChatGPT images remain linked as supporting revision evidence. The state-table image originally classified as `fsm_onehot` was corrected to `exams/2014_q3c` after comparison with the live page.
 
@@ -35,13 +35,13 @@ The second pass corrected strict-language issues that the HDLBits environment ca
 
 ## Structure and presentation review
 
-- All 157 manifest records have a unique number and HDLBits ID, a problem note, a standalone solution, a day entry, and a README index entry. Problems 151–152 include screenshots of their loaded successful submissions. Problem 153 has no recovered successful-submission capture, while problem 154 preserves five wrong-attempt/review screenshots alongside its verified solution. Problems 155–158 have complete question-answer-success captures.
+- All 157 manifest records have a unique number and HDLBits ID, a problem note, a standalone solution, a day entry, a README index entry, and an audited completed-submission screenshot. Problems 153–154 now use their loaded successful-submission captures as the primary archive images; problem 154 also preserves five wrong-attempt/review screenshots.
 - The day split is reproducible: 12, 34, 42, 19, 12, 21, 1, 1, 11, and 4 completed questions across Days 01-10.
 - Every generated problem note follows the same heading order, metadata layout, image width, explanation structure, and code presentation.
 - Markdown tables use consistent columns and numeric alignment. The repository-wide Verilog pass removed 177 trailing-whitespace defects and enforced terminal newlines.
-- The root tracker still contains all 178 standard course questions in website order, but its last verified snapshot is **153 Completed**, **2 Review**, and **23 To Do**. The current study state is **157 Completed**, **2 Review**, and **19 To Do**. The four Day 10 rows and all repository hyperlinks need a workbook refresh to include the new `study/` path prefix. This session could not perform that refresh because the required spreadsheet authoring runtime was unavailable.
+- The root tracker contains all 178 standard course questions in website order and now reports **157 Completed**, **2 Review**, and **19 To Do**. All repository hyperlinks use the `study/` prefix, Days 01–10 reflect actual completion dates, and the 21 unfinished rows are mapped to the 2026-07-04 Day 11 plan without inventing submission dates or screenshots.
 - The visible repository root now contains only the tracker and one `study` directory. Study-facing notes, images, problems, and solutions live under `study`; generated manifests, audits, and maintenance scripts live under `study/internal`.
 
 ## Remaining study queue
 
-`lemmings2` and `exams/2013_q2afsm` remain under review. The four Day 10 completions are currently still labelled To Do in the workbook pending its refresh.
+`lemmings2` and `exams/2013_q2afsm` remain under review. Together with 19 untouched questions, they form the 21-item Day 11 queue.

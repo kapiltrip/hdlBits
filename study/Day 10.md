@@ -1,4 +1,4 @@
-# Day 10 — 2026-07-03 to 2026-07-04
+# Day 10 — 2026-07-03
 
 Completed FSM problems: **4**. Every entry has a full-page HDLBits capture containing the question, complete submitted answer, and visible `Status: Success!` result. The original handwritten, partial-attempt, and ChatGPT discussion images remain beside the matching problem for revision.
 

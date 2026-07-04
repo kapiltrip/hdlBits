@@ -10,7 +10,9 @@
 | Success rate | 25% |
 | Verification | Confirmed from the logged-in HDLBits statistics and saved successful submission |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
-| Files | [Verilog solution](../../solutions/Day%2009/153-exams__review2015_fsm.sv) |
+| Files | [Successful-submission screenshot](../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png) · [Verilog solution](../../solutions/Day%2009/153-exams__review2015_fsm.sv) |
+
+<a href="../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png"><img src="../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png" alt="Complete FSM question and loaded successful submission" width="100%"></a>
 
 ## What the question is asking
 

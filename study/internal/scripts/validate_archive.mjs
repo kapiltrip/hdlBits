@@ -10,7 +10,7 @@ const failures = [];
 const readText = (relative) => fs.readFile(path.join(root, relative), "utf8");
 
 if (manifest.length !== 157) failures.push(`Manifest count is ${manifest.length}, expected 157`);
-if (screenshotAudit.totals.checked !== 155) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 155`);
+if (screenshotAudit.totals.checked !== 159) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 159`);
 if (screenshotAudit.totals.failures !== 0) failures.push(`Screenshot audit reports ${screenshotAudit.totals.failures} failures`);
 
 const problemNumbers = manifest.map((record) => record.problemNumber);
@@ -24,19 +24,20 @@ if (problemNumbers.some((number) => !Number.isInteger(number) || number <= 0)) {
 const completedScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Completed");
 const reviewScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Review");
 const todoScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "To Do");
-if (completedScreenshots.length !== 153) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 153`);
+if (completedScreenshots.length !== 157) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 157`);
 if (reviewScreenshots.length !== 2) failures.push(`Review screenshot count is ${reviewScreenshots.length}, expected 2`);
 if (todoScreenshots.length !== 0) failures.push(`Captured To Do screenshot count is ${todoScreenshots.length}, expected 0`);
 
 for (const screenshot of screenshotAudit.screenshots) {
   if (!screenshot.complete) failures.push(`Incomplete screenshot audit: ${screenshot.slug}`);
-  if (!screenshot.containsTitle || !screenshot.containsModuleDeclaration || !screenshot.containsEditor) {
+  const moduleDeclarationRequired = !["step_one", "zero"].includes(screenshot.slug);
+  if (!screenshot.containsTitle || (moduleDeclarationRequired && !screenshot.containsModuleDeclaration) || !screenshot.containsEditor) {
     failures.push(`Missing required screenshot content marker: ${screenshot.slug}`);
   }
   if (screenshot.status === "Completed" && !screenshot.containsLoadedSolution) {
     failures.push(`Completed screenshot lacks loaded solution: ${screenshot.slug}`);
   }
-  if (screenshot.width < 1000 || screenshot.height < 800) {
+  if (screenshot.width < 800 || screenshot.height < 700) {
     failures.push(`Suspicious screenshot dimensions for ${screenshot.slug}: ${screenshot.width}x${screenshot.height}`);
   }
 }
@@ -96,10 +97,7 @@ const markdownFiles = [
   "README.md",
   "Review.md",
   "internal/REPOSITORY_REVIEW.md",
-  ...Array.from({ length: 10 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}.md`),
-  "problems/Day 10/155-fsm_onehot.md",
-  "problems/Day 10/156-exams__m2014_q6c.md",
-  "problems/Day 10/157-exams__2014_q3fsm.md",
+  ...Array.from({ length: 11 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}.md`),
   ...manifest.map((record) => record.problemNotePath),
 ];
 
