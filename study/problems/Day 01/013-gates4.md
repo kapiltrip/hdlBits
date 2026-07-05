@@ -9,11 +9,11 @@
 | Attempts | 8 total: 0 incorrect, 7 compile error, 0 simulation error |
 | Success rate | 13% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/gates4) |
-| Files | [Open screenshot at full resolution](../../images/Day%2001/013-gates4.png) · [Verilog solution](../../solutions/Day%2001/013-gates4.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2001/013-gates4.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2001/013-gates4.png"><img src="../../images/Day%2001/013-gates4.png" alt="Four-input gates question and submitted solution" width="100%"></a>
+![Four-input gates question and submitted solution](../../images/Day%2001/013-gates4.png)
 
 ## What the question is asking
 

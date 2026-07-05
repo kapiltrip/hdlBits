@@ -11,7 +11,7 @@
 
 ## Complete question, submitted answer, and success result
 
-<a href="../../images/Day%2010/155-exams__2014_q3fsm-question-and-answer.png"><img src="../../images/Day%2010/155-exams__2014_q3fsm-question-and-answer.png" alt="Q3a FSM full question, submitted solution, and successful result" width="100%"></a>
+![Q3a FSM full question, submitted solution, and successful result](../../images/Day%2010/155-exams__2014_q3fsm-question-and-answer.png)
 
 The full-page capture includes the prompt, timing diagram, two-state sketch, complete submitted code, and the authoritative `Status: Success!` result.
 
@@ -26,19 +26,19 @@ The FSM state records the phase—waiting or sampling. Two datapath registers re
 
 ## Kapil's working attempt
 
-<a href="../../images/Day%2010/155-exams__2014_q3fsm-working-attempt.png"><img src="../../images/Day%2010/155-exams__2014_q3fsm-working-attempt.png" alt="Kapil's Q3a FSM attempt with state, sample count, ones count, and correct flag declarations" width="100%"></a>
+![Kapil's Q3a FSM attempt with state, sample count, ones count, and correct flag declarations](../../images/Day%2010/155-exams__2014_q3fsm-working-attempt.png)
 
 The two-state interpretation and counter declarations were correct. The remaining work was to give those registers clocked update rules and handle the third sample without accidentally reading an old nonblocking-assignment value.
 
 ## Kapil's comment and adjacent discussion
 
-<a href="../../images/Day%2010/155-exams__2014_q3fsm-chat-question.png"><img src="../../images/Day%2010/155-exams__2014_q3fsm-chat-question.png" alt="Chat discussion showing Kapil's question about clocked counter logic" width="100%"></a>
+![Chat discussion showing Kapil's question about clocked counter logic](../../images/Day%2010/155-exams__2014_q3fsm-chat-question.png)
 
 > “I’m doing that in the clocked block, not in `next_state`; how does it make sense?”
 
 Your objection was correct: counter assignments belong in a clocked block. Combinational next-state logic may **read** registered counters, but it should not own their stored updates. In this problem, `sample_count==2` does not need a state transition because the controller stays in B between groups. The terminal-count action is datapath timing: calculate `z`, clear both counters, and start the next group.
 
-<a href="../../images/Day%2010/155-exams__2014_q3fsm-chat-explanation.png"><img src="../../images/Day%2010/155-exams__2014_q3fsm-chat-explanation.png" alt="Chat explanation comparing classical next-state style with a single clocked block" width="100%"></a>
+![Chat explanation comparing classical next-state style with a single clocked block](../../images/Day%2010/155-exams__2014_q3fsm-chat-explanation.png)
 
 Both a classical FSM split and a single clocked controller can work. The essential rule is signal ownership: every stored signal has one clocked owner, while combinational logic only calculates decisions and outputs.
 

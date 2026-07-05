@@ -9,11 +9,11 @@
 | Attempts | 3 total: 0 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/always_nolatches) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/034-always_nolatches.png) · [Verilog solution](../../solutions/Day%2002/034-always_nolatches.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/034-always_nolatches.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/034-always_nolatches.png"><img src="../../images/Day%2002/034-always_nolatches.png" alt="Avoiding latches question and submitted solution" width="100%"></a>
+![Avoiding latches question and submitted solution](../../images/Day%2002/034-always_nolatches.png)
 
 ## What the question is asking
 

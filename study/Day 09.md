@@ -6,28 +6,28 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 3:09:43 PM | [144](#problem-144) | Sequential Logic | [Counter 1000](problems/Day%2009/144-exams__ece241_2014_q7b.md) | [Code](solutions/Day%2009/144-exams__ece241_2014_q7b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7b) |
-| 2 | 12:08:54 AM | [145](#problem-145) | Sequential Logic | [4-digit decimal counter](problems/Day%2009/145-countbcd.md) | [Code](solutions/Day%2009/145-countbcd.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/countbcd) |
-| 3 | 2:55:03 PM | [146](#problem-146) | Sequential Logic | [12-hour clock](problems/Day%2009/146-count_clock.md) | [Code](solutions/Day%2009/146-count_clock.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count_clock) |
-| 4 | 4:31:18 PM | [147](#problem-147) | Building Larger Circuits | [Counter with period 1000](problems/Day%2009/147-exams__review2015_count1k.md) | [Code](solutions/Day%2009/147-exams__review2015_count1k.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_count1k) |
-| 5 | 4:47:48 PM | [148](#problem-148) | Building Larger Circuits | [4-bit shift register and down counter](problems/Day%2009/148-exams__review2015_shiftcount.md) | [Code](solutions/Day%2009/148-exams__review2015_shiftcount.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount) |
-| 6 | 5:30:53 PM | [149](#problem-149) | Building Larger Circuits | [FSM: Sequence 1101 recognizer](problems/Day%2009/149-exams__review2015_fsmseq.md) | [Code](solutions/Day%2009/149-exams__review2015_fsmseq.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) |
-| 7 | 6:02:39 PM | [150](#problem-150) | Building Larger Circuits | [FSM: Enable shift register](problems/Day%2009/150-exams__review2015_fsmshift.md) | [Code](solutions/Day%2009/150-exams__review2015_fsmshift.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift) |
-| 8 | 9:12:14 PM | [151](#problem-151) | Getting Started | [Getting Started](problems/Day%2009/151-step_one.md) | [Code](solutions/Day%2009/151-step_one.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/step_one) |
-| 9 | 9:12:38 PM | [152](#problem-152) | Getting Started | [Output Zero](problems/Day%2009/152-zero.md) | [Code](solutions/Day%2009/152-zero.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/zero) |
-| 10 | 10:20:45 PM | [153](#problem-153) | Building Larger Circuits | [FSM: The complete FSM](problems/Day%2009/153-exams__review2015_fsm.md) | [Code](solutions/Day%2009/153-exams__review2015_fsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
-| 11 | 11:38:15 PM | [154](#problem-154) | Building Larger Circuits | [The complete timer](problems/Day%2009/154-exams__review2015_fancytimer.md) | [Code](solutions/Day%2009/154-exams__review2015_fancytimer.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
+| 1 | 3:09:43 PM | [144](#problem-144) | Sequential Logic | [Counter 1000](problems/Day%2009/144-exams__ece241_2014_q7b.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7b) |
+| 2 | 12:08:54 AM | [145](#problem-145) | Sequential Logic | [4-digit decimal counter](problems/Day%2009/145-countbcd.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/countbcd) |
+| 3 | 2:55:03 PM | [146](#problem-146) | Sequential Logic | [12-hour clock](problems/Day%2009/146-count_clock.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/count_clock) |
+| 4 | 4:31:18 PM | [147](#problem-147) | Building Larger Circuits | [Counter with period 1000](problems/Day%2009/147-exams__review2015_count1k.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_count1k) |
+| 5 | 4:47:48 PM | [148](#problem-148) | Building Larger Circuits | [4-bit shift register and down counter](problems/Day%2009/148-exams__review2015_shiftcount.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount) |
+| 6 | 5:30:53 PM | [149](#problem-149) | Building Larger Circuits | [FSM: Sequence 1101 recognizer](problems/Day%2009/149-exams__review2015_fsmseq.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) |
+| 7 | 6:02:39 PM | [150](#problem-150) | Building Larger Circuits | [FSM: Enable shift register](problems/Day%2009/150-exams__review2015_fsmshift.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift) |
+| 8 | 9:12:14 PM | [151](#problem-151) | Getting Started | [Getting Started](problems/Day%2009/151-step_one.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/step_one) |
+| 9 | 9:12:38 PM | [152](#problem-152) | Getting Started | [Output Zero](problems/Day%2009/152-zero.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/zero) |
+| 10 | 10:20:45 PM | [153](#problem-153) | Building Larger Circuits | [FSM: The complete FSM](problems/Day%2009/153-exams__review2015_fsm.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
+| 11 | 11:38:15 PM | [154](#problem-154) | Building Larger Circuits | [The complete timer](problems/Day%2009/154-exams__review2015_fancytimer.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
 
 ---
 
 <a id="problem-144"></a>
 ## 144 — Counter 1000
 
-[Problem note](problems/Day%2009/144-exams__ece241_2014_q7b.md) · [Open screenshot at full resolution](images/Day%2009/144-exams__ece241_2014_q7b.png) · [Verilog file](solutions/Day%2009/144-exams__ece241_2014_q7b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7b)
+[Problem note](problems/Day%2009/144-exams__ece241_2014_q7b.md) · [Verilog file](solutions/Day%2009/144-exams__ece241_2014_q7b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7b)
 
-<a href="images/Day%2009/144-exams__ece241_2014_q7b.png"><img src="images/Day%2009/144-exams__ece241_2014_q7b.png" alt="Counter 1000 question and submitted solution" width="100%"></a>
+![Counter 1000 question and submitted solution](images/Day%2009/144-exams__ece241_2014_q7b.png)
 
 ### What the question is asking
 
@@ -65,9 +65,9 @@ endmodule
 <a id="problem-145"></a>
 ## 145 — 4-digit decimal counter
 
-[Problem note](problems/Day%2009/145-countbcd.md) · [Open screenshot at full resolution](images/Day%2009/145-countbcd.png) · [Verilog file](solutions/Day%2009/145-countbcd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/countbcd)
+[Problem note](problems/Day%2009/145-countbcd.md) · [Verilog file](solutions/Day%2009/145-countbcd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/countbcd)
 
-<a href="images/Day%2009/145-countbcd.png"><img src="images/Day%2009/145-countbcd.png" alt="4-digit decimal counter question and submitted solution" width="100%"></a>
+![4-digit decimal counter question and submitted solution](images/Day%2009/145-countbcd.png)
 
 ### What the question is asking
 
@@ -137,9 +137,9 @@ endmodule
 <a id="problem-146"></a>
 ## 146 — 12-hour clock
 
-[Problem note](problems/Day%2009/146-count_clock.md) · [Open screenshot at full resolution](images/Day%2009/146-count_clock.png) · [Verilog file](solutions/Day%2009/146-count_clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count_clock)
+[Problem note](problems/Day%2009/146-count_clock.md) · [Verilog file](solutions/Day%2009/146-count_clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count_clock)
 
-<a href="images/Day%2009/146-count_clock.png"><img src="images/Day%2009/146-count_clock.png" alt="12-hour clock question and submitted solution" width="100%"></a>
+![12-hour clock question and submitted solution](images/Day%2009/146-count_clock.png)
 
 ### What the question is asking
 
@@ -217,9 +217,9 @@ endmodule
 <a id="problem-147"></a>
 ## 147 — Counter with period 1000
 
-[Problem note](problems/Day%2009/147-exams__review2015_count1k.md) · [Open screenshot at full resolution](images/Day%2009/147-exams__review2015_count1k.png) · [Verilog file](solutions/Day%2009/147-exams__review2015_count1k.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_count1k)
+[Problem note](problems/Day%2009/147-exams__review2015_count1k.md) · [Verilog file](solutions/Day%2009/147-exams__review2015_count1k.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_count1k)
 
-<a href="images/Day%2009/147-exams__review2015_count1k.png"><img src="images/Day%2009/147-exams__review2015_count1k.png" alt="Counter with period 1000 question and submitted solution" width="100%"></a>
+![Counter with period 1000 question and submitted solution](images/Day%2009/147-exams__review2015_count1k.png)
 
 ### What the question is asking
 
@@ -259,9 +259,9 @@ endmodule
 <a id="problem-148"></a>
 ## 148 — 4-bit shift register and down counter
 
-[Problem note](problems/Day%2009/148-exams__review2015_shiftcount.md) · [Open screenshot at full resolution](images/Day%2009/148-exams__review2015_shiftcount.png) · [Verilog file](solutions/Day%2009/148-exams__review2015_shiftcount.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount)
+[Problem note](problems/Day%2009/148-exams__review2015_shiftcount.md) · [Verilog file](solutions/Day%2009/148-exams__review2015_shiftcount.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount)
 
-<a href="images/Day%2009/148-exams__review2015_shiftcount.png"><img src="images/Day%2009/148-exams__review2015_shiftcount.png" alt="4-bit shift register and down counter question and submitted solution" width="100%"></a>
+![4-bit shift register and down counter question and submitted solution](images/Day%2009/148-exams__review2015_shiftcount.png)
 
 ### What the question is asking
 
@@ -305,9 +305,9 @@ endmodule
 <a id="problem-149"></a>
 ## 149 — FSM: Sequence 1101 recognizer
 
-[Problem note](problems/Day%2009/149-exams__review2015_fsmseq.md) · [Open screenshot at full resolution](images/Day%2009/149-exams__review2015_fsmseq.png) · [Verilog file](solutions/Day%2009/149-exams__review2015_fsmseq.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq)
+[Problem note](problems/Day%2009/149-exams__review2015_fsmseq.md) · [Verilog file](solutions/Day%2009/149-exams__review2015_fsmseq.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq)
 
-<a href="images/Day%2009/149-exams__review2015_fsmseq.png"><img src="images/Day%2009/149-exams__review2015_fsmseq.png" alt="FSM: Sequence 1101 recognizer question and submitted solution" width="100%"></a>
+![FSM: Sequence 1101 recognizer question and submitted solution](images/Day%2009/149-exams__review2015_fsmseq.png)
 
 ### What the question is asking
 
@@ -364,9 +364,9 @@ endmodule
 <a id="problem-150"></a>
 ## 150 — FSM: Enable shift register
 
-[Problem note](problems/Day%2009/150-exams__review2015_fsmshift.md) · [Open screenshot at full resolution](images/Day%2009/150-exams__review2015_fsmshift.png) · [Verilog file](solutions/Day%2009/150-exams__review2015_fsmshift.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift)
+[Problem note](problems/Day%2009/150-exams__review2015_fsmshift.md) · [Verilog file](solutions/Day%2009/150-exams__review2015_fsmshift.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift)
 
-<a href="images/Day%2009/150-exams__review2015_fsmshift.png"><img src="images/Day%2009/150-exams__review2015_fsmshift.png" alt="FSM: Enable shift register question and submitted solution" width="100%"></a>
+![FSM: Enable shift register question and submitted solution](images/Day%2009/150-exams__review2015_fsmshift.png)
 
 ### What the question is asking
 
@@ -406,15 +406,25 @@ endmodule
 
 [Problem note](problems/Day%2009/151-step_one.md) · [Question screenshot](images/Day%2009/151-step_one.png) · [Successful solution screenshot](images/Day%2009/151-step_one-solution.png) · [Verilog file](solutions/Day%2009/151-step_one.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/step_one)
 
-<a href="images/Day%2009/151-step_one.png"><img src="images/Day%2009/151-step_one.png" alt="Getting Started problem statement and success timestamp" width="100%"></a>
+![Getting Started problem statement and success timestamp](images/Day%2009/151-step_one.png)
 
-<a href="images/Day%2009/151-step_one-solution.png"><img src="images/Day%2009/151-step_one-solution.png" alt="Getting Started successful submitted solution" width="100%"></a>
+![Getting Started successful submitted solution](images/Day%2009/151-step_one-solution.png)
 
 ### What the question is asking
 
 This introductory circuit has no inputs and continuously drives output `one` high. The saved solution uses `assign one = 1'b1;`, which synthesizes as a constant tie-high connection with no state or procedural logic.
 
 The logged-in HDLBits page confirms one successful attempt at 9:12:14 PM with no failed attempts.
+
+### Saved Verilog solution
+
+```verilog
+module top_module (
+    output one
+);
+    assign one = 1'b1;
+endmodule
+```
 
 ---
 
@@ -423,7 +433,7 @@ The logged-in HDLBits page confirms one successful attempt at 9:12:14 PM with no
 
 [Problem note](problems/Day%2009/152-zero.md) · [Screenshot](images/Day%2009/152-zero.png) · [Verilog file](solutions/Day%2009/152-zero.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/zero)
 
-<a href="images/Day%2009/152-zero.png"><img src="images/Day%2009/152-zero.png" alt="Output Zero successful submitted solution" width="100%"></a>
+![Output Zero successful submitted solution](images/Day%2009/152-zero.png)
 
 ### What the question is asking
 
@@ -431,14 +441,24 @@ This circuit continuously drives output `zero` low using `assign zero = 1'b0;`. 
 
 The logged-in HDLBits page confirms one successful attempt at 9:12:38 PM with no failed attempts.
 
+### Saved Verilog solution
+
+```verilog
+module top_module (
+    output zero
+);
+    assign zero = 1'b0;
+endmodule
+```
+
 ---
 
 <a id="problem-153"></a>
 ## 153 — FSM: The complete FSM
 
-[Problem note](problems/Day%2009/153-exams__review2015_fsm.md) · [Open screenshot at full resolution](images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png) · [Verilog file](solutions/Day%2009/153-exams__review2015_fsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm)
+[Problem note](problems/Day%2009/153-exams__review2015_fsm.md) · [Verilog file](solutions/Day%2009/153-exams__review2015_fsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm)
 
-<a href="images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png"><img src="images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png" alt="Complete FSM question and loaded successful submission" width="100%"></a>
+![Complete FSM question and loaded successful submission](images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png)
 
 ### What the question is asking
 
@@ -448,7 +468,60 @@ The live record confirms the last successful submission at 10:20:45 PM: 2 succes
 
 ### Saved Verilog solution
 
-The editable implementation is in [153-exams__review2015_fsm.sv](solutions/Day%2009/153-exams__review2015_fsm.sv).
+```verilog
+module top_module (
+    input clk,
+    input reset,
+    input data,
+    output shift_ena,
+    output counting,
+    input done_counting,
+    output done,
+    input ack
+);
+    localparam S     = 4'd0;
+    localparam S1    = 4'd1;
+    localparam S11   = 4'd2;
+    localparam S110  = 4'd3;
+    localparam B0    = 4'd4;
+    localparam B1    = 4'd5;
+    localparam B2    = 4'd6;
+    localparam B3    = 4'd7;
+    localparam COUNT = 4'd8;
+    localparam WAIT  = 4'd9;
+
+    reg [3:0] state;
+    reg [3:0] next_state;
+
+    always @(posedge clk) begin
+        if (reset)
+            state <= S;
+        else
+            state <= next_state;
+    end
+
+    always @(*) begin
+        case (state)
+            S:     next_state = data ? S1 : S;
+            S1:    next_state = data ? S11 : S;
+            S11:   next_state = data ? S11 : S110;
+            S110:  next_state = data ? B0 : S;
+            B0:    next_state = B1;
+            B1:    next_state = B2;
+            B2:    next_state = B3;
+            B3:    next_state = COUNT;
+            COUNT: next_state = done_counting ? WAIT : COUNT;
+            WAIT:  next_state = ack ? S : WAIT;
+            default: next_state = S;
+        endcase
+    end
+
+    assign shift_ena = (state == B0) || (state == B1) ||
+                       (state == B2) || (state == B3);
+    assign counting = (state == COUNT);
+    assign done = (state == WAIT);
+endmodule
+```
 
 ---
 
@@ -457,7 +530,7 @@ The editable implementation is in [153-exams__review2015_fsm.sv](solutions/Day%2
 
 [Problem note with wrong-attempt discussion](problems/Day%2009/154-exams__review2015_fancytimer.md) · [Open successful-submission screenshot](images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) · [Verilog file](solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer)
 
-<a href="images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png"><img src="images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png" alt="Complete timer question and loaded successful submission" width="100%"></a>
+![Complete timer question and loaded successful submission](images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png)
 
 ### What the question is asking
 
@@ -469,4 +542,81 @@ All five screenshots are embedded and explained in the [problem-specific note](p
 
 ### Saved Verilog solution
 
-The editable implementation is in [154-exams__review2015_fancytimer.sv](solutions/Day%2009/154-exams__review2015_fancytimer.sv).
+```verilog
+module top_module (
+    input clk,
+    input reset,
+    input data,
+    output [3:0] count,
+    output counting,
+    output done,
+    input ack
+);
+    localparam S = 4'd0, S1 = 4'd1, S11 = 4'd2, S110 = 4'd3;
+    localparam B0 = 4'd4, B1 = 4'd5, B2 = 4'd6, B3 = 4'd7;
+    localparam COUNT = 4'd8, WAIT = 4'd9;
+
+    reg [3:0] state, next_state;
+    reg [3:0] delay, count_remaining;
+    reg [9:0] count_1000;
+
+    wire shift_ena = (state == B0) || (state == B1) ||
+                     (state == B2) || (state == B3);
+    wire finished = (count_1000 == 10'd999) &&
+                    (count_remaining == 4'd0);
+
+    always @(posedge clk) begin
+        if (reset)
+            state <= S;
+        else
+            state <= next_state;
+    end
+
+    always @(*) begin
+        case (state)
+            S:     next_state = data ? S1 : S;
+            S1:    next_state = data ? S11 : S;
+            S11:   next_state = data ? S11 : S110;
+            S110:  next_state = data ? B0 : S;
+            B0:    next_state = B1;
+            B1:    next_state = B2;
+            B2:    next_state = B3;
+            B3:    next_state = COUNT;
+            COUNT: next_state = finished ? WAIT : COUNT;
+            WAIT:  next_state = ack ? S : WAIT;
+            default: next_state = S;
+        endcase
+    end
+
+    always @(posedge clk) begin
+        if (reset) begin
+            delay <= 4'd0;
+            count_remaining <= 4'd0;
+            count_1000 <= 10'd0;
+        end
+        else begin
+            if (shift_ena)
+                delay <= {delay[2:0], data};
+
+            if (state == B3) begin
+                count_remaining <= {delay[2:0], data};
+                count_1000 <= 10'd0;
+            end
+            else if (counting) begin
+                if (count_1000 == 10'd999) begin
+                    count_1000 <= 10'd0;
+                    if (count_remaining != 4'd0)
+                        count_remaining <= count_remaining - 4'd1;
+                end
+                else begin
+                    count_1000 <= count_1000 + 10'd1;
+                end
+            end
+        end
+    end
+
+    assign count = count_remaining;
+    assign counting = (state == COUNT);
+    assign done = (state == WAIT);
+endmodule
+```

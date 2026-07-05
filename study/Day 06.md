@@ -6,38 +6,38 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 12:22:36 AM | [121](#problem-121) | Sequential Logic | [Q2b: Another FSM](problems/Day%2006/121-exams__2013_q2bfsm.md) | [Code](solutions/Day%2006/121-exams__2013_q2bfsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
-| 2 | 12:54:12 AM | [122](#problem-122) | Finding bugs in code | [Mux](problems/Day%2006/122-bugs_mux2.md) | [Code](solutions/Day%2006/122-bugs_mux2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_mux2) |
-| 3 | 1:04:51 AM | [123](#problem-123) | Finding bugs in code | [NAND](problems/Day%2006/123-bugs_nand3.md) | [Code](solutions/Day%2006/123-bugs_nand3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_nand3) |
-| 4 | 1:01:34 AM | [124](#problem-124) | Finding bugs in code | [Mux](problems/Day%2006/124-bugs_mux4.md) | [Code](solutions/Day%2006/124-bugs_mux4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_mux4) |
-| 5 | 1:31:18 AM | [125](#problem-125) | Finding bugs in code | [Add/sub](problems/Day%2006/125-bugs_addsubz.md) | [Code](solutions/Day%2006/125-bugs_addsubz.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_addsubz) |
-| 6 | 1:28:42 AM | [126](#problem-126) | Finding bugs in code | [Case statement](problems/Day%2006/126-bugs_case.md) | [Code](solutions/Day%2006/126-bugs_case.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_case) |
-| 7 | 1:33:25 AM | [127](#problem-127) | Build a circuit from a simulation waveform | [Combinational circuit 1](problems/Day%2006/127-sim__circuit1.md) | [Code](solutions/Day%2006/127-sim__circuit1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit1) |
-| 8 | 3:19:03 PM | [128](#problem-128) | Build a circuit from a simulation waveform | [Combinational circuit 2](problems/Day%2006/128-sim__circuit2.md) | [Code](solutions/Day%2006/128-sim__circuit2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit2) |
-| 9 | 3:26:19 PM | [129](#problem-129) | Build a circuit from a simulation waveform | [Combinational circuit 3](problems/Day%2006/129-sim__circuit3.md) | [Code](solutions/Day%2006/129-sim__circuit3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit3) |
-| 10 | 3:35:24 PM | [130](#problem-130) | Build a circuit from a simulation waveform | [Combinational circuit 4](problems/Day%2006/130-sim__circuit4.md) | [Code](solutions/Day%2006/130-sim__circuit4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit4) |
-| 11 | 3:57:19 PM | [131](#problem-131) | Build a circuit from a simulation waveform | [Combinational circuit 5](problems/Day%2006/131-sim__circuit5.md) | [Code](solutions/Day%2006/131-sim__circuit5.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit5) |
-| 12 | 4:07:13 PM | [132](#problem-132) | Build a circuit from a simulation waveform | [Combinational circuit 6](problems/Day%2006/132-sim__circuit6.md) | [Code](solutions/Day%2006/132-sim__circuit6.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit6) |
-| 13 | 2:20:37 PM | [133](#problem-133) | Build a circuit from a simulation waveform | [Sequential circuit 7](problems/Day%2006/133-sim__circuit7.md) | [Code](solutions/Day%2006/133-sim__circuit7.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit7) |
-| 14 | 2:46:53 PM | [134](#problem-134) | Build a circuit from a simulation waveform | [Sequential circuit 8](problems/Day%2006/134-sim__circuit8.md) | [Code](solutions/Day%2006/134-sim__circuit8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit8) |
-| 15 | 2:35:52 PM | [135](#problem-135) | Build a circuit from a simulation waveform | [Sequential circuit 9](problems/Day%2006/135-sim__circuit9.md) | [Code](solutions/Day%2006/135-sim__circuit9.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit9) |
-| 16 | 4:28:35 PM | [136](#problem-136) | Build a circuit from a simulation waveform | [Sequential circuit 10](problems/Day%2006/136-sim__circuit10.md) | [Code](solutions/Day%2006/136-sim__circuit10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit10) |
-| 17 | 5:45:53 PM | [137](#problem-137) | Writing Testbenches | [Clock](problems/Day%2006/137-tb__clock.md) | [Code](solutions/Day%2006/137-tb__clock.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/clock) |
-| 18 | 5:51:57 PM | [138](#problem-138) | Writing Testbenches | [Testbench1](problems/Day%2006/138-tb__tb1.md) | [Code](solutions/Day%2006/138-tb__tb1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb1) |
-| 19 | 6:15:10 PM | [139](#problem-139) | Writing Testbenches | [AND gate](problems/Day%2006/139-tb__and.md) | [Code](solutions/Day%2006/139-tb__and.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/and) |
-| 20 | 11:14:42 PM | [140](#problem-140) | Writing Testbenches | [Testbench2](problems/Day%2006/140-tb__tb2.md) | [Code](solutions/Day%2006/140-tb__tb2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb2) |
-| 21 | 6:29:03 PM | [141](#problem-141) | Writing Testbenches | [T flip-flop](problems/Day%2006/141-tb__tff.md) | [Code](solutions/Day%2006/141-tb__tff.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tff) |
+| 1 | 12:22:36 AM | [121](#problem-121) | Sequential Logic | [Q2b: Another FSM](problems/Day%2006/121-exams__2013_q2bfsm.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
+| 2 | 12:54:12 AM | [122](#problem-122) | Finding bugs in code | [Mux](problems/Day%2006/122-bugs_mux2.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_mux2) |
+| 3 | 1:04:51 AM | [123](#problem-123) | Finding bugs in code | [NAND](problems/Day%2006/123-bugs_nand3.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_nand3) |
+| 4 | 1:01:34 AM | [124](#problem-124) | Finding bugs in code | [Mux](problems/Day%2006/124-bugs_mux4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_mux4) |
+| 5 | 1:31:18 AM | [125](#problem-125) | Finding bugs in code | [Add/sub](problems/Day%2006/125-bugs_addsubz.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_addsubz) |
+| 6 | 1:28:42 AM | [126](#problem-126) | Finding bugs in code | [Case statement](problems/Day%2006/126-bugs_case.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/bugs_case) |
+| 7 | 1:33:25 AM | [127](#problem-127) | Build a circuit from a simulation waveform | [Combinational circuit 1](problems/Day%2006/127-sim__circuit1.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit1) |
+| 8 | 3:19:03 PM | [128](#problem-128) | Build a circuit from a simulation waveform | [Combinational circuit 2](problems/Day%2006/128-sim__circuit2.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit2) |
+| 9 | 3:26:19 PM | [129](#problem-129) | Build a circuit from a simulation waveform | [Combinational circuit 3](problems/Day%2006/129-sim__circuit3.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit3) |
+| 10 | 3:35:24 PM | [130](#problem-130) | Build a circuit from a simulation waveform | [Combinational circuit 4](problems/Day%2006/130-sim__circuit4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit4) |
+| 11 | 3:57:19 PM | [131](#problem-131) | Build a circuit from a simulation waveform | [Combinational circuit 5](problems/Day%2006/131-sim__circuit5.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit5) |
+| 12 | 4:07:13 PM | [132](#problem-132) | Build a circuit from a simulation waveform | [Combinational circuit 6](problems/Day%2006/132-sim__circuit6.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit6) |
+| 13 | 2:20:37 PM | [133](#problem-133) | Build a circuit from a simulation waveform | [Sequential circuit 7](problems/Day%2006/133-sim__circuit7.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit7) |
+| 14 | 2:46:53 PM | [134](#problem-134) | Build a circuit from a simulation waveform | [Sequential circuit 8](problems/Day%2006/134-sim__circuit8.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit8) |
+| 15 | 2:35:52 PM | [135](#problem-135) | Build a circuit from a simulation waveform | [Sequential circuit 9](problems/Day%2006/135-sim__circuit9.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit9) |
+| 16 | 4:28:35 PM | [136](#problem-136) | Build a circuit from a simulation waveform | [Sequential circuit 10](problems/Day%2006/136-sim__circuit10.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/sim/circuit10) |
+| 17 | 5:45:53 PM | [137](#problem-137) | Writing Testbenches | [Clock](problems/Day%2006/137-tb__clock.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/tb/clock) |
+| 18 | 5:51:57 PM | [138](#problem-138) | Writing Testbenches | [Testbench1](problems/Day%2006/138-tb__tb1.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb1) |
+| 19 | 6:15:10 PM | [139](#problem-139) | Writing Testbenches | [AND gate](problems/Day%2006/139-tb__and.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/tb/and) |
+| 20 | 11:14:42 PM | [140](#problem-140) | Writing Testbenches | [Testbench2](problems/Day%2006/140-tb__tb2.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tb2) |
+| 21 | 6:29:03 PM | [141](#problem-141) | Writing Testbenches | [T flip-flop](problems/Day%2006/141-tb__tff.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/tb/tff) |
 
 ---
 
 <a id="problem-121"></a>
 ## 121 — Q2b: Another FSM
 
-[Problem note](problems/Day%2006/121-exams__2013_q2bfsm.md) · [Open screenshot at full resolution](images/Day%2006/121-exams__2013_q2bfsm.png) · [Verilog file](solutions/Day%2006/121-exams__2013_q2bfsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm)
+[Problem note](problems/Day%2006/121-exams__2013_q2bfsm.md) · [Verilog file](solutions/Day%2006/121-exams__2013_q2bfsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm)
 
-<a href="images/Day%2006/121-exams__2013_q2bfsm.png"><img src="images/Day%2006/121-exams__2013_q2bfsm.png" alt="Q2b: Another FSM question and submitted solution" width="100%"></a>
+![Q2b: Another FSM question and submitted solution](images/Day%2006/121-exams__2013_q2bfsm.png)
 
 ### What the question is asking
 
@@ -106,9 +106,9 @@ endmodule
 <a id="problem-122"></a>
 ## 122 — Mux
 
-[Problem note](problems/Day%2006/122-bugs_mux2.md) · [Open screenshot at full resolution](images/Day%2006/122-bugs_mux2.png) · [Verilog file](solutions/Day%2006/122-bugs_mux2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux2)
+[Problem note](problems/Day%2006/122-bugs_mux2.md) · [Verilog file](solutions/Day%2006/122-bugs_mux2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux2)
 
-<a href="images/Day%2006/122-bugs_mux2.png"><img src="images/Day%2006/122-bugs_mux2.png" alt="Mux question and submitted solution" width="100%"></a>
+![Mux question and submitted solution](images/Day%2006/122-bugs_mux2.png)
 
 ### What the question is asking
 
@@ -138,9 +138,9 @@ endmodule
 <a id="problem-123"></a>
 ## 123 — NAND
 
-[Problem note](problems/Day%2006/123-bugs_nand3.md) · [Open screenshot at full resolution](images/Day%2006/123-bugs_nand3.png) · [Verilog file](solutions/Day%2006/123-bugs_nand3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_nand3)
+[Problem note](problems/Day%2006/123-bugs_nand3.md) · [Verilog file](solutions/Day%2006/123-bugs_nand3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_nand3)
 
-<a href="images/Day%2006/123-bugs_nand3.png"><img src="images/Day%2006/123-bugs_nand3.png" alt="NAND question and submitted solution" width="100%"></a>
+![NAND question and submitted solution](images/Day%2006/123-bugs_nand3.png)
 
 ### What the question is asking
 
@@ -172,9 +172,9 @@ endmodule
 <a id="problem-124"></a>
 ## 124 — Mux
 
-[Problem note](problems/Day%2006/124-bugs_mux4.md) · [Open screenshot at full resolution](images/Day%2006/124-bugs_mux4.png) · [Verilog file](solutions/Day%2006/124-bugs_mux4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux4)
+[Problem note](problems/Day%2006/124-bugs_mux4.md) · [Verilog file](solutions/Day%2006/124-bugs_mux4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux4)
 
-<a href="images/Day%2006/124-bugs_mux4.png"><img src="images/Day%2006/124-bugs_mux4.png" alt="Mux question and submitted solution" width="100%"></a>
+![Mux question and submitted solution](images/Day%2006/124-bugs_mux4.png)
 
 ### What the question is asking
 
@@ -216,9 +216,9 @@ endmodule
 <a id="problem-125"></a>
 ## 125 — Add/sub
 
-[Problem note](problems/Day%2006/125-bugs_addsubz.md) · [Open screenshot at full resolution](images/Day%2006/125-bugs_addsubz.png) · [Verilog file](solutions/Day%2006/125-bugs_addsubz.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_addsubz)
+[Problem note](problems/Day%2006/125-bugs_addsubz.md) · [Verilog file](solutions/Day%2006/125-bugs_addsubz.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_addsubz)
 
-<a href="images/Day%2006/125-bugs_addsubz.png"><img src="images/Day%2006/125-bugs_addsubz.png" alt="Add/sub question and submitted solution" width="100%"></a>
+![Add/sub question and submitted solution](images/Day%2006/125-bugs_addsubz.png)
 
 ### What the question is asking
 
@@ -258,9 +258,9 @@ endmodule
 <a id="problem-126"></a>
 ## 126 — Case statement
 
-[Problem note](problems/Day%2006/126-bugs_case.md) · [Open screenshot at full resolution](images/Day%2006/126-bugs_case.png) · [Verilog file](solutions/Day%2006/126-bugs_case.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_case)
+[Problem note](problems/Day%2006/126-bugs_case.md) · [Verilog file](solutions/Day%2006/126-bugs_case.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_case)
 
-<a href="images/Day%2006/126-bugs_case.png"><img src="images/Day%2006/126-bugs_case.png" alt="Case statement question and submitted solution" width="100%"></a>
+![Case statement question and submitted solution](images/Day%2006/126-bugs_case.png)
 
 ### What the question is asking
 
@@ -308,9 +308,9 @@ endmodule
 <a id="problem-127"></a>
 ## 127 — Combinational circuit 1
 
-[Problem note](problems/Day%2006/127-sim__circuit1.md) · [Open screenshot at full resolution](images/Day%2006/127-sim__circuit1.png) · [Verilog file](solutions/Day%2006/127-sim__circuit1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit1)
+[Problem note](problems/Day%2006/127-sim__circuit1.md) · [Verilog file](solutions/Day%2006/127-sim__circuit1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit1)
 
-<a href="images/Day%2006/127-sim__circuit1.png"><img src="images/Day%2006/127-sim__circuit1.png" alt="Combinational circuit 1 question and submitted solution" width="100%"></a>
+![Combinational circuit 1 question and submitted solution](images/Day%2006/127-sim__circuit1.png)
 
 ### What the question is asking
 
@@ -339,9 +339,9 @@ endmodule
 <a id="problem-128"></a>
 ## 128 — Combinational circuit 2
 
-[Problem note](problems/Day%2006/128-sim__circuit2.md) · [Open screenshot at full resolution](images/Day%2006/128-sim__circuit2.png) · [Verilog file](solutions/Day%2006/128-sim__circuit2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit2)
+[Problem note](problems/Day%2006/128-sim__circuit2.md) · [Verilog file](solutions/Day%2006/128-sim__circuit2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit2)
 
-<a href="images/Day%2006/128-sim__circuit2.png"><img src="images/Day%2006/128-sim__circuit2.png" alt="Combinational circuit 2 question and submitted solution" width="100%"></a>
+![Combinational circuit 2 question and submitted solution](images/Day%2006/128-sim__circuit2.png)
 
 ### What the question is asking
 
@@ -372,9 +372,9 @@ endmodule
 <a id="problem-129"></a>
 ## 129 — Combinational circuit 3
 
-[Problem note](problems/Day%2006/129-sim__circuit3.md) · [Open screenshot at full resolution](images/Day%2006/129-sim__circuit3.png) · [Verilog file](solutions/Day%2006/129-sim__circuit3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit3)
+[Problem note](problems/Day%2006/129-sim__circuit3.md) · [Verilog file](solutions/Day%2006/129-sim__circuit3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit3)
 
-<a href="images/Day%2006/129-sim__circuit3.png"><img src="images/Day%2006/129-sim__circuit3.png" alt="Combinational circuit 3 question and submitted solution" width="100%"></a>
+![Combinational circuit 3 question and submitted solution](images/Day%2006/129-sim__circuit3.png)
 
 ### What the question is asking
 
@@ -405,9 +405,9 @@ endmodule
 <a id="problem-130"></a>
 ## 130 — Combinational circuit 4
 
-[Problem note](problems/Day%2006/130-sim__circuit4.md) · [Open screenshot at full resolution](images/Day%2006/130-sim__circuit4.png) · [Verilog file](solutions/Day%2006/130-sim__circuit4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit4)
+[Problem note](problems/Day%2006/130-sim__circuit4.md) · [Verilog file](solutions/Day%2006/130-sim__circuit4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit4)
 
-<a href="images/Day%2006/130-sim__circuit4.png"><img src="images/Day%2006/130-sim__circuit4.png" alt="Combinational circuit 4 question and submitted solution" width="100%"></a>
+![Combinational circuit 4 question and submitted solution](images/Day%2006/130-sim__circuit4.png)
 
 ### What the question is asking
 
@@ -438,9 +438,9 @@ endmodule
 <a id="problem-131"></a>
 ## 131 — Combinational circuit 5
 
-[Problem note](problems/Day%2006/131-sim__circuit5.md) · [Open screenshot at full resolution](images/Day%2006/131-sim__circuit5.png) · [Verilog file](solutions/Day%2006/131-sim__circuit5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit5)
+[Problem note](problems/Day%2006/131-sim__circuit5.md) · [Verilog file](solutions/Day%2006/131-sim__circuit5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit5)
 
-<a href="images/Day%2006/131-sim__circuit5.png"><img src="images/Day%2006/131-sim__circuit5.png" alt="Combinational circuit 5 question and submitted solution" width="100%"></a>
+![Combinational circuit 5 question and submitted solution](images/Day%2006/131-sim__circuit5.png)
 
 ### What the question is asking
 
@@ -480,9 +480,9 @@ endmodule
 <a id="problem-132"></a>
 ## 132 — Combinational circuit 6
 
-[Problem note](problems/Day%2006/132-sim__circuit6.md) · [Open screenshot at full resolution](images/Day%2006/132-sim__circuit6.png) · [Verilog file](solutions/Day%2006/132-sim__circuit6.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit6)
+[Problem note](problems/Day%2006/132-sim__circuit6.md) · [Verilog file](solutions/Day%2006/132-sim__circuit6.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit6)
 
-<a href="images/Day%2006/132-sim__circuit6.png"><img src="images/Day%2006/132-sim__circuit6.png" alt="Combinational circuit 6 question and submitted solution" width="100%"></a>
+![Combinational circuit 6 question and submitted solution](images/Day%2006/132-sim__circuit6.png)
 
 ### What the question is asking
 
@@ -530,9 +530,9 @@ endmodule
 <a id="problem-133"></a>
 ## 133 — Sequential circuit 7
 
-[Problem note](problems/Day%2006/133-sim__circuit7.md) · [Open screenshot at full resolution](images/Day%2006/133-sim__circuit7.png) · [Verilog file](solutions/Day%2006/133-sim__circuit7.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit7)
+[Problem note](problems/Day%2006/133-sim__circuit7.md) · [Verilog file](solutions/Day%2006/133-sim__circuit7.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit7)
 
-<a href="images/Day%2006/133-sim__circuit7.png"><img src="images/Day%2006/133-sim__circuit7.png" alt="Sequential circuit 7 question and submitted solution" width="100%"></a>
+![Sequential circuit 7 question and submitted solution](images/Day%2006/133-sim__circuit7.png)
 
 ### What the question is asking
 
@@ -563,9 +563,9 @@ endmodule
 <a id="problem-134"></a>
 ## 134 — Sequential circuit 8
 
-[Problem note](problems/Day%2006/134-sim__circuit8.md) · [Open screenshot at full resolution](images/Day%2006/134-sim__circuit8.png) · [Verilog file](solutions/Day%2006/134-sim__circuit8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit8)
+[Problem note](problems/Day%2006/134-sim__circuit8.md) · [Verilog file](solutions/Day%2006/134-sim__circuit8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit8)
 
-<a href="images/Day%2006/134-sim__circuit8.png"><img src="images/Day%2006/134-sim__circuit8.png" alt="Sequential circuit 8 question and submitted solution" width="100%"></a>
+![Sequential circuit 8 question and submitted solution](images/Day%2006/134-sim__circuit8.png)
 
 ### What the question is asking
 
@@ -604,9 +604,9 @@ endmodule
 <a id="problem-135"></a>
 ## 135 — Sequential circuit 9
 
-[Problem note](problems/Day%2006/135-sim__circuit9.md) · [Open screenshot at full resolution](images/Day%2006/135-sim__circuit9.png) · [Verilog file](solutions/Day%2006/135-sim__circuit9.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit9)
+[Problem note](problems/Day%2006/135-sim__circuit9.md) · [Verilog file](solutions/Day%2006/135-sim__circuit9.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit9)
 
-<a href="images/Day%2006/135-sim__circuit9.png"><img src="images/Day%2006/135-sim__circuit9.png" alt="Sequential circuit 9 question and submitted solution" width="100%"></a>
+![Sequential circuit 9 question and submitted solution](images/Day%2006/135-sim__circuit9.png)
 
 ### What the question is asking
 
@@ -647,9 +647,9 @@ endmodule
 <a id="problem-136"></a>
 ## 136 — Sequential circuit 10
 
-[Problem note](problems/Day%2006/136-sim__circuit10.md) · [Open screenshot at full resolution](images/Day%2006/136-sim__circuit10.png) · [Verilog file](solutions/Day%2006/136-sim__circuit10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit10)
+[Problem note](problems/Day%2006/136-sim__circuit10.md) · [Verilog file](solutions/Day%2006/136-sim__circuit10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit10)
 
-<a href="images/Day%2006/136-sim__circuit10.png"><img src="images/Day%2006/136-sim__circuit10.png" alt="Sequential circuit 10 question and submitted solution" width="100%"></a>
+![Sequential circuit 10 question and submitted solution](images/Day%2006/136-sim__circuit10.png)
 
 ### What the question is asking
 
@@ -691,9 +691,9 @@ endmodule
 <a id="problem-137"></a>
 ## 137 — Clock
 
-[Problem note](problems/Day%2006/137-tb__clock.md) · [Open screenshot at full resolution](images/Day%2006/137-tb__clock.png) · [Verilog file](solutions/Day%2006/137-tb__clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/clock)
+[Problem note](problems/Day%2006/137-tb__clock.md) · [Verilog file](solutions/Day%2006/137-tb__clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/clock)
 
-<a href="images/Day%2006/137-tb__clock.png"><img src="images/Day%2006/137-tb__clock.png" alt="Clock question and submitted solution" width="100%"></a>
+![Clock question and submitted solution](images/Day%2006/137-tb__clock.png)
 
 ### What the question is asking
 
@@ -726,9 +726,9 @@ endmodule
 <a id="problem-138"></a>
 ## 138 — Testbench1
 
-[Problem note](problems/Day%2006/138-tb__tb1.md) · [Open screenshot at full resolution](images/Day%2006/138-tb__tb1.png) · [Verilog file](solutions/Day%2006/138-tb__tb1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb1)
+[Problem note](problems/Day%2006/138-tb__tb1.md) · [Verilog file](solutions/Day%2006/138-tb__tb1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb1)
 
-<a href="images/Day%2006/138-tb__tb1.png"><img src="images/Day%2006/138-tb__tb1.png" alt="Testbench1 question and submitted solution" width="100%"></a>
+![Testbench1 question and submitted solution](images/Day%2006/138-tb__tb1.png)
 
 ### What the question is asking
 
@@ -767,9 +767,9 @@ endmodule
 <a id="problem-139"></a>
 ## 139 — AND gate
 
-[Problem note](problems/Day%2006/139-tb__and.md) · [Open screenshot at full resolution](images/Day%2006/139-tb__and.png) · [Verilog file](solutions/Day%2006/139-tb__and.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/and)
+[Problem note](problems/Day%2006/139-tb__and.md) · [Verilog file](solutions/Day%2006/139-tb__and.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/and)
 
-<a href="images/Day%2006/139-tb__and.png"><img src="images/Day%2006/139-tb__and.png" alt="AND gate question and submitted solution" width="100%"></a>
+![AND gate question and submitted solution](images/Day%2006/139-tb__and.png)
 
 ### What the question is asking
 
@@ -806,9 +806,9 @@ endmodule
 <a id="problem-140"></a>
 ## 140 — Testbench2
 
-[Problem note](problems/Day%2006/140-tb__tb2.md) · [Open screenshot at full resolution](images/Day%2006/140-tb__tb2.png) · [Verilog file](solutions/Day%2006/140-tb__tb2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb2)
+[Problem note](problems/Day%2006/140-tb__tb2.md) · [Verilog file](solutions/Day%2006/140-tb__tb2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb2)
 
-<a href="images/Day%2006/140-tb__tb2.png"><img src="images/Day%2006/140-tb__tb2.png" alt="Testbench2 question and submitted solution" width="100%"></a>
+![Testbench2 question and submitted solution](images/Day%2006/140-tb__tb2.png)
 
 ### What the question is asking
 
@@ -863,9 +863,9 @@ endmodule
 <a id="problem-141"></a>
 ## 141 — T flip-flop
 
-[Problem note](problems/Day%2006/141-tb__tff.md) · [Open screenshot at full resolution](images/Day%2006/141-tb__tff.png) · [Verilog file](solutions/Day%2006/141-tb__tff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tff)
+[Problem note](problems/Day%2006/141-tb__tff.md) · [Verilog file](solutions/Day%2006/141-tb__tff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tff)
 
-<a href="images/Day%2006/141-tb__tff.png"><img src="images/Day%2006/141-tb__tff.png" alt="T flip-flop question and submitted solution" width="100%"></a>
+![T flip-flop question and submitted solution](images/Day%2006/141-tb__tff.png)
 
 ### What the question is asking
 

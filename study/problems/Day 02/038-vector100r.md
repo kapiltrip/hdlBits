@@ -9,11 +9,11 @@
 | Attempts | 8 total: 1 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 38% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector100r) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/038-vector100r.png) · [Verilog solution](../../solutions/Day%2002/038-vector100r.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/038-vector100r.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/038-vector100r.png"><img src="../../images/Day%2002/038-vector100r.png" alt="Combinational for-loop: Vector reversal 2 question and submitted solution" width="100%"></a>
+![Combinational for-loop: Vector reversal 2 question and submitted solution](../../images/Day%2002/038-vector100r.png)
 
 ## What the question is asking
 

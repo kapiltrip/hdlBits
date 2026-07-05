@@ -9,11 +9,11 @@
 | Attempts | 7 total: 5 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/edgecapture) |
-| Files | [Open screenshot at full resolution](../../images/Day%2004/095-edgecapture.png) · [Verilog solution](../../solutions/Day%2004/095-edgecapture.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2004/095-edgecapture.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2004/095-edgecapture.png"><img src="../../images/Day%2004/095-edgecapture.png" alt="Edge capture register question and submitted solution" width="100%"></a>
+![Edge capture register question and submitted solution](../../images/Day%2004/095-edgecapture.png)
 
 ## What the question is asking
 

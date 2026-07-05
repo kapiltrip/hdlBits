@@ -12,7 +12,7 @@
 
 ## Complete question, submitted answer, and success result
 
-<a href="../../images/Day%2010/156-exams__2014_q3bfsm-question-and-answer.png"><img src="../../images/Day%2010/156-exams__2014_q3bfsm-question-and-answer.png" alt="Q3b FSM full question, submitted solution, and successful result" width="100%"></a>
+![Q3b FSM full question, submitted solution, and successful result](../../images/Day%2010/156-exams__2014_q3bfsm-question-and-answer.png)
 
 ## What the question is asking
 

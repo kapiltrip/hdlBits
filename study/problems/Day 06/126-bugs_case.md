@@ -9,11 +9,11 @@
 | Attempts | 5 total: 2 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 20% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_case) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/126-bugs_case.png) · [Verilog solution](../../solutions/Day%2006/126-bugs_case.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/126-bugs_case.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/126-bugs_case.png"><img src="../../images/Day%2006/126-bugs_case.png" alt="Case statement question and submitted solution" width="100%"></a>
+![Case statement question and submitted solution](../../images/Day%2006/126-bugs_case.png)
 
 ## What the question is asking
 

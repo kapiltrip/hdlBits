@@ -11,7 +11,7 @@ No screenshot, solution, submission date, or archive number is assigned until HD
 | 1 | 116 | To Do | More Circuits | Rule 90 | [Open](https://hdlbits.01xz.net/wiki/rule90) |
 | 2 | 117 | To Do | More Circuits | Rule 110 | [Open](https://hdlbits.01xz.net/wiki/rule110) |
 | 3 | 118 | To Do | More Circuits | Conway's Game of Life 16x16 | [Open](https://hdlbits.01xz.net/wiki/conwaylife) |
-| 4 | 129 | Review | Finite State Machines | Lemmings 2 | [Open](https://hdlbits.01xz.net/wiki/lemmings2) · [Review evidence](images/Review/120-lemmings2.png) |
+| 4 | 129 | Review | Finite State Machines | Lemmings 2 | [Open](https://hdlbits.01xz.net/wiki/lemmings2) · evidence rendered below |
 | 5 | 130 | To Do | Finite State Machines | Lemmings 3 | [Open](https://hdlbits.01xz.net/wiki/lemmings3) |
 | 6 | 131 | To Do | Finite State Machines | Lemmings 4 | [Open](https://hdlbits.01xz.net/wiki/lemmings4) |
 | 7 | 132 | To Do | Finite State Machines | One-hot FSM | [Open](https://hdlbits.01xz.net/wiki/fsm_onehot) |
@@ -27,8 +27,20 @@ No screenshot, solution, submission date, or archive number is assigned until HD
 | 17 | 147 | To Do | Finite State Machines | Q6: FSM | [Open](https://hdlbits.01xz.net/wiki/exams/m2014_q6) |
 | 18 | 148 | To Do | Finite State Machines | Q2a: FSM | [Open](https://hdlbits.01xz.net/wiki/exams/2012_q2fsm) |
 | 19 | 149 | To Do | Finite State Machines | Q2b: One-hot FSM equations | [Open](https://hdlbits.01xz.net/wiki/exams/2012_q2b) |
-| 20 | 150 | Review | Finite State Machines | Q2a: FSM | [Open](https://hdlbits.01xz.net/wiki/exams/2013_q2afsm) · [Review evidence](images/Review/review-exams__2013_q2afsm.png) |
+| 20 | 150 | Review | Finite State Machines | Q2a: FSM | [Open](https://hdlbits.01xz.net/wiki/exams/2013_q2afsm) · evidence rendered below |
 | 21 | 158 | To Do | Building Larger Circuits | FSM: One-hot logic equations | [Open](https://hdlbits.01xz.net/wiki/exams/review2015_fsmonehot) |
+
+## Review evidence rendered inline
+
+### Lemmings 2
+
+![Complete Lemmings 2 question and previous attempt](images/Review/120-lemmings2.png)
+
+The latest 2026-07-04 attempt is reviewed with all of its split editor screenshots in [Review.md](Review.md). It remains a review item because no successful submission is visible.
+
+### Q2a: FSM
+
+![Complete Q2a FSM review capture](images/Review/review-exams__2013_q2afsm.png)
 
 ## Completion rule
 

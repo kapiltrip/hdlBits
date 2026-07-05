@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_muxdff) |
-| Files | [Open screenshot at full resolution](../../images/Day%2004/089-mt2015_muxdff.png) · [Verilog solution](../../solutions/Day%2004/089-mt2015_muxdff.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2004/089-mt2015_muxdff.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2004/089-mt2015_muxdff.png"><img src="../../images/Day%2004/089-mt2015_muxdff.png" alt="Mux and DFF question and submitted solution" width="100%"></a>
+![Mux and DFF question and submitted solution](../../images/Day%2004/089-mt2015_muxdff.png)
 
 ## What the question is asking
 

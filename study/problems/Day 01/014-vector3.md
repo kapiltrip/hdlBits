@@ -9,11 +9,11 @@
 | Attempts | 8 total: 0 incorrect, 7 compile error, 0 simulation error |
 | Success rate | 13% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector3) |
-| Files | [Open screenshot at full resolution](../../images/Day%2001/014-vector3.png) · [Verilog solution](../../solutions/Day%2001/014-vector3.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2001/014-vector3.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2001/014-vector3.png"><img src="../../images/Day%2001/014-vector3.png" alt="Vector concatenation operator question and submitted solution" width="100%"></a>
+![Vector concatenation operator question and submitted solution](../../images/Day%2001/014-vector3.png)
 
 ## What the question is asking
 

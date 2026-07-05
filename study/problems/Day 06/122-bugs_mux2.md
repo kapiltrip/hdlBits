@@ -9,11 +9,11 @@
 | Attempts | 4 total: 2 incorrect, 0 compile error, 1 simulation error |
 | Success rate | 25% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux2) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/122-bugs_mux2.png) · [Verilog solution](../../solutions/Day%2006/122-bugs_mux2.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/122-bugs_mux2.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/122-bugs_mux2.png"><img src="../../images/Day%2006/122-bugs_mux2.png" alt="Mux question and submitted solution" width="100%"></a>
+![Mux question and submitted solution](../../images/Day%2006/122-bugs_mux2.png)
 
 ## What the question is asking
 

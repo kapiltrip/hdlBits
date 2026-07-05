@@ -9,11 +9,11 @@
 | Attempts | 6 total: 5 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 17% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/gatesv) |
-| Files | [Open screenshot at full resolution](../../images/Day%2003/057-gatesv.png) · [Verilog solution](../../solutions/Day%2003/057-gatesv.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2003/057-gatesv.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2003/057-gatesv.png"><img src="../../images/Day%2003/057-gatesv.png" alt="Gates and vectors question and submitted solution" width="100%"></a>
+![Gates and vectors question and submitted solution](../../images/Day%2003/057-gatesv.png)
 
 ## What the question is asking
 

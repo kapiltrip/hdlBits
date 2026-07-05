@@ -9,11 +9,11 @@
 | Attempts | 6 total: 4 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 17% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3onehot) |
-| Files | [Open screenshot at full resolution](../../images/Day%2005/115-fsm3onehot.png) · [Verilog solution](../../solutions/Day%2005/115-fsm3onehot.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2005/115-fsm3onehot.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2005/115-fsm3onehot.png"><img src="../../images/Day%2005/115-fsm3onehot.png" alt="Simple one-hot state transitions 3 question and submitted solution" width="100%"></a>
+![Simple one-hot state transitions 3 question and submitted solution](../../images/Day%2005/115-fsm3onehot.png)
 
 ## What the question is asking
 

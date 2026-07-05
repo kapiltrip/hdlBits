@@ -9,11 +9,11 @@
 | Attempts | 22 total: 5 incorrect, 16 compile error, 0 simulation error |
 | Success rate | 5% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/popcount255) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/039-popcount255.png) · [Verilog solution](../../solutions/Day%2002/039-popcount255.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/039-popcount255.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/039-popcount255.png"><img src="../../images/Day%2002/039-popcount255.png" alt="Combinational for-loop: 255-bit population count question and submitted solution" width="100%"></a>
+![Combinational for-loop: 255-bit population count question and submitted solution](../../images/Day%2002/039-popcount255.png)
 
 ## What the question is asking
 

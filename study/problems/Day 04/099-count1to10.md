@@ -9,11 +9,11 @@
 | Attempts | 3 total: 1 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/count1to10) |
-| Files | [Open screenshot at full resolution](../../images/Day%2004/099-count1to10.png) · [Verilog solution](../../solutions/Day%2004/099-count1to10.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2004/099-count1to10.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2004/099-count1to10.png"><img src="../../images/Day%2004/099-count1to10.png" alt="Decade counter again question and submitted solution" width="100%"></a>
+![Decade counter again question and submitted solution](../../images/Day%2004/099-count1to10.png)
 
 ## What the question is asking
 

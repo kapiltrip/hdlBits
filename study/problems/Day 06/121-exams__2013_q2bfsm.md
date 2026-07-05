@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/121-exams__2013_q2bfsm.png) · [Verilog solution](../../solutions/Day%2006/121-exams__2013_q2bfsm.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/121-exams__2013_q2bfsm.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/121-exams__2013_q2bfsm.png"><img src="../../images/Day%2006/121-exams__2013_q2bfsm.png" alt="Q2b: Another FSM question and submitted solution" width="100%"></a>
+![Q2b: Another FSM question and submitted solution](../../images/Day%2006/121-exams__2013_q2bfsm.png)
 
 ## What the question is asking
 

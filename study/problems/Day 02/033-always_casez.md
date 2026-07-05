@@ -9,11 +9,11 @@
 | Attempts | 2 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/always_casez) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/033-always_casez.png) · [Verilog solution](../../solutions/Day%2002/033-always_casez.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/033-always_casez.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/033-always_casez.png"><img src="../../images/Day%2002/033-always_casez.png" alt="Priority encoder with casez question and submitted solution" width="100%"></a>
+![Priority encoder with casez question and submitted solution](../../images/Day%2002/033-always_casez.png)
 
 ## What the question is asking
 

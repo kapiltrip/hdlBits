@@ -9,11 +9,11 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_count1k) |
-| Files | [Open screenshot at full resolution](../../images/Day%2009/147-exams__review2015_count1k.png) · [Verilog solution](../../solutions/Day%2009/147-exams__review2015_count1k.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2009/147-exams__review2015_count1k.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2009/147-exams__review2015_count1k.png"><img src="../../images/Day%2009/147-exams__review2015_count1k.png" alt="Counter with period 1000 question and submitted solution" width="100%"></a>
+![Counter with period 1000 question and submitted solution](../../images/Day%2009/147-exams__review2015_count1k.png)
 
 ## What the question is asking
 

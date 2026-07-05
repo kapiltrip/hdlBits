@@ -6,18 +6,18 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 12:02:40 AM | [142](#problem-142) | Sequential Logic | [Q8: Design a Mealy FSM](problems/Day%2007/142-exams__ece241_2013_q8.md) | [Code](solutions/Day%2007/142-exams__ece241_2013_q8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) |
+| 1 | 12:02:40 AM | [142](#problem-142) | Sequential Logic | [Q8: Design a Mealy FSM](problems/Day%2007/142-exams__ece241_2013_q8.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) |
 
 ---
 
 <a id="problem-142"></a>
 ## 142 — Q8: Design a Mealy FSM
 
-[Problem note](problems/Day%2007/142-exams__ece241_2013_q8.md) · [Open screenshot at full resolution](images/Day%2007/142-exams__ece241_2013_q8.png) · [Verilog file](solutions/Day%2007/142-exams__ece241_2013_q8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8)
+[Problem note](problems/Day%2007/142-exams__ece241_2013_q8.md) · [Verilog file](solutions/Day%2007/142-exams__ece241_2013_q8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8)
 
-<a href="images/Day%2007/142-exams__ece241_2013_q8.png"><img src="images/Day%2007/142-exams__ece241_2013_q8.png" alt="Q8: Design a Mealy FSM question and submitted solution" width="100%"></a>
+![Q8: Design a Mealy FSM question and submitted solution](images/Day%2007/142-exams__ece241_2013_q8.png)
 
 ### What the question is asking
 

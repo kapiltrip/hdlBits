@@ -9,11 +9,11 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/wire_decl) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/007-wire_decl.png) · [Verilog solution](../../solutions/Day%2002/007-wire_decl.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/007-wire_decl.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/007-wire_decl.png"><img src="../../images/Day%2002/007-wire_decl.png" alt="Declaring wires question and submitted solution" width="100%"></a>
+![Declaring wires question and submitted solution](../../images/Day%2002/007-wire_decl.png)
 
 ## What the question is asking
 

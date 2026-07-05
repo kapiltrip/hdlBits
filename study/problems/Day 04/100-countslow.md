@@ -9,11 +9,11 @@
 | Attempts | 3 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 67% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/countslow) |
-| Files | [Open screenshot at full resolution](../../images/Day%2004/100-countslow.png) · [Verilog solution](../../solutions/Day%2004/100-countslow.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2004/100-countslow.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2004/100-countslow.png"><img src="../../images/Day%2004/100-countslow.png" alt="Slow decade counter question and submitted solution" width="100%"></a>
+![Slow decade counter question and submitted solution](../../images/Day%2004/100-countslow.png)
 
 ## What the question is asking
 

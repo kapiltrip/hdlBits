@@ -14,9 +14,9 @@
 
 ## Question and successful submission
 
-<a href="../../images/Day%2009/151-step_one.png"><img src="../../images/Day%2009/151-step_one.png" alt="Getting Started problem statement and verified success timestamp" width="100%"></a>
+![Getting Started problem statement and verified success timestamp](../../images/Day%2009/151-step_one.png)
 
-<a href="../../images/Day%2009/151-step_one-solution.png"><img src="../../images/Day%2009/151-step_one-solution.png" alt="Getting Started loaded successful Verilog submission" width="100%"></a>
+![Getting Started loaded successful Verilog submission](../../images/Day%2009/151-step_one-solution.png)
 
 ## What the question is asking
 

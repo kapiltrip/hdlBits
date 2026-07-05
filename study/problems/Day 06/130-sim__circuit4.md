@@ -9,11 +9,11 @@
 | Attempts | 4 total: 2 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 25% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit4) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/130-sim__circuit4.png) · [Verilog solution](../../solutions/Day%2006/130-sim__circuit4.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/130-sim__circuit4.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/130-sim__circuit4.png"><img src="../../images/Day%2006/130-sim__circuit4.png" alt="Combinational circuit 4 question and submitted solution" width="100%"></a>
+![Combinational circuit 4 question and submitted solution](../../images/Day%2006/130-sim__circuit4.png)
 
 ## What the question is asking
 

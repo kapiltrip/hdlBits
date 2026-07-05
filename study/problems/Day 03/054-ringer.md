@@ -9,11 +9,11 @@
 | Attempts | 5 total: 1 incorrect, 3 compile error, 0 simulation error |
 | Success rate | 20% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/ringer) |
-| Files | [Open screenshot at full resolution](../../images/Day%2003/054-ringer.png) · [Verilog solution](../../solutions/Day%2003/054-ringer.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2003/054-ringer.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2003/054-ringer.png"><img src="../../images/Day%2003/054-ringer.png" alt="Ring or vibrate? question and submitted solution" width="100%"></a>
+![Ring or vibrate? question and submitted solution](../../images/Day%2003/054-ringer.png)
 
 ## What the question is asking
 

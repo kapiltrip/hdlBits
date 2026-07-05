@@ -9,11 +9,11 @@
 | Attempts | 7 total: 1 incorrect, 5 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3comb) |
-| Files | [Open screenshot at full resolution](../../images/Day%2005/114-fsm3comb.png) · [Verilog solution](../../solutions/Day%2005/114-fsm3comb.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2005/114-fsm3comb.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2005/114-fsm3comb.png"><img src="../../images/Day%2005/114-fsm3comb.png" alt="Simple state transitions 3 question and submitted solution" width="100%"></a>
+![Simple state transitions 3 question and submitted solution](../../images/Day%2005/114-fsm3comb.png)
 
 ## What the question is asking
 
