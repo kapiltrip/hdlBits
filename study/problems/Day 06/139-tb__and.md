@@ -9,11 +9,11 @@
 | Attempts | 7 total: 2 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/tb/and) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/139-tb__and.png) · [Verilog solution](../../solutions/Day%2006/139-tb__and.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/139-tb__and.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/139-tb__and.png"><img src="../../images/Day%2006/139-tb__and.png" alt="AND gate question and submitted solution" width="100%"></a>
+![AND gate question and submitted solution](../../images/Day%2006/139-tb__and.png)
 
 ## What the question is asking
 

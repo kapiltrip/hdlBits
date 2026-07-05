@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/thermostat) |
-| Files | [Open screenshot at full resolution](../../images/Day%2003/055-thermostat.png) · [Verilog solution](../../solutions/Day%2003/055-thermostat.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2003/055-thermostat.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2003/055-thermostat.png"><img src="../../images/Day%2003/055-thermostat.png" alt="Thermostat question and submitted solution" width="100%"></a>
+![Thermostat question and submitted solution](../../images/Day%2003/055-thermostat.png)
 
 ## What the question is asking
 

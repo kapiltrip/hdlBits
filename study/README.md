@@ -5,12 +5,13 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 - Latest archived completion: `exams/m2014_q6c`.
 - Review queue: `lemmings2` and `exams/2013_q2afsm`.
 - Study status: **157 completed**, **2 review**, and **19 to do**, matching the live HDLBits solved count.
-- Workbook status: the root tracker is current at **157 completed / 2 review / 19 to do**, uses the correct `study/` repository links, and maps all 21 remaining questions to Day 11.
+- Workbook status: the root tracker is current at **157 completed / 2 review / 19 to do**, uses the correct `study/` repository links, and maps all 21 remaining questions to Day 12.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The complete Excel tracker is the single root-level file [HDLBits_Tracker.xlsx](../HDLBits_Tracker.xlsx).
 - [Review queue](Review.md) contains only the two genuinely unfinished problems.
 - Every completed problem has a deep problem note, standalone Verilog solution, and source URL. The logged-in HDLBits record verified the exact timestamps and attempt totals for problems 151–154; the complete-timer wrong-attempt screenshots remain integrated with its discussion.
 - All 157 completed records are covered by the internal [screenshot audit](internal/screenshot_audit.json). Problems 153 and 154 now include full question, successful-submission history, and complete loaded-answer captures; the earlier mistake images remain available for revision.
+- Every completed day/problem page renders its screenshot and complete saved Verilog directly in GitHub Markdown. Review and mistake pages also render their evidence inline; links are secondary navigation only.
 - The second-pass code, screenshot, workbook, link, and formatting checks are recorded in the internal [repository review](internal/REPOSITORY_REVIEW.md).
 
 ## Study days
@@ -28,6 +29,7 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 | [Day 09](Day%2009.md) | 2026-07-02 | 11 |
 | [Day 10](Day%2010.md) | 2026-07-03 | 4 |
 | [Day 11](Day%2011.md) | 2026-07-04 | 0 completed / 21 planned |
+| [Day 12](Day%2012.md) | 2026-07-05 | 0 completed / 21 carried forward |
 
 ## Section index
 

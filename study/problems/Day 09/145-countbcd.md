@@ -9,11 +9,11 @@
 | Attempts | 11 total: 1 incorrect, 9 compile error, 0 simulation error |
 | Success rate | 9% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/countbcd) |
-| Files | [Open screenshot at full resolution](../../images/Day%2009/145-countbcd.png) · [Verilog solution](../../solutions/Day%2009/145-countbcd.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2009/145-countbcd.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2009/145-countbcd.png"><img src="../../images/Day%2009/145-countbcd.png" alt="4-digit decimal counter question and submitted solution" width="100%"></a>
+![4-digit decimal counter question and submitted solution](../../images/Day%2009/145-countbcd.png)
 
 ## What the question is asking
 

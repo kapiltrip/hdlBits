@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_shift) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/021-module_shift.png) · [Verilog solution](../../solutions/Day%2002/021-module_shift.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/021-module_shift.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/021-module_shift.png"><img src="../../images/Day%2002/021-module_shift.png" alt="Three modules question and submitted solution" width="100%"></a>
+![Three modules question and submitted solution](../../images/Day%2002/021-module_shift.png)
 
 ## What the question is asking
 

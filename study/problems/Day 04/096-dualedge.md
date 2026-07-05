@@ -9,11 +9,11 @@
 | Attempts | 7 total: 4 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 14% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/dualedge) |
-| Files | [Open screenshot at full resolution](../../images/Day%2004/096-dualedge.png) · [Verilog solution](../../solutions/Day%2004/096-dualedge.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2004/096-dualedge.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2004/096-dualedge.png"><img src="../../images/Day%2004/096-dualedge.png" alt="Dual-edge triggered flip-flop question and submitted solution" width="100%"></a>
+![Dual-edge triggered flip-flop question and submitted solution](../../images/Day%2004/096-dualedge.png)
 
 ## What the question is asking
 

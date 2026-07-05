@@ -9,11 +9,11 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/018-module.png) · [Verilog solution](../../solutions/Day%2002/018-module.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/018-module.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/018-module.png"><img src="../../images/Day%2002/018-module.png" alt="Modules question and submitted solution" width="100%"></a>
+![Modules question and submitted solution](../../images/Day%2002/018-module.png)
 
 ## What the question is asking
 

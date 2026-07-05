@@ -9,11 +9,11 @@
 | Attempts | 2 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/popcount3) |
-| Files | [Open screenshot at full resolution](../../images/Day%2003/056-popcount3.png) · [Verilog solution](../../solutions/Day%2003/056-popcount3.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2003/056-popcount3.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2003/056-popcount3.png"><img src="../../images/Day%2003/056-popcount3.png" alt="3-bit population count question and submitted solution" width="100%"></a>
+![3-bit population count question and submitted solution](../../images/Day%2003/056-popcount3.png)
 
 ## What the question is asking
 

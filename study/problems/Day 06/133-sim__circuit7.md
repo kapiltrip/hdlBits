@@ -9,11 +9,11 @@
 | Attempts | 5 total: 4 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 20% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit7) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/133-sim__circuit7.png) · [Verilog solution](../../solutions/Day%2006/133-sim__circuit7.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/133-sim__circuit7.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/133-sim__circuit7.png"><img src="../../images/Day%2006/133-sim__circuit7.png" alt="Sequential circuit 7 question and submitted solution" width="100%"></a>
+![Sequential circuit 7 question and submitted solution](../../images/Day%2006/133-sim__circuit7.png)
 
 ## What the question is asking
 

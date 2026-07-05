@@ -9,11 +9,11 @@
 | Attempts | 9 total: 2 incorrect, 5 compile error, 0 simulation error |
 | Success rate | 22% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tff) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/141-tb__tff.png) · [Verilog solution](../../solutions/Day%2006/141-tb__tff.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/141-tb__tff.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/141-tb__tff.png"><img src="../../images/Day%2006/141-tb__tff.png" alt="T flip-flop question and submitted solution" width="100%"></a>
+![T flip-flop question and submitted solution](../../images/Day%2006/141-tb__tff.png)
 
 ## What the question is asking
 

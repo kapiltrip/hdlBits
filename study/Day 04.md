@@ -6,36 +6,36 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 12:09:54 AM | [089](#problem-089) | Sequential Logic | [Mux and DFF](problems/Day%2004/089-mt2015_muxdff.md) | [Code](solutions/Day%2004/089-mt2015_muxdff.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/mt2015_muxdff) |
-| 2 | 12:25:46 AM | [090](#problem-090) | Sequential Logic | [Mux and DFF](problems/Day%2004/090-exams__2014_q4a.md) | [Code](solutions/Day%2004/090-exams__2014_q4a.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2014_q4a) |
-| 3 | 12:00:31 AM | [091](#problem-091) | Sequential Logic | [DFFs and gates](problems/Day%2004/091-exams__ece241_2014_q4.md) | [Code](solutions/Day%2004/091-exams__ece241_2014_q4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q4) |
-| 4 | 2:12:29 PM | [092](#problem-092) | Sequential Logic | [Create circuit from truth table](problems/Day%2004/092-exams__ece241_2013_q7.md) | [Code](solutions/Day%2004/092-exams__ece241_2013_q7.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q7) |
-| 5 | 2:28:20 PM | [093](#problem-093) | Sequential Logic | [Detect an edge](problems/Day%2004/093-edgedetect.md) | [Code](solutions/Day%2004/093-edgedetect.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/edgedetect) |
-| 6 | 2:31:22 PM | [094](#problem-094) | Sequential Logic | [Detect both edges](problems/Day%2004/094-edgedetect2.md) | [Code](solutions/Day%2004/094-edgedetect2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/edgedetect2) |
-| 7 | 2:50:42 PM | [095](#problem-095) | Sequential Logic | [Edge capture register](problems/Day%2004/095-edgecapture.md) | [Code](solutions/Day%2004/095-edgecapture.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/edgecapture) |
-| 8 | 3:07:56 PM | [096](#problem-096) | Sequential Logic | [Dual-edge triggered flip-flop](problems/Day%2004/096-dualedge.md) | [Code](solutions/Day%2004/096-dualedge.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/dualedge) |
-| 9 | 1:01:36 AM | [097](#problem-097) | Sequential Logic | [Four-bit binary counter](problems/Day%2004/097-count15.md) | [Code](solutions/Day%2004/097-count15.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count15) |
-| 10 | 1:12:51 AM | [098](#problem-098) | Sequential Logic | [Decade counter](problems/Day%2004/098-count10.md) | [Code](solutions/Day%2004/098-count10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count10) |
-| 11 | 1:21:20 AM | [099](#problem-099) | Sequential Logic | [Decade counter again](problems/Day%2004/099-count1to10.md) | [Code](solutions/Day%2004/099-count1to10.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/count1to10) |
-| 12 | 1:31:52 AM | [100](#problem-100) | Sequential Logic | [Slow decade counter](problems/Day%2004/100-countslow.md) | [Code](solutions/Day%2004/100-countslow.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/countslow) |
-| 13 | 4:10:18 PM | [101](#problem-101) | Sequential Logic | [4-bit shift register](problems/Day%2004/101-shift4.md) | [Code](solutions/Day%2004/101-shift4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/shift4) |
-| 14 | 4:23:55 PM | [102](#problem-102) | Sequential Logic | [Left/right rotator](problems/Day%2004/102-rotate100.md) | [Code](solutions/Day%2004/102-rotate100.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/rotate100) |
-| 15 | 4:42:03 PM | [103](#problem-103) | Sequential Logic | [Left/right arithmetic shift by 1 or 8](problems/Day%2004/103-shift18.md) | [Code](solutions/Day%2004/103-shift18.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/shift18) |
-| 16 | 5:21:13 PM | [104](#problem-104) | Sequential Logic | [5-bit LFSR](problems/Day%2004/104-lfsr5.md) | [Code](solutions/Day%2004/104-lfsr5.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lfsr5) |
-| 17 | 11:37:29 PM | [105](#problem-105) | Sequential Logic | [3-bit LFSR](problems/Day%2004/105-mt2015_lfsr.md) | [Code](solutions/Day%2004/105-mt2015_lfsr.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/mt2015_lfsr) |
-| 18 | 11:03:20 PM | [106](#problem-106) | Sequential Logic | [32-bit LFSR](problems/Day%2004/106-lfsr32.md) | [Code](solutions/Day%2004/106-lfsr32.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lfsr32) |
-| 19 | 11:20:08 PM | [107](#problem-107) | Sequential Logic | [Shift register](problems/Day%2004/107-exams__m2014_q4k.md) | [Code](solutions/Day%2004/107-exams__m2014_q4k.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/m2014_q4k) |
+| 1 | 12:09:54 AM | [089](#problem-089) | Sequential Logic | [Mux and DFF](problems/Day%2004/089-mt2015_muxdff.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/mt2015_muxdff) |
+| 2 | 12:25:46 AM | [090](#problem-090) | Sequential Logic | [Mux and DFF](problems/Day%2004/090-exams__2014_q4a.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2014_q4a) |
+| 3 | 12:00:31 AM | [091](#problem-091) | Sequential Logic | [DFFs and gates](problems/Day%2004/091-exams__ece241_2014_q4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q4) |
+| 4 | 2:12:29 PM | [092](#problem-092) | Sequential Logic | [Create circuit from truth table](problems/Day%2004/092-exams__ece241_2013_q7.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q7) |
+| 5 | 2:28:20 PM | [093](#problem-093) | Sequential Logic | [Detect an edge](problems/Day%2004/093-edgedetect.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/edgedetect) |
+| 6 | 2:31:22 PM | [094](#problem-094) | Sequential Logic | [Detect both edges](problems/Day%2004/094-edgedetect2.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/edgedetect2) |
+| 7 | 2:50:42 PM | [095](#problem-095) | Sequential Logic | [Edge capture register](problems/Day%2004/095-edgecapture.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/edgecapture) |
+| 8 | 3:07:56 PM | [096](#problem-096) | Sequential Logic | [Dual-edge triggered flip-flop](problems/Day%2004/096-dualedge.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/dualedge) |
+| 9 | 1:01:36 AM | [097](#problem-097) | Sequential Logic | [Four-bit binary counter](problems/Day%2004/097-count15.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/count15) |
+| 10 | 1:12:51 AM | [098](#problem-098) | Sequential Logic | [Decade counter](problems/Day%2004/098-count10.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/count10) |
+| 11 | 1:21:20 AM | [099](#problem-099) | Sequential Logic | [Decade counter again](problems/Day%2004/099-count1to10.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/count1to10) |
+| 12 | 1:31:52 AM | [100](#problem-100) | Sequential Logic | [Slow decade counter](problems/Day%2004/100-countslow.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/countslow) |
+| 13 | 4:10:18 PM | [101](#problem-101) | Sequential Logic | [4-bit shift register](problems/Day%2004/101-shift4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/shift4) |
+| 14 | 4:23:55 PM | [102](#problem-102) | Sequential Logic | [Left/right rotator](problems/Day%2004/102-rotate100.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/rotate100) |
+| 15 | 4:42:03 PM | [103](#problem-103) | Sequential Logic | [Left/right arithmetic shift by 1 or 8](problems/Day%2004/103-shift18.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/shift18) |
+| 16 | 5:21:13 PM | [104](#problem-104) | Sequential Logic | [5-bit LFSR](problems/Day%2004/104-lfsr5.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/lfsr5) |
+| 17 | 11:37:29 PM | [105](#problem-105) | Sequential Logic | [3-bit LFSR](problems/Day%2004/105-mt2015_lfsr.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/mt2015_lfsr) |
+| 18 | 11:03:20 PM | [106](#problem-106) | Sequential Logic | [32-bit LFSR](problems/Day%2004/106-lfsr32.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/lfsr32) |
+| 19 | 11:20:08 PM | [107](#problem-107) | Sequential Logic | [Shift register](problems/Day%2004/107-exams__m2014_q4k.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/m2014_q4k) |
 
 ---
 
 <a id="problem-089"></a>
 ## 089 — Mux and DFF
 
-[Problem note](problems/Day%2004/089-mt2015_muxdff.md) · [Open screenshot at full resolution](images/Day%2004/089-mt2015_muxdff.png) · [Verilog file](solutions/Day%2004/089-mt2015_muxdff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_muxdff)
+[Problem note](problems/Day%2004/089-mt2015_muxdff.md) · [Verilog file](solutions/Day%2004/089-mt2015_muxdff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_muxdff)
 
-<a href="images/Day%2004/089-mt2015_muxdff.png"><img src="images/Day%2004/089-mt2015_muxdff.png" alt="Mux and DFF question and submitted solution" width="100%"></a>
+![Mux and DFF question and submitted solution](images/Day%2004/089-mt2015_muxdff.png)
 
 ### What the question is asking
 
@@ -63,9 +63,9 @@ endmodule
 <a id="problem-090"></a>
 ## 090 — Mux and DFF
 
-[Problem note](problems/Day%2004/090-exams__2014_q4a.md) · [Open screenshot at full resolution](images/Day%2004/090-exams__2014_q4a.png) · [Verilog file](solutions/Day%2004/090-exams__2014_q4a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2014_q4a)
+[Problem note](problems/Day%2004/090-exams__2014_q4a.md) · [Verilog file](solutions/Day%2004/090-exams__2014_q4a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2014_q4a)
 
-<a href="images/Day%2004/090-exams__2014_q4a.png"><img src="images/Day%2004/090-exams__2014_q4a.png" alt="Mux and DFF question and submitted solution" width="100%"></a>
+![Mux and DFF question and submitted solution](images/Day%2004/090-exams__2014_q4a.png)
 
 ### What the question is asking
 
@@ -90,9 +90,9 @@ endmodule
 <a id="problem-091"></a>
 ## 091 — DFFs and gates
 
-[Problem note](problems/Day%2004/091-exams__ece241_2014_q4.md) · [Open screenshot at full resolution](images/Day%2004/091-exams__ece241_2014_q4.png) · [Verilog file](solutions/Day%2004/091-exams__ece241_2014_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q4)
+[Problem note](problems/Day%2004/091-exams__ece241_2014_q4.md) · [Verilog file](solutions/Day%2004/091-exams__ece241_2014_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q4)
 
-<a href="images/Day%2004/091-exams__ece241_2014_q4.png"><img src="images/Day%2004/091-exams__ece241_2014_q4.png" alt="DFFs and gates question and submitted solution" width="100%"></a>
+![DFFs and gates question and submitted solution](images/Day%2004/091-exams__ece241_2014_q4.png)
 
 ### What the question is asking
 
@@ -126,9 +126,9 @@ endmodule
 <a id="problem-092"></a>
 ## 092 — Create circuit from truth table
 
-[Problem note](problems/Day%2004/092-exams__ece241_2013_q7.md) · [Open screenshot at full resolution](images/Day%2004/092-exams__ece241_2013_q7.png) · [Verilog file](solutions/Day%2004/092-exams__ece241_2013_q7.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q7)
+[Problem note](problems/Day%2004/092-exams__ece241_2013_q7.md) · [Verilog file](solutions/Day%2004/092-exams__ece241_2013_q7.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q7)
 
-<a href="images/Day%2004/092-exams__ece241_2013_q7.png"><img src="images/Day%2004/092-exams__ece241_2013_q7.png" alt="Create circuit from truth table question and submitted solution" width="100%"></a>
+![Create circuit from truth table question and submitted solution](images/Day%2004/092-exams__ece241_2013_q7.png)
 
 ### What the question is asking
 
@@ -151,9 +151,9 @@ endmodule
 <a id="problem-093"></a>
 ## 093 — Detect an edge
 
-[Problem note](problems/Day%2004/093-edgedetect.md) · [Open screenshot at full resolution](images/Day%2004/093-edgedetect.png) · [Verilog file](solutions/Day%2004/093-edgedetect.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect)
+[Problem note](problems/Day%2004/093-edgedetect.md) · [Verilog file](solutions/Day%2004/093-edgedetect.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect)
 
-<a href="images/Day%2004/093-edgedetect.png"><img src="images/Day%2004/093-edgedetect.png" alt="Detect an edge question and submitted solution" width="100%"></a>
+![Detect an edge question and submitted solution](images/Day%2004/093-edgedetect.png)
 
 ### What the question is asking
 
@@ -180,9 +180,9 @@ endmodule
 <a id="problem-094"></a>
 ## 094 — Detect both edges
 
-[Problem note](problems/Day%2004/094-edgedetect2.md) · [Open screenshot at full resolution](images/Day%2004/094-edgedetect2.png) · [Verilog file](solutions/Day%2004/094-edgedetect2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect2)
+[Problem note](problems/Day%2004/094-edgedetect2.md) · [Verilog file](solutions/Day%2004/094-edgedetect2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect2)
 
-<a href="images/Day%2004/094-edgedetect2.png"><img src="images/Day%2004/094-edgedetect2.png" alt="Detect both edges question and submitted solution" width="100%"></a>
+![Detect both edges question and submitted solution](images/Day%2004/094-edgedetect2.png)
 
 ### What the question is asking
 
@@ -211,9 +211,9 @@ endmodule
 <a id="problem-095"></a>
 ## 095 — Edge capture register
 
-[Problem note](problems/Day%2004/095-edgecapture.md) · [Open screenshot at full resolution](images/Day%2004/095-edgecapture.png) · [Verilog file](solutions/Day%2004/095-edgecapture.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgecapture)
+[Problem note](problems/Day%2004/095-edgecapture.md) · [Verilog file](solutions/Day%2004/095-edgecapture.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgecapture)
 
-<a href="images/Day%2004/095-edgecapture.png"><img src="images/Day%2004/095-edgecapture.png" alt="Edge capture register question and submitted solution" width="100%"></a>
+![Edge capture register question and submitted solution](images/Day%2004/095-edgecapture.png)
 
 ### What the question is asking
 
@@ -237,9 +237,9 @@ endmodule
 <a id="problem-096"></a>
 ## 096 — Dual-edge triggered flip-flop
 
-[Problem note](problems/Day%2004/096-dualedge.md) · [Open screenshot at full resolution](images/Day%2004/096-dualedge.png) · [Verilog file](solutions/Day%2004/096-dualedge.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dualedge)
+[Problem note](problems/Day%2004/096-dualedge.md) · [Verilog file](solutions/Day%2004/096-dualedge.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dualedge)
 
-<a href="images/Day%2004/096-dualedge.png"><img src="images/Day%2004/096-dualedge.png" alt="Dual-edge triggered flip-flop question and submitted solution" width="100%"></a>
+![Dual-edge triggered flip-flop question and submitted solution](images/Day%2004/096-dualedge.png)
 
 ### What the question is asking
 
@@ -269,9 +269,9 @@ endmodule
 <a id="problem-097"></a>
 ## 097 — Four-bit binary counter
 
-[Problem note](problems/Day%2004/097-count15.md) · [Open screenshot at full resolution](images/Day%2004/097-count15.png) · [Verilog file](solutions/Day%2004/097-count15.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count15)
+[Problem note](problems/Day%2004/097-count15.md) · [Verilog file](solutions/Day%2004/097-count15.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count15)
 
-<a href="images/Day%2004/097-count15.png"><img src="images/Day%2004/097-count15.png" alt="Four-bit binary counter question and submitted solution" width="100%"></a>
+![Four-bit binary counter question and submitted solution](images/Day%2004/097-count15.png)
 
 ### What the question is asking
 
@@ -307,9 +307,9 @@ endmodule
 <a id="problem-098"></a>
 ## 098 — Decade counter
 
-[Problem note](problems/Day%2004/098-count10.md) · [Open screenshot at full resolution](images/Day%2004/098-count10.png) · [Verilog file](solutions/Day%2004/098-count10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count10)
+[Problem note](problems/Day%2004/098-count10.md) · [Verilog file](solutions/Day%2004/098-count10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count10)
 
-<a href="images/Day%2004/098-count10.png"><img src="images/Day%2004/098-count10.png" alt="Decade counter question and submitted solution" width="100%"></a>
+![Decade counter question and submitted solution](images/Day%2004/098-count10.png)
 
 ### What the question is asking
 
@@ -344,9 +344,9 @@ endmodule
 <a id="problem-099"></a>
 ## 099 — Decade counter again
 
-[Problem note](problems/Day%2004/099-count1to10.md) · [Open screenshot at full resolution](images/Day%2004/099-count1to10.png) · [Verilog file](solutions/Day%2004/099-count1to10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count1to10)
+[Problem note](problems/Day%2004/099-count1to10.md) · [Verilog file](solutions/Day%2004/099-count1to10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count1to10)
 
-<a href="images/Day%2004/099-count1to10.png"><img src="images/Day%2004/099-count1to10.png" alt="Decade counter again question and submitted solution" width="100%"></a>
+![Decade counter again question and submitted solution](images/Day%2004/099-count1to10.png)
 
 ### What the question is asking
 
@@ -368,9 +368,9 @@ endmodule
 <a id="problem-100"></a>
 ## 100 — Slow decade counter
 
-[Problem note](problems/Day%2004/100-countslow.md) · [Open screenshot at full resolution](images/Day%2004/100-countslow.png) · [Verilog file](solutions/Day%2004/100-countslow.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/countslow)
+[Problem note](problems/Day%2004/100-countslow.md) · [Verilog file](solutions/Day%2004/100-countslow.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/countslow)
 
-<a href="images/Day%2004/100-countslow.png"><img src="images/Day%2004/100-countslow.png" alt="Slow decade counter question and submitted solution" width="100%"></a>
+![Slow decade counter question and submitted solution](images/Day%2004/100-countslow.png)
 
 ### What the question is asking
 
@@ -408,9 +408,9 @@ endmodule
 <a id="problem-101"></a>
 ## 101 — 4-bit shift register
 
-[Problem note](problems/Day%2004/101-shift4.md) · [Open screenshot at full resolution](images/Day%2004/101-shift4.png) · [Verilog file](solutions/Day%2004/101-shift4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/shift4)
+[Problem note](problems/Day%2004/101-shift4.md) · [Verilog file](solutions/Day%2004/101-shift4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/shift4)
 
-<a href="images/Day%2004/101-shift4.png"><img src="images/Day%2004/101-shift4.png" alt="4-bit shift register question and submitted solution" width="100%"></a>
+![4-bit shift register question and submitted solution](images/Day%2004/101-shift4.png)
 
 ### What the question is asking
 
@@ -435,9 +435,9 @@ endmodule
 <a id="problem-102"></a>
 ## 102 — Left/right rotator
 
-[Problem note](problems/Day%2004/102-rotate100.md) · [Open screenshot at full resolution](images/Day%2004/102-rotate100.png) · [Verilog file](solutions/Day%2004/102-rotate100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/rotate100)
+[Problem note](problems/Day%2004/102-rotate100.md) · [Verilog file](solutions/Day%2004/102-rotate100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/rotate100)
 
-<a href="images/Day%2004/102-rotate100.png"><img src="images/Day%2004/102-rotate100.png" alt="Left/right rotator question and submitted solution" width="100%"></a>
+![Left/right rotator question and submitted solution](images/Day%2004/102-rotate100.png)
 
 ### What the question is asking
 
@@ -461,9 +461,9 @@ endmodule
 <a id="problem-103"></a>
 ## 103 — Left/right arithmetic shift by 1 or 8
 
-[Problem note](problems/Day%2004/103-shift18.md) · [Open screenshot at full resolution](images/Day%2004/103-shift18.png) · [Verilog file](solutions/Day%2004/103-shift18.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/shift18)
+[Problem note](problems/Day%2004/103-shift18.md) · [Verilog file](solutions/Day%2004/103-shift18.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/shift18)
 
-<a href="images/Day%2004/103-shift18.png"><img src="images/Day%2004/103-shift18.png" alt="Left/right arithmetic shift by 1 or 8 question and submitted solution" width="100%"></a>
+![Left/right arithmetic shift by 1 or 8 question and submitted solution](images/Day%2004/103-shift18.png)
 
 ### What the question is asking
 
@@ -501,9 +501,9 @@ endmodule
 <a id="problem-104"></a>
 ## 104 — 5-bit LFSR
 
-[Problem note](problems/Day%2004/104-lfsr5.md) · [Open screenshot at full resolution](images/Day%2004/104-lfsr5.png) · [Verilog file](solutions/Day%2004/104-lfsr5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lfsr5)
+[Problem note](problems/Day%2004/104-lfsr5.md) · [Verilog file](solutions/Day%2004/104-lfsr5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lfsr5)
 
-<a href="images/Day%2004/104-lfsr5.png"><img src="images/Day%2004/104-lfsr5.png" alt="5-bit LFSR question and submitted solution" width="100%"></a>
+![5-bit LFSR question and submitted solution](images/Day%2004/104-lfsr5.png)
 
 ### What the question is asking
 
@@ -536,9 +536,9 @@ endmodule
 <a id="problem-105"></a>
 ## 105 — 3-bit LFSR
 
-[Problem note](problems/Day%2004/105-mt2015_lfsr.md) · [Open screenshot at full resolution](images/Day%2004/105-mt2015_lfsr.png) · [Verilog file](solutions/Day%2004/105-mt2015_lfsr.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_lfsr)
+[Problem note](problems/Day%2004/105-mt2015_lfsr.md) · [Verilog file](solutions/Day%2004/105-mt2015_lfsr.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_lfsr)
 
-<a href="images/Day%2004/105-mt2015_lfsr.png"><img src="images/Day%2004/105-mt2015_lfsr.png" alt="3-bit LFSR question and submitted solution" width="100%"></a>
+![3-bit LFSR question and submitted solution](images/Day%2004/105-mt2015_lfsr.png)
 
 ### What the question is asking
 
@@ -568,9 +568,9 @@ endmodule
 <a id="problem-106"></a>
 ## 106 — 32-bit LFSR
 
-[Problem note](problems/Day%2004/106-lfsr32.md) · [Open screenshot at full resolution](images/Day%2004/106-lfsr32.png) · [Verilog file](solutions/Day%2004/106-lfsr32.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lfsr32)
+[Problem note](problems/Day%2004/106-lfsr32.md) · [Verilog file](solutions/Day%2004/106-lfsr32.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lfsr32)
 
-<a href="images/Day%2004/106-lfsr32.png"><img src="images/Day%2004/106-lfsr32.png" alt="32-bit LFSR question and submitted solution" width="100%"></a>
+![32-bit LFSR question and submitted solution](images/Day%2004/106-lfsr32.png)
 
 ### What the question is asking
 
@@ -593,9 +593,9 @@ endmodule
 <a id="problem-107"></a>
 ## 107 — Shift register
 
-[Problem note](problems/Day%2004/107-exams__m2014_q4k.md) · [Open screenshot at full resolution](images/Day%2004/107-exams__m2014_q4k.png) · [Verilog file](solutions/Day%2004/107-exams__m2014_q4k.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4k)
+[Problem note](problems/Day%2004/107-exams__m2014_q4k.md) · [Verilog file](solutions/Day%2004/107-exams__m2014_q4k.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4k)
 
-<a href="images/Day%2004/107-exams__m2014_q4k.png"><img src="images/Day%2004/107-exams__m2014_q4k.png" alt="Shift register question and submitted solution" width="100%"></a>
+![Shift register question and submitted solution](images/Day%2004/107-exams__m2014_q4k.png)
 
 ### What the question is asking
 

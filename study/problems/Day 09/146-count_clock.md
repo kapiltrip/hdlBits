@@ -9,11 +9,11 @@
 | Attempts | 6 total: 0 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/count_clock) |
-| Files | [Open screenshot at full resolution](../../images/Day%2009/146-count_clock.png) · [Verilog solution](../../solutions/Day%2009/146-count_clock.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2009/146-count_clock.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2009/146-count_clock.png"><img src="../../images/Day%2009/146-count_clock.png" alt="12-hour clock question and submitted solution" width="100%"></a>
+![12-hour clock question and submitted solution](../../images/Day%2009/146-count_clock.png)
 
 ## What the question is asking
 

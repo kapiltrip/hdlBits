@@ -21,7 +21,7 @@ Use this file as a weakness tracker, not only as a list of old errors. The impor
 
 ## 1. Assignment Context: Wires, `assign`, and `always`
 
-<a href="images/Mistakes/007-vector-split-assign-inside-always.png"><img src="images/Mistakes/007-vector-split-assign-inside-always.png" alt="Vector split attempt with assign inside always" width="100%"></a>
+![Vector split attempt with assign inside always](images/Mistakes/007-vector-split-assign-inside-always.png)
 
 The vector split screenshot shows two separate mistakes at the same time:
 
@@ -48,7 +48,7 @@ The deeper issue is that HDL code is not executed like a C program. A continuous
 
 ## 2. Verilog Operators Are Not English or C++
 
-<a href="images/Mistakes/011-nor-uses-verilog-or-keyword.png"><img src="images/Mistakes/011-nor-uses-verilog-or-keyword.png" alt="NOR attempt using English or keyword" width="100%"></a>
+![NOR attempt using English or keyword](images/Mistakes/011-nor-uses-verilog-or-keyword.png)
 
 The NOR screenshot used:
 
@@ -73,7 +73,7 @@ For scalar one-bit signals, `|` and `||` may appear to produce the same answer f
 
 ## 3. Concatenation and Literal Widths
 
-<a href="images/Mistakes/009-concatenation-unsized-constants.png"><img src="images/Mistakes/009-concatenation-unsized-constants.png" alt="Concatenation attempt with unsized constants" width="100%"></a>
+![Concatenation attempt with unsized constants](images/Mistakes/009-concatenation-unsized-constants.png)
 
 The concatenation attempt built a 32-bit collection from six 5-bit inputs and two constants:
 
@@ -103,7 +103,7 @@ The deeper rule is: every concatenation is a bit-packing operation. Before writi
 
 ## 4. Adders and Borrow Logic: Derive the Equation, Do Not Guess It
 
-<a href="images/Mistakes/003-full-subtractor-borrow-logic.png"><img src="images/Mistakes/003-full-subtractor-borrow-logic.png" alt="Full subtractor borrow logic attempt" width="100%"></a>
+![Full subtractor borrow logic attempt](images/Mistakes/003-full-subtractor-borrow-logic.png)
 
 The full subtractor screenshot correctly used:
 
@@ -135,7 +135,7 @@ Why this works:
 - `~(a ^ b) & bin`: if `a` and `b` are equal, subtracting the borrow-in decides whether another borrow is needed.
 - The OR combines the two situations where the next higher bit must lend.
 
-<a href="images/Mistakes/005-full-adder-carry-expression.png"><img src="images/Mistakes/005-full-adder-carry-expression.png" alt="Full adder carry expression using logical operators" width="100%"></a>
+![Full adder carry expression using logical operators](images/Mistakes/005-full-adder-carry-expression.png)
 
 For a full adder, the sum is parity and the carry is majority:
 
@@ -146,7 +146,7 @@ assign cout = (a & b) | (a & cin) | (b & cin);
 
 The screenshot used `&&` and `||`. For one-bit inputs, it may simulate correctly, but it trains the wrong habit. Full adders are bit-level circuits. The carry is not a C boolean condition; it is an OR of AND gates. Use bitwise operators.
 
-<a href="images/Mistakes/006-ripple-carry-adder-empty-instances.png"><img src="images/Mistakes/006-ripple-carry-adder-empty-instances.png" alt="Ripple carry adder attempt with empty module instance ports" width="100%"></a>
+![Ripple carry adder attempt with empty module instance ports](images/Mistakes/006-ripple-carry-adder-empty-instances.png)
 
 The ripple-carry attempt also shows a structural weakness: instances were declared but their ports were empty. A module instance is a real piece of hardware. If you instantiate four full adders, each one needs:
 
@@ -181,7 +181,7 @@ The key idea: ripple-carry is a chain, not a loop that "runs." The generate loop
 
 ## 5. Generate Loops and Indexed Part-Selects
 
-<a href="images/Mistakes/019-generate-loop-bcd-part-select.png"><img src="images/Mistakes/019-generate-loop-bcd-part-select.png" alt="BCD generate loop with invalid variable part-select" width="100%"></a>
+![BCD generate loop with invalid variable part-select](images/Mistakes/019-generate-loop-bcd-part-select.png)
 
 In the BCD adder screenshot, the code tried to connect one decimal digit using:
 
@@ -221,7 +221,7 @@ generate
 endgenerate
 ```
 
-<a href="images/Mistakes/020-bcd-adder-warning-trace.png"><img src="images/Mistakes/020-bcd-adder-warning-trace.png" alt="BCD adder trace and stuck pin warning" width="100%"></a>
+![BCD adder trace and stuck pin warning](images/Mistakes/020-bcd-adder-warning-trace.png)
 
 The stuck-output warning is a good example of how to read tool output. A stuck pin is not always wrong, but it means the tool sees an output that never changes in the tested/synthesized logic. In an adder problem, that often points to one of these:
 
@@ -235,9 +235,9 @@ Do not ignore warnings. First ask whether the output is supposed to be constant.
 
 ## 6. Priority Encoders and `casez`
 
-<a href="images/Mistakes/015-priority-encoder-mismatch.png"><img src="images/Mistakes/015-priority-encoder-mismatch.png" alt="Priority encoder mismatch trace" width="100%"></a>
+![Priority encoder mismatch trace](images/Mistakes/015-priority-encoder-mismatch.png)
 
-<a href="images/Mistakes/016-priority-encoder-casez-patterns.png"><img src="images/Mistakes/016-priority-encoder-casez-patterns.png" alt="Priority encoder casez attempt" width="100%"></a>
+![Priority encoder casez attempt](images/Mistakes/016-priority-encoder-casez-patterns.png)
 
 The mismatch shows that values like `8'h10`, `8'h11`, `8'h12`, etc. were being classified as position 4 for too many cases. The reason is the `casez` pattern direction.
 
@@ -267,15 +267,15 @@ end
 
 The weakness here is not `casez` itself. The weakness is not testing your mask mentally against a concrete input. Before submitting a priority encoder, test at least these inputs by hand: `8'b00000001`, `8'b00000010`, `8'b00000011`, `8'b00010001`, and `8'b00000000`.
 
-<a href="images/Mistakes/017-scancode-default-assignments-good-pattern.png"><img src="images/Mistakes/017-scancode-default-assignments-good-pattern.png" alt="Good default assignment pattern in combinational case" width="100%"></a>
+![Good default assignment pattern in combinational case](images/Mistakes/017-scancode-default-assignments-good-pattern.png)
 
 This scancode screenshot is a good pattern: default all outputs to zero before the `case`, then set only the matched output. That prevents accidental latches and makes unmatched input codes behave predictably.
 
 ## 7. K-Maps Feeding Multiplexers
 
-<a href="images/Mistakes/026-kmap-mux-question.png"><img src="images/Mistakes/026-kmap-mux-question.png" alt="K-map mux question" width="100%"></a>
+![K-map mux question](images/Mistakes/026-kmap-mux-question.png)
 
-<a href="images/Mistakes/027-kmap-mux-mismatch.png"><img src="images/Mistakes/027-kmap-mux-mismatch.png" alt="K-map mux mismatch" width="100%"></a>
+![K-map mux mismatch](images/Mistakes/027-kmap-mux-mismatch.png)
 
 The mux K-map problem is easy to get wrong because K-map columns are arranged in Gray-code order, but mux select inputs use binary order.
 
@@ -316,7 +316,7 @@ The mismatch trace expecting decimal values `4, 1, 5, 9` is a useful debug clue.
 
 ## 8. Latches vs Flip-Flops
 
-<a href="images/Mistakes/048-sim-circuit8-edge-attempt.png"><img src="images/Mistakes/048-sim-circuit8-edge-attempt.png" alt="Circuit8 attempt using edges instead of latches" width="100%"></a>
+![Circuit8 attempt using edges instead of latches](images/Mistakes/048-sim-circuit8-edge-attempt.png)
 
 The comments in the screenshot say:
 
@@ -346,7 +346,7 @@ output reg p,
 output reg q
 ```
 
-<a href="images/Mistakes/051-sim-circuit8-inferred-latch-warning.png"><img src="images/Mistakes/051-sim-circuit8-inferred-latch-warning.png" alt="Intentional latch warning for circuit8" width="100%"></a>
+![Intentional latch warning for circuit8](images/Mistakes/051-sim-circuit8-inferred-latch-warning.png)
 
 This warning is important because it teaches nuance. Most of the time, an inferred latch warning means a combinational block forgot to assign an output in every path. But in this specific waveform problem, a latch is the intended hardware. The right reaction is not "warnings are bad" or "warnings are fine"; the right reaction is to classify the warning against the problem statement.
 
@@ -361,9 +361,9 @@ If all are yes, the latch warning is expected. If not, it is probably a bug.
 
 ## 9. Edge Detection, Shift Registers, and LFSRs
 
-<a href="images/Mistakes/033-edge-detect-question.png"><img src="images/Mistakes/033-edge-detect-question.png" alt="Edge detect question" width="100%"></a>
+![Edge detect question](images/Mistakes/033-edge-detect-question.png)
 
-<a href="images/Mistakes/034-edge-detect-attempt.png"><img src="images/Mistakes/034-edge-detect-attempt.png" alt="Edge detect attempt" width="100%"></a>
+![Edge detect attempt](images/Mistakes/034-edge-detect-attempt.png)
 
 For edge detection, the output depends on both the current input and the previous sampled input. That means you need memory:
 
@@ -384,7 +384,7 @@ The concept is simple but easy to mis-time:
 
 With nonblocking assignments, both right-hand sides use old values from before the clock edge. That is why this works. Do not reason as if the first assignment immediately changes `prev` for the second assignment.
 
-<a href="images/Mistakes/039-lfsr5-question.png"><img src="images/Mistakes/039-lfsr5-question.png" alt="LFSR5 question" width="100%"></a>
+![LFSR5 question](images/Mistakes/039-lfsr5-question.png)
 
 For LFSRs and shift registers, the same timing rule matters. Every bit of the register updates together on the clock edge. If the diagram says `q[2]` gets `q[3] ^ q[0]`, both `q[3]` and `q[0]` are old values from before the edge. Nonblocking assignments model that:
 
@@ -406,9 +406,9 @@ The weakness to watch: drawing a shift register as if assignments happen top-to-
 
 ## 10. FSMs: State Is Memory, Not Input
 
-<a href="images/Mistakes/044-water-reservoir-fsm-question.png"><img src="images/Mistakes/044-water-reservoir-fsm-question.png" alt="Water reservoir FSM question" width="100%"></a>
+![Water reservoir FSM question](images/Mistakes/044-water-reservoir-fsm-question.png)
 
-<a href="images/Mistakes/045-water-reservoir-fsm-attempt.png"><img src="images/Mistakes/045-water-reservoir-fsm-attempt.png" alt="Water reservoir FSM attempt" width="100%"></a>
+![Water reservoir FSM attempt](images/Mistakes/045-water-reservoir-fsm-attempt.png)
 
 The water reservoir attempt treated things like `s[3]`, `s[2]`, and `s[1]` as if they could be `parameter` state values:
 
@@ -420,7 +420,7 @@ parameter low     = s[1];
 
 That is the wrong abstraction. A `parameter` is a compile-time constant. It cannot represent the current sensor input. More importantly, the FSM state should represent what the circuit remembers, not just what the input is right now.
 
-<a href="images/Mistakes/046-water-reservoir-dfr-mismatch.png"><img src="images/Mistakes/046-water-reservoir-dfr-mismatch.png" alt="Water reservoir dfr mismatch" width="100%"></a>
+![Water reservoir dfr mismatch](images/Mistakes/046-water-reservoir-dfr-mismatch.png)
 
 The mismatch shows `fr3`, `fr2`, and `fr1` were correct, but `dfr` was wrong. That means the level-to-flow mapping was mostly right, but the direction memory was not. `dfr` depends on whether the water level is rising or falling. Current sensor level alone is not enough. You need separate states for the same level depending on the direction of travel.
 
@@ -443,7 +443,7 @@ FSM design process:
 4. Write output logic from state, not from guesses inside the transition block.
 5. Only then write Verilog.
 
-<a href="images/Mistakes/069-fsm-arbiter-q2afsm-full.png"><img src="images/Mistakes/069-fsm-arbiter-q2afsm-full.png" alt="FSM arbiter problem full screenshot" width="100%"></a>
+![FSM arbiter problem full screenshot](images/Mistakes/069-fsm-arbiter-q2afsm-full.png)
 
 The arbiter FSM reinforces the same lesson. The circuit must remember which requester currently owns the grant. If requester 1 is being served, it should keep the grant while `r[1]` remains asserted. Priority matters when choosing a new owner from idle, but "hold current owner" matters after a grant has already been given.
 
@@ -451,7 +451,7 @@ That is a common FSM weakness: priority logic and state memory are being mixed t
 
 ## 11. Reading Simulation Waveforms
 
-<a href="images/Mistakes/058-sim-circuit5-waveform-question.png"><img src="images/Mistakes/058-sim-circuit5-waveform-question.png" alt="Simulation waveform with mux-like output" width="100%"></a>
+![Simulation waveform with mux-like output](images/Mistakes/058-sim-circuit5-waveform-question.png)
 
 Waveform problems are not about guessing a pretty circuit. They are about extracting a truth table from time.
 
@@ -484,13 +484,13 @@ always @(*) begin
 end
 ```
 
-<a href="images/Mistakes/057-sim-circuit4-question.png"><img src="images/Mistakes/057-sim-circuit4-question.png" alt="Simulation circuit4 waveform" width="100%"></a>
+![Simulation circuit4 waveform](images/Mistakes/057-sim-circuit4-question.png)
 
 For combinational waveform problems, do not start by coding. First write a mini truth table. If an output changes immediately when an input changes, it is combinational. If it changes only on clock edges, it is sequential. If it follows during a clock level, it is a latch.
 
 ## 12. Testbenches: Instantiate Once, Stimulate Over Time
 
-<a href="images/Mistakes/064-testbench-andgate-loop-attempt.png"><img src="images/Mistakes/064-testbench-andgate-loop-attempt.png" alt="Testbench attempt instantiating a module inside an initial loop" width="100%"></a>
+![Testbench attempt instantiating a module inside an initial loop](images/Mistakes/064-testbench-andgate-loop-attempt.png)
 
 The testbench screenshot instantiated `andgate` inside a `for` loop in an `initial` block. That is a software mental model: "loop four times and create/call the module." Verilog modules are not functions. A module instance is hardware created once during elaboration. You cannot instantiate hardware procedurally inside `initial`.
 
@@ -518,9 +518,9 @@ endmodule
 
 The DUT exists once. The `initial` block changes the input signal over simulation time. That is the core difference between hardware structure and testbench stimulus.
 
-<a href="images/Mistakes/065-tb2-question.png"><img src="images/Mistakes/065-tb2-question.png" alt="tb2 waveform question" width="100%"></a>
+![tb2 waveform question](images/Mistakes/065-tb2-question.png)
 
-<a href="images/Mistakes/067-tb2-solved.png"><img src="images/Mistakes/067-tb2-solved.png" alt="tb2 solved screenshot" width="100%"></a>
+![tb2 solved screenshot](images/Mistakes/067-tb2-solved.png)
 
 For waveform-driven testbenches, focus on exact timing:
 
@@ -535,9 +535,9 @@ Testbench HDL is allowed to use delays and procedural loops because it is simula
 
 These screenshots belong to [problem 154 — The complete timer](problems/Day%2009/154-exams__review2015_fancytimer.md). The problem-specific note contains the full corrected design and cycle trace; this section records the reusable weakness.
 
-<a href="images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png"><img src="images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png" alt="Complete timer wrong attempt state declarations" width="100%"></a>
+![Complete timer wrong attempt state declarations](images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png)
 
-<a href="images/Mistakes/071-fancytimer-wrong-attempt-next-state-logic.png"><img src="images/Mistakes/071-fancytimer-wrong-attempt-next-state-logic.png" alt="Complete timer wrong attempt next-state logic" width="100%"></a>
+![Complete timer wrong attempt next-state logic](images/Mistakes/071-fancytimer-wrong-attempt-next-state-logic.png)
 
 The state list was broadly correct, but the design mixed two kinds of hardware:
 
@@ -546,15 +546,15 @@ The state list was broadly correct, but the design mixed two kinds of hardware:
 
 `next_state` belongs in combinational logic. `delay` and the counters are stored values and belong in clocked logic. `counting` is a Moore output and should be a complete decode such as `assign counting = (state == COUNT);`. Assigning these only inside selected `case` items creates incomplete paths and obscures the timing.
 
-<a href="images/Mistakes/072-fancytimer-review-duplicate-expression-question.png"><img src="images/Mistakes/072-fancytimer-review-duplicate-expression-question.png" alt="Question about duplicate shift expressions" width="100%"></a>
+![Question about duplicate shift expressions](images/Mistakes/072-fancytimer-review-duplicate-expression-question.png)
 
-<a href="images/Mistakes/073-fancytimer-review-shift-versus-load.png"><img src="images/Mistakes/073-fancytimer-review-shift-versus-load.png" alt="Review of shift and countdown loading roles" width="100%"></a>
+![Review of shift and countdown loading roles](images/Mistakes/073-fancytimer-review-shift-versus-load.png)
 
 Two assignments can calculate `{delay[2:0], data}` without being redundant if they load different destination registers. The expression is only the next four-bit value. The destination and enable determine the hardware role.
 
 For this timer, a better simplification is to avoid the second register. The same four-bit register shifts during `B0`–`B3`, then counts down during `COUNT`. Those controls never overlap.
 
-<a href="images/Mistakes/074-fancytimer-review-nonblocking-old-value.png"><img src="images/Mistakes/074-fancytimer-review-nonblocking-old-value.png" alt="Nonblocking old-value explanation" width="100%"></a>
+![Nonblocking old-value explanation](images/Mistakes/074-fancytimer-review-nonblocking-old-value.png)
 
 The important timing rule is:
 
@@ -564,6 +564,34 @@ countRemaining <= delay;
 ```
 
 Both right-hand sides are evaluated before the edge updates any register, so `countRemaining` receives the old `delay`. If both registers must capture the new value, both right-hand sides must use `{delay[2:0], data}`. If one register can serve both phases, remove the duplicate and the synchronization problem disappears.
+
+## 14. Lemmings FSM Revision: Falling Must Remember Direction
+
+Lemmings 1 was revisited successfully on 2026-07-04. Its two-state model is correct because the only stored fact is the current walking direction.
+
+![Lemmings 1 successful revision check](images/Mistakes/075-lemmings1-revision-success.png)
+
+Lemmings 2 adds falling. The full review capture is kept in [Review.md](Review.md); the current question and split editor capture are rendered here in reading order.
+
+![Lemmings 2 question and waveform](images/Mistakes/076-lemmings2-question-waveform.png)
+
+![Lemmings 2 current attempt, top](images/Mistakes/077-lemmings2-attempt-top.png)
+
+![Lemmings 2 current attempt, middle](images/Mistakes/078-lemmings2-attempt-middle.png)
+
+![Lemmings 2 current attempt, bottom](images/Mistakes/079-lemmings2-attempt-bottom.png)
+
+The attempt keeps only one direction bit and uses `aaahReg` as a separate falling flag. That is not enough because a falling Lemming must remember whether it was walking left or right before the ground disappeared. While falling, bumps must be ignored. The clean state space is therefore four Moore states: `WALK_L`, `WALK_R`, `FALL_L`, and `FALL_R`.
+
+The attempt also assigns `state` from two clocked `always` blocks. A register must have one procedural owner. State transition decisions belong in a combinational `always @(*)` block that drives only `next_state`; a single clocked block then performs `state <= next_state` and handles asynchronous reset. The falling output should be decoded from the registered falling states, so a separate sticky `aaahReg` is unnecessary.
+
+Transition priority matters:
+
+1. In a walking state, `ground==0` enters the matching falling state before bump inputs are considered.
+2. In a falling state, all bump inputs are ignored.
+3. When `ground` returns, `FALL_L` resumes `WALK_L` and `FALL_R` resumes `WALK_R`.
+
+This organization directly implements the wording of the problem and prevents direction changes during a fall.
 
 ## Revision Checklist
 
@@ -660,3 +688,8 @@ These are the technical screenshots kept for this reflection log.
 | [072-fancytimer-review-duplicate-expression-question.png](images/Mistakes/072-fancytimer-review-duplicate-expression-question.png) | Question about two identical shift expressions |
 | [073-fancytimer-review-shift-versus-load.png](images/Mistakes/073-fancytimer-review-shift-versus-load.png) | Continuous shifting versus final countdown loading |
 | [074-fancytimer-review-nonblocking-old-value.png](images/Mistakes/074-fancytimer-review-nonblocking-old-value.png) | Nonblocking assignments read pre-edge values |
+| [075-lemmings1-revision-success.png](images/Mistakes/075-lemmings1-revision-success.png) | Successful Lemmings 1 revision check |
+| [076-lemmings2-question-waveform.png](images/Mistakes/076-lemmings2-question-waveform.png) | Lemmings 2 falling behavior and waveform |
+| [077-lemmings2-attempt-top.png](images/Mistakes/077-lemmings2-attempt-top.png) | Lemmings 2 attempt declarations and first state branch |
+| [078-lemmings2-attempt-middle.png](images/Mistakes/078-lemmings2-attempt-middle.png) | Lemmings 2 attempt transition and state-register overlap |
+| [079-lemmings2-attempt-bottom.png](images/Mistakes/079-lemmings2-attempt-bottom.png) | Lemmings 2 attempt outputs and submission controls |

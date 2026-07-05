@@ -9,11 +9,11 @@
 | Attempts | 5 total: 0 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 20% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/tb/clock) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/137-tb__clock.png) · [Verilog solution](../../solutions/Day%2006/137-tb__clock.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/137-tb__clock.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/137-tb__clock.png"><img src="../../images/Day%2006/137-tb__clock.png" alt="Clock question and submitted solution" width="100%"></a>
+![Clock question and submitted solution](../../images/Day%2006/137-tb__clock.png)
 
 ## What the question is asking
 

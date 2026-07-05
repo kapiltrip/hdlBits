@@ -9,11 +9,11 @@
 | Attempts | 2 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/reduction) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/036-reduction.png) · [Verilog solution](../../solutions/Day%2002/036-reduction.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/036-reduction.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/036-reduction.png"><img src="../../images/Day%2002/036-reduction.png" alt="Reduction operators question and submitted solution" width="100%"></a>
+![Reduction operators question and submitted solution](../../images/Day%2002/036-reduction.png)
 
 ## What the question is asking
 

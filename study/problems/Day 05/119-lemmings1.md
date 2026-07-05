@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 1 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/lemmings1) |
-| Files | [Open screenshot at full resolution](../../images/Day%2005/119-lemmings1.png) · [Verilog solution](../../solutions/Day%2005/119-lemmings1.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2005/119-lemmings1.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2005/119-lemmings1.png"><img src="../../images/Day%2005/119-lemmings1.png" alt="Lemmings 1 question and submitted solution" width="100%"></a>
+![Lemmings 1 question and submitted solution](../../images/Day%2005/119-lemmings1.png)
 
 ## What the question is asking
 

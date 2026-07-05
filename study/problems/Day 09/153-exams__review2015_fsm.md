@@ -12,7 +12,7 @@
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
 | Files | [Successful-submission screenshot](../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png) · [Verilog solution](../../solutions/Day%2009/153-exams__review2015_fsm.sv) |
 
-<a href="../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png"><img src="../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png" alt="Complete FSM question and loaded successful submission" width="100%"></a>
+![Complete FSM question and loaded successful submission](../../images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png)
 
 ## What the question is asking
 

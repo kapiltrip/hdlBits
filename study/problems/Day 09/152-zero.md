@@ -14,7 +14,7 @@
 
 ## Question and successful submission
 
-<a href="../../images/Day%2009/152-zero.png"><img src="../../images/Day%2009/152-zero.png" alt="Output Zero question and loaded successful Verilog submission" width="100%"></a>
+![Output Zero question and loaded successful Verilog submission](../../images/Day%2009/152-zero.png)
 
 ## What the question is asking
 

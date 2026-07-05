@@ -9,11 +9,11 @@
 | Attempts | 9 total: 0 incorrect, 8 compile error, 0 simulation error |
 | Success rate | 11% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vector4) |
-| Files | [Open screenshot at full resolution](../../images/Day%2001/016-vector4.png) · [Verilog solution](../../solutions/Day%2001/016-vector4.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2001/016-vector4.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2001/016-vector4.png"><img src="../../images/Day%2001/016-vector4.png" alt="Replication operator question and submitted solution" width="100%"></a>
+![Replication operator question and submitted solution](../../images/Day%2001/016-vector4.png)
 
 ## What the question is asking
 

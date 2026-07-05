@@ -6,18 +6,18 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 4:36:01 PM | [143](#problem-143) | Sequential Logic | [Counter 1-12](problems/Day%2008/143-exams__ece241_2014_q7a.md) | [Code](solutions/Day%2008/143-exams__ece241_2014_q7a.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7a) |
+| 1 | 4:36:01 PM | [143](#problem-143) | Sequential Logic | [Counter 1-12](problems/Day%2008/143-exams__ece241_2014_q7a.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7a) |
 
 ---
 
 <a id="problem-143"></a>
 ## 143 — Counter 1-12
 
-[Problem note](problems/Day%2008/143-exams__ece241_2014_q7a.md) · [Open screenshot at full resolution](images/Day%2008/143-exams__ece241_2014_q7a.png) · [Verilog file](solutions/Day%2008/143-exams__ece241_2014_q7a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7a)
+[Problem note](problems/Day%2008/143-exams__ece241_2014_q7a.md) · [Verilog file](solutions/Day%2008/143-exams__ece241_2014_q7a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7a)
 
-<a href="images/Day%2008/143-exams__ece241_2014_q7a.png"><img src="images/Day%2008/143-exams__ece241_2014_q7a.png" alt="Counter 1-12 question and submitted solution" width="100%"></a>
+![Counter 1-12 question and submitted solution](images/Day%2008/143-exams__ece241_2014_q7a.png)
 
 ### What the question is asking
 

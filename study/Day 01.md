@@ -6,29 +6,29 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 5:47:07 PM | [001](#problem-001) | Basics | [Simple wire](problems/Day%2001/001-wire.md) | [Code](solutions/Day%2001/001-wire.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/wire) |
-| 2 | 5:50:30 PM | [002](#problem-002) | Basics | [Four wires](problems/Day%2001/002-wire4.md) | [Code](solutions/Day%2001/002-wire4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/wire4) |
-| 3 | 5:52:19 PM | [003](#problem-003) | Basics | [Inverter](problems/Day%2001/003-notgate.md) | [Code](solutions/Day%2001/003-notgate.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/notgate) |
-| 4 | 6:15:38 PM | [008](#problem-008) | Basics | [7458 chip](problems/Day%2001/008-7458.md) | [Code](solutions/Day%2001/008-7458.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/7458) |
-| 5 | 6:24:20 PM | [009](#problem-009) | Vectors | [Vectors](problems/Day%2001/009-vector0.md) | [Code](solutions/Day%2001/009-vector0.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vector0) |
-| 6 | 9:45:09 PM | [010](#problem-010) | Vectors | [Vectors in more detail](problems/Day%2001/010-vector1.md) | [Code](solutions/Day%2001/010-vector1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vector1) |
-| 7 | 9:56:38 PM | [011](#problem-011) | Vectors | [Vector part select](problems/Day%2001/011-vector2.md) | [Code](solutions/Day%2001/011-vector2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vector2) |
-| 8 | 10:04:38 PM | [012](#problem-012) | Vectors | [Bitwise operators](problems/Day%2001/012-vectorgates.md) | [Code](solutions/Day%2001/012-vectorgates.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vectorgates) |
-| 9 | 10:24:24 PM | [013](#problem-013) | Vectors | [Four-input gates](problems/Day%2001/013-gates4.md) | [Code](solutions/Day%2001/013-gates4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/gates4) |
-| 10 | 10:56:44 PM | [014](#problem-014) | Vectors | [Vector concatenation operator](problems/Day%2001/014-vector3.md) | [Code](solutions/Day%2001/014-vector3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vector3) |
-| 11 | 11:34:51 PM | [015](#problem-015) | Vectors | [Vector reversal 1](problems/Day%2001/015-vectorr.md) | [Code](solutions/Day%2001/015-vectorr.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vectorr) |
-| 12 | 11:49:31 PM | [016](#problem-016) | Vectors | [Replication operator](problems/Day%2001/016-vector4.md) | [Code](solutions/Day%2001/016-vector4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/vector4) |
+| 1 | 5:47:07 PM | [001](#problem-001) | Basics | [Simple wire](problems/Day%2001/001-wire.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/wire) |
+| 2 | 5:50:30 PM | [002](#problem-002) | Basics | [Four wires](problems/Day%2001/002-wire4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/wire4) |
+| 3 | 5:52:19 PM | [003](#problem-003) | Basics | [Inverter](problems/Day%2001/003-notgate.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/notgate) |
+| 4 | 6:15:38 PM | [008](#problem-008) | Basics | [7458 chip](problems/Day%2001/008-7458.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/7458) |
+| 5 | 6:24:20 PM | [009](#problem-009) | Vectors | [Vectors](problems/Day%2001/009-vector0.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vector0) |
+| 6 | 9:45:09 PM | [010](#problem-010) | Vectors | [Vectors in more detail](problems/Day%2001/010-vector1.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vector1) |
+| 7 | 9:56:38 PM | [011](#problem-011) | Vectors | [Vector part select](problems/Day%2001/011-vector2.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vector2) |
+| 8 | 10:04:38 PM | [012](#problem-012) | Vectors | [Bitwise operators](problems/Day%2001/012-vectorgates.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vectorgates) |
+| 9 | 10:24:24 PM | [013](#problem-013) | Vectors | [Four-input gates](problems/Day%2001/013-gates4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/gates4) |
+| 10 | 10:56:44 PM | [014](#problem-014) | Vectors | [Vector concatenation operator](problems/Day%2001/014-vector3.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vector3) |
+| 11 | 11:34:51 PM | [015](#problem-015) | Vectors | [Vector reversal 1](problems/Day%2001/015-vectorr.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vectorr) |
+| 12 | 11:49:31 PM | [016](#problem-016) | Vectors | [Replication operator](problems/Day%2001/016-vector4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/vector4) |
 
 ---
 
 <a id="problem-001"></a>
 ## 001 — Simple wire
 
-[Problem note](problems/Day%2001/001-wire.md) · [Open screenshot at full resolution](images/Day%2001/001-wire.png) · [Verilog file](solutions/Day%2001/001-wire.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire)
+[Problem note](problems/Day%2001/001-wire.md) · [Verilog file](solutions/Day%2001/001-wire.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire)
 
-<a href="images/Day%2001/001-wire.png"><img src="images/Day%2001/001-wire.png" alt="Simple wire question and submitted solution" width="100%"></a>
+![Simple wire question and submitted solution](images/Day%2001/001-wire.png)
 
 ### What the question is asking
 
@@ -47,9 +47,9 @@ endmodule
 <a id="problem-002"></a>
 ## 002 — Four wires
 
-[Problem note](problems/Day%2001/002-wire4.md) · [Open screenshot at full resolution](images/Day%2001/002-wire4.png) · [Verilog file](solutions/Day%2001/002-wire4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire4)
+[Problem note](problems/Day%2001/002-wire4.md) · [Verilog file](solutions/Day%2001/002-wire4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire4)
 
-<a href="images/Day%2001/002-wire4.png"><img src="images/Day%2001/002-wire4.png" alt="Four wires question and submitted solution" width="100%"></a>
+![Four wires question and submitted solution](images/Day%2001/002-wire4.png)
 
 ### What the question is asking
 
@@ -70,9 +70,9 @@ endmodule
 <a id="problem-003"></a>
 ## 003 — Inverter
 
-[Problem note](problems/Day%2001/003-notgate.md) · [Open screenshot at full resolution](images/Day%2001/003-notgate.png) · [Verilog file](solutions/Day%2001/003-notgate.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/notgate)
+[Problem note](problems/Day%2001/003-notgate.md) · [Verilog file](solutions/Day%2001/003-notgate.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/notgate)
 
-<a href="images/Day%2001/003-notgate.png"><img src="images/Day%2001/003-notgate.png" alt="Inverter question and submitted solution" width="100%"></a>
+![Inverter question and submitted solution](images/Day%2001/003-notgate.png)
 
 ### What the question is asking
 
@@ -91,9 +91,9 @@ endmodule
 <a id="problem-008"></a>
 ## 008 — 7458 chip
 
-[Problem note](problems/Day%2001/008-7458.md) · [Open screenshot at full resolution](images/Day%2001/008-7458.png) · [Verilog file](solutions/Day%2001/008-7458.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/7458)
+[Problem note](problems/Day%2001/008-7458.md) · [Verilog file](solutions/Day%2001/008-7458.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/7458)
 
-<a href="images/Day%2001/008-7458.png"><img src="images/Day%2001/008-7458.png" alt="7458 chip question and submitted solution" width="100%"></a>
+![7458 chip question and submitted solution](images/Day%2001/008-7458.png)
 
 ### What the question is asking
 
@@ -117,9 +117,9 @@ endmodule
 <a id="problem-009"></a>
 ## 009 — Vectors
 
-[Problem note](problems/Day%2001/009-vector0.md) · [Open screenshot at full resolution](images/Day%2001/009-vector0.png) · [Verilog file](solutions/Day%2001/009-vector0.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector0)
+[Problem note](problems/Day%2001/009-vector0.md) · [Verilog file](solutions/Day%2001/009-vector0.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector0)
 
-<a href="images/Day%2001/009-vector0.png"><img src="images/Day%2001/009-vector0.png" alt="Vectors question and submitted solution" width="100%"></a>
+![Vectors question and submitted solution](images/Day%2001/009-vector0.png)
 
 ### What the question is asking
 
@@ -148,9 +148,9 @@ endmodule
 <a id="problem-010"></a>
 ## 010 — Vectors in more detail
 
-[Problem note](problems/Day%2001/010-vector1.md) · [Open screenshot at full resolution](images/Day%2001/010-vector1.png) · [Verilog file](solutions/Day%2001/010-vector1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector1)
+[Problem note](problems/Day%2001/010-vector1.md) · [Verilog file](solutions/Day%2001/010-vector1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector1)
 
-<a href="images/Day%2001/010-vector1.png"><img src="images/Day%2001/010-vector1.png" alt="Vectors in more detail question and submitted solution" width="100%"></a>
+![Vectors in more detail question and submitted solution](images/Day%2001/010-vector1.png)
 
 ### What the question is asking
 
@@ -178,9 +178,9 @@ endmodule
 <a id="problem-011"></a>
 ## 011 — Vector part select
 
-[Problem note](problems/Day%2001/011-vector2.md) · [Open screenshot at full resolution](images/Day%2001/011-vector2.png) · [Verilog file](solutions/Day%2001/011-vector2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector2)
+[Problem note](problems/Day%2001/011-vector2.md) · [Verilog file](solutions/Day%2001/011-vector2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector2)
 
-<a href="images/Day%2001/011-vector2.png"><img src="images/Day%2001/011-vector2.png" alt="Vector part select question and submitted solution" width="100%"></a>
+![Vector part select question and submitted solution](images/Day%2001/011-vector2.png)
 
 ### What the question is asking
 
@@ -208,9 +208,9 @@ endmodule
 <a id="problem-012"></a>
 ## 012 — Bitwise operators
 
-[Problem note](problems/Day%2001/012-vectorgates.md) · [Open screenshot at full resolution](images/Day%2001/012-vectorgates.png) · [Verilog file](solutions/Day%2001/012-vectorgates.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vectorgates)
+[Problem note](problems/Day%2001/012-vectorgates.md) · [Verilog file](solutions/Day%2001/012-vectorgates.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vectorgates)
 
-<a href="images/Day%2001/012-vectorgates.png"><img src="images/Day%2001/012-vectorgates.png" alt="Bitwise operators question and submitted solution" width="100%"></a>
+![Bitwise operators question and submitted solution](images/Day%2001/012-vectorgates.png)
 
 ### What the question is asking
 
@@ -237,9 +237,9 @@ endmodule
 <a id="problem-013"></a>
 ## 013 — Four-input gates
 
-[Problem note](problems/Day%2001/013-gates4.md) · [Open screenshot at full resolution](images/Day%2001/013-gates4.png) · [Verilog file](solutions/Day%2001/013-gates4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gates4)
+[Problem note](problems/Day%2001/013-gates4.md) · [Verilog file](solutions/Day%2001/013-gates4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gates4)
 
-<a href="images/Day%2001/013-gates4.png"><img src="images/Day%2001/013-gates4.png" alt="Four-input gates question and submitted solution" width="100%"></a>
+![Four-input gates question and submitted solution](images/Day%2001/013-gates4.png)
 
 ### What the question is asking
 
@@ -266,9 +266,9 @@ endmodule
 <a id="problem-014"></a>
 ## 014 — Vector concatenation operator
 
-[Problem note](problems/Day%2001/014-vector3.md) · [Open screenshot at full resolution](images/Day%2001/014-vector3.png) · [Verilog file](solutions/Day%2001/014-vector3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector3)
+[Problem note](problems/Day%2001/014-vector3.md) · [Verilog file](solutions/Day%2001/014-vector3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector3)
 
-<a href="images/Day%2001/014-vector3.png"><img src="images/Day%2001/014-vector3.png" alt="Vector concatenation operator question and submitted solution" width="100%"></a>
+![Vector concatenation operator question and submitted solution](images/Day%2001/014-vector3.png)
 
 ### What the question is asking
 
@@ -291,9 +291,9 @@ endmodule
 <a id="problem-015"></a>
 ## 015 — Vector reversal 1
 
-[Problem note](problems/Day%2001/015-vectorr.md) · [Open screenshot at full resolution](images/Day%2001/015-vectorr.png) · [Verilog file](solutions/Day%2001/015-vectorr.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vectorr)
+[Problem note](problems/Day%2001/015-vectorr.md) · [Verilog file](solutions/Day%2001/015-vectorr.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vectorr)
 
-<a href="images/Day%2001/015-vectorr.png"><img src="images/Day%2001/015-vectorr.png" alt="Vector reversal 1 question and submitted solution" width="100%"></a>
+![Vector reversal 1 question and submitted solution](images/Day%2001/015-vectorr.png)
 
 ### What the question is asking
 
@@ -320,9 +320,9 @@ endmodule
 <a id="problem-016"></a>
 ## 016 — Replication operator
 
-[Problem note](problems/Day%2001/016-vector4.md) · [Open screenshot at full resolution](images/Day%2001/016-vector4.png) · [Verilog file](solutions/Day%2001/016-vector4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector4)
+[Problem note](problems/Day%2001/016-vector4.md) · [Verilog file](solutions/Day%2001/016-vector4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector4)
 
-<a href="images/Day%2001/016-vector4.png"><img src="images/Day%2001/016-vector4.png" alt="Replication operator question and submitted solution" width="100%"></a>
+![Replication operator question and submitted solution](images/Day%2001/016-vector4.png)
 
 ### What the question is asking
 

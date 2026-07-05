@@ -9,11 +9,11 @@
 | Attempts | 3 total: 2 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit9) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/135-sim__circuit9.png) · [Verilog solution](../../solutions/Day%2006/135-sim__circuit9.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/135-sim__circuit9.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/135-sim__circuit9.png"><img src="../../images/Day%2006/135-sim__circuit9.png" alt="Sequential circuit 9 question and submitted solution" width="100%"></a>
+![Sequential circuit 9 question and submitted solution](../../images/Day%2006/135-sim__circuit9.png)
 
 ## What the question is asking
 

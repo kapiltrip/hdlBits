@@ -387,9 +387,9 @@ function readSolution(record) {
     .trimEnd();
 }
 
-function imageHtml(src, title) {
+function imageMarkdown(src, title) {
   const alt = `${title} question and submitted solution`;
-  return `<a href="${src}"><img src="${src}" alt="${alt}" width="100%"></a>`;
+  return `![${alt}](${src})`;
 }
 
 function buildProblemNote(record) {
@@ -410,11 +410,11 @@ function buildProblemNote(record) {
 | Attempts | ${attempts} |
 | Success rate | ${record.successRate} |
 | Source | [Open original HDLBits problem](${record.url}) |
-| Files | [Open screenshot at full resolution](${image}) · [Verilog solution](${solution}) |
+| Files | Screenshot rendered below · [Verilog solution](${solution}) |
 
 ## Question and submitted solution
 
-${imageHtml(image, record.title)}
+${imageMarkdown(image, record.title)}
 
 ## What the question is asking
 
@@ -436,7 +436,7 @@ function buildDayPage(day, dayRecords) {
   const date = dayRecords[0].dateKey;
   const rows = dayRecords.map((record, index) => {
     const number = String(record.problemNumber).padStart(3, "0");
-    return `| ${index + 1} | ${record.time} | [${number}](#problem-${number}) | ${record.section} | [${record.title}](${urlPath(record.problemNotePath)}) | [Code](${urlPath(record.solutionPath)}) | [HDLBits](${record.url}) |`;
+    return `| ${index + 1} | ${record.time} | [${number}](#problem-${number}) | ${record.section} | [${record.title}](${urlPath(record.problemNotePath)}) | Screenshot + code rendered below | [HDLBits](${record.url}) |`;
   }).join("\n");
 
   const sections = dayRecords.map((record) => {
@@ -446,9 +446,9 @@ function buildDayPage(day, dayRecords) {
     return `<a id="problem-${number}"></a>
 ## ${number} — ${record.title}
 
-[Problem note](${urlPath(record.problemNotePath)}) · [Open screenshot at full resolution](${image}) · [Verilog file](${urlPath(record.solutionPath)}) · [HDLBits problem](${record.url})
+[Problem note](${urlPath(record.problemNotePath)}) · [Verilog file](${urlPath(record.solutionPath)}) · [HDLBits problem](${record.url})
 
-${imageHtml(image, record.title)}
+${imageMarkdown(image, record.title)}
 
 ### What the question is asking
 
@@ -466,11 +466,11 @@ ${code}
 
 Completed problems: **${dayRecords.length}**
 
-Each screenshot is embedded at the full width of the GitHub page. Select an image to open its original-resolution file.
+Each screenshot is rendered directly in this page for revision. The image is not wrapped in a click-only link.
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
 ${rows}
 

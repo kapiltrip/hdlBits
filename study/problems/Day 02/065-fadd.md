@@ -9,11 +9,11 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/fadd) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/065-fadd.png) · [Verilog solution](../../solutions/Day%2002/065-fadd.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/065-fadd.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/065-fadd.png"><img src="../../images/Day%2002/065-fadd.png" alt="Full adder question and submitted solution" width="100%"></a>
+![Full adder question and submitted solution](../../images/Day%2002/065-fadd.png)
 
 ## What the question is asking
 

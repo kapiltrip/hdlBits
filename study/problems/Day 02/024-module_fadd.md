@@ -9,11 +9,11 @@
 | Attempts | 4 total: 1 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 25% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_fadd) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/024-module_fadd.png) · [Verilog solution](../../solutions/Day%2002/024-module_fadd.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/024-module_fadd.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/024-module_fadd.png"><img src="../../images/Day%2002/024-module_fadd.png" alt="Adder 2 question and submitted solution" width="100%"></a>
+![Adder 2 question and submitted solution](../../images/Day%2002/024-module_fadd.png)
 
 ## What the question is asking
 

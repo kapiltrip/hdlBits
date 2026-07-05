@@ -9,11 +9,11 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/vectorgates) |
-| Files | [Open screenshot at full resolution](../../images/Day%2001/012-vectorgates.png) · [Verilog solution](../../solutions/Day%2001/012-vectorgates.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2001/012-vectorgates.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2001/012-vectorgates.png"><img src="../../images/Day%2001/012-vectorgates.png" alt="Bitwise operators question and submitted solution" width="100%"></a>
+![Bitwise operators question and submitted solution](../../images/Day%2001/012-vectorgates.png)
 
 ## What the question is asking
 

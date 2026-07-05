@@ -9,11 +9,11 @@
 | Attempts | 10 total: 7 incorrect, 2 compile error, 0 simulation error |
 | Success rate | 10% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/mux9to1v) |
-| Files | [Open screenshot at full resolution](../../images/Day%2003/061-mux9to1v.png) · [Verilog solution](../../solutions/Day%2003/061-mux9to1v.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2003/061-mux9to1v.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2003/061-mux9to1v.png"><img src="../../images/Day%2003/061-mux9to1v.png" alt="9-to-1 multiplexer question and submitted solution" width="100%"></a>
+![9-to-1 multiplexer question and submitted solution](../../images/Day%2003/061-mux9to1v.png)
 
 ## What the question is asking
 

@@ -9,11 +9,11 @@
 | Attempts | 2 total: 1 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 50% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_nand3) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/123-bugs_nand3.png) · [Verilog solution](../../solutions/Day%2006/123-bugs_nand3.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/123-bugs_nand3.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/123-bugs_nand3.png"><img src="../../images/Day%2006/123-bugs_nand3.png" alt="NAND question and submitted solution" width="100%"></a>
+![NAND question and submitted solution](../../images/Day%2006/123-bugs_nand3.png)
 
 ## What the question is asking
 

@@ -9,11 +9,11 @@
 | Attempts | 12 total: 6 incorrect, 5 compile error, 0 simulation error |
 | Success rate | 8% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) |
-| Files | [Open screenshot at full resolution](../../images/Day%2009/149-exams__review2015_fsmseq.png) · [Verilog solution](../../solutions/Day%2009/149-exams__review2015_fsmseq.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2009/149-exams__review2015_fsmseq.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2009/149-exams__review2015_fsmseq.png"><img src="../../images/Day%2009/149-exams__review2015_fsmseq.png" alt="FSM: Sequence 1101 recognizer question and submitted solution" width="100%"></a>
+![FSM: Sequence 1101 recognizer question and submitted solution](../../images/Day%2009/149-exams__review2015_fsmseq.png)
 
 ## What the question is asking
 

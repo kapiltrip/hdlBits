@@ -9,11 +9,11 @@
 | Attempts | 6 total: 0 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 33% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/norgate) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/005-norgate.png) · [Verilog solution](../../solutions/Day%2002/005-norgate.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/005-norgate.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/005-norgate.png"><img src="../../images/Day%2002/005-norgate.png" alt="NOR gate question and submitted solution" width="100%"></a>
+![NOR gate question and submitted solution](../../images/Day%2002/005-norgate.png)
 
 ## What the question is asking
 

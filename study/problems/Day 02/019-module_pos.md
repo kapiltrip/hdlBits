@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/module_pos) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/019-module_pos.png) · [Verilog solution](../../solutions/Day%2002/019-module_pos.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/019-module_pos.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/019-module_pos.png"><img src="../../images/Day%2002/019-module_pos.png" alt="Connecting ports by position question and submitted solution" width="100%"></a>
+![Connecting ports by position question and submitted solution](../../images/Day%2002/019-module_pos.png)
 
 ## What the question is asking
 

@@ -9,11 +9,11 @@
 | Attempts | 12 total: 6 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 17% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_addsubz) |
-| Files | [Open screenshot at full resolution](../../images/Day%2006/125-bugs_addsubz.png) · [Verilog solution](../../solutions/Day%2006/125-bugs_addsubz.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2006/125-bugs_addsubz.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2006/125-bugs_addsubz.png"><img src="../../images/Day%2006/125-bugs_addsubz.png" alt="Add/sub question and submitted solution" width="100%"></a>
+![Add/sub question and submitted solution](../../images/Day%2006/125-bugs_addsubz.png)
 
 ## What the question is asking
 

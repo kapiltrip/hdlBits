@@ -9,11 +9,11 @@
 | Attempts | 12 total: 7 incorrect, 4 compile error, 0 simulation error |
 | Success rate | 8% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount) |
-| Files | [Open screenshot at full resolution](../../images/Day%2009/148-exams__review2015_shiftcount.png) · [Verilog solution](../../solutions/Day%2009/148-exams__review2015_shiftcount.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2009/148-exams__review2015_shiftcount.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2009/148-exams__review2015_shiftcount.png"><img src="../../images/Day%2009/148-exams__review2015_shiftcount.png" alt="4-bit shift register and down counter question and submitted solution" width="100%"></a>
+![4-bit shift register and down counter question and submitted solution](../../images/Day%2009/148-exams__review2015_shiftcount.png)
 
 ## What the question is asking
 

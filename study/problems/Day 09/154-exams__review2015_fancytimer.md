@@ -12,7 +12,7 @@
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
 | Files | [Successful-submission screenshot](../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) · [Verilog solution](../../solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [Mistake log](../../Mistakes.md#13-the-complete-timer-separate-control-state-and-datapath-state) |
 
-<a href="../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png"><img src="../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png" alt="Complete timer question and loaded successful submission" width="100%"></a>
+![Complete timer question and loaded successful submission](../../images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png)
 
 ## What the question is asking
 
@@ -38,9 +38,9 @@ That is 3000 counting cycles, matching `(2+1)×1000`.
 
 ### 1. The controller and datapath were mixed together
 
-<a href="../../images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png"><img src="../../images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png" alt="Complete timer wrong attempt showing many FSM states and delay register" width="100%"></a>
+![Complete timer wrong attempt showing many FSM states and delay register](../../images/Mistakes/070-fancytimer-wrong-attempt-state-and-registers.png)
 
-<a href="../../images/Mistakes/071-fancytimer-wrong-attempt-next-state-logic.png"><img src="../../images/Mistakes/071-fancytimer-wrong-attempt-next-state-logic.png" alt="Complete timer wrong attempt with next-state logic writing datapath registers" width="100%"></a>
+![Complete timer wrong attempt with next-state logic writing datapath registers](../../images/Mistakes/071-fancytimer-wrong-attempt-next-state-logic.png)
 
 The attempt correctly recognized that the problem needs search states, four shift states, a counting state, and a done state. The structural error was assigning `delay` and `counting` inside the combinational next-state `case`. `delay` is stored data, so it belongs in a clocked datapath block. `counting` is a Moore output, so it should be decoded from `state` on every path. Writing either only in selected `case` branches leaves incomplete combinational assignments and can infer latches.
 
@@ -48,9 +48,9 @@ There was also no complete behavior for `COUNTING`, `ack`, the modulo-1000 count
 
 ### 2. Two blocks may calculate the same expression for different destinations
 
-<a href="../../images/Mistakes/072-fancytimer-review-duplicate-expression-question.png"><img src="../../images/Mistakes/072-fancytimer-review-duplicate-expression-question.png" alt="Question about duplicate shift expressions" width="100%"></a>
+![Question about duplicate shift expressions](../../images/Mistakes/072-fancytimer-review-duplicate-expression-question.png)
 
-<a href="../../images/Mistakes/073-fancytimer-review-shift-versus-load.png"><img src="../../images/Mistakes/073-fancytimer-review-shift-versus-load.png" alt="Comparison of continuous shifting and loading the countdown register" width="100%"></a>
+![Comparison of continuous shifting and loading the countdown register](../../images/Mistakes/073-fancytimer-review-shift-versus-load.png)
 
 The expression `{delay[2:0], data}` represents the *new* four-bit value after accepting the current serial bit. It is reasonable for that same calculated value to feed two destinations on the fourth capture edge: the shift register keeps the new value, and another register could load it as its initial countdown value. Identical right-hand expressions do not imply identical hardware jobs; the left-hand registers and their enable conditions define the jobs.
 
@@ -58,7 +58,7 @@ The verified saved solution uses two registers deliberately. `delay` accumulates
 
 ### 3. Nonblocking assignments read the old value during the whole edge
 
-<a href="../../images/Mistakes/074-fancytimer-review-nonblocking-old-value.png"><img src="../../images/Mistakes/074-fancytimer-review-nonblocking-old-value.png" alt="Explanation that a nonblocking assignment reads the old delay value" width="100%"></a>
+![Explanation that a nonblocking assignment reads the old delay value](../../images/Mistakes/074-fancytimer-review-nonblocking-old-value.png)
 
 On the fourth shift edge, this pair is wrong if both statements are intended to capture the newly shifted value:
 

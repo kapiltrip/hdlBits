@@ -6,29 +6,29 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 
 ## Index
 
-| # | Time | Problem | Section | Problem note | Solution | Source |
+| # | Time | Problem | Section | Problem note | Page contents | Source |
 |---:|---|---:|---|---|---|---|
-| 1 | 12:13:30 AM | [108](#problem-108) | Sequential Logic | [Shift register](problems/Day%2005/108-exams__2014_q4b.md) | [Code](solutions/Day%2005/108-exams__2014_q4b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2014_q4b) |
-| 2 | 12:36:42 AM | [109](#problem-109) | Sequential Logic | [3-input LUT](problems/Day%2005/109-exams__ece241_2013_q12.md) | [Code](solutions/Day%2005/109-exams__ece241_2013_q12.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q12) |
-| 3 | 1:04:37 AM | [110](#problem-110) | Sequential Logic | [Simple FSM 1 (asynchronous reset)](problems/Day%2005/110-fsm1.md) | [Code](solutions/Day%2005/110-fsm1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm1) |
-| 4 | 1:25:24 AM | [111](#problem-111) | Sequential Logic | [Simple FSM 1 (synchronous reset)](problems/Day%2005/111-fsm1s.md) | [Code](solutions/Day%2005/111-fsm1s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm1s) |
-| 5 | 1:59:48 AM | [112](#problem-112) | Sequential Logic | [Simple FSM 2 (asynchronous reset)](problems/Day%2005/112-fsm2.md) | [Code](solutions/Day%2005/112-fsm2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2) |
-| 6 | 2:04:20 AM | [113](#problem-113) | Sequential Logic | [Simple FSM 2 (synchronous reset)](problems/Day%2005/113-fsm2s.md) | [Code](solutions/Day%2005/113-fsm2s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2s) |
-| 7 | 2:15:08 AM | [114](#problem-114) | Sequential Logic | [Simple state transitions 3](problems/Day%2005/114-fsm3comb.md) | [Code](solutions/Day%2005/114-fsm3comb.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3comb) |
-| 8 | 4:45:28 PM | [115](#problem-115) | Sequential Logic | [Simple one-hot state transitions 3](problems/Day%2005/115-fsm3onehot.md) | [Code](solutions/Day%2005/115-fsm3onehot.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3onehot) |
-| 9 | 5:05:31 PM | [116](#problem-116) | Sequential Logic | [Simple FSM 3 (asynchronous reset)](problems/Day%2005/116-fsm3.md) | [Code](solutions/Day%2005/116-fsm3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3) |
-| 10 | 5:07:35 PM | [117](#problem-117) | Sequential Logic | [Simple FSM 3 (synchronous reset)](problems/Day%2005/117-fsm3s.md) | [Code](solutions/Day%2005/117-fsm3s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3s) |
-| 11 | 11:58:25 PM | [118](#problem-118) | Sequential Logic | [Design a Moore FSM](problems/Day%2005/118-exams__ece241_2013_q4.md) | [Code](solutions/Day%2005/118-exams__ece241_2013_q4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) |
-| 12 | 6:32:59 PM | [119](#problem-119) | Sequential Logic | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | [Code](solutions/Day%2005/119-lemmings1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
+| 1 | 12:13:30 AM | [108](#problem-108) | Sequential Logic | [Shift register](problems/Day%2005/108-exams__2014_q4b.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2014_q4b) |
+| 2 | 12:36:42 AM | [109](#problem-109) | Sequential Logic | [3-input LUT](problems/Day%2005/109-exams__ece241_2013_q12.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q12) |
+| 3 | 1:04:37 AM | [110](#problem-110) | Sequential Logic | [Simple FSM 1 (asynchronous reset)](problems/Day%2005/110-fsm1.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm1) |
+| 4 | 1:25:24 AM | [111](#problem-111) | Sequential Logic | [Simple FSM 1 (synchronous reset)](problems/Day%2005/111-fsm1s.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm1s) |
+| 5 | 1:59:48 AM | [112](#problem-112) | Sequential Logic | [Simple FSM 2 (asynchronous reset)](problems/Day%2005/112-fsm2.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2) |
+| 6 | 2:04:20 AM | [113](#problem-113) | Sequential Logic | [Simple FSM 2 (synchronous reset)](problems/Day%2005/113-fsm2s.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm2s) |
+| 7 | 2:15:08 AM | [114](#problem-114) | Sequential Logic | [Simple state transitions 3](problems/Day%2005/114-fsm3comb.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3comb) |
+| 8 | 4:45:28 PM | [115](#problem-115) | Sequential Logic | [Simple one-hot state transitions 3](problems/Day%2005/115-fsm3onehot.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3onehot) |
+| 9 | 5:05:31 PM | [116](#problem-116) | Sequential Logic | [Simple FSM 3 (asynchronous reset)](problems/Day%2005/116-fsm3.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3) |
+| 10 | 5:07:35 PM | [117](#problem-117) | Sequential Logic | [Simple FSM 3 (synchronous reset)](problems/Day%2005/117-fsm3s.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3s) |
+| 11 | 11:58:25 PM | [118](#problem-118) | Sequential Logic | [Design a Moore FSM](problems/Day%2005/118-exams__ece241_2013_q4.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) |
+| 12 | 6:32:59 PM | [119](#problem-119) | Sequential Logic | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | Screenshot + code rendered below | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
 
 ---
 
 <a id="problem-108"></a>
 ## 108 — Shift register
 
-[Problem note](problems/Day%2005/108-exams__2014_q4b.md) · [Open screenshot at full resolution](images/Day%2005/108-exams__2014_q4b.png) · [Verilog file](solutions/Day%2005/108-exams__2014_q4b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2014_q4b)
+[Problem note](problems/Day%2005/108-exams__2014_q4b.md) · [Verilog file](solutions/Day%2005/108-exams__2014_q4b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2014_q4b)
 
-<a href="images/Day%2005/108-exams__2014_q4b.png"><img src="images/Day%2005/108-exams__2014_q4b.png" alt="Shift register question and submitted solution" width="100%"></a>
+![Shift register question and submitted solution](images/Day%2005/108-exams__2014_q4b.png)
 
 ### What the question is asking
 
@@ -100,9 +100,9 @@ endmodule
 <a id="problem-109"></a>
 ## 109 — 3-input LUT
 
-[Problem note](problems/Day%2005/109-exams__ece241_2013_q12.md) · [Open screenshot at full resolution](images/Day%2005/109-exams__ece241_2013_q12.png) · [Verilog file](solutions/Day%2005/109-exams__ece241_2013_q12.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q12)
+[Problem note](problems/Day%2005/109-exams__ece241_2013_q12.md) · [Verilog file](solutions/Day%2005/109-exams__ece241_2013_q12.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q12)
 
-<a href="images/Day%2005/109-exams__ece241_2013_q12.png"><img src="images/Day%2005/109-exams__ece241_2013_q12.png" alt="3-input LUT question and submitted solution" width="100%"></a>
+![3-input LUT question and submitted solution](images/Day%2005/109-exams__ece241_2013_q12.png)
 
 ### What the question is asking
 
@@ -147,9 +147,9 @@ endmodule
 <a id="problem-110"></a>
 ## 110 — Simple FSM 1 (asynchronous reset)
 
-[Problem note](problems/Day%2005/110-fsm1.md) · [Open screenshot at full resolution](images/Day%2005/110-fsm1.png) · [Verilog file](solutions/Day%2005/110-fsm1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm1)
+[Problem note](problems/Day%2005/110-fsm1.md) · [Verilog file](solutions/Day%2005/110-fsm1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm1)
 
-<a href="images/Day%2005/110-fsm1.png"><img src="images/Day%2005/110-fsm1.png" alt="Simple FSM 1 (asynchronous reset) question and submitted solution" width="100%"></a>
+![Simple FSM 1 (asynchronous reset) question and submitted solution](images/Day%2005/110-fsm1.png)
 
 ### What the question is asking
 
@@ -195,9 +195,9 @@ endmodule
 <a id="problem-111"></a>
 ## 111 — Simple FSM 1 (synchronous reset)
 
-[Problem note](problems/Day%2005/111-fsm1s.md) · [Open screenshot at full resolution](images/Day%2005/111-fsm1s.png) · [Verilog file](solutions/Day%2005/111-fsm1s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm1s)
+[Problem note](problems/Day%2005/111-fsm1s.md) · [Verilog file](solutions/Day%2005/111-fsm1s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm1s)
 
-<a href="images/Day%2005/111-fsm1s.png"><img src="images/Day%2005/111-fsm1s.png" alt="Simple FSM 1 (synchronous reset) question and submitted solution" width="100%"></a>
+![Simple FSM 1 (synchronous reset) question and submitted solution](images/Day%2005/111-fsm1s.png)
 
 ### What the question is asking
 
@@ -245,9 +245,9 @@ endmodule
 <a id="problem-112"></a>
 ## 112 — Simple FSM 2 (asynchronous reset)
 
-[Problem note](problems/Day%2005/112-fsm2.md) · [Open screenshot at full resolution](images/Day%2005/112-fsm2.png) · [Verilog file](solutions/Day%2005/112-fsm2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm2)
+[Problem note](problems/Day%2005/112-fsm2.md) · [Verilog file](solutions/Day%2005/112-fsm2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm2)
 
-<a href="images/Day%2005/112-fsm2.png"><img src="images/Day%2005/112-fsm2.png" alt="Simple FSM 2 (asynchronous reset) question and submitted solution" width="100%"></a>
+![Simple FSM 2 (asynchronous reset) question and submitted solution](images/Day%2005/112-fsm2.png)
 
 ### What the question is asking
 
@@ -296,9 +296,9 @@ endmodule
 <a id="problem-113"></a>
 ## 113 — Simple FSM 2 (synchronous reset)
 
-[Problem note](problems/Day%2005/113-fsm2s.md) · [Open screenshot at full resolution](images/Day%2005/113-fsm2s.png) · [Verilog file](solutions/Day%2005/113-fsm2s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm2s)
+[Problem note](problems/Day%2005/113-fsm2s.md) · [Verilog file](solutions/Day%2005/113-fsm2s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm2s)
 
-<a href="images/Day%2005/113-fsm2s.png"><img src="images/Day%2005/113-fsm2s.png" alt="Simple FSM 2 (synchronous reset) question and submitted solution" width="100%"></a>
+![Simple FSM 2 (synchronous reset) question and submitted solution](images/Day%2005/113-fsm2s.png)
 
 ### What the question is asking
 
@@ -344,9 +344,9 @@ endmodule
 <a id="problem-114"></a>
 ## 114 — Simple state transitions 3
 
-[Problem note](problems/Day%2005/114-fsm3comb.md) · [Open screenshot at full resolution](images/Day%2005/114-fsm3comb.png) · [Verilog file](solutions/Day%2005/114-fsm3comb.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3comb)
+[Problem note](problems/Day%2005/114-fsm3comb.md) · [Verilog file](solutions/Day%2005/114-fsm3comb.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3comb)
 
-<a href="images/Day%2005/114-fsm3comb.png"><img src="images/Day%2005/114-fsm3comb.png" alt="Simple state transitions 3 question and submitted solution" width="100%"></a>
+![Simple state transitions 3 question and submitted solution](images/Day%2005/114-fsm3comb.png)
 
 ### What the question is asking
 
@@ -385,9 +385,9 @@ endmodule
 <a id="problem-115"></a>
 ## 115 — Simple one-hot state transitions 3
 
-[Problem note](problems/Day%2005/115-fsm3onehot.md) · [Open screenshot at full resolution](images/Day%2005/115-fsm3onehot.png) · [Verilog file](solutions/Day%2005/115-fsm3onehot.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3onehot)
+[Problem note](problems/Day%2005/115-fsm3onehot.md) · [Verilog file](solutions/Day%2005/115-fsm3onehot.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3onehot)
 
-<a href="images/Day%2005/115-fsm3onehot.png"><img src="images/Day%2005/115-fsm3onehot.png" alt="Simple one-hot state transitions 3 question and submitted solution" width="100%"></a>
+![Simple one-hot state transitions 3 question and submitted solution](images/Day%2005/115-fsm3onehot.png)
 
 ### What the question is asking
 
@@ -427,9 +427,9 @@ endmodule
 <a id="problem-116"></a>
 ## 116 — Simple FSM 3 (asynchronous reset)
 
-[Problem note](problems/Day%2005/116-fsm3.md) · [Open screenshot at full resolution](images/Day%2005/116-fsm3.png) · [Verilog file](solutions/Day%2005/116-fsm3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3)
+[Problem note](problems/Day%2005/116-fsm3.md) · [Verilog file](solutions/Day%2005/116-fsm3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3)
 
-<a href="images/Day%2005/116-fsm3.png"><img src="images/Day%2005/116-fsm3.png" alt="Simple FSM 3 (asynchronous reset) question and submitted solution" width="100%"></a>
+![Simple FSM 3 (asynchronous reset) question and submitted solution](images/Day%2005/116-fsm3.png)
 
 ### What the question is asking
 
@@ -484,9 +484,9 @@ endmodule
 <a id="problem-117"></a>
 ## 117 — Simple FSM 3 (synchronous reset)
 
-[Problem note](problems/Day%2005/117-fsm3s.md) · [Open screenshot at full resolution](images/Day%2005/117-fsm3s.png) · [Verilog file](solutions/Day%2005/117-fsm3s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3s)
+[Problem note](problems/Day%2005/117-fsm3s.md) · [Verilog file](solutions/Day%2005/117-fsm3s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3s)
 
-<a href="images/Day%2005/117-fsm3s.png"><img src="images/Day%2005/117-fsm3s.png" alt="Simple FSM 3 (synchronous reset) question and submitted solution" width="100%"></a>
+![Simple FSM 3 (synchronous reset) question and submitted solution](images/Day%2005/117-fsm3s.png)
 
 ### What the question is asking
 
@@ -541,9 +541,9 @@ endmodule
 <a id="problem-118"></a>
 ## 118 — Design a Moore FSM
 
-[Problem note](problems/Day%2005/118-exams__ece241_2013_q4.md) · [Open screenshot at full resolution](images/Day%2005/118-exams__ece241_2013_q4.png) · [Verilog file](solutions/Day%2005/118-exams__ece241_2013_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4)
+[Problem note](problems/Day%2005/118-exams__ece241_2013_q4.md) · [Verilog file](solutions/Day%2005/118-exams__ece241_2013_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4)
 
-<a href="images/Day%2005/118-exams__ece241_2013_q4.png"><img src="images/Day%2005/118-exams__ece241_2013_q4.png" alt="Design a Moore FSM question and submitted solution" width="100%"></a>
+![Design a Moore FSM question and submitted solution](images/Day%2005/118-exams__ece241_2013_q4.png)
 
 ### What the question is asking
 
@@ -672,9 +672,9 @@ endmodule
 <a id="problem-119"></a>
 ## 119 — Lemmings 1
 
-[Problem note](problems/Day%2005/119-lemmings1.md) · [Open screenshot at full resolution](images/Day%2005/119-lemmings1.png) · [Verilog file](solutions/Day%2005/119-lemmings1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lemmings1)
+[Problem note](problems/Day%2005/119-lemmings1.md) · [Verilog file](solutions/Day%2005/119-lemmings1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lemmings1)
 
-<a href="images/Day%2005/119-lemmings1.png"><img src="images/Day%2005/119-lemmings1.png" alt="Lemmings 1 question and submitted solution" width="100%"></a>
+![Lemmings 1 question and submitted solution](images/Day%2005/119-lemmings1.png)
 
 ### What the question is asking
 

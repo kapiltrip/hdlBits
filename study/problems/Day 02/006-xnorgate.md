@@ -9,11 +9,11 @@
 | Attempts | 2 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/xnorgate) |
-| Files | [Open screenshot at full resolution](../../images/Day%2002/006-xnorgate.png) · [Verilog solution](../../solutions/Day%2002/006-xnorgate.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2002/006-xnorgate.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2002/006-xnorgate.png"><img src="../../images/Day%2002/006-xnorgate.png" alt="XNOR gate question and submitted solution" width="100%"></a>
+![XNOR gate question and submitted solution](../../images/Day%2002/006-xnorgate.png)
 
 ## What the question is asking
 

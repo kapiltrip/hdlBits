@@ -9,11 +9,11 @@
 | Attempts | 1 total: 0 incorrect, 0 compile error, 0 simulation error |
 | Success rate | 100% |
 | Source | [Open original HDLBits problem](https://hdlbits.01xz.net/wiki/hadd) |
-| Files | [Open screenshot at full resolution](../../images/Day%2003/064-hadd.png) · [Verilog solution](../../solutions/Day%2003/064-hadd.sv) |
+| Files | Screenshot rendered below · [Verilog solution](../../solutions/Day%2003/064-hadd.sv) |
 
 ## Question and submitted solution
 
-<a href="../../images/Day%2003/064-hadd.png"><img src="../../images/Day%2003/064-hadd.png" alt="Half adder question and submitted solution" width="100%"></a>
+![Half adder question and submitted solution](../../images/Day%2003/064-hadd.png)
 
 ## What the question is asking
 
