@@ -13,8 +13,53 @@ const hasInlineImageTarget = (content, target) => Array.from(
   (match) => match[1],
 ).includes(target);
 
-if (manifest.length !== 157) failures.push(`Manifest count is ${manifest.length}, expected 157`);
-if (screenshotAudit.totals.checked !== 159) failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, expected 159`);
+const readImageMetadata = (buffer) => {
+  if (
+    buffer.length >= 24 &&
+    buffer.subarray(0, 8).equals(Buffer.from([0x89, 0x50, 0x4e, 0x47, 0x0d, 0x0a, 0x1a, 0x0a]))
+  ) {
+    return {
+      format: "PNG",
+      width: buffer.readUInt32BE(16),
+      height: buffer.readUInt32BE(20),
+    };
+  }
+
+  if (buffer.length >= 4 && buffer[0] === 0xff && buffer[1] === 0xd8) {
+    const startOfFrameMarkers = new Set([
+      0xc0, 0xc1, 0xc2, 0xc3, 0xc5, 0xc6, 0xc7,
+      0xc9, 0xca, 0xcb, 0xcd, 0xce, 0xcf,
+    ]);
+    let offset = 2;
+    while (offset + 8 < buffer.length) {
+      if (buffer[offset] !== 0xff) {
+        offset += 1;
+        continue;
+      }
+      const marker = buffer[offset + 1];
+      if (marker === 0xd8 || marker === 0xd9) {
+        offset += 2;
+        continue;
+      }
+      const segmentLength = buffer.readUInt16BE(offset + 2);
+      if (segmentLength < 2 || offset + segmentLength + 2 > buffer.length) break;
+      if (startOfFrameMarkers.has(marker)) {
+        return {
+          format: "JPEG",
+          width: buffer.readUInt16BE(offset + 7),
+          height: buffer.readUInt16BE(offset + 5),
+        };
+      }
+      offset += segmentLength + 2;
+    }
+  }
+
+  return null;
+};
+
+if (screenshotAudit.totals.checked !== screenshotAudit.screenshots.length) {
+  failures.push(`Screenshot audit count is ${screenshotAudit.totals.checked}, but contains ${screenshotAudit.screenshots.length} records`);
+}
 if (screenshotAudit.totals.failures !== 0) failures.push(`Screenshot audit reports ${screenshotAudit.totals.failures} failures`);
 
 const problemNumbers = manifest.map((record) => record.problemNumber);
@@ -28,8 +73,10 @@ if (problemNumbers.some((number) => !Number.isInteger(number) || number <= 0)) {
 const completedScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Completed");
 const reviewScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "Review");
 const todoScreenshots = screenshotAudit.screenshots.filter((screenshot) => screenshot.status === "To Do");
-if (completedScreenshots.length !== 157) failures.push(`Completed screenshot count is ${completedScreenshots.length}, expected 157`);
-if (reviewScreenshots.length !== 2) failures.push(`Review screenshot count is ${reviewScreenshots.length}, expected 2`);
+if (completedScreenshots.length !== manifest.length) {
+  failures.push(`Completed screenshot count is ${completedScreenshots.length}, but manifest contains ${manifest.length} records`);
+}
+if (reviewScreenshots.length !== 0) failures.push(`Review screenshot count is ${reviewScreenshots.length}, expected 0`);
 if (todoScreenshots.length !== 0) failures.push(`Captured To Do screenshot count is ${todoScreenshots.length}, expected 0`);
 
 for (const screenshot of screenshotAudit.screenshots) {
@@ -44,17 +91,26 @@ for (const screenshot of screenshotAudit.screenshots) {
   if (screenshot.width < 800 || screenshot.height < 700) {
     failures.push(`Suspicious screenshot dimensions for ${screenshot.slug}: ${screenshot.width}x${screenshot.height}`);
   }
-}
-
-// Primary revision captures must be complete. Supporting close-ups may be split,
-// but only when the corresponding complete primary image remains embedded.
-const reviewPage = await readText("Review.md");
-for (const primaryReviewImage of [
-  "images/Review/120-lemmings2.png",
-  "images/Review/review-exams__2013_q2afsm.png",
-]) {
-  if (!hasInlineImageTarget(reviewPage, primaryReviewImage)) {
-    failures.push(`Review page does not render complete primary image: ${primaryReviewImage}`);
+  try {
+    const image = await fs.readFile(path.join(root, screenshot.screenshotPath));
+    const metadata = readImageMetadata(image);
+    if (!metadata) {
+      failures.push(`Unsupported or corrupt screenshot format: ${screenshot.slug}`);
+    } else {
+      if (metadata.format !== screenshot.format) {
+        failures.push(`Screenshot format mismatch for ${screenshot.slug}: audit ${screenshot.format}, file ${metadata.format}`);
+      }
+      if (metadata.width !== screenshot.width || metadata.height !== screenshot.height) {
+        failures.push(
+          `Screenshot dimension mismatch for ${screenshot.slug}: audit ${screenshot.width}x${screenshot.height}, file ${metadata.width}x${metadata.height}`,
+        );
+      }
+    }
+    if (image.length !== screenshot.bytes) {
+      failures.push(`Screenshot byte-count mismatch for ${screenshot.slug}: audit ${screenshot.bytes}, file ${image.length}`);
+    }
+  } catch {
+    failures.push(`Missing or unreadable screenshot: ${screenshot.screenshotPath}`);
   }
 }
 
@@ -93,7 +149,8 @@ for (const record of manifest) {
   }
 }
 
-for (const day of Array.from({ length: 10 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}`)) {
+const archiveDays = [...new Set(manifest.map((record) => record.day))].sort();
+for (const day of archiveDays) {
   const dayPage = await readText(`${day}.md`);
   const dayRecords = manifest.filter((item) => item.day === day);
   const inlineCodeBlocks = Array.from(dayPage.matchAll(/^```verilog$/gm)).length;
@@ -115,7 +172,6 @@ for (const day of Array.from({ length: 10 }, (_, index) => `Day ${String(index +
 
 for (const requiredFile of [
   "../HDLBits_Tracker.xlsx",
-  "images/Review/120-lemmings2.png",
   "images/Review/review-exams__2013_q2afsm.png",
 ]) {
   try {
@@ -130,7 +186,7 @@ const markdownFiles = [
   "Review.md",
   "internal/REPOSITORY_REVIEW.md",
   "Mistakes.md",
-  ...Array.from({ length: 11 }, (_, index) => `Day ${String(index + 1).padStart(2, "0")}.md`),
+  ...archiveDays.map((day) => `${day}.md`),
   ...manifest.map((record) => record.problemNotePath),
 ];
 
@@ -169,6 +225,7 @@ if (failures.length) {
   console.log(JSON.stringify({
     records: manifest.length,
     screenshots: screenshotAudit.totals.checked,
+    verifiedImageMetadata: screenshotAudit.screenshots.length,
     markdownFiles: markdownFiles.length,
     dayCounts: counts,
     brokenLinks: 0,

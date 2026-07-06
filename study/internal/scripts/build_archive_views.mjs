@@ -5,7 +5,7 @@ const root = path.resolve(import.meta.dirname, "../..");
 const internal = path.join(root, "internal");
 const records = JSON.parse(fs.readFileSync(path.join(internal, "archive_manifest.json"), "utf8"));
 
-const explanations = {
+const generatedExplanations = {
   wire: "Connect the single input directly to the output so the module behaves exactly like a wire.",
   wire4: "Create the requested one-to-one and fan-out wire connections between the named inputs and outputs.",
   notgate: "Drive the output with the logical inverse of the input, implementing a NOT gate.",
@@ -373,7 +373,40 @@ The two cases are combined with x as the selector. Output z is derived separatel
   "exams/m2014_q6c": `With one-hot encoding, each requested next-state bit is the OR of all enabled transitions entering its destination state. B has one incoming transition, from A when w is zero, so Y2=y1&~w. D has incoming w=1 transitions from B, C, E, and F, so Y4=w&(y2|y3|y5|y6).
 
 Direct sum-of-products equations also behave correctly when the testbench asserts non-one-hot current-state vectors, unlike a priority case that assumes exactly one active bit.`,
+  "exams/ece241_2014_q5a": `A serial two's-complementer copies input bits from least significant to most significant until it encounters the first 1. That first 1 is copied unchanged; every later bit is inverted. The Moore implementation stores whether the first 1 has already appeared. In the COPY state, output z is 0 and input 0 keeps the machine in COPY, while input 1 moves it to INVERT. In INVERT, z is the complement of the current input and the state remains there for the rest of the word.
+
+Because a Moore output depends only on registered state, the transition cycle must be designed carefully: the first 1 is produced while the machine is still in COPY, so z must equal the required copied value on that boundary. Reset synchronously returns to COPY for the start of a new number. The key verification cases are all-zero input, a word whose least-significant bit is 1, and long leading runs of zeros before the first 1.`,
+  "exams/ece241_2014_q5b": `The Mealy version implements the same least-significant-bit-first two's-complement algorithm with only two states. Before the first 1, output z follows x directly: zeros remain zero and the first 1 remains one. Once that 1 is observed, the FSM enters the INVERT state and every later output is NOT x. Since z depends on both present state and current input, the first 1 can be emitted correctly on the same cycle that causes the state transition.
+
+This is the central Moore-versus-Mealy distinction in the paired exam questions. State records only the historical fact that the first 1 has occurred; it does not store the data word. Synchronous reset clears that history between words. A useful trace is x=0,0,1,0,1: z=0,0,1,1,0. Combinational defaults and a recovery branch keep next-state and output fully assigned for every encoding.`,
+  "exams/m2014_q6b": `This problem asks only for the combinational next-state equation for state Y. The transition diagram must be read as incoming arcs to Y, not as every arc leaving the current state. Each product term combines a present-state condition with the input value that enables its transition, and the terms are ORed because any one incoming arc is sufficient to assert Y on the next clock.
+
+No state register is required: the supplied state bits already represent the present state, and the output is the Boolean equation for the requested destination bit. The safest derivation method is to list every arrow whose head is Y, write one AND term per arrow, then OR those terms and simplify only after the unsimplified equation has been checked. This avoids the common errors of reversing arrow direction, omitting a self-loop, or applying priority where the diagram defines parallel sum-of-products logic.`,
+  "exams/m2014_q6": `This complete FSM separates registered state, combinational transition logic, and output decoding. The transition table is translated literally so each legal state defines its next state for both input values. A synchronous reset loads the specified initial state at the next rising edge, while ordinary state changes also occur only on rising edges. The output is decoded from the registered present state, so its timing follows the Moore interpretation shown in the problem.
+
+The default transition returns the machine to a safe legal state if an unused binary encoding appears. That is useful both for simulation determinism and hardware recovery. Verification should include both branches from every state, the reset edge, and at least one path that reaches the output-asserting state. Keeping the three responsibilities in separate blocks makes it clear that combinational logic cannot accidentally infer storage and that reset timing is not confused with asynchronous behavior.`,
+  "exams/2012_q2fsm": `The state diagram is implemented as a conventional Moore machine. Each named state represents the history needed to decide future transitions, the combinational case statement selects the next state from the current state and input, and a clocked register advances the machine once per rising edge. The output is decoded only from the registered state, so it changes after the transition into an output-producing state rather than directly with the input.
+
+Reset is handled with the timing required by the prompt and returns the controller to its initial state. A default branch provides deterministic recovery from unused encodings. The most reliable way to validate this design is to trace one row at a time from the diagram: record current state, input, expected destination, then compare the code. Finally trace a complete input sequence through reset, state transitions, and output timing to catch a one-cycle shift between transition recognition and Moore output assertion.`,
+  "exams/2012_q2b": `The current state is supplied as a one-hot vector, so the task is pure combinational next-state and output logic. For each destination bit, collect every transition entering that state. An incoming transition contributes current_state[source] AND its input condition; ORing all such terms produces the destination's next-state equation. The output is a direct decode of whichever present-state bits are marked as output-producing in the diagram.
+
+Direct equations are preferable to a priority case because they preserve the Boolean behavior even if a test vector contains zero or multiple asserted state bits. There is no internal register and the clock input is therefore intentionally unused. The essential checks are that every diagram arrow appears exactly once in an incoming equation, input polarities match the arrow labels, self-loops are included, and next_state is driven in full on every combinational evaluation.`,
+  rule90: `Rule 90 is a one-dimensional cellular automaton in which every cell's next value is the XOR of its left and right neighbors; the current value of the cell itself is irrelevant. For a 512-bit row, the interior equation is q_next[i] = q[i-1] ^ q[i+1]. The two boundaries have an implied zero neighbor, so the leftmost cell uses only its one real neighbor and the rightmost cell does the same.
+
+The implementation computes the complete next row from the old registered q and loads it on one rising edge with a nonblocking assignment. The load input has priority and synchronously replaces all 512 cells with data. Concatenated shifted versions of q provide the zero padding compactly and avoid 512 handwritten equations. Verification should test a single live cell, an alternating pattern, both edges, and load priority; each expected row must be calculated from the same pre-edge generation, never from partially updated cells.`,
+  rule110: `Rule 110 updates each cell from the three-bit neighborhood {left, center, right}. Its truth table produces 0 for 111, 100, and 000, and 1 for 110, 101, 011, 010, and 001. The saved design evaluates that Boolean rule across all 512 cells in parallel, with nonexistent neighbors outside the row treated as zero.
+
+As with Rule 90, q is the only state. A synchronous load has priority over evolution and installs the entire data row on a rising edge. Otherwise one clock advances exactly one generation, because every right-hand side reads the old q before any nonblocking update becomes visible. Boundary padding is part of the functional specification and must be checked separately from interior cells. A robust review compares the coded expression against all eight neighborhood combinations, then checks edge neighborhoods and two consecutive generations to detect reversed neighbor order or in-place-update mistakes.`,
+  "exams/2013_q2afsm": `This arbiter FSM grants access according to the request conditions in the supplied state diagram. Each state represents the currently selected ownership or idle condition, and the combinational transition block follows the diagram for every request combination. The clocked state register applies the specified reset and makes grants stable for a complete cycle. Outputs are Moore decodes of the registered state, preventing combinational request glitches from appearing directly on grant lines.
+
+The earlier attempt evidence is retained because it shows why a complete transition table matters: missing request combinations or an incorrect priority can strand the controller or grant the wrong requester. The corrected version assigns next_state for every legal state, includes a safe default for unused encodings, and decodes mutually exclusive grants from state. Verification should cover idle entry, each independent request, simultaneous requests, request withdrawal, and reset from every grant state.`,
 };
+
+const explanationPath = path.join(internal, "problem_explanations.json");
+const storedExplanations = fs.existsSync(explanationPath)
+  ? JSON.parse(fs.readFileSync(explanationPath, "utf8"))
+  : {};
+const explanations = { ...storedExplanations, ...generatedExplanations };
 
 function urlPath(value) {
   return value.split("/").map(encodeURIComponent).join("/");
@@ -398,6 +431,9 @@ function buildProblemNote(record) {
   const explanation = explanations[record.slug];
   const code = readSolution(record);
   const attempts = `${record.totalAttempts} total: ${record.incorrect} incorrect, ${record.compileError} compile error, ${record.simulationError} simulation error`;
+  const priorEvidence = record.slug === "exams/2013_q2afsm"
+    ? `\n## Prior attempt evidence\n\n![Earlier Q2a FSM review attempt](../../images/Review/review-exams__2013_q2afsm.png)\n\nThis earlier attempt is preserved as mistake evidence; the complete Chrome capture above is the authoritative successful submission.\n`
+    : "";
 
   return `# ${String(record.problemNumber).padStart(3, "0")} — ${record.title}
 
@@ -415,6 +451,7 @@ function buildProblemNote(record) {
 ## Question and submitted solution
 
 ${imageMarkdown(image, record.title)}
+${priorEvidence}
 
 ## What the question is asking
 
@@ -484,14 +521,17 @@ if (missing.length) {
   throw new Error(`Missing explanations: ${missing.map((record) => record.slug).join(", ")}`);
 }
 
-for (const record of records) {
+const minimumProblemNumber = Number.parseInt(globalThis.ARCHIVE_MIN_NUMBER || "0", 10);
+const selectedRecords = records.filter((record) => record.problemNumber >= minimumProblemNumber);
+
+for (const record of selectedRecords) {
   fs.writeFileSync(path.join(root, record.problemNotePath), buildProblemNote(record), "utf8");
 }
 
-for (const day of [...new Set(records.map((record) => record.day))]) {
+for (const day of [...new Set(selectedRecords.map((record) => record.day))]) {
   const dayRecords = records.filter((record) => record.day === day);
   fs.writeFileSync(path.join(root, `${day}.md`), buildDayPage(day, dayRecords), "utf8");
 }
 
 fs.writeFileSync(path.join(internal, "problem_explanations.json"), `${JSON.stringify(explanations, null, 2)}\n`, "utf8");
-console.log(`Updated ${records.length} problem notes and ${new Set(records.map((record) => record.day)).size} day pages.`);
+console.log(`Updated ${selectedRecords.length} problem notes and ${new Set(selectedRecords.map((record) => record.day)).size} day pages.`);

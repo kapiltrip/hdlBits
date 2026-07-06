@@ -1,16 +1,16 @@
 # HDLBits Learning Archive
 
-Offline study archive for **157 completed HDLBits problems** plus **2 active review problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
+Offline study archive for **176 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
 
-- Latest archived completion: `exams/m2014_q6c`.
-- Review queue: `lemmings2` and `exams/2013_q2afsm`.
-- Study status: **157 completed**, **2 review**, and **19 to do**, matching the live HDLBits solved count.
-- Workbook status: the root tracker is current at **157 completed / 2 review / 19 to do**, uses the correct `study/` repository links, and maps all 21 remaining questions to Day 12.
+- Latest archived completion: `exams/2013_q2afsm`.
+- Review queue: empty; the former review item is now verified as completed.
+- Study status: **176 completed**, **0 review**, and **2 to do**, verified from the logged-in HDLBits profile (**176 solved / 176 attempted**).
+- Remaining untouched questions: `conwaylife` and `exams/review2015_fsmonehot`.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
 - The complete Excel tracker is the single root-level file [HDLBits_Tracker.xlsx](../HDLBits_Tracker.xlsx).
-- [Review queue](Review.md) contains only the two genuinely unfinished problems.
+- [Review queue](Review.md) records the empty review state and the two untouched questions.
 - Every completed problem has a deep problem note, standalone Verilog solution, and source URL. The logged-in HDLBits record verified the exact timestamps and attempt totals for problems 151–154; the complete-timer wrong-attempt screenshots remain integrated with its discussion.
-- All 157 completed records are covered by the internal [screenshot audit](internal/screenshot_audit.json). Problems 153 and 154 now include full question, successful-submission history, and complete loaded-answer captures; the earlier mistake images remain available for revision.
+- All 176 completed records are covered by the internal [screenshot audit](internal/screenshot_audit.json). Problems 169–177 add nine full-page Chrome captures with loaded successful answers; earlier mistake images remain available for revision.
 - Every completed day/problem page renders its screenshot and complete saved Verilog directly in GitHub Markdown. Review and mistake pages also render their evidence inline; links are secondary navigation only.
 - The second-pass code, screenshot, workbook, link, and formatting checks are recorded in the internal [repository review](internal/REPOSITORY_REVIEW.md).
 
@@ -28,8 +28,10 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 | [Day 08](Day%2008.md) | 2026-06-30 | 1 |
 | [Day 09](Day%2009.md) | 2026-07-02 | 11 |
 | [Day 10](Day%2010.md) | 2026-07-03 | 4 |
-| [Day 11](Day%2011.md) | 2026-07-04 | 0 completed / 21 planned |
-| [Day 12](Day%2012.md) | 2026-07-05 | 0 completed / 21 carried forward |
+| [Day 11](Day%2011.md) | 2026-07-04 | 2 |
+| [Day 12](Day%2012.md) | 2026-07-05 | 4 |
+| [Day 13](Day%2013.md) | 2026-07-06 | 10 |
+| [Day 14](Day%2014.md) | 2026-07-07 | 3 |
 
 ## Section index
 
@@ -213,6 +215,13 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 | 108 | [Shift register](problems/Day%2005/108-exams__2014_q4b.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/108-exams__2014_q4b.png) | [Code](solutions/Day%2005/108-exams__2014_q4b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2014_q4b) |
 | 109 | [3-input LUT](problems/Day%2005/109-exams__ece241_2013_q12.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/109-exams__ece241_2013_q12.png) | [Code](solutions/Day%2005/109-exams__ece241_2013_q12.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q12) |
 
+## Circuits → Sequential Logic → More Circuits
+
+| # | Problem | Day | Date | Screenshot | Solution | Source |
+|---:|---|---|---|---|---|---|
+| 175 | [Rule 90](problems/Day%2014/175-rule90.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/175-rule90-question-and-successful-submission.png) | [Code](solutions/Day%2014/175-rule90.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/rule90) |
+| 176 | [Rule 110](problems/Day%2014/176-rule110.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/176-rule110-question-and-successful-submission.png) | [Code](solutions/Day%2014/176-rule110.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/rule110) |
+
 ## Circuits → Sequential Logic → Finite State Machines
 
 | # | Problem | Day | Date | Screenshot | Solution | Source |
@@ -227,6 +236,23 @@ Offline study archive for **157 completed HDLBits problems** plus **2 active rev
 | 117 | [Simple FSM 3 (synchronous reset)](problems/Day%2005/117-fsm3s.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/117-fsm3s.png) | [Code](solutions/Day%2005/117-fsm3s.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm3s) |
 | 118 | [Design a Moore FSM](problems/Day%2005/118-exams__ece241_2013_q4.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/118-exams__ece241_2013_q4.png) | [Code](solutions/Day%2005/118-exams__ece241_2013_q4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) |
 | 119 | [Lemmings 1](problems/Day%2005/119-lemmings1.md) | Day 05 | 2026-06-27 | [Image](images/Day%2005/119-lemmings1.png) | [Code](solutions/Day%2005/119-lemmings1.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings1) |
+| 159 | [Lemmings 2](problems/Day%2011/159-lemmings2.md) | Day 11 | 2026-07-04 | [Question + successful submission](images/Day%2011/159-lemmings2-question-and-successful-submission.png) | [Code](solutions/Day%2011/159-lemmings2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings2) |
+| 160 | [Lemmings 3](problems/Day%2011/160-lemmings3.md) | Day 11 | 2026-07-04 | [Question + successful submission](images/Day%2011/160-lemmings3-question-and-successful-submission.png) | [Code](solutions/Day%2011/160-lemmings3.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings3) |
+| 161 | [Lemmings 4](problems/Day%2012/161-lemmings4.md) | Day 12 | 2026-07-05 | [Question + successful submission](images/Day%2012/161-lemmings4-question-and-successful-submission.png) | [Code](solutions/Day%2012/161-lemmings4.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/lemmings4) |
+| 162 | [One-hot FSM](problems/Day%2012/162-fsm_onehot.md) | Day 12 | 2026-07-05 | [Question + successful submission](images/Day%2012/162-fsm_onehot-question-and-successful-submission.png) | [Code](solutions/Day%2012/162-fsm_onehot.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_onehot) |
+| 163 | [Serial receiver](problems/Day%2012/163-fsm_serial.md) | Day 12 | 2026-07-05 | [Question + successful submission](images/Day%2012/163-fsm_serial-question-and-successful-submission.png) | [Code](solutions/Day%2012/163-fsm_serial.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_serial) |
+| 164 | [Serial receiver and datapath](problems/Day%2012/164-fsm_serialdata.md) | Day 12 | 2026-07-05 | [Question + successful submission](images/Day%2012/164-fsm_serialdata-question-and-successful-submission.png) | [Code](solutions/Day%2012/164-fsm_serialdata.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_serialdata) |
+| 165 | [Serial receiver with parity checking](problems/Day%2013/165-fsm_serialdp.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/165-fsm_serialdp-question-and-successful-submission.png) | [Code](solutions/Day%2013/165-fsm_serialdp.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_serialdp) |
+| 166 | [PS/2 packet parser](problems/Day%2013/166-fsm_ps2.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/166-fsm_ps2-question-and-successful-submission.png) | [Code](solutions/Day%2013/166-fsm_ps2.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_ps2) |
+| 167 | [PS/2 packet parser and datapath](problems/Day%2013/167-fsm_ps2data.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/167-fsm_ps2data-question-and-successful-submission.png) | [Code](solutions/Day%2013/167-fsm_ps2data.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_ps2data) |
+| 168 | [Sequence recognition](problems/Day%2013/168-fsm_hdlc.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/168-fsm_hdlc-question-and-successful-submission.png) | [Code](solutions/Day%2013/168-fsm_hdlc.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/fsm_hdlc) |
+| 169 | [Q5a: Serial two's complementer (Moore FSM)](problems/Day%2013/169-exams__ece241_2014_q5a.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/169-exams__ece241_2014_q5a-question-and-successful-submission.png) | [Code](solutions/Day%2013/169-exams__ece241_2014_q5a.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5a) |
+| 170 | [Q5b: Serial two's complementer (Mealy FSM)](problems/Day%2013/170-exams__ece241_2014_q5b.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/170-exams__ece241_2014_q5b-question-and-successful-submission.png) | [Code](solutions/Day%2013/170-exams__ece241_2014_q5b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5b) |
+| 171 | [Q6b: FSM next-state logic](problems/Day%2013/171-exams__m2014_q6b.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/171-exams__m2014_q6b-question-and-successful-submission.png) | [Code](solutions/Day%2013/171-exams__m2014_q6b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/m2014_q6b) |
+| 172 | [Q6: FSM](problems/Day%2013/172-exams__m2014_q6.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/172-exams__m2014_q6-question-and-successful-submission.png) | [Code](solutions/Day%2013/172-exams__m2014_q6.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/m2014_q6) |
+| 173 | [Q2a: FSM](problems/Day%2013/173-exams__2012_q2fsm.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/173-exams__2012_q2fsm-question-and-successful-submission.png) | [Code](solutions/Day%2013/173-exams__2012_q2fsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2012_q2fsm) |
+| 174 | [Q2b: One-hot FSM equations](problems/Day%2013/174-exams__2012_q2b.md) | Day 13 | 2026-07-06 | [Question + successful submission](images/Day%2013/174-exams__2012_q2b-question-and-successful-submission.png) | [Code](solutions/Day%2013/174-exams__2012_q2b.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2012_q2b) |
+| 177 | [Q2a: Arbiter FSM](problems/Day%2014/177-exams__2013_q2afsm.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/177-exams__2013_q2afsm-question-and-successful-submission.png) | [Code](solutions/Day%2014/177-exams__2013_q2afsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2afsm) |
 | 121 | [Q2b: Another FSM](problems/Day%2006/121-exams__2013_q2bfsm.md) | Day 06 | 2026-06-28 | [Image](images/Day%2006/121-exams__2013_q2bfsm.png) | [Code](solutions/Day%2006/121-exams__2013_q2bfsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm) |
 | 142 | [Q8: Design a Mealy FSM](problems/Day%2007/142-exams__ece241_2013_q8.md) | Day 07 | 2026-06-29 | [Image](images/Day%2007/142-exams__ece241_2013_q8.png) | [Code](solutions/Day%2007/142-exams__ece241_2013_q8.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) |
 | 155 | [Q3a: FSM](problems/Day%2010/155-exams__2014_q3fsm.md) | Day 10 | 2026-07-03 | [Question + answer](images/Day%2010/155-exams__2014_q3fsm-question-and-answer.png) | [Code](solutions/Day%2010/155-exams__2014_q3fsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/2014_q3fsm) |
