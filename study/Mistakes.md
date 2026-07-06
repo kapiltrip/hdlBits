@@ -571,7 +571,7 @@ Lemmings 1 was revisited successfully on 2026-07-04. Its two-state model is corr
 
 ![Lemmings 1 successful revision check](images/Mistakes/075-lemmings1-revision-success.png)
 
-Lemmings 2 adds falling. The full review capture is kept in [Review.md](Review.md); the current question and split editor capture are rendered here in reading order.
+Lemmings 2 adds falling. The unsuccessful split editor capture is rendered here in reading order; the later verified solution is archived in [problem 159](problems/Day%2011/159-lemmings2.md).
 
 ![Lemmings 2 question and waveform](images/Mistakes/076-lemmings2-question-waveform.png)
 
@@ -592,6 +592,64 @@ Transition priority matters:
 3. When `ground` returns, `FALL_L` resumes `WALK_L` and `FALL_R` resumes `WALK_R`.
 
 This organization directly implements the wording of the problem and prevents direction changes during a fall.
+
+The correction was successfully submitted on 2026-07-04 at 5:14:31 PM. The problem note keeps the full question, loaded accepted answer, and final four-state solution beside this mistake evidence.
+
+## 15. One-hot FSM: Do Not Replace the Supplied State Interface
+
+![One-hot FSM state diagram](images/Mistakes/081-fsm-onehot-question.png)
+
+![Incomplete One-hot FSM attempt](images/Mistakes/080-fsm-onehot-incomplete-attempt.png)
+
+The mistake was treating a one-hot transition-logic exercise like a normal encoded FSM. HDLBits already supplies `state[9:0]`; the task is to compute `next_state[9:0]`. Redeclaring both as four-bit variables creates conflicting declarations and throws away six state bits. A `parameter` is a compile-time constant, so it also cannot alias a run-time expression such as `state[0]`.
+
+For one-hot logic, work destination-first: for each `next_state[k]`, OR together the conditions on every arrow entering state `Sk`. Outputs are direct decodes of the given current-state bits. No state flip-flop belongs in this module.
+
+This was corrected in [problem 162 — One-hot FSM](problems/Day%2012/162-fsm_onehot.md), verified successfully on 2026-07-05.
+
+## 16. Memory Requirement: State for Control, Registers for Data
+
+![Prior-cycle information requires stored state](images/Mistakes/082-fsm-history-requires-state-explanation.png)
+
+An FSM does not remember an input merely because the Verilog source mentioned it earlier. At each combinational evaluation, next-state logic knows only the registered current state and current inputs. Previous-cycle facts must be encoded in state or held in a separate register. Extra states are best for remembered control phases; counters, shift registers, and flags are best for datapath values.
+
+## 17. Serial Receiver Datapath: Align `done`, Stop Validation, and Byte Capture
+
+![Serial receiver and datapath question](images/Mistakes/083-serial-receiver-datapath-question.png)
+
+![Serial receiver and datapath mismatch](images/Mistakes/084-serial-receiver-datapath-mismatch.png)
+
+The first mismatch occurs when the reference pulses `done` and the attempted design does not. That localizes the bug to the boundary between the eighth data bit and stop-bit validation. Count accepted data bits explicitly, decode `done` from the state/cycle where a valid stop bit has been recognized, and enter the recovery state after an invalid stop bit.
+
+Because the protocol sends the least-significant bit first, shifting with `out_byte <= {in, out_byte[7:1]}` during each data cycle reconstructs the byte in normal `[7:0]` order after eight clocks.
+
+The control-cycle alignment and byte capture were corrected in [problem 164](problems/Day%2012/164-fsm_serialdata.md).
+
+## 18. Serial Parity: Reset Per Frame and Check the Post-bit Value
+
+![Serial receiver with parity checking question](images/Mistakes/085-serial-receiver-parity-question.png)
+
+Odd parity covers the eight data bits and the following parity bit. Reset the parity accumulator at frame start, toggle it for those nine bits, and accept the stop bit only when the accumulated parity is odd. A nonblocking assignment does not expose its newly toggled value until after the edge, so checking `odd` in the same block that toggles it can be one bit late unless the logic explicitly includes the current input.
+
+The completed implementation and loaded successful submission are archived in [problem 165](problems/Day%2013/165-fsm_serialdp.md).
+
+## 19. PS/2 Datapath: Count Bytes, Not Bits
+
+![PS/2 packet datapath explanation, top](images/Mistakes/086-ps2-parser-datapath-explanation-top.png)
+
+![PS/2 packet datapath explanation, bottom](images/Mistakes/087-ps2-parser-datapath-explanation-bottom.png)
+
+Each `in[7:0]` value is already a full byte. After detecting byte 1 with `in[3]`, the next two inputs must be stored as complete byte slices. A scalar index such as `latching[pointer]` selects one bit and cannot store an eight-bit input. Also preserve back-to-back packets by inspecting `in[3]` during the done cycle instead of always discarding that cycle.
+
+The corrected byte-slice datapath is archived in [problem 167](problems/Day%2013/167-fsm_ps2data.md).
+
+## 20. HDLC Recognition: Decode Outputs from the Correct Run-length State
+
+![HDLC sequence-recognition mismatch](images/Mistakes/088-hdlc-sequence-recognition-mismatch.png)
+
+The attempted error indication starts one cycle earlier than the reference. Label every state with the exact number of consecutive ones already consumed before the current input. Then determine whether the output belongs to the current state, the transition, or the destination state. That explicit timing model prevents an off-by-one decode from treating the “one short” state as the error state.
+
+The corrected run-length FSM was successfully submitted and is archived in [problem 168](problems/Day%2013/168-fsm_hdlc.md).
 
 ## Revision Checklist
 
@@ -693,3 +751,12 @@ These are the technical screenshots kept for this reflection log.
 | [077-lemmings2-attempt-top.png](images/Mistakes/077-lemmings2-attempt-top.png) | Lemmings 2 attempt declarations and first state branch |
 | [078-lemmings2-attempt-middle.png](images/Mistakes/078-lemmings2-attempt-middle.png) | Lemmings 2 attempt transition and state-register overlap |
 | [079-lemmings2-attempt-bottom.png](images/Mistakes/079-lemmings2-attempt-bottom.png) | Lemmings 2 attempt outputs and submission controls |
+| [080-fsm-onehot-incomplete-attempt.png](images/Mistakes/080-fsm-onehot-incomplete-attempt.png) | One-hot FSM interface and incomplete incoming-arc equation |
+| [081-fsm-onehot-question.png](images/Mistakes/081-fsm-onehot-question.png) | One-hot FSM state diagram and prompt |
+| [082-fsm-history-requires-state-explanation.png](images/Mistakes/082-fsm-history-requires-state-explanation.png) | Why prior-cycle information must be stored |
+| [083-serial-receiver-datapath-question.png](images/Mistakes/083-serial-receiver-datapath-question.png) | Serial receiver with byte datapath question |
+| [084-serial-receiver-datapath-mismatch.png](images/Mistakes/084-serial-receiver-datapath-mismatch.png) | Missing `done` pulse near the first mismatch |
+| [085-serial-receiver-parity-question.png](images/Mistakes/085-serial-receiver-parity-question.png) | Serial receiver with odd-parity checking |
+| [086-ps2-parser-datapath-explanation-top.png](images/Mistakes/086-ps2-parser-datapath-explanation-top.png) | PS/2 packet byte ordering and datapath |
+| [087-ps2-parser-datapath-explanation-bottom.png](images/Mistakes/087-ps2-parser-datapath-explanation-bottom.png) | PS/2 back-to-back packet handling and common mistakes |
+| [088-hdlc-sequence-recognition-mismatch.png](images/Mistakes/088-hdlc-sequence-recognition-mismatch.png) | HDLC sequence-recognition error timing mismatch |
