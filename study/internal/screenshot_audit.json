@@ -2,8 +2,8 @@
   "generatedAt": "2026-07-07",
   "method": "Measured the complete problem page from the heading through the editor and bottom navigation; completed captures require the submitted answer plus either a visible success result or the authoritative Last success submission-history entry.",
   "totals": {
-    "checked": 176,
-    "completed": 176,
+    "checked": 178,
+    "completed": 178,
     "review": 0,
     "todoCaptured": 0,
     "failures": 0
@@ -2497,6 +2497,38 @@
       "containsLoadedSolution": true,
       "containsSuccessResult": true,
       "complete": true
+    },
+    {
+      "slug": "exams/review2015_fsmonehot",
+      "status": "Completed",
+      "screenshotPath": "images/Day 14/178-exams__review2015_fsmonehot-question-and-successful-submission.png",
+      "format": "JPEG",
+      "width": 1536,
+      "height": 3846,
+      "bytes": 353548,
+      "containsTitle": true,
+      "containsModuleDeclaration": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "containsSuccessHistory": true,
+      "complete": true,
+      "containsSuccessResult": true
+    },
+    {
+      "slug": "conwaylife",
+      "status": "Completed",
+      "screenshotPath": "images/Day 14/179-conwaylife-question-and-successful-submission.png",
+      "format": "PNG",
+      "width": 900,
+      "height": 4393,
+      "bytes": 1095298,
+      "containsTitle": true,
+      "containsModuleDeclaration": true,
+      "containsEditor": true,
+      "containsLoadedSolution": true,
+      "containsSuccessHistory": true,
+      "complete": true,
+      "containsSuccessResult": true
     }
   ]
 }

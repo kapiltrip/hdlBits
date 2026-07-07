@@ -1,16 +1,16 @@
 # HDLBits Learning Archive
 
-Offline study archive for **176 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
+Offline study archive for **178 completed HDLBits problems**. The Excel tracker covers the complete **178-problem HDLBits series** in the exact order shown by the website course tree.
 
-- Latest archived completion: `exams/2013_q2afsm`.
-- Review queue: empty; the former review item is now verified as completed.
-- Study status: **176 completed**, **0 review**, and **2 to do**, verified from the logged-in HDLBits profile (**176 solved / 176 attempted**).
-- Remaining untouched questions: `conwaylife` and `exams/review2015_fsmonehot`.
+- Latest archived completion: `conwaylife`.
+- Review queue: empty; all attempted questions are now verified as completed.
+- Study status: **178 completed**, **0 review**, and **0 to do**, verified from the logged-in HDLBits profile (**178 solved / 178 attempted**).
+- Remaining untouched questions: none.
 - Day labels use the calendar date shown by HDLBits for the **last successful submission**.
-- The complete Excel tracker is the single root-level file [HDLBits_Tracker.xlsx](../HDLBits_Tracker.xlsx).
-- [Review queue](Review.md) records the empty review state and the two untouched questions.
-- Every completed problem has a deep problem note, standalone Verilog solution, and source URL. The logged-in HDLBits record verified the exact timestamps and attempt totals for problems 151–154; the complete-timer wrong-attempt screenshots remain integrated with its discussion.
-- All 176 completed records are covered by the internal [screenshot audit](internal/screenshot_audit.json). Problems 169–177 add nine full-page Chrome captures with loaded successful answers; earlier mistake images remain available for revision.
+- The complete Excel tracker is the single root-level file [HDLBits_Tracker.xlsx](../HDLBits_Tracker.xlsx), synced to the final 178/178 audit.
+- [Review queue](Review.md) records the completed review state.
+- Every completed problem has a deep problem note, standalone Verilog solution, and source URL. The logged-in HDLBits record verified the final **178 solved / 178 attempted** state; mistake screenshots remain available for revision.
+- All 178 completed records are covered by the internal [screenshot audit](internal/screenshot_audit.json). Problems 169–179 add full-page or focused Chrome captures with visible successful answers; earlier mistake images remain available for revision.
 - Every completed day/problem page renders its screenshot and complete saved Verilog directly in GitHub Markdown. Review and mistake pages also render their evidence inline; links are secondary navigation only.
 - The second-pass code, screenshot, workbook, link, and formatting checks are recorded in the internal [repository review](internal/REPOSITORY_REVIEW.md).
 
@@ -31,7 +31,7 @@ Offline study archive for **176 completed HDLBits problems**. The Excel tracker 
 | [Day 11](Day%2011.md) | 2026-07-04 | 2 |
 | [Day 12](Day%2012.md) | 2026-07-05 | 4 |
 | [Day 13](Day%2013.md) | 2026-07-06 | 10 |
-| [Day 14](Day%2014.md) | 2026-07-07 | 3 |
+| [Day 14](Day%2014.md) | 2026-07-07 | 5 |
 
 ## Section index
 
@@ -221,6 +221,7 @@ Offline study archive for **176 completed HDLBits problems**. The Excel tracker 
 |---:|---|---|---|---|---|---|
 | 175 | [Rule 90](problems/Day%2014/175-rule90.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/175-rule90-question-and-successful-submission.png) | [Code](solutions/Day%2014/175-rule90.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/rule90) |
 | 176 | [Rule 110](problems/Day%2014/176-rule110.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/176-rule110-question-and-successful-submission.png) | [Code](solutions/Day%2014/176-rule110.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/rule110) |
+| 179 | [Conway's Game of Life 16x16](problems/Day%2014/179-conwaylife.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/179-conwaylife-question-and-successful-submission.png) | [Code](solutions/Day%2014/179-conwaylife.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/conwaylife) |
 
 ## Circuits → Sequential Logic → Finite State Machines
 
@@ -270,6 +271,7 @@ Offline study archive for **176 completed HDLBits problems**. The Excel tracker 
 | 150 | [FSM: Enable shift register](problems/Day%2009/150-exams__review2015_fsmshift.md) | Day 09 | 2026-07-02 | [Image](images/Day%2009/150-exams__review2015_fsmshift.png) | [Code](solutions/Day%2009/150-exams__review2015_fsmshift.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift) |
 | 153 | [FSM: The complete FSM](problems/Day%2009/153-exams__review2015_fsm.md) | Day 09 | 2026-07-02 | [Question + successful submission](images/Day%2009/153-exams__review2015_fsm-question-and-successful-submission.png) | [Code](solutions/Day%2009/153-exams__review2015_fsm.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) |
 | 154 | [The complete timer](problems/Day%2009/154-exams__review2015_fancytimer.md) | Day 09 | 2026-07-02 | [Question + successful submission](images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) | [Code](solutions/Day%2009/154-exams__review2015_fancytimer.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) |
+| 178 | [FSM: One-hot logic equations](problems/Day%2014/178-exams__review2015_fsmonehot.md) | Day 14 | 2026-07-07 | [Question + successful submission](images/Day%2014/178-exams__review2015_fsmonehot-question-and-successful-submission.png) | [Code](solutions/Day%2014/178-exams__review2015_fsmonehot.sv) | [HDLBits](https://hdlbits.01xz.net/wiki/exams/review2015_fsmonehot) |
 
 ## Verification: Reading Simulations → Finding bugs in code
 
