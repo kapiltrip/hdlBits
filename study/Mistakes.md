@@ -651,6 +651,46 @@ The attempted error indication starts one cycle earlier than the reference. Labe
 
 The corrected run-length FSM was successfully submitted and is archived in [problem 168](problems/Day%2013/168-fsm_hdlc.md).
 
+## 21. Q3c: Present-state Vector vs Next-state Bit
+
+![Q3c handwritten state-table and Karnaugh-map review](images/Mistakes/WhatsApp%20Image%202026-07-04%20at%2012.13.55%20AM.jpeg)
+
+![Q3c vector declaration and present-state review note](images/Mistakes/WhatsApp%20Image%202026-07-06%20at%209.54.18%20PM.jpeg)
+
+The question in these notes is about what the vector means and which column should be simplified. `input [2:0] y` is a 3-bit packed current-state vector, not an array of separate state records. The uppercase `Y[2:0]` in the table is the next state, and HDLBits asks only for `Y0`, so the Karnaugh map should use the least-significant bit of the table's next-state entries.
+
+That gives `Y0 = (~x & (y[0] | y[2])) | (x & ~y[0] & ~y[2])`. The Moore output `z` is separate from the next-state equation and is high only for present states `3'b011` and `3'b100`. The full corrected answer is linked from [problem 157 - Q3c: FSM logic](problems/Day%2010/157-exams__2014_q3c.md).
+
+## 22. Q6c One-hot State Equations: Use Incoming Arrows
+
+![Q6c handwritten one-hot incoming-arrow derivation](images/Mistakes/WhatsApp%20Image%202026-07-06%20at%2010.38.46%20PM.jpeg)
+
+The clean rule is destination-first. `Y2` means "next state is B", so only arrows entering B matter; the only one is `A --w=0--> B`, giving `Y2 = y[1] & ~w`. `Y4` means "next state is D"; arrows enter D from B, C, E, and F when `w=1`, giving `Y4 = w & (y[2] | y[3] | y[5] | y[6])`.
+
+Do not include a state bit just because that state exists. Include it only when there is an enabled transition from that current state into the requested destination. The full corrected answer is linked from [problem 158 - Q6c: FSM one-hot next-state logic](problems/Day%2010/158-exams__m2014_q6c.md).
+
+## 23. Review2015 One-hot: Selected Equations and Unused-state Warnings
+
+![Review2015 one-hot prompt top](images/Mistakes/Screenshot%202026-07-07%20120850.png)
+
+![Review2015 one-hot module and prompt detail](images/Mistakes/Screenshot%202026-07-07%20120950.png)
+
+![Review2015 one-hot port/detail crop](images/Mistakes/Screenshot%202026-07-07%20121000.png)
+
+![Review2015 one-hot successful submission with warning](images/Mistakes/Screenshot%202026-07-07%20125016.png)
+
+The warning beside the successful submission is not a sign that the answer should force every state bit into the logic. This HDLBits task requests only `B3_next`, `S_next`, `S1_next`, `Count_next`, `Wait_next`, and three Moore outputs. Any present-state bit that has no incoming arrow into those requested destination bits, and is not part of those output decodes, can legitimately be absent.
+
+For this problem, derive each requested output from the state diagram, not from a generic ten-bit next-state template. The full corrected answer is linked from [problem 178 - FSM: One-hot logic equations](problems/Day%2014/178-exams__review2015_fsmonehot.md).
+
+## 24. Conway Life: Wrap the Grid Before Counting Neighbours
+
+![Conwaylife highlighted prompt and toroidal-grid question](images/Mistakes/Screenshot%202026-07-07%20125205.png)
+
+The highlighted point is the toroidal boundary. Row 0 wraps upward to row 15, row 15 wraps downward to row 0, column 0 wraps left to column 15, and column 15 wraps right to column 0. For example, cell `(0,0)` counts neighbours from the opposite edges as well as the adjacent cells: `(15,15)`, `(15,0)`, `(15,1)`, `(0,15)`, `(0,1)`, `(1,15)`, `(1,0)`, and `(1,1)`.
+
+Compute all neighbour counts from the old registered `q` value, store them in `next_q`, and update `q` on the clock edge. The full corrected answer is linked from [problem 179 - Conway's Game of Life 16x16](problems/Day%2014/179-conwaylife.md).
+
 ## Revision Checklist
 
 Before submitting an HDLBits solution, run this checklist:
@@ -760,3 +800,11 @@ These are the technical screenshots kept for this reflection log.
 | [086-ps2-parser-datapath-explanation-top.png](images/Mistakes/086-ps2-parser-datapath-explanation-top.png) | PS/2 packet byte ordering and datapath |
 | [087-ps2-parser-datapath-explanation-bottom.png](images/Mistakes/087-ps2-parser-datapath-explanation-bottom.png) | PS/2 back-to-back packet handling and common mistakes |
 | [088-hdlc-sequence-recognition-mismatch.png](images/Mistakes/088-hdlc-sequence-recognition-mismatch.png) | HDLC sequence-recognition error timing mismatch |
+| [Screenshot 2026-07-07 120850.png](images/Mistakes/Screenshot%202026-07-07%20120850.png) | Review2015 one-hot prompt context |
+| [Screenshot 2026-07-07 120950.png](images/Mistakes/Screenshot%202026-07-07%20120950.png) | Review2015 one-hot module and selected equations |
+| [Screenshot 2026-07-07 121000.png](images/Mistakes/Screenshot%202026-07-07%20121000.png) | Review2015 one-hot declaration detail |
+| [Screenshot 2026-07-07 125016.png](images/Mistakes/Screenshot%202026-07-07%20125016.png) | Review2015 one-hot successful submission warning |
+| [Screenshot 2026-07-07 125205.png](images/Mistakes/Screenshot%202026-07-07%20125205.png) | Conwaylife toroidal-grid prompt |
+| [WhatsApp Image 2026-07-04 at 12.13.55 AM.jpeg](images/Mistakes/WhatsApp%20Image%202026-07-04%20at%2012.13.55%20AM.jpeg) | Q3c state-table and Karnaugh-map derivation |
+| [WhatsApp Image 2026-07-06 at 10.38.46 PM.jpeg](images/Mistakes/WhatsApp%20Image%202026-07-06%20at%2010.38.46%20PM.jpeg) | Q6c one-hot incoming-arrow derivation |
+| [WhatsApp Image 2026-07-06 at 9.54.18 PM.jpeg](images/Mistakes/WhatsApp%20Image%202026-07-06%20at%209.54.18%20PM.jpeg) | Q3c vector declaration and present-state review |

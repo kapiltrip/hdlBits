@@ -8,6 +8,7 @@ const explanations = JSON.parse(await fs.readFile(path.join(internal, "problem_e
 const screenshotAudit = JSON.parse(await fs.readFile(path.join(internal, "screenshot_audit.json"), "utf8"));
 const failures = [];
 const readText = (relative) => fs.readFile(path.join(root, relative), "utf8");
+const normalizeLineEndings = (content) => content.replace(/\r\n/g, "\n");
 const hasInlineImageTarget = (content, target) => Array.from(
   content.matchAll(/!\[[^\]]*\]\(([^)]+)\)/g),
   (match) => match[1],
@@ -132,7 +133,10 @@ for (const record of manifest) {
   if (!hasInlineImageTarget(problemNote, expectedProblemImage)) {
     failures.push(`Problem note does not render its screenshot inline: ${record.problemNotePath}`);
   }
-  if (![153, 154].includes(record.problemNumber) && !problemNote.includes(solution.trim())) {
+  if (
+    ![153, 154].includes(record.problemNumber) &&
+    !normalizeLineEndings(problemNote).includes(normalizeLineEndings(solution.trim()))
+  ) {
     failures.push(`Problem note code is out of sync: ${record.problemNotePath}`);
   }
   if (record.problemNumber >= 115 && ![151, 152].includes(record.problemNumber) && explanations[record.slug].length < 400) {
