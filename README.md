@@ -3,11 +3,13 @@
 This repository is my offline HDLBits study archive. It keeps the completed problem notes, screenshots, saved SystemVerilog solutions, review material, and tracker workbook together in one place.
 
 ## Personal Note
-
+(I write this section not AI ). 
 I do not use AI to write the HDL code for me. I use AI to help manage files, maintain a clean structure, and update sub-directories according to how I want the study archive organized.
 
 AI is just a tool, and it should never replace human intelligence.
 Also I will be adding personal notes and personal experiences and weaknesses that i felt while solving each question .
+Planning that, with the help of column in excel sheet when i will start revision from tomorrow . 
+Also i can find a way to attach handwritten notes, to the excel sheet and the personal note about the question , that, will be more insightful . 
 
 ## Current Status
 
