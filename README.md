@@ -7,6 +7,7 @@ This repository is my offline HDLBits study archive. It keeps the completed prob
 I do not use AI to write the HDL code for me. I use AI to help manage files, maintain a clean structure, and update sub-directories according to how I want the study archive organized.
 
 AI is just a tool, and it should never replace human intelligence.
+Also I will be adding personal notes and personal experiences and weaknesses that i felt while solving each question .
 
 ## Current Status
 
