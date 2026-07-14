@@ -21,6 +21,7 @@ Also i can find a way to attach handwritten notes, to the excel sheet and the pe
 ## Quick Links
 
 - [Study archive](study/README.md) - full HDLBits section index with problem notes, screenshots, solutions, and source URLs.
+- [Dated revision sheet](REVISION_SHEET.md) - 178-problem revision calendar with +2, +7, and +21-day recalls.
 - [Tracker workbook](HDLBits_Tracker.xlsx) - spreadsheet tracker for the complete 178-problem HDLBits sequence.
 - [Review queue](study/Review.md) - completed review state and any future review notes.
 - [Mistakes log](study/Mistakes.md) - revision evidence and explanations for mistakes worth revisiting.
