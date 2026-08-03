@@ -671,13 +671,13 @@ Do not include a state bit just because that state exists. Include it only when 
 
 ## 23. Review2015 One-hot: Selected Equations and Unused-state Warnings
 
-![Review2015 one-hot prompt top](images/Mistakes/Screenshot%202026-07-07%20120850.png)
+![Review2015 one-hot prompt top](images/Mistakes/089-review2015-onehot-prompt.png)
 
-![Review2015 one-hot module and prompt detail](images/Mistakes/Screenshot%202026-07-07%20120950.png)
+![Review2015 one-hot module and prompt detail](images/Mistakes/090-review2015-onehot-module.png)
 
-![Review2015 one-hot port/detail crop](images/Mistakes/Screenshot%202026-07-07%20121000.png)
+![Review2015 one-hot port/detail crop](images/Mistakes/091-review2015-onehot-detail.png)
 
-![Review2015 one-hot successful submission with warning](images/Mistakes/Screenshot%202026-07-07%20125016.png)
+![Review2015 one-hot successful submission with warning](images/Mistakes/092-review2015-onehot-success-warning.png)
 
 The warning beside the successful submission is not a sign that the answer should force every state bit into the logic. This HDLBits task requests only `B3_next`, `S_next`, `S1_next`, `Count_next`, `Wait_next`, and three Moore outputs. Any present-state bit that has no incoming arrow into those requested destination bits, and is not part of those output decodes, can legitimately be absent.
 
@@ -685,7 +685,7 @@ For this problem, derive each requested output from the state diagram, not from 
 
 ## 24. Conway Life: Wrap the Grid Before Counting Neighbours
 
-![Conwaylife highlighted prompt and toroidal-grid question](images/Mistakes/Screenshot%202026-07-07%20125205.png)
+![Conwaylife highlighted prompt and toroidal-grid question](images/Mistakes/093-conwaylife-toroidal-grid.png)
 
 The highlighted point is the toroidal boundary. Row 0 wraps upward to row 15, row 15 wraps downward to row 0, column 0 wraps left to column 15, and column 15 wraps right to column 0. For example, cell `(0,0)` counts neighbours from the opposite edges as well as the adjacent cells: `(15,15)`, `(15,0)`, `(15,1)`, `(0,15)`, `(0,1)`, `(1,15)`, `(1,0)`, and `(1,1)`.
 
@@ -800,11 +800,11 @@ These are the technical screenshots kept for this reflection log.
 | [086-ps2-parser-datapath-explanation-top.png](images/Mistakes/086-ps2-parser-datapath-explanation-top.png) | PS/2 packet byte ordering and datapath |
 | [087-ps2-parser-datapath-explanation-bottom.png](images/Mistakes/087-ps2-parser-datapath-explanation-bottom.png) | PS/2 back-to-back packet handling and common mistakes |
 | [088-hdlc-sequence-recognition-mismatch.png](images/Mistakes/088-hdlc-sequence-recognition-mismatch.png) | HDLC sequence-recognition error timing mismatch |
-| [Screenshot 2026-07-07 120850.png](images/Mistakes/Screenshot%202026-07-07%20120850.png) | Review2015 one-hot prompt context |
-| [Screenshot 2026-07-07 120950.png](images/Mistakes/Screenshot%202026-07-07%20120950.png) | Review2015 one-hot module and selected equations |
-| [Screenshot 2026-07-07 121000.png](images/Mistakes/Screenshot%202026-07-07%20121000.png) | Review2015 one-hot declaration detail |
-| [Screenshot 2026-07-07 125016.png](images/Mistakes/Screenshot%202026-07-07%20125016.png) | Review2015 one-hot successful submission warning |
-| [Screenshot 2026-07-07 125205.png](images/Mistakes/Screenshot%202026-07-07%20125205.png) | Conwaylife toroidal-grid prompt |
+| [089-review2015-onehot-prompt.png](images/Mistakes/089-review2015-onehot-prompt.png) | Review2015 one-hot prompt context |
+| [090-review2015-onehot-module.png](images/Mistakes/090-review2015-onehot-module.png) | Review2015 one-hot module and selected equations |
+| [091-review2015-onehot-detail.png](images/Mistakes/091-review2015-onehot-detail.png) | Review2015 one-hot declaration detail |
+| [092-review2015-onehot-success-warning.png](images/Mistakes/092-review2015-onehot-success-warning.png) | Review2015 one-hot successful submission warning |
+| [093-conwaylife-toroidal-grid.png](images/Mistakes/093-conwaylife-toroidal-grid.png) | Conwaylife toroidal-grid prompt |
 | [WhatsApp Image 2026-07-04 at 12.13.55 AM.jpeg](images/Mistakes/WhatsApp%20Image%202026-07-04%20at%2012.13.55%20AM.jpeg) | Q3c state-table and Karnaugh-map derivation |
 | [WhatsApp Image 2026-07-06 at 10.38.46 PM.jpeg](images/Mistakes/WhatsApp%20Image%202026-07-06%20at%2010.38.46%20PM.jpeg) | Q6c one-hot incoming-arrow derivation |
 | [WhatsApp Image 2026-07-06 at 9.54.18 PM.jpeg](images/Mistakes/WhatsApp%20Image%202026-07-06%20at%209.54.18%20PM.jpeg) | Q3c vector declaration and present-state review |
