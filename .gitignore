@@ -1,0 +1,8 @@
+# Generated inspection, rendering, and dependency output
+**/outputs/
+**/internal/tmp/
+**/node_modules/
+*.inspect.ndjson
+
+# Microsoft Office lock files
+~$*.xlsx
