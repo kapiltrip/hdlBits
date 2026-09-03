@@ -1,13 +1,13 @@
 # HDLBits Attempt 2 - Original Submission Audit Through Entry 93
 
-This review is based on the original HDLBits problem pages and the saved submission history visible in Kapil's signed-in Chrome session on 2026-09-02. Six separate Chrome audit tabs were used so the problem statement, last successful submission, and last unsuccessful submission could be compared directly rather than inferred from the local tracker.
+The original audit is based on the HDLBits problem pages and saved submission history visible in Kapil's signed-in Chrome session on 2026-09-02. A 2026-09-03 follow-up extends the progress frontier through entry 93 using Kapil's explicit completion confirmation and a captured set of eight matching HDLBits tabs. The newer rows deliberately do not invent submission timestamps that were not visible to the audit tool.
 
 ## Result
 
-- Entries **1 through 93** were checked against their original HDLBits pages and saved-submission selectors.
-- **All entries 1 through 85 now have a fresh successful submission during Attempt 2**, beginning on 2026-08-29.
-- Entries **80, 83, 84, and 85 are newly verified Done** from successful submissions on 2026-09-02. Entries 86-93 show only pre-Attempt-2 successes and remain Pending.
-- The submitted code now contains **15 explicit questions or requests for explanation**. Fourteen were already covered by the earlier answer set. The new question in entry 80 asks for a deep explanation of the Moore serial two's-complement code and why states S0, S1, and S2 are needed; it is answered in the dedicated [Entry 80 Moore FSM deep-dive PDF](output/pdf/HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf).
+- Entries **1 through 85** retain the detailed original-page and saved-submission-selector audit from 2026-09-02.
+- **All entries 1 through 93 are now Done in Attempt 2**. Entries 86-93 were updated on 2026-09-03 from Kapil's completion confirmation and the matching open problem tabs.
+- Entries **80, 83, 84, and 85** retain their timestamped success evidence from 2026-09-02. The Day 6 entries use `current pass; user-confirmed` instead of guessed timestamps.
+- The earlier 15 explicit questions remain documented. Day 6 adds Q&A for Dualedge (entry 87), Sim/circuit5 (entry 89), and Exams/2014 q3fsm (entry 90). Entry 90 has its own [standalone FSM deep dive](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf); the other two are kept in the separate [Day 6 non-FSM Q&A](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf).
 - A successful submission followed by later experimentation does not erase the earlier success. `Done` means a fresh Attempt 2 success exists, not that the most recently loaded editor contents are necessarily successful.
 
 ## Previously documented questions confirmed against the original code
@@ -142,7 +142,7 @@ For an LSB-first stream, two's complement can be produced by copying zeros until
 - `OUTPUT_1`, output 1, for the first 1 or a later inverted 0;
 - `OUTPUT_0`, output 0, for a later inverted 1.
 
-The latest successful code follows this rule, includes a `default` transition for illegal-state recovery, and now has a fresh Attempt 2 success. Its submitted comments explicitly ask for a deeper explanation of the algorithm, timing, and need for each state; see the [Entry 80 Moore FSM deep-dive PDF](output/pdf/HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf).
+The latest successful code follows this rule, includes a `default` transition for illegal-state recovery, and now has a fresh Attempt 2 success. Its submitted comments explicitly ask for a deeper explanation of the algorithm, timing, and need for each state; see the [Entry 80 Moore FSM deep-dive PDF](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf).
 
 ### Entry 81 - Combinational circuit 4
 
@@ -243,6 +243,27 @@ always @(*) begin
 end
 ```
 
+## Day 6 completion follow-up - entries 86 through 93
+
+Kapil reported these eight problems completed in the current pass. The Chrome tab strip captured on 2026-09-03 contains the same eight HDLBits pages, in the same progress block. Because page-body attachment was unavailable during this follow-up, the evidence column records the confirmation exactly and does not claim unseen success timestamps.
+
+| Entry | Problem | Attempt 2 state | Question/reference |
+|---:|---|---|---|
+| 86 | [Vectorr](https://hdlbits.01xz.net/wiki/vectorr) | Done | No questions asked |
+| 87 | [Dualedge](https://hdlbits.01xz.net/wiki/dualedge) | Done | [Day 6 non-FSM Q&A PDF](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) |
+| 88 | [Thermostat](https://hdlbits.01xz.net/wiki/thermostat) | Done | No questions asked |
+| 89 | [Sim/circuit5](https://hdlbits.01xz.net/wiki/sim/circuit5) | Done | [Day 6 non-FSM Q&A PDF](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) |
+| 90 | [Exams/2014 q3fsm](https://hdlbits.01xz.net/wiki/exams/2014_q3fsm) | Done | [Standalone three-sample-window FSM PDF](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf) |
+| 91 | [Vector4](https://hdlbits.01xz.net/wiki/vector4) | Done | No questions asked |
+| 92 | [Count15](https://hdlbits.01xz.net/wiki/count15) | Done | No questions asked |
+| 93 | [Popcount3](https://hdlbits.01xz.net/wiki/popcount3) | Done | No questions asked |
+
+The saved Edge conversations add three review topics:
+
+- In Dualedge, `qpos | qneg` can preserve a stale 1 from the register that was not updated at the latest edge. The primary HDLBits solution selects `qpos` while `clk` is high and `qneg` while it is low. The expanded PDF now distinguishes simulator acceptance from FPGA implementability: ordinary fabric registers are normally single-edge, whereas real DDR capture and launch use device-specific I/O resources such as AMD IDDR/ODDR or Intel/Altera DDIO. It also covers half-cycle timing, duty-cycle, glitch, metastability, reset, and XOR-startup concerns using primary vendor documentation.
+- In Sim/circuit5, the waveform implies `c=0 -> b`, `c=1 -> e`, `c=2 -> a`, `c=3 -> d`, and all other selector values -> `4'hf`. Therefore `c` belongs in `case(c)`; input bus `b` is an identifier, not hexadecimal digit B.
+- In Exams/2014 q3fsm, `ticks==2` means two samples have already been processed before the current third edge. Because nonblocking assignments expose old register values within the block, the third-sample decision uses `count + w`. The window counters must reset after every third sample, not only when the group contains exactly two ones. Both earlier wrong versions and the corrected two-state RTL are preserved in the standalone PDF.
+
 ## Local verification
 
 The reusable testbench [day5_original_submission_selfcheck.sv](internal/Verification/day5_original_submission_selfcheck.sv) checks:
@@ -262,9 +283,16 @@ Icarus Verilog result:
 PASS: Chrome-audit follow-up behavior checks passed (entries 74, 75, 77, 80-85).
 ```
 
+The Day 6 checkers add:
+
+```text
+PASS: all 8 possible q3fsm groups plus back-to-back grouping; saved reset-only-on-match bug diverged as expected.
+PASS: Dualedge MUX/XOR solutions and all 16 Circuit5 selector values; stale-register OR bug diverged as expected.
+```
+
 ## Chrome evidence appendix
 
-The table below records every original page checked. Dates are copied from the saved-submission selector displayed by HDLBits. `Done` requires a successful submission during the current Attempt 2 window beginning 2026-08-29.
+The table below records every original page in the audited range. For entries 1-85, dates are copied from the saved-submission selector displayed by HDLBits. For entries 86-93, `2026-09-03 current pass; user-confirmed` records the exact evidence available in the follow-up and avoids inventing an unseen timestamp.
 
 | No. | Original HDLBits page | Last success shown in Chrome | Last non-success shown in Chrome | Attempt 2 state | Question/reference |
 |---:|---|---|---|---|---|
@@ -321,7 +349,7 @@ The table below records every original page checked. Dates are copied from the s
 | 51 | [Exams/m2014 q4d](https://hdlbits.01xz.net/wiki/exams/m2014_q4d) | 8/31/2026, 9:32:17 AM | 8/31/2026, 9:31:28 AM | Done | No explicit question recorded |
 | 52 | [Exams/m2014 q4g](https://hdlbits.01xz.net/wiki/exams/m2014_q4g) | 8/31/2026, 9:34:10 AM | none | Done | No explicit question recorded |
 | 53 | [7458](https://hdlbits.01xz.net/wiki/7458) | 8/31/2026, 9:39:14 AM | none | Done | No explicit question recorded |
-| 54 | [Exams/ece241 2013 q4](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) | 9/1/2026, 12:21:28 AM | 9/1/2026, 12:16:46 AM | Done | [Recovered questions PDF](output/pdf/HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
+| 54 | [Exams/ece241 2013 q4](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4) | 9/1/2026, 12:21:28 AM | 9/1/2026, 12:16:46 AM | Done | [Recovered questions PDF](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
 | 55 | [Sim/circuit1](https://hdlbits.01xz.net/wiki/sim/circuit1) | 8/31/2026, 8:36:12 PM | 6/28/2026, 1:32:14 AM | Done | No explicit question recorded |
 | 56 | [Mt2015 muxdff](https://hdlbits.01xz.net/wiki/mt2015_muxdff) | 9/1/2026, 12:32:44 AM | 9/1/2026, 12:32:23 AM | Done | No explicit question recorded |
 | 57 | [Gates](https://hdlbits.01xz.net/wiki/gates) | 9/1/2026, 12:39:20 AM | 9/1/2026, 12:38:40 AM | Done | No explicit question recorded |
@@ -341,25 +369,25 @@ The table below records every original page checked. Dates are copied from the s
 | 71 | [Sim/circuit3](https://hdlbits.01xz.net/wiki/sim/circuit3) | 9/1/2026, 10:21:36 PM | 9/1/2026, 10:17:52 PM | Done | No explicit question recorded |
 | 72 | [Mt2015 q4a](https://hdlbits.01xz.net/wiki/mt2015_q4a) | 9/1/2026, 10:22:14 PM | none | Done | No explicit question recorded |
 | 73 | [Vectorgates](https://hdlbits.01xz.net/wiki/vectorgates) | 9/1/2026, 10:24:57 PM | 9/1/2026, 10:23:57 PM | Done | No explicit question recorded |
-| 74 | [Edgedetect](https://hdlbits.01xz.net/wiki/edgedetect) | 9/1/2026, 10:28:38 PM | 9/1/2026, 9:58:30 PM | Done | [Recovered questions PDF](output/pdf/HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
-| 75 | [Exams/ece241 2013 q8](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) | 9/1/2026, 10:37:57 PM | 9/1/2026, 10:36:46 PM | Done | [Recovered questions PDF](output/pdf/HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
+| 74 | [Edgedetect](https://hdlbits.01xz.net/wiki/edgedetect) | 9/1/2026, 10:28:38 PM | 9/1/2026, 9:58:30 PM | Done | [Recovered questions PDF](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
+| 75 | [Exams/ece241 2013 q8](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8) | 9/1/2026, 10:37:57 PM | 9/1/2026, 10:36:46 PM | Done | [Recovered questions PDF](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
 | 76 | [Mt2015 q4b](https://hdlbits.01xz.net/wiki/mt2015_q4b) | 9/1/2026, 10:38:41 PM | none | Done | No explicit question recorded |
-| 77 | [Gates4](https://hdlbits.01xz.net/wiki/gates4) | 9/1/2026, 10:44:37 PM | 6/23/2026, 10:15:40 PM | Done | [Recovered questions PDF](output/pdf/HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
+| 77 | [Gates4](https://hdlbits.01xz.net/wiki/gates4) | 9/1/2026, 10:44:37 PM | 6/23/2026, 10:15:40 PM | Done | [Recovered questions PDF](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) |
 | 78 | [Edgedetect2](https://hdlbits.01xz.net/wiki/edgedetect2) | 9/1/2026, 10:47:42 PM | 9/1/2026, 10:47:07 PM | Done | No explicit question recorded |
 | 79 | [Mt2015 q4](https://hdlbits.01xz.net/wiki/mt2015_q4) | 9/1/2026, 11:01:04 PM | 9/1/2026, 11:00:16 PM | Done | No explicit question recorded |
-| 80 | [Exams/ece241 2014 q5a](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5a) | 9/2/2026, 4:28:11 PM | 9/2/2026, 4:18:12 PM | Done | [Entry 80 Moore FSM PDF](output/pdf/HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf) |
+| 80 | [Exams/ece241 2014 q5a](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5a) | 9/2/2026, 4:28:11 PM | 9/2/2026, 4:18:12 PM | Done | [Entry 80 Moore FSM PDF](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf) |
 | 81 | [Sim/circuit4](https://hdlbits.01xz.net/wiki/sim/circuit4) | 9/1/2026, 11:26:08 PM | 6/28/2026, 3:34:12 PM | Done | Day 5 submission review |
 | 82 | [Vector3](https://hdlbits.01xz.net/wiki/vector3) | 9/1/2026, 11:23:20 PM | 9/1/2026, 11:19:13 PM | Done | Day 5 submission review |
 | 83 | [Edgecapture](https://hdlbits.01xz.net/wiki/edgecapture) | 9/2/2026, 5:00:08 PM | 9/2/2026, 4:57:13 PM | Done | Day 5 submission review |
 | 84 | [Ringer](https://hdlbits.01xz.net/wiki/ringer) | 9/2/2026, 4:54:21 PM | 9/2/2026, 4:53:47 PM | Done | Day 5 submission review |
 | 85 | [Exams/ece241 2014 q5b](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5b) | 9/2/2026, 4:44:54 PM | 9/2/2026, 4:31:02 PM | Done | Day 5 submission review |
-| 86 | [Vectorr](https://hdlbits.01xz.net/wiki/vectorr) | 6/23/2026, 11:34:51 PM | 6/23/2026, 11:34:39 PM | Pending | Not reached in Attempt 2 |
-| 87 | [Dualedge](https://hdlbits.01xz.net/wiki/dualedge) | 6/26/2026, 3:07:56 PM | 6/26/2026, 3:06:29 PM | Pending | Not reached in Attempt 2 |
-| 88 | [Thermostat](https://hdlbits.01xz.net/wiki/thermostat) | 6/25/2026, 4:47:58 PM | 6/25/2026, 4:45:18 PM | Pending | Not reached in Attempt 2 |
-| 89 | [Sim/circuit5](https://hdlbits.01xz.net/wiki/sim/circuit5) | 6/28/2026, 3:57:19 PM | 6/28/2026, 3:57:01 PM | Pending | Not reached in Attempt 2 |
-| 90 | [Exams/2014 q3fsm](https://hdlbits.01xz.net/wiki/exams/2014_q3fsm) | 7/4/2026, 1:52:13 AM | 7/4/2026, 12:53:14 AM | Pending | Not reached in Attempt 2 |
-| 91 | [Vector4](https://hdlbits.01xz.net/wiki/vector4) | 6/23/2026, 11:49:31 PM | 6/23/2026, 11:49:05 PM | Pending | Not reached in Attempt 2 |
-| 92 | [Count15](https://hdlbits.01xz.net/wiki/count15) | 6/26/2026, 1:01:36 AM | 6/26/2026, 1:00:23 AM | Pending | Not reached in Attempt 2 |
-| 93 | [Popcount3](https://hdlbits.01xz.net/wiki/popcount3) | 6/25/2026, 12:58:42 AM | 6/25/2026, 12:58:17 AM | Pending | Not reached in Attempt 2 |
+| 86 | [Vectorr](https://hdlbits.01xz.net/wiki/vectorr) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
+| 87 | [Dualedge](https://hdlbits.01xz.net/wiki/dualedge) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | [Day 6 non-FSM Q&A PDF](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) |
+| 88 | [Thermostat](https://hdlbits.01xz.net/wiki/thermostat) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
+| 89 | [Sim/circuit5](https://hdlbits.01xz.net/wiki/sim/circuit5) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | [Day 6 non-FSM Q&A PDF](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) |
+| 90 | [Exams/2014 q3fsm](https://hdlbits.01xz.net/wiki/exams/2014_q3fsm) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | [Standalone three-sample-window FSM PDF](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf) |
+| 91 | [Vector4](https://hdlbits.01xz.net/wiki/vector4) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
+| 92 | [Count15](https://hdlbits.01xz.net/wiki/count15) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
+| 93 | [Popcount3](https://hdlbits.01xz.net/wiki/popcount3) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
 
-Entries 86 through 178 have not yet been reached in Attempt 2. Entries 86-93 were checked in Chrome and show only older successes; entries 94-178 were not part of this audit extension. All remain Pending, and no current-window submission claim is made for them.
+Entries 1 through 93 are now Done. Entries 94-178 remain Pending and were not part of this follow-up; no current-window submission claim is made for them.
