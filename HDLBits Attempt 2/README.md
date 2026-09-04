@@ -4,13 +4,13 @@ This directory is the working record for the second HDLBits pass. The tracker re
 
 ## Current checkpoint
 
-Verified on **2026-09-04**:
+Verified on **2026-09-05**:
 
 - **178** tracker entries in a continuous sequence from 1 through 178.
-- **120 Done** and **58 Pending**.
+- **122 Done** and **56 Pending**.
 - All **178 problem names** link to their matching HDLBits problem page.
-- Among the 120 completed entries, **80** say `No questions asked` and **40** link to a relevant question or review document.
-- Every entry from **1 through 118** is now reached in Attempt 2, with entries 120-121 also completed. Entries 113-118 and 120-121 were updated from the eight matching HDLBits tabs in the previous Chrome tab group on 2026-09-04. Entry 119 and entries 122-178 remain Pending.
+- Among the 122 completed entries, **82** say `No questions asked` and **40** link to a relevant question or review document.
+- Every entry from **1 through 122** is now reached in Attempt 2. Entries 119 and 122 were reconciled after Kapil identified them as missing from the completed set, with matching saved-success HDLBits pages. Entry 123, the 12-hour clock, is the only pending item before the next active batch beginning at entry 124.
 - The current question-bearing entries 102, 107, and 109 share a Day 7 Q&A PDF covering Quartus width warnings, FSM next-state decoding, and the 1-12 counter interface.
 
 Open the [Attempt 2 tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) for the complete problem list.
@@ -34,7 +34,7 @@ These groups account for all **40 tracker entries** whose Notes / Discussion cel
 
 ## Verification record
 
-- The full stored problem-target set retains its earlier successful HTTP verification; all 22 completion pages added at this checkpoint were read directly in Chrome with saved `Last success` records across the three batches.
+- The full stored problem-target set retains its earlier successful HTTP verification; all 24 completion pages added at this checkpoint were read directly in Chrome with saved `Last success` records across the four batches.
 - The nine PDFs contain **95 pages** in total. All seven pages of the new Day 7 Q&A were text-checked and freshly rendered; no blank, clipped, overlapping, low-contrast, or unreadable page was found.
 - The working HDLC Moore source passed **1,022 post-edge reference-model checks**. The earlier Mealy-style draft elaborates successfully, and its timing failure is intentionally preserved and explained in the HDLC PDF.
 - The serial-loop self-check reproduced the documented single-edge failure and verified the counter-controlled eight-edge capture.
@@ -42,8 +42,8 @@ These groups account for all **40 tracker entries** whose Notes / Discussion cel
 - The Day 5 self-check passed the corrected behavior for entries 74, 75, 77, and 80-85, including randomized concatenation, sticky edge capture, reset timing, the Ringer truth table, and true one-hot Mealy encoding.
 - The Day 6 FSM self-check passed all eight possible three-bit groups plus back-to-back windows and reproduced the saved reset-only-on-match failure. The non-FSM self-check passed the Dualedge MUX/XOR implementations and all 16 Circuit5 selector values while reproducing the stale-register OR failure.
 - The tracker contains **218 Excel `HYPERLINK` formulas**: 178 problem links and 40 document/review links. All retain friendly labels when opened in Excel.
-- Entries 1-98 retain their earlier completion evidence. Entries 99-118 and 120-121 are marked Done from Kapil's current-pass completion confirmations, corroborated by the matching 22 HDLBits problem tabs across the three batches and each page's saved `Last success` record captured on 2026-09-04; no fabricated per-entry timestamps are claimed.
+- Entries 1-98 retain their earlier completion evidence. Entries 99-122 are marked Done from Kapil's current-pass completion confirmations, corroborated by the matching 24 HDLBits problem pages across the four batches and each page's saved `Last success` record captured across 2026-09-04 and 2026-09-05; no fabricated per-entry timestamps are claimed.
 
 ## Evidence boundary
 
-The HDLBits website is the authority for platform acceptance. Earlier checkpoints support entries 1-98; Kapil's explicit current-pass completion reports support entries 99-118 and 120-121, with the matching Chrome tabs and saved-success records used as evidence. Local simulation is a separate check and was run only where source or a reusable testbench is preserved in this directory; it is not claimed as a local rerun of all accepted submissions. Entry 119 and entries 122 through 178 remain Pending without any current-window submission claim.
+The HDLBits website is the authority for platform acceptance. Earlier checkpoints support entries 1-98; Kapil's explicit current-pass completion reports support entries 99-122, with the matching Chrome tabs and saved-success records used as evidence. Local simulation is a separate check and was run only where source or a reusable testbench is preserved in this directory; it is not claimed as a local rerun of all accepted submissions. Entries 123 through 178 remain Pending until Kapil confirms the active batch.
