@@ -13,6 +13,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-143"></a>
+
 ## 143 — Counter 1-12
 
 [Problem note](problems/Day%2008/143-exams__ece241_2014_q7a.md) · [Verilog file](solutions/Day%2008/143-exams__ece241_2014_q7a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7a)

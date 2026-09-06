@@ -31,6 +31,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-089"></a>
+
 ## 089 — Mux and DFF
 
 [Problem note](problems/Day%2004/089-mt2015_muxdff.md) · [Verilog file](solutions/Day%2004/089-mt2015_muxdff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_muxdff)
@@ -61,6 +62,7 @@ endmodule
 ---
 
 <a id="problem-090"></a>
+
 ## 090 — Mux and DFF
 
 [Problem note](problems/Day%2004/090-exams__2014_q4a.md) · [Verilog file](solutions/Day%2004/090-exams__2014_q4a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2014_q4a)
@@ -88,6 +90,7 @@ endmodule
 ---
 
 <a id="problem-091"></a>
+
 ## 091 — DFFs and gates
 
 [Problem note](problems/Day%2004/091-exams__ece241_2014_q4.md) · [Verilog file](solutions/Day%2004/091-exams__ece241_2014_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q4)
@@ -124,6 +127,7 @@ endmodule
 ---
 
 <a id="problem-092"></a>
+
 ## 092 — Create circuit from truth table
 
 [Problem note](problems/Day%2004/092-exams__ece241_2013_q7.md) · [Verilog file](solutions/Day%2004/092-exams__ece241_2013_q7.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q7)
@@ -149,6 +153,7 @@ endmodule
 ---
 
 <a id="problem-093"></a>
+
 ## 093 — Detect an edge
 
 [Problem note](problems/Day%2004/093-edgedetect.md) · [Verilog file](solutions/Day%2004/093-edgedetect.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect)
@@ -178,6 +183,7 @@ endmodule
 ---
 
 <a id="problem-094"></a>
+
 ## 094 — Detect both edges
 
 [Problem note](problems/Day%2004/094-edgedetect2.md) · [Verilog file](solutions/Day%2004/094-edgedetect2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgedetect2)
@@ -209,6 +215,7 @@ endmodule
 ---
 
 <a id="problem-095"></a>
+
 ## 095 — Edge capture register
 
 [Problem note](problems/Day%2004/095-edgecapture.md) · [Verilog file](solutions/Day%2004/095-edgecapture.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/edgecapture)
@@ -235,6 +242,7 @@ endmodule
 ---
 
 <a id="problem-096"></a>
+
 ## 096 — Dual-edge triggered flip-flop
 
 [Problem note](problems/Day%2004/096-dualedge.md) · [Verilog file](solutions/Day%2004/096-dualedge.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dualedge)
@@ -267,6 +275,7 @@ endmodule
 ---
 
 <a id="problem-097"></a>
+
 ## 097 — Four-bit binary counter
 
 [Problem note](problems/Day%2004/097-count15.md) · [Verilog file](solutions/Day%2004/097-count15.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count15)
@@ -305,6 +314,7 @@ endmodule
 ---
 
 <a id="problem-098"></a>
+
 ## 098 — Decade counter
 
 [Problem note](problems/Day%2004/098-count10.md) · [Verilog file](solutions/Day%2004/098-count10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count10)
@@ -342,6 +352,7 @@ endmodule
 ---
 
 <a id="problem-099"></a>
+
 ## 099 — Decade counter again
 
 [Problem note](problems/Day%2004/099-count1to10.md) · [Verilog file](solutions/Day%2004/099-count1to10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count1to10)
@@ -366,6 +377,7 @@ endmodule
 ---
 
 <a id="problem-100"></a>
+
 ## 100 — Slow decade counter
 
 [Problem note](problems/Day%2004/100-countslow.md) · [Verilog file](solutions/Day%2004/100-countslow.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/countslow)
@@ -406,6 +418,7 @@ endmodule
 ---
 
 <a id="problem-101"></a>
+
 ## 101 — 4-bit shift register
 
 [Problem note](problems/Day%2004/101-shift4.md) · [Verilog file](solutions/Day%2004/101-shift4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/shift4)
@@ -433,6 +446,7 @@ endmodule
 ---
 
 <a id="problem-102"></a>
+
 ## 102 — Left/right rotator
 
 [Problem note](problems/Day%2004/102-rotate100.md) · [Verilog file](solutions/Day%2004/102-rotate100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/rotate100)
@@ -459,6 +473,7 @@ endmodule
 ---
 
 <a id="problem-103"></a>
+
 ## 103 — Left/right arithmetic shift by 1 or 8
 
 [Problem note](problems/Day%2004/103-shift18.md) · [Verilog file](solutions/Day%2004/103-shift18.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/shift18)
@@ -499,6 +514,7 @@ endmodule
 ---
 
 <a id="problem-104"></a>
+
 ## 104 — 5-bit LFSR
 
 [Problem note](problems/Day%2004/104-lfsr5.md) · [Verilog file](solutions/Day%2004/104-lfsr5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lfsr5)
@@ -534,6 +550,7 @@ endmodule
 ---
 
 <a id="problem-105"></a>
+
 ## 105 — 3-bit LFSR
 
 [Problem note](problems/Day%2004/105-mt2015_lfsr.md) · [Verilog file](solutions/Day%2004/105-mt2015_lfsr.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_lfsr)
@@ -566,6 +583,7 @@ endmodule
 ---
 
 <a id="problem-106"></a>
+
 ## 106 — 32-bit LFSR
 
 [Problem note](problems/Day%2004/106-lfsr32.md) · [Verilog file](solutions/Day%2004/106-lfsr32.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lfsr32)
@@ -591,6 +609,7 @@ endmodule
 ---
 
 <a id="problem-107"></a>
+
 ## 107 — Shift register
 
 [Problem note](problems/Day%2004/107-exams__m2014_q4k.md) · [Verilog file](solutions/Day%2004/107-exams__m2014_q4k.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4k)

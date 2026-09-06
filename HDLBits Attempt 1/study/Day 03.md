@@ -54,6 +54,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-041"></a>
+
 ## 041 — Generate for-loop: 100-digit BCD adder
 
 [Problem note](problems/Day%2003/041-bcdadd100.md) · [Verilog file](solutions/Day%2003/041-bcdadd100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bcdadd100)
@@ -79,6 +80,7 @@ endmodule
 ---
 
 <a id="problem-047"></a>
+
 ## 047 — More logic gates
 
 [Problem note](problems/Day%2003/047-gates.md) · [Verilog file](solutions/Day%2003/047-gates.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gates)
@@ -115,6 +117,7 @@ endmodule
 ---
 
 <a id="problem-048"></a>
+
 ## 048 — 7420 chip
 
 [Problem note](problems/Day%2003/048-7420.md) · [Verilog file](solutions/Day%2003/048-7420.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/7420)
@@ -141,6 +144,7 @@ endmodule
 ---
 
 <a id="problem-049"></a>
+
 ## 049 — Truth tables
 
 [Problem note](problems/Day%2003/049-truthtable1.md) · [Verilog file](solutions/Day%2003/049-truthtable1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/truthtable1)
@@ -167,6 +171,7 @@ endmodule
 ---
 
 <a id="problem-050"></a>
+
 ## 050 — Two-bit equality
 
 [Problem note](problems/Day%2003/050-mt2015_eq2.md) · [Verilog file](solutions/Day%2003/050-mt2015_eq2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_eq2)
@@ -188,6 +193,7 @@ endmodule
 ---
 
 <a id="problem-051"></a>
+
 ## 051 — Simple circuit A
 
 [Problem note](problems/Day%2003/051-mt2015_q4a.md) · [Verilog file](solutions/Day%2003/051-mt2015_q4a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_q4a)
@@ -211,6 +217,7 @@ endmodule
 ---
 
 <a id="problem-052"></a>
+
 ## 052 — Simple circuit B
 
 [Problem note](problems/Day%2003/052-mt2015_q4b.md) · [Verilog file](solutions/Day%2003/052-mt2015_q4b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_q4b)
@@ -232,6 +239,7 @@ endmodule
 ---
 
 <a id="problem-053"></a>
+
 ## 053 — Combine circuits A and B
 
 [Problem note](problems/Day%2003/053-mt2015_q4.md) · [Verilog file](solutions/Day%2003/053-mt2015_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mt2015_q4)
@@ -294,6 +302,7 @@ endmodule
 ---
 
 <a id="problem-054"></a>
+
 ## 054 — Ring or vibrate?
 
 [Problem note](problems/Day%2003/054-ringer.md) · [Verilog file](solutions/Day%2003/054-ringer.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/ringer)
@@ -321,6 +330,7 @@ endmodule
 ---
 
 <a id="problem-055"></a>
+
 ## 055 — Thermostat
 
 [Problem note](problems/Day%2003/055-thermostat.md) · [Verilog file](solutions/Day%2003/055-thermostat.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/thermostat)
@@ -353,6 +363,7 @@ endmodule
 ---
 
 <a id="problem-056"></a>
+
 ## 056 — 3-bit population count
 
 [Problem note](problems/Day%2003/056-popcount3.md) · [Verilog file](solutions/Day%2003/056-popcount3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/popcount3)
@@ -383,6 +394,7 @@ endmodule
 ---
 
 <a id="problem-057"></a>
+
 ## 057 — Gates and vectors
 
 [Problem note](problems/Day%2003/057-gatesv.md) · [Verilog file](solutions/Day%2003/057-gatesv.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gatesv)
@@ -411,6 +423,7 @@ endmodule
 ---
 
 <a id="problem-058"></a>
+
 ## 058 — Even longer vectors
 
 [Problem note](problems/Day%2003/058-gatesv100.md) · [Verilog file](solutions/Day%2003/058-gatesv100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gatesv100)
@@ -436,6 +449,7 @@ endmodule
 ---
 
 <a id="problem-059"></a>
+
 ## 059 — 2-to-1 multiplexer
 
 [Problem note](problems/Day%2003/059-mux2to1.md) · [Verilog file](solutions/Day%2003/059-mux2to1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mux2to1)
@@ -459,6 +473,7 @@ endmodule
 ---
 
 <a id="problem-060"></a>
+
 ## 060 — 2-to-1 bus multiplexer
 
 [Problem note](problems/Day%2003/060-mux2to1v.md) · [Verilog file](solutions/Day%2003/060-mux2to1v.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mux2to1v)
@@ -483,6 +498,7 @@ endmodule
 ---
 
 <a id="problem-061"></a>
+
 ## 061 — 9-to-1 multiplexer
 
 [Problem note](problems/Day%2003/061-mux9to1v.md) · [Verilog file](solutions/Day%2003/061-mux9to1v.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mux9to1v)
@@ -507,6 +523,7 @@ endmodule
 ---
 
 <a id="problem-062"></a>
+
 ## 062 — 256-to-1 multiplexer
 
 [Problem note](problems/Day%2003/062-mux256to1.md) · [Verilog file](solutions/Day%2003/062-mux256to1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mux256to1)
@@ -531,6 +548,7 @@ endmodule
 ---
 
 <a id="problem-063"></a>
+
 ## 063 — 256-to-1 4-bit multiplexer
 
 [Problem note](problems/Day%2003/063-mux256to1v.md) · [Verilog file](solutions/Day%2003/063-mux256to1v.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/mux256to1v)
@@ -556,6 +574,7 @@ endmodule
 ---
 
 <a id="problem-064"></a>
+
 ## 064 — Half adder
 
 [Problem note](problems/Day%2003/064-hadd.md) · [Verilog file](solutions/Day%2003/064-hadd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/hadd)
@@ -581,6 +600,7 @@ endmodule
 ---
 
 <a id="problem-066"></a>
+
 ## 066 — 3-bit binary adder
 
 [Problem note](problems/Day%2003/066-adder3.md) · [Verilog file](solutions/Day%2003/066-adder3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/adder3)
@@ -631,6 +651,7 @@ endmodule
 ---
 
 <a id="problem-067"></a>
+
 ## 067 — Adder
 
 [Problem note](problems/Day%2003/067-exams__m2014_q4j.md) · [Verilog file](solutions/Day%2003/067-exams__m2014_q4j.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4j)
@@ -680,6 +701,7 @@ endmodule
 ---
 
 <a id="problem-068"></a>
+
 ## 068 — Signed addition overflow
 
 [Problem note](problems/Day%2003/068-exams__ece241_2014_q1c.md) · [Verilog file](solutions/Day%2003/068-exams__ece241_2014_q1c.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q1c)
@@ -709,6 +731,7 @@ endmodule
 ---
 
 <a id="problem-069"></a>
+
 ## 069 — 100-bit binary adder
 
 [Problem note](problems/Day%2003/069-adder100.md) · [Verilog file](solutions/Day%2003/069-adder100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/adder100)
@@ -756,6 +779,7 @@ endmodule
 ---
 
 <a id="problem-070"></a>
+
 ## 070 — 4-digit BCD adder
 
 [Problem note](problems/Day%2003/070-bcdadd4.md) · [Verilog file](solutions/Day%2003/070-bcdadd4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bcdadd4)
@@ -796,6 +820,7 @@ endmodule
 ---
 
 <a id="problem-071"></a>
+
 ## 071 — 3-variable
 
 [Problem note](problems/Day%2003/071-kmap1.md) · [Verilog file](solutions/Day%2003/071-kmap1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/kmap1)
@@ -821,6 +846,7 @@ endmodule
 ---
 
 <a id="problem-072"></a>
+
 ## 072 — 4-variable
 
 [Problem note](problems/Day%2003/072-kmap2.md) · [Verilog file](solutions/Day%2003/072-kmap2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/kmap2)
@@ -848,6 +874,7 @@ endmodule
 ---
 
 <a id="problem-073"></a>
+
 ## 073 — 4-variable
 
 [Problem note](problems/Day%2003/073-kmap3.md) · [Verilog file](solutions/Day%2003/073-kmap3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/kmap3)
@@ -874,6 +901,7 @@ endmodule
 ---
 
 <a id="problem-074"></a>
+
 ## 074 — 4-variable
 
 [Problem note](problems/Day%2003/074-kmap4.md) · [Verilog file](solutions/Day%2003/074-kmap4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/kmap4)
@@ -904,6 +932,7 @@ endmodule
 ---
 
 <a id="problem-075"></a>
+
 ## 075 — Minimum SOP and POS
 
 [Problem note](problems/Day%2003/075-exams__ece241_2013_q2.md) · [Verilog file](solutions/Day%2003/075-exams__ece241_2013_q2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q2)
@@ -934,6 +963,7 @@ endmodule
 ---
 
 <a id="problem-076"></a>
+
 ## 076 — Karnaugh map
 
 [Problem note](problems/Day%2003/076-exams__m2014_q3.md) · [Verilog file](solutions/Day%2003/076-exams__m2014_q3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q3)
@@ -958,6 +988,7 @@ endmodule
 ---
 
 <a id="problem-077"></a>
+
 ## 077 — Karnaugh map
 
 [Problem note](problems/Day%2003/077-exams__2012_q1g.md) · [Verilog file](solutions/Day%2003/077-exams__2012_q1g.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2012_q1g)
@@ -982,6 +1013,7 @@ endmodule
 ---
 
 <a id="problem-078"></a>
+
 ## 078 — K-map implemented with a multiplexer
 
 [Problem note](problems/Day%2003/078-exams__ece241_2014_q3.md) · [Verilog file](solutions/Day%2003/078-exams__ece241_2014_q3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q3)
@@ -1007,6 +1039,7 @@ endmodule
 ---
 
 <a id="problem-079"></a>
+
 ## 079 — D flip-flop
 
 [Problem note](problems/Day%2003/079-dff.md) · [Verilog file](solutions/Day%2003/079-dff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dff)
@@ -1037,6 +1070,7 @@ endmodule
 ---
 
 <a id="problem-080"></a>
+
 ## 080 — D flip-flops
 
 [Problem note](problems/Day%2003/080-dff8.md) · [Verilog file](solutions/Day%2003/080-dff8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dff8)
@@ -1064,6 +1098,7 @@ endmodule
 ---
 
 <a id="problem-081"></a>
+
 ## 081 — DFF with reset
 
 [Problem note](problems/Day%2003/081-dff8r.md) · [Verilog file](solutions/Day%2003/081-dff8r.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dff8r)
@@ -1090,6 +1125,7 @@ endmodule
 ---
 
 <a id="problem-082"></a>
+
 ## 082 — DFF with reset value
 
 [Problem note](problems/Day%2003/082-dff8p.md) · [Verilog file](solutions/Day%2003/082-dff8p.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dff8p)
@@ -1121,6 +1157,7 @@ endmodule
 ---
 
 <a id="problem-083"></a>
+
 ## 083 — DFF with asynchronous reset
 
 [Problem note](problems/Day%2003/083-dff8ar.md) · [Verilog file](solutions/Day%2003/083-dff8ar.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dff8ar)
@@ -1152,6 +1189,7 @@ endmodule
 ---
 
 <a id="problem-084"></a>
+
 ## 084 — DFF with byte enable
 
 [Problem note](problems/Day%2003/084-dff16e.md) · [Verilog file](solutions/Day%2003/084-dff16e.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/dff16e)
@@ -1191,6 +1229,7 @@ endmodule
 ---
 
 <a id="problem-085"></a>
+
 ## 085 — D Latch
 
 [Problem note](problems/Day%2003/085-exams__m2014_q4a.md) · [Verilog file](solutions/Day%2003/085-exams__m2014_q4a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4a)
@@ -1219,6 +1258,7 @@ endmodule
 ---
 
 <a id="problem-086"></a>
+
 ## 086 — DFF
 
 [Problem note](problems/Day%2003/086-exams__m2014_q4b.md) · [Verilog file](solutions/Day%2003/086-exams__m2014_q4b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4b)
@@ -1251,6 +1291,7 @@ endmodule
 ---
 
 <a id="problem-087"></a>
+
 ## 087 — DFF
 
 [Problem note](problems/Day%2003/087-exams__m2014_q4c.md) · [Verilog file](solutions/Day%2003/087-exams__m2014_q4c.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4c)
@@ -1282,6 +1323,7 @@ endmodule
 ---
 
 <a id="problem-088"></a>
+
 ## 088 — DFF+gate
 
 [Problem note](problems/Day%2003/088-exams__m2014_q4d.md) · [Verilog file](solutions/Day%2003/088-exams__m2014_q4d.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4d)

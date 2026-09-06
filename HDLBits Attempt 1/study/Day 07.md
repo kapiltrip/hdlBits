@@ -13,6 +13,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-142"></a>
+
 ## 142 — Q8: Design a Mealy FSM
 
 [Problem note](problems/Day%2007/142-exams__ece241_2013_q8.md) · [Verilog file](solutions/Day%2007/142-exams__ece241_2013_q8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q8)

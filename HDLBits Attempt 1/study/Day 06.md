@@ -33,6 +33,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-121"></a>
+
 ## 121 — Q2b: Another FSM
 
 [Problem note](problems/Day%2006/121-exams__2013_q2bfsm.md) · [Verilog file](solutions/Day%2006/121-exams__2013_q2bfsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2013_q2bfsm)
@@ -104,6 +105,7 @@ endmodule
 ---
 
 <a id="problem-122"></a>
+
 ## 122 — Mux
 
 [Problem note](problems/Day%2006/122-bugs_mux2.md) · [Verilog file](solutions/Day%2006/122-bugs_mux2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux2)
@@ -136,6 +138,7 @@ endmodule
 ---
 
 <a id="problem-123"></a>
+
 ## 123 — NAND
 
 [Problem note](problems/Day%2006/123-bugs_nand3.md) · [Verilog file](solutions/Day%2006/123-bugs_nand3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_nand3)
@@ -170,6 +173,7 @@ endmodule
 ---
 
 <a id="problem-124"></a>
+
 ## 124 — Mux
 
 [Problem note](problems/Day%2006/124-bugs_mux4.md) · [Verilog file](solutions/Day%2006/124-bugs_mux4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_mux4)
@@ -214,6 +218,7 @@ endmodule
 ---
 
 <a id="problem-125"></a>
+
 ## 125 — Add/sub
 
 [Problem note](problems/Day%2006/125-bugs_addsubz.md) · [Verilog file](solutions/Day%2006/125-bugs_addsubz.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_addsubz)
@@ -256,6 +261,7 @@ endmodule
 ---
 
 <a id="problem-126"></a>
+
 ## 126 — Case statement
 
 [Problem note](problems/Day%2006/126-bugs_case.md) · [Verilog file](solutions/Day%2006/126-bugs_case.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/bugs_case)
@@ -306,6 +312,7 @@ endmodule
 ---
 
 <a id="problem-127"></a>
+
 ## 127 — Combinational circuit 1
 
 [Problem note](problems/Day%2006/127-sim__circuit1.md) · [Verilog file](solutions/Day%2006/127-sim__circuit1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit1)
@@ -337,6 +344,7 @@ endmodule
 ---
 
 <a id="problem-128"></a>
+
 ## 128 — Combinational circuit 2
 
 [Problem note](problems/Day%2006/128-sim__circuit2.md) · [Verilog file](solutions/Day%2006/128-sim__circuit2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit2)
@@ -370,6 +378,7 @@ endmodule
 ---
 
 <a id="problem-129"></a>
+
 ## 129 — Combinational circuit 3
 
 [Problem note](problems/Day%2006/129-sim__circuit3.md) · [Verilog file](solutions/Day%2006/129-sim__circuit3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit3)
@@ -403,6 +412,7 @@ endmodule
 ---
 
 <a id="problem-130"></a>
+
 ## 130 — Combinational circuit 4
 
 [Problem note](problems/Day%2006/130-sim__circuit4.md) · [Verilog file](solutions/Day%2006/130-sim__circuit4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit4)
@@ -436,6 +446,7 @@ endmodule
 ---
 
 <a id="problem-131"></a>
+
 ## 131 — Combinational circuit 5
 
 [Problem note](problems/Day%2006/131-sim__circuit5.md) · [Verilog file](solutions/Day%2006/131-sim__circuit5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit5)
@@ -478,6 +489,7 @@ endmodule
 ---
 
 <a id="problem-132"></a>
+
 ## 132 — Combinational circuit 6
 
 [Problem note](problems/Day%2006/132-sim__circuit6.md) · [Verilog file](solutions/Day%2006/132-sim__circuit6.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit6)
@@ -528,6 +540,7 @@ endmodule
 ---
 
 <a id="problem-133"></a>
+
 ## 133 — Sequential circuit 7
 
 [Problem note](problems/Day%2006/133-sim__circuit7.md) · [Verilog file](solutions/Day%2006/133-sim__circuit7.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit7)
@@ -561,6 +574,7 @@ endmodule
 ---
 
 <a id="problem-134"></a>
+
 ## 134 — Sequential circuit 8
 
 [Problem note](problems/Day%2006/134-sim__circuit8.md) · [Verilog file](solutions/Day%2006/134-sim__circuit8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit8)
@@ -602,6 +616,7 @@ endmodule
 ---
 
 <a id="problem-135"></a>
+
 ## 135 — Sequential circuit 9
 
 [Problem note](problems/Day%2006/135-sim__circuit9.md) · [Verilog file](solutions/Day%2006/135-sim__circuit9.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit9)
@@ -645,6 +660,7 @@ endmodule
 ---
 
 <a id="problem-136"></a>
+
 ## 136 — Sequential circuit 10
 
 [Problem note](problems/Day%2006/136-sim__circuit10.md) · [Verilog file](solutions/Day%2006/136-sim__circuit10.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/sim/circuit10)
@@ -689,6 +705,7 @@ endmodule
 ---
 
 <a id="problem-137"></a>
+
 ## 137 — Clock
 
 [Problem note](problems/Day%2006/137-tb__clock.md) · [Verilog file](solutions/Day%2006/137-tb__clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/clock)
@@ -724,6 +741,7 @@ endmodule
 ---
 
 <a id="problem-138"></a>
+
 ## 138 — Testbench1
 
 [Problem note](problems/Day%2006/138-tb__tb1.md) · [Verilog file](solutions/Day%2006/138-tb__tb1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb1)
@@ -765,6 +783,7 @@ endmodule
 ---
 
 <a id="problem-139"></a>
+
 ## 139 — AND gate
 
 [Problem note](problems/Day%2006/139-tb__and.md) · [Verilog file](solutions/Day%2006/139-tb__and.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/and)
@@ -804,6 +823,7 @@ endmodule
 ---
 
 <a id="problem-140"></a>
+
 ## 140 — Testbench2
 
 [Problem note](problems/Day%2006/140-tb__tb2.md) · [Verilog file](solutions/Day%2006/140-tb__tb2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tb2)
@@ -861,6 +881,7 @@ endmodule
 ---
 
 <a id="problem-141"></a>
+
 ## 141 — T flip-flop
 
 [Problem note](problems/Day%2006/141-tb__tff.md) · [Verilog file](solutions/Day%2006/141-tb__tff.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/tb/tff)

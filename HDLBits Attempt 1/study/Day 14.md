@@ -17,6 +17,7 @@ Each screenshot is rendered directly in this page for revision. The image is not
 ---
 
 <a id="problem-175"></a>
+
 ## 175 — Rule 90
 
 [Problem note](problems/Day%2014/175-rule90.md) · [Verilog file](solutions/Day%2014/175-rule90.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/rule90)
@@ -60,6 +61,7 @@ endmodule
 ---
 
 <a id="problem-176"></a>
+
 ## 176 — Rule 110
 
 [Problem note](problems/Day%2014/176-rule110.md) · [Verilog file](solutions/Day%2014/176-rule110.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/rule110)
@@ -119,6 +121,7 @@ endmodule
 ---
 
 <a id="problem-177"></a>
+
 ## 177 — Q2a: Arbiter FSM
 
 [Problem note](problems/Day%2014/177-exams__2013_q2afsm.md) · [Verilog file](solutions/Day%2014/177-exams__2013_q2afsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2013_q2afsm)
@@ -181,6 +184,7 @@ endmodule
 ---
 
 <a id="problem-178"></a>
+
 ## 178 — FSM: One-hot logic equations
 
 [Problem note](problems/Day%2014/178-exams__review2015_fsmonehot.md) · [Verilog file](solutions/Day%2014/178-exams__review2015_fsmonehot.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmonehot)
@@ -230,6 +234,7 @@ endmodule
 ---
 
 <a id="problem-179"></a>
+
 ## 179 — Conway's Game of Life 16x16
 
 [Problem note](problems/Day%2014/179-conwaylife.md) · [Verilog file](solutions/Day%2014/179-conwaylife.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/conwaylife)

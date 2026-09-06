@@ -46,6 +46,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-004"></a>
+
 ## 004 — AND gate
 
 [Problem note](problems/Day%2002/004-andgate.md) · [Verilog file](solutions/Day%2002/004-andgate.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/andgate)
@@ -71,6 +72,7 @@ endmodule
 ---
 
 <a id="problem-005"></a>
+
 ## 005 — NOR gate
 
 [Problem note](problems/Day%2002/005-norgate.md) · [Verilog file](solutions/Day%2002/005-norgate.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/norgate)
@@ -95,6 +97,7 @@ endmodule
 ---
 
 <a id="problem-006"></a>
+
 ## 006 — XNOR gate
 
 [Problem note](problems/Day%2002/006-xnorgate.md) · [Verilog file](solutions/Day%2002/006-xnorgate.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/xnorgate)
@@ -121,6 +124,7 @@ endmodule
 ---
 
 <a id="problem-007"></a>
+
 ## 007 — Declaring wires
 
 [Problem note](problems/Day%2002/007-wire_decl.md) · [Verilog file](solutions/Day%2002/007-wire_decl.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire_decl)
@@ -149,6 +153,7 @@ endmodule
 ---
 
 <a id="problem-017"></a>
+
 ## 017 — More replication
 
 [Problem note](problems/Day%2002/017-vector5.md) · [Verilog file](solutions/Day%2002/017-vector5.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector5)
@@ -175,6 +180,7 @@ endmodule
 ---
 
 <a id="problem-018"></a>
+
 ## 018 — Modules
 
 [Problem note](problems/Day%2002/018-module.md) · [Verilog file](solutions/Day%2002/018-module.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module)
@@ -196,6 +202,7 @@ endmodule
 ---
 
 <a id="problem-019"></a>
+
 ## 019 — Connecting ports by position
 
 [Problem note](problems/Day%2002/019-module_pos.md) · [Verilog file](solutions/Day%2002/019-module_pos.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_pos)
@@ -226,6 +233,7 @@ endmodule
 ---
 
 <a id="problem-020"></a>
+
 ## 020 — Connecting ports by name
 
 [Problem note](problems/Day%2002/020-module_name.md) · [Verilog file](solutions/Day%2002/020-module_name.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_name)
@@ -254,6 +262,7 @@ endmodule
 ---
 
 <a id="problem-021"></a>
+
 ## 021 — Three modules
 
 [Problem note](problems/Day%2002/021-module_shift.md) · [Verilog file](solutions/Day%2002/021-module_shift.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_shift)
@@ -291,6 +300,7 @@ endmodule
 ---
 
 <a id="problem-022"></a>
+
 ## 022 — Modules and vectors
 
 [Problem note](problems/Day%2002/022-module_shift8.md) · [Verilog file](solutions/Day%2002/022-module_shift8.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_shift8)
@@ -317,6 +327,7 @@ endmodule
 ---
 
 <a id="problem-023"></a>
+
 ## 023 — Adder 1
 
 [Problem note](problems/Day%2002/023-module_add.md) · [Verilog file](solutions/Day%2002/023-module_add.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_add)
@@ -363,6 +374,7 @@ endmodule
 ---
 
 <a id="problem-024"></a>
+
 ## 024 — Adder 2
 
 [Problem note](problems/Day%2002/024-module_fadd.md) · [Verilog file](solutions/Day%2002/024-module_fadd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_fadd)
@@ -394,6 +406,7 @@ endmodule
 ---
 
 <a id="problem-025"></a>
+
 ## 025 — Carry-select adder
 
 [Problem note](problems/Day%2002/025-module_cseladd.md) · [Verilog file](solutions/Day%2002/025-module_cseladd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_cseladd)
@@ -419,6 +432,7 @@ endmodule
 ---
 
 <a id="problem-026"></a>
+
 ## 026 — Adder-subtractor
 
 [Problem note](problems/Day%2002/026-module_addsub.md) · [Verilog file](solutions/Day%2002/026-module_addsub.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/module_addsub)
@@ -469,6 +483,7 @@ endmodule
 ---
 
 <a id="problem-027"></a>
+
 ## 027 — Always blocks (combinational)
 
 [Problem note](problems/Day%2002/027-alwaysblock1.md) · [Verilog file](solutions/Day%2002/027-alwaysblock1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/alwaysblock1)
@@ -499,6 +514,7 @@ endmodule
 ---
 
 <a id="problem-028"></a>
+
 ## 028 — Always blocks (clocked)
 
 [Problem note](problems/Day%2002/028-alwaysblock2.md) · [Verilog file](solutions/Day%2002/028-alwaysblock2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/alwaysblock2)
@@ -527,6 +543,7 @@ endmodule
 ---
 
 <a id="problem-029"></a>
+
 ## 029 — If statement
 
 [Problem note](problems/Day%2002/029-always_if.md) · [Verilog file](solutions/Day%2002/029-always_if.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/always_if)
@@ -555,6 +572,7 @@ endmodule
 ---
 
 <a id="problem-030"></a>
+
 ## 030 — If statement latches
 
 [Problem note](problems/Day%2002/030-always_if2.md) · [Verilog file](solutions/Day%2002/030-always_if2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/always_if2)
@@ -592,6 +610,7 @@ endmodule
 ---
 
 <a id="problem-031"></a>
+
 ## 031 — Case statement
 
 [Problem note](problems/Day%2002/031-always_case.md) · [Verilog file](solutions/Day%2002/031-always_case.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/always_case)
@@ -635,6 +654,7 @@ endmodule
 ---
 
 <a id="problem-032"></a>
+
 ## 032 — Priority encoder
 
 [Problem note](problems/Day%2002/032-always_case2.md) · [Verilog file](solutions/Day%2002/032-always_case2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/always_case2)
@@ -659,6 +679,7 @@ endmodule
 ---
 
 <a id="problem-033"></a>
+
 ## 033 — Priority encoder with casez
 
 [Problem note](problems/Day%2002/033-always_casez.md) · [Verilog file](solutions/Day%2002/033-always_casez.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/always_casez)
@@ -697,6 +718,7 @@ endmodule
 ---
 
 <a id="problem-034"></a>
+
 ## 034 — Avoiding latches
 
 [Problem note](problems/Day%2002/034-always_nolatches.md) · [Verilog file](solutions/Day%2002/034-always_nolatches.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/always_nolatches)
@@ -737,6 +759,7 @@ endmodule
 ---
 
 <a id="problem-035"></a>
+
 ## 035 — Conditional ternary operator
 
 [Problem note](problems/Day%2002/035-conditional.md) · [Verilog file](solutions/Day%2002/035-conditional.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/conditional)
@@ -767,6 +790,7 @@ endmodule
 ---
 
 <a id="problem-036"></a>
+
 ## 036 — Reduction operators
 
 [Problem note](problems/Day%2002/036-reduction.md) · [Verilog file](solutions/Day%2002/036-reduction.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/reduction)
@@ -792,6 +816,7 @@ endmodule
 ---
 
 <a id="problem-037"></a>
+
 ## 037 — Reduction: Even wider gates
 
 [Problem note](problems/Day%2002/037-gates100.md) · [Verilog file](solutions/Day%2002/037-gates100.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gates100)
@@ -820,6 +845,7 @@ endmodule
 ---
 
 <a id="problem-038"></a>
+
 ## 038 — Combinational for-loop: Vector reversal 2
 
 [Problem note](problems/Day%2002/038-vector100r.md) · [Verilog file](solutions/Day%2002/038-vector100r.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector100r)
@@ -851,6 +877,7 @@ endmodule
 ---
 
 <a id="problem-039"></a>
+
 ## 039 — Combinational for-loop: 255-bit population count
 
 [Problem note](problems/Day%2002/039-popcount255.md) · [Verilog file](solutions/Day%2002/039-popcount255.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/popcount255)
@@ -889,6 +916,7 @@ endmodule
 ---
 
 <a id="problem-040"></a>
+
 ## 040 — Generate for-loop: 100-bit binary adder 2
 
 [Problem note](problems/Day%2002/040-adder100i.md) · [Verilog file](solutions/Day%2002/040-adder100i.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/adder100i)
@@ -942,6 +970,7 @@ endmodule
 ---
 
 <a id="problem-042"></a>
+
 ## 042 — Wire
 
 [Problem note](problems/Day%2002/042-exams__m2014_q4h.md) · [Verilog file](solutions/Day%2002/042-exams__m2014_q4h.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4h)
@@ -967,6 +996,7 @@ endmodule
 ---
 
 <a id="problem-043"></a>
+
 ## 043 — GND
 
 [Problem note](problems/Day%2002/043-exams__m2014_q4i.md) · [Verilog file](solutions/Day%2002/043-exams__m2014_q4i.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4i)
@@ -990,6 +1020,7 @@ endmodule
 ---
 
 <a id="problem-044"></a>
+
 ## 044 — NOR
 
 [Problem note](problems/Day%2002/044-exams__m2014_q4e.md) · [Verilog file](solutions/Day%2002/044-exams__m2014_q4e.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4e)
@@ -1014,6 +1045,7 @@ endmodule
 ---
 
 <a id="problem-045"></a>
+
 ## 045 — Another gate
 
 [Problem note](problems/Day%2002/045-exams__m2014_q4f.md) · [Verilog file](solutions/Day%2002/045-exams__m2014_q4f.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4f)
@@ -1041,6 +1073,7 @@ endmodule
 ---
 
 <a id="problem-046"></a>
+
 ## 046 — Two gates
 
 [Problem note](problems/Day%2002/046-exams__m2014_q4g.md) · [Verilog file](solutions/Day%2002/046-exams__m2014_q4g.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q4g)
@@ -1069,6 +1102,7 @@ endmodule
 ---
 
 <a id="problem-065"></a>
+
 ## 065 — Full adder
 
 [Problem note](problems/Day%2002/065-fadd.md) · [Verilog file](solutions/Day%2002/065-fadd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fadd)

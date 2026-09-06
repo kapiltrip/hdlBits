@@ -24,6 +24,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-108"></a>
+
 ## 108 — Shift register
 
 [Problem note](problems/Day%2005/108-exams__2014_q4b.md) · [Verilog file](solutions/Day%2005/108-exams__2014_q4b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2014_q4b)
@@ -98,6 +99,7 @@ endmodule
 ---
 
 <a id="problem-109"></a>
+
 ## 109 — 3-input LUT
 
 [Problem note](problems/Day%2005/109-exams__ece241_2013_q12.md) · [Verilog file](solutions/Day%2005/109-exams__ece241_2013_q12.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q12)
@@ -145,6 +147,7 @@ endmodule
 ---
 
 <a id="problem-110"></a>
+
 ## 110 — Simple FSM 1 (asynchronous reset)
 
 [Problem note](problems/Day%2005/110-fsm1.md) · [Verilog file](solutions/Day%2005/110-fsm1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm1)
@@ -193,6 +196,7 @@ endmodule
 ---
 
 <a id="problem-111"></a>
+
 ## 111 — Simple FSM 1 (synchronous reset)
 
 [Problem note](problems/Day%2005/111-fsm1s.md) · [Verilog file](solutions/Day%2005/111-fsm1s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm1s)
@@ -243,6 +247,7 @@ endmodule
 ---
 
 <a id="problem-112"></a>
+
 ## 112 — Simple FSM 2 (asynchronous reset)
 
 [Problem note](problems/Day%2005/112-fsm2.md) · [Verilog file](solutions/Day%2005/112-fsm2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm2)
@@ -294,6 +299,7 @@ endmodule
 ---
 
 <a id="problem-113"></a>
+
 ## 113 — Simple FSM 2 (synchronous reset)
 
 [Problem note](problems/Day%2005/113-fsm2s.md) · [Verilog file](solutions/Day%2005/113-fsm2s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm2s)
@@ -342,6 +348,7 @@ endmodule
 ---
 
 <a id="problem-114"></a>
+
 ## 114 — Simple state transitions 3
 
 [Problem note](problems/Day%2005/114-fsm3comb.md) · [Verilog file](solutions/Day%2005/114-fsm3comb.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3comb)
@@ -383,6 +390,7 @@ endmodule
 ---
 
 <a id="problem-115"></a>
+
 ## 115 — Simple one-hot state transitions 3
 
 [Problem note](problems/Day%2005/115-fsm3onehot.md) · [Verilog file](solutions/Day%2005/115-fsm3onehot.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3onehot)
@@ -425,6 +433,7 @@ endmodule
 ---
 
 <a id="problem-116"></a>
+
 ## 116 — Simple FSM 3 (asynchronous reset)
 
 [Problem note](problems/Day%2005/116-fsm3.md) · [Verilog file](solutions/Day%2005/116-fsm3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3)
@@ -482,6 +491,7 @@ endmodule
 ---
 
 <a id="problem-117"></a>
+
 ## 117 — Simple FSM 3 (synchronous reset)
 
 [Problem note](problems/Day%2005/117-fsm3s.md) · [Verilog file](solutions/Day%2005/117-fsm3s.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm3s)
@@ -539,6 +549,7 @@ endmodule
 ---
 
 <a id="problem-118"></a>
+
 ## 118 — Design a Moore FSM
 
 [Problem note](problems/Day%2005/118-exams__ece241_2013_q4.md) · [Verilog file](solutions/Day%2005/118-exams__ece241_2013_q4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q4)
@@ -670,6 +681,7 @@ endmodule
 ---
 
 <a id="problem-119"></a>
+
 ## 119 — Lemmings 1
 
 [Problem note](problems/Day%2005/119-lemmings1.md) · [Verilog file](solutions/Day%2005/119-lemmings1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/lemmings1)

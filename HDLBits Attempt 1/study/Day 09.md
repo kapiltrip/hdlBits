@@ -23,6 +23,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-144"></a>
+
 ## 144 — Counter 1000
 
 [Problem note](problems/Day%2009/144-exams__ece241_2014_q7b.md) · [Verilog file](solutions/Day%2009/144-exams__ece241_2014_q7b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q7b)
@@ -63,6 +64,7 @@ endmodule
 ---
 
 <a id="problem-145"></a>
+
 ## 145 — 4-digit decimal counter
 
 [Problem note](problems/Day%2009/145-countbcd.md) · [Verilog file](solutions/Day%2009/145-countbcd.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/countbcd)
@@ -135,6 +137,7 @@ endmodule
 ---
 
 <a id="problem-146"></a>
+
 ## 146 — 12-hour clock
 
 [Problem note](problems/Day%2009/146-count_clock.md) · [Verilog file](solutions/Day%2009/146-count_clock.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/count_clock)
@@ -215,6 +218,7 @@ endmodule
 ---
 
 <a id="problem-147"></a>
+
 ## 147 — Counter with period 1000
 
 [Problem note](problems/Day%2009/147-exams__review2015_count1k.md) · [Verilog file](solutions/Day%2009/147-exams__review2015_count1k.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_count1k)
@@ -257,6 +261,7 @@ endmodule
 ---
 
 <a id="problem-148"></a>
+
 ## 148 — 4-bit shift register and down counter
 
 [Problem note](problems/Day%2009/148-exams__review2015_shiftcount.md) · [Verilog file](solutions/Day%2009/148-exams__review2015_shiftcount.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount)
@@ -303,6 +308,7 @@ endmodule
 ---
 
 <a id="problem-149"></a>
+
 ## 149 — FSM: Sequence 1101 recognizer
 
 [Problem note](problems/Day%2009/149-exams__review2015_fsmseq.md) · [Verilog file](solutions/Day%2009/149-exams__review2015_fsmseq.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq)
@@ -362,6 +368,7 @@ endmodule
 ---
 
 <a id="problem-150"></a>
+
 ## 150 — FSM: Enable shift register
 
 [Problem note](problems/Day%2009/150-exams__review2015_fsmshift.md) · [Verilog file](solutions/Day%2009/150-exams__review2015_fsmshift.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift)
@@ -402,6 +409,7 @@ endmodule
 ---
 
 <a id="problem-151"></a>
+
 ## 151 — Getting Started
 
 [Problem note](problems/Day%2009/151-step_one.md) · [Question screenshot](images/Day%2009/151-step_one.png) · [Successful solution screenshot](images/Day%2009/151-step_one-solution.png) · [Verilog file](solutions/Day%2009/151-step_one.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/step_one)
@@ -429,6 +437,7 @@ endmodule
 ---
 
 <a id="problem-152"></a>
+
 ## 152 — Output Zero
 
 [Problem note](problems/Day%2009/152-zero.md) · [Screenshot](images/Day%2009/152-zero.png) · [Verilog file](solutions/Day%2009/152-zero.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/zero)
@@ -454,6 +463,7 @@ endmodule
 ---
 
 <a id="problem-153"></a>
+
 ## 153 — FSM: The complete FSM
 
 [Problem note](problems/Day%2009/153-exams__review2015_fsm.md) · [Verilog file](solutions/Day%2009/153-exams__review2015_fsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fsm)
@@ -526,6 +536,7 @@ endmodule
 ---
 
 <a id="problem-154"></a>
+
 ## 154 — The complete timer
 
 [Problem note with wrong-attempt discussion](problems/Day%2009/154-exams__review2015_fancytimer.md) · [Open successful-submission screenshot](images/Day%2009/154-exams__review2015_fancytimer-question-and-successful-submission.png) · [Verilog file](solutions/Day%2009/154-exams__review2015_fancytimer.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer)

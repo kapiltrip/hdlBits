@@ -22,6 +22,7 @@ Each screenshot is rendered directly in this page for revision. The image is not
 ---
 
 <a id="problem-165"></a>
+
 ## 165 — Serial receiver with parity checking
 
 [Problem note](problems/Day%2013/165-fsm_serialdp.md) · [Verilog file](solutions/Day%2013/165-fsm_serialdp.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm_serialdp)
@@ -110,6 +111,7 @@ endmodule
 ---
 
 <a id="problem-166"></a>
+
 ## 166 — PS/2 packet parser
 
 [Problem note](problems/Day%2013/166-fsm_ps2.md) · [Verilog file](solutions/Day%2013/166-fsm_ps2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm_ps2)
@@ -172,6 +174,7 @@ endmodule
 ---
 
 <a id="problem-167"></a>
+
 ## 167 — PS/2 packet parser and datapath
 
 [Problem note](problems/Day%2013/167-fsm_ps2data.md) · [Verilog file](solutions/Day%2013/167-fsm_ps2data.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm_ps2data)
@@ -252,6 +255,7 @@ endmodule
 ---
 
 <a id="problem-168"></a>
+
 ## 168 — Sequence recognition
 
 [Problem note](problems/Day%2013/168-fsm_hdlc.md) · [Verilog file](solutions/Day%2013/168-fsm_hdlc.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/fsm_hdlc)
@@ -320,6 +324,7 @@ endmodule
 ---
 
 <a id="problem-169"></a>
+
 ## 169 — Q5a: Serial two's complementer (Moore FSM)
 
 [Problem note](problems/Day%2013/169-exams__ece241_2014_q5a.md) · [Verilog file](solutions/Day%2013/169-exams__ece241_2014_q5a.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5a)
@@ -369,6 +374,7 @@ endmodule
 ---
 
 <a id="problem-170"></a>
+
 ## 170 — Q5b: Serial two's complementer (Mealy FSM)
 
 [Problem note](problems/Day%2013/170-exams__ece241_2014_q5b.md) · [Verilog file](solutions/Day%2013/170-exams__ece241_2014_q5b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/ece241_2014_q5b)
@@ -432,6 +438,7 @@ endmodule
 ---
 
 <a id="problem-171"></a>
+
 ## 171 — Q6b: FSM next-state logic
 
 [Problem note](problems/Day%2013/171-exams__m2014_q6b.md) · [Verilog file](solutions/Day%2013/171-exams__m2014_q6b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q6b)
@@ -459,6 +466,7 @@ endmodule
 ---
 
 <a id="problem-172"></a>
+
 ## 172 — Q6: FSM
 
 [Problem note](problems/Day%2013/172-exams__m2014_q6.md) · [Verilog file](solutions/Day%2013/172-exams__m2014_q6.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/m2014_q6)
@@ -514,6 +522,7 @@ endmodule
 ---
 
 <a id="problem-173"></a>
+
 ## 173 — Q2a: FSM
 
 [Problem note](problems/Day%2013/173-exams__2012_q2fsm.md) · [Verilog file](solutions/Day%2013/173-exams__2012_q2fsm.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2012_q2fsm)
@@ -569,6 +578,7 @@ endmodule
 ---
 
 <a id="problem-174"></a>
+
 ## 174 — Q2b: One-hot FSM equations
 
 [Problem note](problems/Day%2013/174-exams__2012_q2b.md) · [Verilog file](solutions/Day%2013/174-exams__2012_q2b.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/exams/2012_q2b)

@@ -24,6 +24,7 @@ Each screenshot is embedded at the full width of the GitHub page. Select an imag
 ---
 
 <a id="problem-001"></a>
+
 ## 001 — Simple wire
 
 [Problem note](problems/Day%2001/001-wire.md) · [Verilog file](solutions/Day%2001/001-wire.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire)
@@ -45,6 +46,7 @@ endmodule
 ---
 
 <a id="problem-002"></a>
+
 ## 002 — Four wires
 
 [Problem note](problems/Day%2001/002-wire4.md) · [Verilog file](solutions/Day%2001/002-wire4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/wire4)
@@ -68,6 +70,7 @@ endmodule
 ---
 
 <a id="problem-003"></a>
+
 ## 003 — Inverter
 
 [Problem note](problems/Day%2001/003-notgate.md) · [Verilog file](solutions/Day%2001/003-notgate.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/notgate)
@@ -89,6 +92,7 @@ endmodule
 ---
 
 <a id="problem-008"></a>
+
 ## 008 — 7458 chip
 
 [Problem note](problems/Day%2001/008-7458.md) · [Verilog file](solutions/Day%2001/008-7458.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/7458)
@@ -115,6 +119,7 @@ endmodule
 ---
 
 <a id="problem-009"></a>
+
 ## 009 — Vectors
 
 [Problem note](problems/Day%2001/009-vector0.md) · [Verilog file](solutions/Day%2001/009-vector0.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector0)
@@ -146,6 +151,7 @@ endmodule
 ---
 
 <a id="problem-010"></a>
+
 ## 010 — Vectors in more detail
 
 [Problem note](problems/Day%2001/010-vector1.md) · [Verilog file](solutions/Day%2001/010-vector1.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector1)
@@ -176,6 +182,7 @@ endmodule
 ---
 
 <a id="problem-011"></a>
+
 ## 011 — Vector part select
 
 [Problem note](problems/Day%2001/011-vector2.md) · [Verilog file](solutions/Day%2001/011-vector2.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector2)
@@ -206,6 +213,7 @@ endmodule
 ---
 
 <a id="problem-012"></a>
+
 ## 012 — Bitwise operators
 
 [Problem note](problems/Day%2001/012-vectorgates.md) · [Verilog file](solutions/Day%2001/012-vectorgates.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vectorgates)
@@ -235,6 +243,7 @@ endmodule
 ---
 
 <a id="problem-013"></a>
+
 ## 013 — Four-input gates
 
 [Problem note](problems/Day%2001/013-gates4.md) · [Verilog file](solutions/Day%2001/013-gates4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/gates4)
@@ -264,6 +273,7 @@ endmodule
 ---
 
 <a id="problem-014"></a>
+
 ## 014 — Vector concatenation operator
 
 [Problem note](problems/Day%2001/014-vector3.md) · [Verilog file](solutions/Day%2001/014-vector3.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector3)
@@ -289,6 +299,7 @@ endmodule
 ---
 
 <a id="problem-015"></a>
+
 ## 015 — Vector reversal 1
 
 [Problem note](problems/Day%2001/015-vectorr.md) · [Verilog file](solutions/Day%2001/015-vectorr.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vectorr)
@@ -318,6 +329,7 @@ endmodule
 ---
 
 <a id="problem-016"></a>
+
 ## 016 — Replication operator
 
 [Problem note](problems/Day%2001/016-vector4.md) · [Verilog file](solutions/Day%2001/016-vector4.sv) · [HDLBits problem](https://hdlbits.01xz.net/wiki/vector4)
