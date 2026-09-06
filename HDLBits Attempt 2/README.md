@@ -2,6 +2,8 @@
 
 Use the [tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) for problem order and progress. The notes below explain the questions and mistakes from this pass.
 
+The [LinkedIn posting plan and ideas](../LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md) contains a proposed 10-day series, draft captions, document choices and a morning review checklist.
+
 As of 7 September 2026, the sheet records **155 Done and 23 Pending** out of 178 entries. All 45 document links have matching explanations. The [document review](DOCUMENT_REVIEW.md) maps each entry to its pages and records the corrections and checks.
 
 ## Study PDFs
