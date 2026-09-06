@@ -1,20 +1,18 @@
-# HDLBits Attempt 2 - Original Submission Audit Through Entry 93
+# Day 5 questions and submission notes
 
-The original audit is based on the HDLBits problem pages and saved submission history visible in Kapil's signed-in Chrome session on 2026-09-02. A 2026-09-03 follow-up extends the progress frontier through entry 93 using Kapil's explicit completion confirmation and a captured set of eight matching HDLBits tabs. The newer rows deliberately do not invent submission timestamps that were not visible to the audit tool.
+This review explains the saved code for entries 81-85 and keeps the earlier questions for entries 54, 74, 75, 77 and 80 nearby. The submission records at the end were collected on 2-3 September 2026. They describe that checkpoint; the tracker holds the current progress.
 
-## Result
+Entries 81-85 are all Done in the tracker. The main fixes are Boolean OR, the two padding bits in a concatenation, sticky edge capture, the ring/vibrate condition, and one-hot Mealy state encoding. Entry 80 has its own detailed Moore explanation.
 
-- Entries **1 through 85** retain the detailed original-page and saved-submission-selector audit from 2026-09-02.
-- **All entries 1 through 93 are now Done in Attempt 2**. Entries 86-93 were updated on 2026-09-03 from Kapil's completion confirmation and the matching open problem tabs.
-- Entries **80, 83, 84, and 85** retain their timestamped success evidence from 2026-09-02. The Day 6 entries use `current pass; user-confirmed` instead of guessed timestamps.
-- The earlier 15 explicit questions remain documented. Day 6 adds Q&A for Dualedge (entry 87), Sim/circuit5 (entry 89), and Exams/2014 q3fsm (entry 90). Entry 90 has its own [standalone FSM deep dive](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf); the other two are kept in the separate [Day 6 non-FSM Q&A](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf).
-- A successful submission followed by later experimentation does not erase the earlier success. `Done` means a fresh Attempt 2 success exists, not that the most recently loaded editor contents are necessarily successful.
+The [PDF version](HDLBits_Day5_Original_Submissions_Review.pdf) contains this review and its historical submission table. The existing tracker links still open this Markdown version.
 
-## Previously documented questions confirmed against the original code
+The saved records show success through entry 93 at the original checkpoint. Entries 86-93 were confirmed by Kapil on 3 September. A matching tab alone does not show that its current editor contents pass; later experiments can differ from an earlier successful submission.
+
+## Earlier questions and where to read them
 
 | Entry | Exact subject found in submitted code | Existing answer |
 |---:|---|---|
-| 7 | Why the Lemmings4 fall counter does not need another reset | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 7 |
+| 7 | Why the Lemmings4 fall counter does not need another reset | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), page 8 |
 | 13 | Why bitwise operators are used in the vector mux | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 6 |
 | 26 | Why `initial` cannot initialize a live population count and when to use procedural versus generate loops | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), sections 2, 3, and 5 |
 | 29 | How `sel[0]` and `sel[1]` divide work between the two mux levels | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 6 |
@@ -22,10 +20,10 @@ The original audit is based on the HDLBits problem pages and saved submission hi
 | 31 | Difference between bitwise `~` and logical `!` | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 9 |
 | 36 | Why `&` and `&&` happen to choose the same branch with an all-ones mask | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 10 |
 | 38 | What latch inference means for an intentionally incomplete assignment | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 11 |
-| 67 | Meaning and tokenization of indexed part-select operators `+:` and `-:` | [Day 4 questions PDF](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf), section 1 |
+| 67 | Meaning and tokenization of indexed part-select operators `+:` and `-:` | [Day 4 questions PDF](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf), pages 2-3 |
 | 70 | Why the PS/2 data register must not be cleared in an unmatched clocked `else` branch | [Day 4 questions PDF](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf), PS/2 datapath section |
 
-## Newly recovered question 1 - Entry 54, water-level Moore FSM
+## Question 1 - Entry 54, water-level Moore FSM
 
 Original code comment:
 
@@ -35,7 +33,7 @@ The input tells the controller which water-level sensors are currently asserted,
 
 `localparam` declarations do not test inputs. They give readable binary encodings to internal states. States such as `belows2` and `aboves2` preserve the direction/history that the input vector alone cannot express. The combinational next-state block must still test the valid sensor bands to decide which history state comes next.
 
-If the HDLBits statement guarantees physically valid sensor patterns, it is reasonable to prioritize the highest asserted sensor rather than enumerate impossible patterns separately. That does not remove the need for the history states. A safe coding pattern is:
+If the HDLBits statement guarantees physically valid sensor patterns, it is reasonable to prioritize the highest asserted sensor rather than enumerate impossible patterns separately. That does not remove the need for the history states. This fragment shows the idea (it is not a complete submission):
 
 ```verilog
 always @(*) begin
@@ -53,7 +51,7 @@ end
 
 The exact state names may differ, but the principle is fixed: sensor bits describe the present level; state bits preserve any past information the outputs still need.
 
-## Newly recovered question 2 - Entry 74, sampled positive-edge detection
+## Question 2 - Entry 74, sampled positive-edge detection
 
 Original code comment:
 
@@ -80,7 +78,7 @@ Both right-hand sides see the old `previous` value because nonblocking assignmen
 
 The unsuccessful submission used `~in & previous`, which detects the opposite sampled transition: 1-to-0.
 
-## Newly recovered question 3 - Entry 75, asynchronous-reset sensitivity list
+## Question 3 - Entry 75, asynchronous-reset sensitivity list
 
 Original code comment:
 
@@ -101,7 +99,7 @@ end
 
 In physical designs, asynchronous assertion is often paired with synchronized deassertion to avoid recovery/removal timing problems, but the HDLBits problem specifically tests the basic active-low asynchronous-reset behavior.
 
-## Newly recovered question 4 - Entry 77, reduction versus bitwise versus logical operators
+## Question 4 - Entry 77, reduction versus bitwise versus logical operators
 
 Original code comment:
 
@@ -123,7 +121,7 @@ assign out_xor = ^in;
 
 The unsuccessful forms `out_and &= in`, `out_or |= in`, and `out_xor ^= in` are compound read-modify-write assignments. They read the old output and combine it with `in`; they are not reduction operators. In combinational logic, reading an output while assigning that same output can also create an unintended feedback dependency.
 
-## Current Day 5 original submissions - entries 80 through 85
+## Submission notes for entries 80-85
 
 | Entry | Chrome evidence | Attempt 2 state | Finding |
 |---:|---|---|---|
@@ -142,7 +140,7 @@ For an LSB-first stream, two's complement can be produced by copying zeros until
 - `OUTPUT_1`, output 1, for the first 1 or a later inverted 0;
 - `OUTPUT_0`, output 0, for a later inverted 1.
 
-The latest successful code follows this rule, includes a `default` transition for illegal-state recovery, and now has a fresh Attempt 2 success. Its submitted comments explicitly ask for a deeper explanation of the algorithm, timing, and need for each state; see the [Entry 80 Moore FSM deep-dive PDF](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf).
+The saved successful code follows this rule and includes a `default` transition for the unused state encoding. Its submitted comments explicitly ask for a deeper explanation of the algorithm, timing, and need for each state; see the [Entry 80 Moore FSM deep-dive PDF](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf).
 
 ### Entry 81 - Combinational circuit 4
 
@@ -204,9 +202,9 @@ The unsuccessful equation used `vibrate_mode & !ring`, which turns the motor on 
 
 ### Entry 85 - Q5b serial two's complementer, true one-hot Mealy FSM
 
-The original problem explicitly says to use one-hot encoding. The latest successful code uses `s0=2'b00` and `s1=2'b01`; `2'b00` has no asserted state bit, so it is not one-hot even though HDLBits accepts the external behavior. Functional tests cannot necessarily observe the internal encoding.
+The problem asks for one-hot encoding. The latest successful code uses `s0=2'b00` and `s1=2'b01`; `2'b00` has no asserted state bit, so it is not one-hot even though HDLBits accepts the external behavior. Functional tests cannot necessarily observe the internal encoding.
 
-The older unsuccessful submission also omitted `zr=0` in one branch of its combinational block. That leaves `zr` unassigned on that path and infers a latch. A genuinely one-hot, fully assigned implementation is:
+The older unsuccessful submission also omitted `zr=0` in one branch of its combinational block. That leaves `zr` unassigned on that path and infers a latch. Here is a one-hot implementation with every combinational output assigned:
 
 ```verilog
 localparam [1:0] BEFORE_FIRST_ONE = 2'b01;
@@ -243,9 +241,9 @@ always @(*) begin
 end
 ```
 
-## Day 6 completion follow-up - entries 86 through 93
+## The 3 September follow-up: entries 86-93
 
-Kapil reported these eight problems completed in the current pass. The Chrome tab strip captured on 2026-09-03 contains the same eight HDLBits pages, in the same progress block. Because page-body attachment was unavailable during this follow-up, the evidence column records the confirmation exactly and does not claim unseen success timestamps.
+Kapil reported these eight problems completed in the current pass. The Chrome tab strip captured on 2026-09-03 contains the same eight HDLBits pages, in the same progress block. Because page-body attachment was unavailable during this follow-up, the evidence column records the confirmation without adding submission timestamps.
 
 | Entry | Problem | Attempt 2 state | Question/reference |
 |---:|---|---|---|
@@ -290,9 +288,9 @@ PASS: all 8 possible q3fsm groups plus back-to-back grouping; saved reset-only-o
 PASS: Dualedge MUX/XOR solutions and all 16 Circuit5 selector values; stale-register OR bug diverged as expected.
 ```
 
-## Chrome evidence appendix
+## Historical submission records
 
-The table below records every original page in the audited range. For entries 1-85, dates are copied from the saved-submission selector displayed by HDLBits. For entries 86-93, `2026-09-03 current pass; user-confirmed` records the exact evidence available in the follow-up and avoids inventing an unseen timestamp.
+The table below records every original page in the audited range. For entries 1-85, dates are copied from the saved-submission selector displayed by HDLBits. For entries 86-93, `2026-09-03 current pass; user-confirmed` records Kapil's confirmation rather than a submission time.
 
 | No. | Original HDLBits page | Last success shown in Chrome | Last non-success shown in Chrome | Attempt 2 state | Question/reference |
 |---:|---|---|---|---|---|
@@ -390,4 +388,4 @@ The table below records every original page in the audited range. For entries 1-
 | 92 | [Count15](https://hdlbits.01xz.net/wiki/count15) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
 | 93 | [Popcount3](https://hdlbits.01xz.net/wiki/popcount3) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
 
-Entries 1 through 93 are now Done. Entries 94-178 remain Pending and were not part of this follow-up; no current-window submission claim is made for them.
+At the 3 September checkpoint, entries 1-93 were Done and entries 94-178 had not yet been included in the review. Those are historical counts. On 7 September, the tracker records 151 Done and 27 Pending.
