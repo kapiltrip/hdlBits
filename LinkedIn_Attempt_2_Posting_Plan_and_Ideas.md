@@ -20,6 +20,10 @@ Before using a completion announcement, finish the remaining work and confirm th
 
 The captions below are drafts for you to review against your own experience. The launch caption deliberately works without an unverified completion claim. After finishing, you can replace its first sentence with: **“I've completed my second pass through the 178 entries in my HDLBits revision tracker.”**
 
+## Document indexing update
+
+All 12 full PDFs now have consistent reading covers, clickable contents, bookmarks and page counters. Use the [topic and tracker-entry index](HDLBits%20Attempt%202/DOCUMENT_INDEX.md) to find a precise explanation. The source-page references below reflect the new pagination: Day 8 wire/reg pages are 2–3; Day 9 latch pages are 2–4; the 1101 recognizer is on pages 5–6. Posting-day numbers remain independent of note numbers.
+
 ## How to share the documents alongside the posts
 
 Use a short PDF document post when a topic benefits from several pages. Give it a clear reader-facing title, such as **“Why a Verilog Loop Does Not Capture Eight Serial Bits.”** Keep the existing repository filenames and links stable.
@@ -87,7 +91,7 @@ Copy the caption text after reviewing it. Add the linked source below it and two
 >
 > Which example helped this distinction click for you?
 
-**Source:** [Wire, reg and reset](HDLBits%20Attempt%202/HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf), pages 1–2. **Visual:** three stacked cards: continuous connection, fully assigned combinational process, clocked assignment. Label these as Verilog examples.
+**Source:** [Wire, reg and reset](HDLBits%20Attempt%202/HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf), pages 2–3. **Visual:** three stacked cards: continuous connection, fully assigned combinational process, clocked assignment. Label these as Verilog examples.
 
 ### Day 4: follow the missing assignment
 
@@ -99,7 +103,7 @@ Copy the caption text after reviewing it. Add the linked source below it and two
 >
 > Which input transition would you use to reveal this bug?
 
-**Source:** [If statements and latches](HDLBits%20Attempt%202/HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), pages 1–3. **Visual:** “driving with fuel → arrival → tank changes” with original and corrected outputs aligned below. Keep the intentional latch discussion distinct from accidental incomplete logic.
+**Source:** [If statements and latches](HDLBits%20Attempt%202/HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), pages 2–4. **Visual:** “driving with fuel → arrival → tank changes” with original and corrected outputs aligned below. Keep the intentional latch discussion distinct from accidental incomplete logic.
 
 ### Day 5: one extra falling cycle matters
 
@@ -171,7 +175,7 @@ Copy the caption text after reviewing it. Add the linked source below it and two
 >
 > Which topic would you like to see traced in more detail?
 
-**Source:** [1101 recognizer discussion](HDLBits%20Attempt%202/HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), pages 4–5, and the [complete notes index](HDLBits%20Attempt%202/README.md). **Visual:** the five questions on a closing card, with a small recognizer trace as evidence. In this exercise detection stays asserted until reset; do not draw it as a one-cycle pulse.
+**Source:** [1101 recognizer discussion](HDLBits%20Attempt%202/HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), pages 5–6, and the [complete notes index](HDLBits%20Attempt%202/DOCUMENT_INDEX.md). **Visual:** the five questions on a closing card, with a small recognizer trace as evidence. In this exercise detection stays asserted until reset; do not draw it as a one-cycle pulse.
 
 ## Beautiful visual ideas to choose from
 

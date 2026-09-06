@@ -10,9 +10,23 @@ The workbook was not edited during that initial review. The later progress updat
 
 Marked entries 155–158 Done after Kapil's completion report and inspection of each current Chrome result panel showing `Status: Success!`: the 1101 recognizer, AND-gate testbench, Kmap3 and Always_if2. The sheet now has 155 Done and 23 Pending, with 45 document links and 110 completed entries marked `No questions asked`.
 
-Added [Day 9 discussion](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), with links from entries 155 and 158. Pages 1–3 explain Always_if2 using the corrected editor code, a latch trace, complete defaults and operator/storage distinctions. Pages 4–5 answer the recognizer code's question about a cleaner implementation, with the complete cleaned FSM, transition table and an overlapping-prefix trace.
+Added [Day 9 discussion](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), with links from entries 155 and 158. Originally pages 1–3 (now pages 2–4) explain Always_if2 using the corrected editor code, a latch trace, complete defaults and operator/storage distinctions. Originally pages 4–5 (now pages 5–6) answer the recognizer code's question about a cleaner implementation, with the complete cleaned FSM, transition table and an overlapping-prefix trace.
 
 Local Icarus checks passed for all eight Always_if2 input combinations, shutdown recovery and the arrival latch trace. The cleaned recognizer passed all 4,096 twelve-bit streams against a sliding-window reference, plus sticky detection and synchronous reset checks. All five PDF pages and the updated tracker views were rendered and visually checked. The workbook comparison found only the four requested status cells, their discussion cells and the two progress totals changed; unrelated workbook package parts were preserved.
+
+## Publication and indexing update
+
+All **12 study PDFs** now use a consistent cover and reading index, author attribution, section and tracker-entry bookmarks, clickable contents rows, and **Contents / All notes** links on every page. The collection has **121 pages**. The [document index](DOCUMENT_INDEX.md) adds topic routes and an exact mapping for all **45 linked tracker entries**, including entries 155 and 158 that were missing from the earlier detailed review table.
+
+Nine existing cover pages were replaced. The Day 5 submission review, Day 8 notes and Day 9 notes each gained one contents page because their original first pages contain technical material. Those three PDFs therefore use old page + 1; the other nine keep their original page numbers. The posting plan, Markdown indexes, Day 9 internal page reference and the tracker's two Day 9 page labels have been updated together. Progress, problem ordering and completion evidence are unchanged.
+
+The original body text, code, diagrams, source links and historical submission records were retained. Two overlong Day 5 verification-log lines were wrapped inside the page margins. The Day 5 Markdown review gained direct section links; literal operator pipes in its tables are escaped so GitHub keeps the columns aligned. Its PDF introduction now points readers to the Markdown companion correctly.
+
+Fonts are embedded throughout the collection. A second renderer exposed substitution and spacing problems with the original unembedded fonts; embedding corrected that display while keeping text searchable. The embedding pass checks that text, bookmarks and link destinations survive, and does not downsample images.
+
+Validation passed for all **190 bookmarks**, **182 internal PDF links**, **45 tracker mappings** and **208 local Markdown links**. The 109 technical body pages were checked for content and source-link preservation; intentional prose edits correct navigation references and explicitly label the older Day 5 progress count as historical. The tracker's only changed cells are `E160` and `E163`; every other cell and workbook package part is preserved. Covers and selected code, diagram and table pages were rendered for visual inspection. These are document checks, separate from the earlier RTL test results below. No new HDLBits acceptance or complete RTL rerun is claimed.
+
+The reproducible builder and maintenance instructions are in [internal/Documentation](internal/Documentation/README.md).
 
 ## Corrections and additions
 
@@ -28,53 +42,55 @@ Local Icarus checks passed for all eight Always_if2 input combinations, shutdown
 
 ## Where each linked entry is answered
 
-Page numbers below refer to the revised PDFs. Day numbers come from the tracker, which may differ from a PDF's older filename.
+The [document index](DOCUMENT_INDEX.md#find-a-tracker-entry) is the main entry lookup. This table uses the current physical PDF page numbers, which match the printed page counters. Sheet days can differ from the older days in filenames.
 
-| Entry | Sheet day | Problem | Document | Pages or section |
-|---:|---|---|---|---|
-| 2 | Day 1 | Serial receiver | [Serial input needs real clock edges](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf) | 2-9; frame timing 10 |
-| 4 | Day 1 | Serial receiver and datapath | [Serial input needs real clock edges](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf) | 2-9; frame timing 10 |
-| 6 | Day 1 | Serial receiver with parity checking | [Serial input needs real clock edges](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf) | 10-11 |
-| 7 | Day 1 | Lemmings 4 | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 8 |
-| 8 | Day 1 | Sequence recognition | [HDLC: getting the output cycle right](HDLBits_Fsm_hdlc_Mealy_to_Moore_Deep_Dive.pdf) | 2-16 |
-| 13 | Day 1 | Mux | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 7 |
-| 19 | Day 2 | DFF with reset | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 20 | Day 2 | Simple wire | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 21 | Day 2 | NAND | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 22 | Day 2 | Simple FSM 2 (asynchronous reset) | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 23 | Day 2 | Combinational for-loop: Vector reversal 2 | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 3-4 |
-| 24 | Day 2 | DFF with reset value | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 25 | Day 2 | Four wires | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 26 | Day 2 | Combinational for-loop: 255-bit population count | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 3, 6 |
-| 27 | Day 2 | Simple FSM 2 (synchronous reset) | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 28 | Day 2 | DFF with asynchronous reset | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 2, 9 |
-| 29 | Day 2 | Mux | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 7 |
-| 30 | Day 2 | Generate for-loop: 100-bit binary adder 2 | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 5 |
-| 31 | Day 2 | Inverter | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 10 |
-| 36 | Day 2 | Add/sub | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 11 |
-| 38 | Day 3 | D Latch | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 12 |
-| 54 | Day 3 | Design a Moore FSM | [States, sampled edges and operators](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) | 2 |
-| 66 | Day 4 | DFFs and gates | [Bytes, flip-flops and PS/2 packets](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf) | 3 |
-| 67 | Day 4 | Vector part select | [Bytes, flip-flops and PS/2 packets](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf) | 2-3 |
-| 70 | Day 4 | PS/2 packet parser and datapath | [Bytes, flip-flops and PS/2 packets](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf) | 4-6 |
-| 74 | Day 5 | Detect an edge | [States, sampled edges and operators](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) | 3 |
-| 75 | Day 5 | Q8: Design a Mealy FSM | [States, sampled edges and operators](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) | 4 |
-| 77 | Day 5 | Four-input gates | [States, sampled edges and operators](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) | 5 |
-| 80 | Day 5 | Q5a: Serial two's complementer (Moore FSM) | [Moore serial two's complement](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf) | 2-8 |
-| 81 | Day 5 | Combinational circuit 4 | [Day 5 review (PDF; Markdown still linked from sheet)](HDLBits_Day5_Original_Submissions_Review.pdf) | Entry 81 section |
-| 82 | Day 5 | Vector concatenation operator | [Day 5 review (PDF; Markdown still linked from sheet)](HDLBits_Day5_Original_Submissions_Review.pdf) | Entry 82 section |
-| 83 | Day 5 | Edge capture register | [Day 5 review (PDF; Markdown still linked from sheet)](HDLBits_Day5_Original_Submissions_Review.pdf) | Entry 83 section |
-| 84 | Day 5 | Ring or vibrate? | [Day 5 review (PDF; Markdown still linked from sheet)](HDLBits_Day5_Original_Submissions_Review.pdf) | Entry 84 section |
-| 85 | Day 5 | Q5b: Serial two's complementer (Mealy FSM) | [Day 5 review (PDF; Markdown still linked from sheet)](HDLBits_Day5_Original_Submissions_Review.pdf) | Entry 85 section |
-| 87 | Day 5 | Dual-edge triggered flip-flop | [Dual-edge sampling and Circuit5](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) | 3-14 |
-| 89 | Day 5 | Combinational circuit 5 | [Dual-edge sampling and Circuit5](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) | 15-17 |
-| 90 | Day 6 | Q3a: FSM | [Counting three-sample groups](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf) | 2-12 |
-| 102 | Day 6 | Q3c: FSM logic | [FSM widths and counter connections](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf) | 2-3 |
-| 107 | Day 6 | Q6b: FSM next-state logic | [FSM widths and counter connections](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf) | 2, 4 |
-| 109 | Day 7 | Counter 1-12 | [FSM widths and counter connections](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf) | 5 |
-| 123 | Day 7 | 12-hour clock | [Wire, reg and reset](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 4-5 |
-| 127 | Day 8 | 4-bit shift register | [Wire, reg and reset](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 3 |
-| 129 | Day 8 | Adder 2 | [Wire, reg and reset](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 1-2 |
+| Entry | Sheet day | Problem | Document and pages |
+|---:|---|---|---|
+| 2 | Day 1 | Serial receiver | [Note 01, pp. 2-10](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf#page=2) |
+| 4 | Day 1 | Serial receiver and datapath | [Note 01, pp. 2-10](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf#page=2) |
+| 6 | Day 1 | Serial receiver with parity checking | [Note 01, pp. 10-11](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf#page=10) |
+| 7 | Day 1 | Lemmings 4 | [Note 02, pp. 8](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=8) |
+| 8 | Day 1 | Sequence recognition | [Note 03, pp. 2-16](HDLBits_Fsm_hdlc_Mealy_to_Moore_Deep_Dive.pdf#page=2) |
+| 13 | Day 1 | Mux | [Note 02, pp. 7](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=7) |
+| 19 | Day 2 | DFF with reset | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 20 | Day 2 | Simple wire | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 21 | Day 2 | NAND | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 22 | Day 2 | Simple FSM 2 (asynchronous reset) | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 23 | Day 2 | Combinational for-loop: Vector reversal 2 | [Note 02, pp. 3-4](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=3) |
+| 24 | Day 2 | DFF with reset value | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 25 | Day 2 | Four wires | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 26 | Day 2 | Combinational for-loop: 255-bit population count | [Note 02, pp. 3, 6](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=3) |
+| 27 | Day 2 | Simple FSM 2 (synchronous reset) | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 28 | Day 2 | DFF with asynchronous reset | [Note 02, pp. 2, 9](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=2) |
+| 29 | Day 2 | Mux | [Note 02, pp. 7](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=7) |
+| 30 | Day 2 | Generate for-loop: 100-bit binary adder 2 | [Note 02, pp. 5](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=5) |
+| 31 | Day 2 | Inverter | [Note 02, pp. 10](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=10) |
+| 36 | Day 2 | Add/sub | [Note 02, pp. 11](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=11) |
+| 38 | Day 3 | D Latch | [Note 02, pp. 12](HDLBits_Combined_Questions_and_Day2_Review.pdf#page=12) |
+| 54 | Day 3 | Design a Moore FSM | [Note 04, pp. 2](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf#page=2) |
+| 66 | Day 4 | DFFs and gates | [Note 05, pp. 3](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf#page=3) |
+| 67 | Day 4 | Vector part select | [Note 05, pp. 2-3](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf#page=2) |
+| 70 | Day 4 | PS/2 packet parser and datapath | [Note 05, pp. 4-6](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf#page=4) |
+| 74 | Day 5 | Detect an edge | [Note 04, pp. 3](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf#page=3) |
+| 75 | Day 5 | Q8: Design a Mealy FSM | [Note 04, pp. 4](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf#page=4) |
+| 77 | Day 5 | Four-input gates | [Note 04, pp. 5](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf#page=5) |
+| 80 | Day 5 | Q5a: Serial two's complementer (Moore FSM) | [Note 06, pp. 2-8](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf#page=2) |
+| 81 | Day 5 | Combinational circuit 4 | [Note 07, pp. 5](HDLBits_Day5_Original_Submissions_Review.pdf#page=5) |
+| 82 | Day 5 | Vector concatenation operator | [Note 07, pp. 5](HDLBits_Day5_Original_Submissions_Review.pdf#page=5) |
+| 83 | Day 5 | Edge capture register | [Note 07, pp. 6](HDLBits_Day5_Original_Submissions_Review.pdf#page=6) |
+| 84 | Day 5 | Ring or vibrate? | [Note 07, pp. 6](HDLBits_Day5_Original_Submissions_Review.pdf#page=6) |
+| 85 | Day 5 | Q5b: Serial two's complementer (Mealy FSM) | [Note 07, pp. 6-7](HDLBits_Day5_Original_Submissions_Review.pdf#page=6) |
+| 87 | Day 5 | Dual-edge triggered flip-flop | [Note 08, pp. 3-14](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf#page=3) |
+| 89 | Day 5 | Combinational circuit 5 | [Note 08, pp. 15-17](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf#page=15) |
+| 90 | Day 6 | Q3a: FSM | [Note 09, pp. 2-12](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf#page=2) |
+| 102 | Day 6 | Q3c: FSM logic | [Note 10, pp. 2-3](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf#page=2) |
+| 107 | Day 6 | Q6b: FSM next-state logic | [Note 10, pp. 4](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf#page=4) |
+| 109 | Day 7 | Counter 1-12 | [Note 10, pp. 5](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf#page=5) |
+| 123 | Day 7 | 12-hour clock | [Note 11, pp. 5-6](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=5) |
+| 127 | Day 8 | 4-bit shift register | [Note 11, pp. 4](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=4) |
+| 129 | Day 8 | Adder 2 | [Note 11, pp. 2-3](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=2) |
+| 155 | Day 9 | FSM: Sequence 1101 recognizer | [Note 12, pp. 5-6](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=5) |
+| 158 | Day 9 | If statement latches | [Note 12, pp. 2-4](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=2) |
 
 ## What was tested
 

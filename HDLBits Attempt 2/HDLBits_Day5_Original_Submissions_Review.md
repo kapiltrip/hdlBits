@@ -8,6 +8,14 @@ The [PDF version](HDLBits_Day5_Original_Submissions_Review.pdf) contains this re
 
 The saved records show success through entry 93 at the original checkpoint. Entries 86-93 were confirmed by Kapil on 3 September. A matching tab alone does not show that its current editor contents pass; later experiments can differ from an earlier successful submission.
 
+## Reading index
+
+[All Attempt 2 notes](DOCUMENT_INDEX.md) · [PDF with contents and bookmarks](HDLBits_Day5_Original_Submissions_Review.pdf)
+
+- **Earlier questions:** [54 - state history](#entry-54), [74 - sampled edges](#entry-74), [75 - asynchronous reset](#entry-75), [77 - operators](#entry-77).
+- **Submission explanations:** [80 - Moore complementer](#entry-80), [81 - OR versus addition](#entry-81), [82 - concatenation width](#entry-82), [83 - sticky edges](#entry-83), [84 - ring/vibrate](#entry-84), [85 - one-hot Mealy encoding](#entry-85).
+- **Supporting records:** [earlier question map](#earlier-questions-and-where-to-read-them), [3 September follow-up](#the-3-september-follow-up-entries-86-93), [local verification](#local-verification), [historical submission appendix](#historical-submission-records).
+
 ## Earlier questions and where to read them
 
 | Entry | Exact subject found in submitted code | Existing answer |
@@ -22,6 +30,8 @@ The saved records show success through entry 93 at the original checkpoint. Entr
 | 38 | What latch inference means for an intentionally incomplete assignment | [Combined questions PDF](HDLBits_Combined_Questions_and_Day2_Review.pdf), section 11 |
 | 67 | Meaning and tokenization of indexed part-select operators `+:` and `-:` | [Day 4 questions PDF](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf), pages 2-3 |
 | 70 | Why the PS/2 data register must not be cleared in an unmatched clocked `else` branch | [Day 4 questions PDF](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf), PS/2 datapath section |
+
+<a id="entry-54"></a>
 
 ## Question 1 - Entry 54, water-level Moore FSM
 
@@ -51,6 +61,8 @@ end
 
 The exact state names may differ, but the principle is fixed: sensor bits describe the present level; state bits preserve any past information the outputs still need.
 
+<a id="entry-74"></a>
+
 ## Question 2 - Entry 74, sampled positive-edge detection
 
 Original code comment:
@@ -78,6 +90,8 @@ Both right-hand sides see the old `previous` value because nonblocking assignmen
 
 The unsuccessful submission used `~in & previous`, which detects the opposite sampled transition: 1-to-0.
 
+<a id="entry-75"></a>
+
 ## Question 3 - Entry 75, asynchronous-reset sensitivity list
 
 Original code comment:
@@ -99,6 +113,8 @@ end
 
 In physical designs, asynchronous assertion is often paired with synchronized deassertion to avoid recovery/removal timing problems, but the HDLBits problem specifically tests the basic active-low asynchronous-reset behavior.
 
+<a id="entry-77"></a>
+
 ## Question 4 - Entry 77, reduction versus bitwise versus logical operators
 
 Original code comment:
@@ -107,9 +123,9 @@ Original code comment:
 
 | Operator class | Example | Input/output width | Meaning for `in = 4'b1011` |
 |---|---|---|---|
-| Unary reduction | `&in`, `|in`, `^in` | Vector to one bit | `&in=0`, `|in=1`, `^in=1` |
-| Bitwise binary | `a & b`, `a | b`, `a ^ b` | One result bit per aligned input bit | Combines corresponding bits independently |
-| Logical | `a && b`, `a || b`, `!a` | Operands become true/false; result is one bit | Tests whether each whole operand is zero or nonzero |
+| Unary reduction | `&in`, `\|in`, `^in` | Vector to one bit | `&in=0`, `\|in=1`, `^in=1` |
+| Bitwise binary | `a & b`, `a \| b`, `a ^ b` | One result bit per aligned input bit | Combines corresponding bits independently |
+| Logical | `a && b`, `a \|\| b`, `!a` | Operands become true/false; result is one bit | Tests whether each whole operand is zero or nonzero |
 
 The original problem asks for one output from all four bits, so unary reduction operators are the direct answer:
 
@@ -126,11 +142,13 @@ The unsuccessful forms `out_and &= in`, `out_or |= in`, and `out_xor ^= in` are 
 | Entry | Chrome evidence | Attempt 2 state | Finding |
 |---:|---|---|---|
 | 80 | Last success 2026-09-02 16:28:11; last non-success 16:18:12 | Done | The corrected Moore implementation passed, and its new in-code explanation request is answered in a dedicated PDF. |
-| 81 | Last success 2026-09-01 23:26:08 | Done | Waveform implements `q = b | c`; inputs `a` and `d` are irrelevant. |
+| 81 | Last success 2026-09-01 23:26:08 | Done | Waveform implements `q = b \| c`; inputs `a` and `d` are irrelevant. |
 | 82 | Last success 2026-09-01 23:23:20 | Done | Correct 32-bit concatenation includes two trailing one bits. |
 | 83 | Last success 2026-09-02 17:00:08; last non-success 16:57:13 | Done | The successful version keeps captured falling edges sticky and initializes the previous sample during reset. |
 | 84 | Last success 2026-09-02 16:54:21; last non-success 16:53:47 | Done | The successful motor equation now requires both `ring` and `vibrate_mode`. |
 | 85 | Last success 2026-09-02 16:44:54; last non-success 16:31:02 | Done | The two-state Mealy behavior passed; the internal encoding is still not literally one-hot. |
+
+<a id="entry-80"></a>
 
 ### Entry 80 - Q5a serial two's complementer, Moore FSM
 
@@ -142,6 +160,8 @@ For an LSB-first stream, two's complement can be produced by copying zeros until
 
 The saved successful code follows this rule and includes a `default` transition for the unused state encoding. Its submitted comments explicitly ask for a deeper explanation of the algorithm, timing, and need for each state; see the [Entry 80 Moore FSM deep-dive PDF](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf).
 
+<a id="entry-81"></a>
+
 ### Entry 81 - Combinational circuit 4
 
 The waveform shows that `q` depends only on `b` and `c`:
@@ -152,6 +172,8 @@ assign q = b | c;
 
 The old `b + c` expression is arithmetic addition, not Boolean OR. When `b=c=1`, the mathematical sum is binary 2 and the carry cannot be represented by the one-bit output, while OR must remain 1. This counterexample distinguishes the two immediately.
 
+<a id="entry-82"></a>
+
 ### Entry 82 - Vector concatenation
 
 Six five-bit inputs contain 30 bits, while `{w,x,y,z}` contains 32 bits. The original prompt explicitly requires two one bits after the six vectors:
@@ -161,6 +183,8 @@ assign {w, x, y, z} = {a, b, c, d, e, f, 2'b11};
 ```
 
 Omitting the final two bits does not merely leave `z[1:0]` unspecified. The 30-bit value is extended to the 32-bit destination from the left, so the grouping of all output bytes is shifted relative to the required concatenation.
+
+<a id="entry-83"></a>
 
 ### Entry 83 - Sticky falling-edge capture
 
@@ -179,6 +203,8 @@ end
 ```
 
 Reset has priority over capture. `previous & ~in` detects bits that were 1 at the preceding sample and are 0 now. The OR makes the result sticky.
+
+<a id="entry-84"></a>
 
 ### Entry 84 - Ring or vibrate
 
@@ -199,6 +225,8 @@ assign motor  = ring &  vibrate_mode;
 ```
 
 The unsuccessful equation used `vibrate_mode & !ring`, which turns the motor on when no call is arriving and turns it off for the exact `ring=1, vibrate_mode=1` case that should activate it. For one-bit signals, `!ring` and `~ring` have the same 0/1 result, so the failure is the reversed `ring` condition, not merely the choice of NOT operator.
+
+<a id="entry-85"></a>
 
 ### Entry 85 - Q5b serial two's complementer, true one-hot Mealy FSM
 
@@ -388,4 +416,6 @@ The table below records every original page in the audited range. For entries 1-
 | 92 | [Count15](https://hdlbits.01xz.net/wiki/count15) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
 | 93 | [Popcount3](https://hdlbits.01xz.net/wiki/popcount3) | 2026-09-03 current pass; user-confirmed | not captured in follow-up | Done | No explicit question recorded |
 
-At the 3 September checkpoint, entries 1-93 were Done and entries 94-178 had not yet been included in the review. Those are historical counts. On 7 September, the tracker records 151 Done and 27 Pending.
+At the 3 September checkpoint, entries 1-93 were Done and entries 94-178 had not yet been included in the review. The earlier 7 September document-review checkpoint recorded 151 Done and 27 Pending. These are historical counts; use the tracker for current progress.
+
+[Back to the reading index](#reading-index) · [All Attempt 2 documents](DOCUMENT_INDEX.md)
