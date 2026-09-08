@@ -12,15 +12,31 @@ import json
 import re
 import shutil
 import subprocess
+import sys
 import textwrap
 from pathlib import Path
 from xml.sax.saxutils import escape
+
+BUNDLED_SITE_PACKAGES = (
+    Path.home()
+    / ".cache"
+    / "codex-runtimes"
+    / "codex-primary-runtime"
+    / "dependencies"
+    / "python"
+    / "Lib"
+    / "site-packages"
+)
+if BUNDLED_SITE_PACKAGES.exists():
+    sys.path.append(str(BUNDLED_SITE_PACKAGES))
 
 import fitz
 import openpyxl
 from reportlab.pdfgen import canvas
 from reportlab.lib.colors import HexColor
 from reportlab.lib.styles import ParagraphStyle
+from reportlab.pdfbase import pdfmetrics
+from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.platypus import Paragraph
 
 ROOT = Path(__file__).resolve().parents[2]
@@ -28,6 +44,11 @@ WORK = ROOT / "internal/tmp/portfolio_index"
 MARKER = "attempt2-reading-index-v1"
 INDEX_URL = "https://github.com/kapiltrip/hdlBits/blob/main/HDLBits%20Attempt%202/DOCUMENT_INDEX.md"
 NAVY, TEAL, INK, MUTED = "#162235", "#087F8C", "#233246", "#566579"
+ARIAL = Path(r"C:/Windows/Fonts/arial.ttf")
+ARIAL_BOLD = Path(r"C:/Windows/Fonts/arialbd.ttf")
+CONSOLAS = Path(r"C:/Windows/Fonts/consola.ttf")
+pdfmetrics.registerFont(TTFont("Arial-Cover", str(ARIAL)))
+pdfmetrics.registerFont(TTFont("Arial-Cover-Bold", str(ARIAL_BOLD)))
 
 
 def spec(filename, title, summary, takeaway, groups, pages, entries, prepend=False):
@@ -36,7 +57,7 @@ def spec(filename, title, summary, takeaway, groups, pages, entries, prepend=Fal
 
 
 # Page numbers below are the original physical pages, before a new cover.
-# The three documents with technical content on page 1 get an additional page.
+# Documents with technical content on page 1 get an additional reading cover.
 DOCS = [
     spec("HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf",
          "Serial input needs\nreal clock edges",
@@ -124,6 +145,18 @@ DOCS = [
           (3, "Defaults, Boolean forms and operator details", "3"), (4, "Entry 155: complete 1101 recognizer RTL", "4"),
           (5, "State meanings, overlap and sticky detection", "5")],
          ["Complete combinational assignments", "Missing else and latch trace", "Defaults and Boolean alternatives", "Complete 1101 recognizer", "Five states, overlap and sticky detection"], {155:"4-5",158:"1-3"}, True),
+    spec("HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf", "K-map operators, Boolean\nforms and cellular automata",
+         "Connect four Day 10 questions: operator intent in Kmap4, equivalent SOP/POS forms, and simultaneous next-state logic in Rules 90 and 110.",
+         "Use | to combine Boolean alternatives, derive SOP from 1-cells and POS from 0-cells, and keep each automaton's current state separate from its next state.",
+         [(1, "Entry 161: why Verilog uses | instead of +", "1-2"),
+          (3, "Entry 164: SOP, POS and De Morgan's law", "3-4"),
+          (5, "Entry 168: Rule 90 and why nextVal is used", "5-6"),
+          (7, "Entry 172: Rule 110 expression and boundaries", "7-8")],
+         ["Why the K-map expression uses |, not +", "Why + can appear to work here",
+          "SOP, POS and De Morgan's law", "Applying SOP and POS to the problem",
+          "One whole generation changes at a time", "Why nextVal is used - and whether it is required",
+          "Rule 110 uses left, center and right", "Why the Rule 110 expression works"],
+         {161:"1-2", 164:"3-4", 168:"5-6", 172:"7-8"}, True),
 ]
 
 
@@ -132,7 +165,7 @@ def shift_range(value, shift):
 
 
 def paragraph(c, text, x, y, width, size=11, color=INK, bold=False):
-    style = ParagraphStyle("text", fontName="Helvetica-Bold" if bold else "Helvetica",
+    style = ParagraphStyle("text", fontName="Arial-Cover-Bold" if bold else "Arial-Cover",
                            fontSize=size, leading=size * 1.4, textColor=HexColor(color))
     p = Paragraph(escape(text).replace("\n", "<br/>"), style)
     _, height = p.wrap(width, 1000)
@@ -178,7 +211,21 @@ def cover(meta, number, total, shift):
     paragraph(c, "HDLBits problem collection", 375, 75, 175, 9, TEAL)
     c.linkURL("https://hdlbits.01xz.net/wiki/Problem_sets", (374, 59, 550, 79), relative=0)
     c.save()
-    return fitz.open(stream=stream.getvalue(), filetype="pdf"), links
+    cover_doc = fitz.open(stream=stream.getvalue(), filetype="pdf")
+    # ReportLab emits an unused Helvetica setup command even though all visible
+    # cover text uses embedded Arial. Remove only that empty command/resource.
+    for page in cover_doc:
+        for content_xref in page.get_contents():
+            content = cover_doc.xref_stream(content_xref)
+            cleaned = re.sub(rb"BT /F1 [0-9.]+ Tf [0-9.]+ TL ET", b"", content)
+            if cleaned != content:
+                cover_doc.update_stream(content_xref, cleaned)
+    for xref in range(1, cover_doc.xref_length()):
+        obj = cover_doc.xref_object(xref, compressed=False)
+        cleaned = re.sub(r"/F1\s+2\s+0\s+R", "", obj)
+        if cleaned != obj:
+            cover_doc.update_object(xref, cleaned)
+    return cover_doc, links
 
 
 def tracker_rows():
@@ -205,7 +252,7 @@ def fix_known_page_references(doc, meta):
                 pg.add_redact_annot(box, fill=False)
                 pg.apply_redactions(images=0, graphics=0)
                 replacement = "This PDF contains the review and its historical submission table. The Markdown companion remains available from the collection index and the existing tracker links."
-                result = pg.insert_textbox(fitz.Rect(box.x0, box.y0, box.x1, box.y1+4), replacement, fontsize=10.2, fontname="helv", color=(.09,.14,.20))
+                result = pg.insert_textbox(fitz.Rect(box.x0, box.y0, box.x1, box.y1+4), replacement, fontsize=10.2, fontname="ArialFix", fontfile=str(ARIAL), color=(.09,.14,.20))
                 if result < 0:
                     raise ValueError("Day 5 companion reference does not fit")
                 break
@@ -217,7 +264,7 @@ def fix_known_page_references(doc, meta):
                 pg.add_redact_annot(box, fill=False)
                 pg.apply_redactions(images=0, graphics=0)
                 wrapped = '\n'.join(textwrap.fill(line, width=90, subsequent_indent='  ') for line in lines)
-                result = pg.insert_textbox(fitz.Rect(box.x0,box.y0,pg.rect.width-48,box.y0+80),wrapped,fontsize=8.1,fontname='cour',color=(.09,.14,.20))
+                result = pg.insert_textbox(fitz.Rect(box.x0,box.y0,pg.rect.width-48,box.y0+80),wrapped,fontsize=8.1,fontname='ConsolasFix',fontfile=str(CONSOLAS),color=(.09,.14,.20))
                 if result < 0:
                     raise ValueError('Wrapped verification log does not fit')
                 break
@@ -228,7 +275,7 @@ def fix_known_page_references(doc, meta):
                 pg.add_redact_annot(box,fill=False)
                 pg.apply_redactions(images=0,graphics=0)
                 replacement = 'At the 3 September checkpoint, entries 1-93 were Done and entries 94-178 had not yet been included in the review. The earlier 7 September document-review checkpoint recorded 151 Done and 27 Pending. These are historical counts; use the tracker for current progress.'
-                result=pg.insert_textbox(fitz.Rect(box.x0,box.y0,box.x1,box.y0+85),replacement,fontsize=10.2,fontname='helv',color=(.09,.14,.20))
+                result=pg.insert_textbox(fitz.Rect(box.x0,box.y0,box.x1,box.y0+85),replacement,fontsize=10.2,fontname='ArialFix',fontfile=str(ARIAL),color=(.09,.14,.20))
                 if result < 0:
                     raise ValueError('Historical checkpoint paragraph does not fit')
                 break
@@ -241,7 +288,7 @@ def fix_known_page_references(doc, meta):
                 pg.add_redact_annot(box, fill=False)
                 pg.apply_redactions(images=0, graphics=0)
                 replacement = "Pages 3-4 explain the missing paths, timing and alternative coding styles. Pages 5-6 answer the cleanup question in the entry 155 sequence-recognizer code."
-                result = pg.insert_textbox(fitz.Rect(box.x0, box.y0, box.x1+2, box.y1+4), replacement, fontsize=8, fontname="helv", color=(.34,.40,.48))
+                result = pg.insert_textbox(fitz.Rect(box.x0, box.y0, box.x1+2, box.y1+4), replacement, fontsize=8, fontname="ArialFix", fontfile=str(ARIAL), color=(.34,.40,.48))
                 if result < 0:
                     raise ValueError("Day 9 cross-reference does not fit")
                 break
@@ -257,8 +304,32 @@ def build_pdf(meta, number, rows):
     shift = int(meta["prepend"])
     total = len(meta["pages"])+1
     output, links = cover(meta, number, total, shift)
-    output.insert_pdf(src, from_page=start)
+    # Copy body links explicitly. Copying a page subset with links enabled can
+    # leave dangling references to the discarded old cover page.
+    body_links = []
+    for source_number in range(start, len(src)):
+        source_page = src[source_number]
+        for link in source_page.get_links():
+            if fitz.Rect(link["from"]).y0 >= source_page.rect.height - 50:
+                continue
+            if link["kind"] == fitz.LINK_URI:
+                body_links.append((source_number-start, {
+                    "kind": fitz.LINK_URI,
+                    "from": fitz.Rect(link["from"]),
+                    "uri": link["uri"],
+                }))
+            elif link["kind"] == fitz.LINK_GOTO and link.get("page", -1) >= start:
+                body_links.append((source_number-start, {
+                    "kind": fitz.LINK_GOTO,
+                    "from": fitz.Rect(link["from"]),
+                    "page": 1 + link["page"] - start,
+                    "to": fitz.Point(link.get("to", fitz.Point(0, 0))),
+                    "zoom": link.get("zoom", 0),
+                }))
+    output.insert_pdf(src, from_page=start, links=False, annots=False)
     src.close()
+    for body_number, link in body_links:
+        output[body_number + 1].insert_link(link)
     fix_known_page_references(output, meta)
     for rect, target in links:
         output[0].insert_link({"kind":fitz.LINK_GOTO,"from":rect,"page":target,"to":fitz.Point(0,0)})
@@ -273,21 +344,28 @@ def build_pdf(meta, number, rows):
     output.xref_set_key(output.pdf_catalog(), "Lang", "(en-IN)")
     for i, pg in enumerate(output):
         w,h = pg.rect.width, pg.rect.height
+        # Remove navigation annotations from a previous indexed build before
+        # drawing the fresh footer. Redaction removes text, not link objects.
+        for link in list(pg.get_links()):
+            if fitz.Rect(link["from"]).y0 >= h - 50:
+                pg.delete_link(link)
         if i:
             # Original footer spans occupy only the final 35 points. Removing text
             # rather than painting over it prevents duplicate extracted page numbers.
             pg.add_redact_annot(fitz.Rect(0,h-37,w,h),fill=(1,1,1))
             pg.apply_redactions(images=0, graphics=0)
         pg.draw_line(fitz.Point(48,h-36),fitz.Point(w-48,h-36), color=(.79,.82,.83), width=.5)
-        pg.insert_text((48,h-22), f"Kapil Tripathi  |  HDLBits Attempt 2  |  Note {number:02d}",fontname="helv",fontsize=7.5,color=(.34,.40,.48))
-        pg.insert_text((w-215,h-22), "Contents",fontsize=8,fontname="helv",color=(.03,.50,.55))
+        pg.insert_font(fontname="ArialFooter", fontfile=str(ARIAL), set_simple=True)
+        pg.insert_text((48,h-22), f"Kapil Tripathi  |  HDLBits Attempt 2  |  Note {number:02d}",fontname="ArialFooter",fontsize=7.5,color=(.34,.40,.48))
+        pg.insert_text((w-215,h-22), "Contents",fontsize=8,fontname="ArialFooter",color=(.03,.50,.55))
         pg.insert_link({"kind":fitz.LINK_GOTO,"from":fitz.Rect(w-217,h-33,w-173,h-14),"page":0,"to":fitz.Point(0,0)})
-        pg.insert_text((w-155,h-22), "All notes",fontsize=8,fontname="helv",color=(.03,.50,.55))
+        pg.insert_text((w-155,h-22), "All notes",fontsize=8,fontname="ArialFooter",color=(.03,.50,.55))
         pg.insert_link({"kind":fitz.LINK_URI,"from":fitz.Rect(w-157,h-33,w-113,h-14),"uri":INDEX_URL})
-        pg.insert_text((w-80,h-22),f"{i+1} / {total}",fontname="helv",fontsize=8,color=(.34,.40,.48))
+        pg.insert_text((w-80,h-22),f"{i+1} / {total}",fontname="ArialFooter",fontsize=8,color=(.34,.40,.48))
     output.set_metadata(dict(title=meta["title"].replace("\n"," "),author="Kapil Tripathi",subject=meta["summary"],
                              keywords=f"{MARKER}; HDLBits; Attempt 2; Verilog; RTL; study notes",creator="Kapil Tripathi - HDLBits study notes"))
     temporary = WORK / path.name
+    output.subset_fonts()
     output.save(temporary, garbage=4, deflate=True)
     output.close()
     embed_fonts(temporary, path)
@@ -302,7 +380,19 @@ def embed_fonts(source, destination):
     """
     gs = shutil.which('gs') or shutil.which('gswin64c')
     if not gs:
-        raise RuntimeError('Ghostscript is required to embed the PDF fonts.')
+        with fitz.open(source) as checked:
+            missing = []
+            for xref in sorted({font[0] for page in checked for font in page.get_fonts()}):
+                name, _, _, data = checked.extract_font(xref)
+                if not data:
+                    missing.append((xref, name))
+            if missing:
+                raise RuntimeError(
+                    f'Ghostscript is unavailable and fonts remain unembedded: '
+                    f'{destination.name}: {missing}'
+                )
+        source.replace(destination)
+        return
     embedded = source.with_suffix('.embedded.pdf')
     subprocess.run([gs, '-q', '-dBATCH', '-dNOPAUSE', '-sDEVICE=pdfwrite',
                     '-dCompatibilityLevel=1.7', '-dAutoRotatePages=/None',
@@ -324,11 +414,12 @@ def embed_fonts(source, destination):
 
 
 def write_index(rows, results):
-    text = """# HDLBits Attempt 2 - document index
+    mapping_count = sum(len(meta["entries"]) for meta in DOCS)
+    text = f"""# HDLBits Attempt 2 - document index
 
 **Kapil Tripathi | Verilog and digital design**
 
-Twelve study PDFs explain the questions behind this second pass through HDLBits. Start with a topic below, browse the collection, or jump to one of the **45 tracker entries with discussion links**. These are study notes based on HDLBits exercises; the original problem statements belong to HDLBits.
+{len(DOCS)} study PDFs explain the questions behind this second pass through HDLBits. Start with a topic below, browse the collection, or jump to one of the **{mapping_count} tracker entries with discussion links**. These are study notes based on HDLBits exercises; the original problem statements belong to HDLBits.
 
 [Browse all PDFs](#the-complete-collection) · [Find an entry](#find-a-tracker-entry) · [Tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) · [Review record](DOCUMENT_REVIEW.md) · [LinkedIn plan](../LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md)
 
@@ -349,14 +440,19 @@ Twelve study PDFs explain the questions behind this second pass through HDLBits.
         ("How do I read FSM width warnings and counter wiring?",9,"2-5"),
         ("How should the 1101 recognizer hold its result?",11,"5-6"),
         ("What is different about reduction, bitwise and logical operators?",3,"5"),
+        ("Why does Kmap4 use | instead of +?",12,"2-3"),
+        ("What are SOP, POS and De Morgan's law, and why do I need them?",12,"4-5"),
+        ("Why did I use nextVal in Rule 90, and is it required?",12,"6-7"),
+        ("How does the Rule 110 expression match its truth table?",12,"8-9"),
         ("Which small mistakes explain sticky capture and one-hot encoding?",6,"5-7"),
     ]
     for question, i, pages in questions:
         text += f"- **{question}** [Note {i+1:02d}, pp. {pages}]({DOCS[i]['filename']}#page={re.search(r'\d+',pages)[0]}).\n"
     text += "\n## The complete collection\n\nNote numbers are catalogue identifiers, separate from tracker entries and posting days. Older day labels remain in filenames so existing links keep working.\n\n| Note | PDF | Pages | What it explains |\n|---|---|---:|---|\n"
     for i, (meta, result) in enumerate(zip(DOCS,results),1):
-        title = meta["title"].replace("\n"," ")
-        text += f"| {i:02d} | [{title}]({meta['filename']}) | {result['pages']} | {meta['summary']} |\n"
+        title = meta["title"].replace("\n"," ").replace("|", "&#124;")
+        summary = meta["summary"].replace("|", "&#124;")
+        text += f"| {i:02d} | [{title}]({meta['filename']}) | {result['pages']} | {summary} |\n"
     text += """
 Each PDF has a clickable contents page, section and tracker-entry bookmarks, embedded fonts, a consistent page counter, and **Contents / All notes** links in the footer. Text and diagrams remain searchable/vector content where present in the source. Page numbers here match the printed counter and physical PDF page.
 
@@ -401,7 +497,8 @@ def main():
     results = [build_pdf(meta,i,rows) for i,meta in enumerate(DOCS,1)]
     write_index(rows,results)
     (WORK/"build_summary.json").write_text(json.dumps(results,indent=2))
-    print(f"Indexed {len(results)} PDFs, {sum(r['pages'] for r in results)} pages and 45 linked tracker entries.")
+    mapping_count = sum(len(meta["entries"]) for meta in DOCS)
+    print(f"Indexed {len(results)} PDFs, {sum(r['pages'] for r in results)} pages and {mapping_count} linked tracker entries.")
 
 
 if __name__ == "__main__":

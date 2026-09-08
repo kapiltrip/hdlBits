@@ -2,7 +2,7 @@
 
 **Kapil Tripathi | Verilog and digital design**
 
-Twelve study PDFs explain the questions behind this second pass through HDLBits. Start with a topic below, browse the collection, or jump to one of the **45 tracker entries with discussion links**. These are study notes based on HDLBits exercises; the original problem statements belong to HDLBits.
+13 study PDFs explain the questions behind this second pass through HDLBits. Start with a topic below, browse the collection, or jump to one of the **49 tracker entries with discussion links**. These are study notes based on HDLBits exercises; the original problem statements belong to HDLBits.
 
 [Browse all PDFs](#the-complete-collection) · [Find an entry](#find-a-tracker-entry) · [Tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) · [Review record](DOCUMENT_REVIEW.md) · [LinkedIn plan](../LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md)
 
@@ -21,6 +21,10 @@ Twelve study PDFs explain the questions behind this second pass through HDLBits.
 - **How do I read FSM width warnings and counter wiring?** [Note 10, pp. 2-5](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf#page=2).
 - **How should the 1101 recognizer hold its result?** [Note 12, pp. 5-6](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=5).
 - **What is different about reduction, bitwise and logical operators?** [Note 04, pp. 5](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf#page=5).
+- **Why does Kmap4 use | instead of +?** [Note 13, pp. 2-3](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=2).
+- **What are SOP, POS and De Morgan's law, and why do I need them?** [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4).
+- **Why did I use nextVal in Rule 90, and is it required?** [Note 13, pp. 6-7](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=6).
+- **How does the Rule 110 expression match its truth table?** [Note 13, pp. 8-9](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=8).
 - **Which small mistakes explain sticky capture and one-hot encoding?** [Note 07, pp. 5-7](HDLBits_Day5_Original_Submissions_Review.pdf#page=5).
 
 ## The complete collection
@@ -41,6 +45,7 @@ Note numbers are catalogue identifiers, separate from tracker entries and postin
 | 10 | [FSM widths and counter connections](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf) | 7 | Read truncation warnings, derive next-state bits, and trace each control signal through a parent and child counter. |
 | 11 | [Wire, reg and reset behavior](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 6 | Distinguish a continuous connection from initialization, follow a carry wire, and check shift-register and BCD-clock reset. |
 | 12 | [Missing assignments and the 1101 FSM](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf) | 6 | Trace the latch created by a missing assignment, then follow a five-state recognizer with detection held until reset. |
+| 13 | [K-map operators, Boolean forms and cellular automata](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf) | 9 | Connect four Day 10 questions: operator intent in Kmap4, equivalent SOP/POS forms, and simultaneous next-state logic in Rules 90 and 110. |
 
 Each PDF has a clickable contents page, section and tracker-entry bookmarks, embedded fonts, a consistent page counter, and **Contents / All notes** links in the footer. Text and diagrams remain searchable/vector content where present in the source. Page numbers here match the printed counter and physical PDF page.
 
@@ -97,6 +102,10 @@ Entry numbers below come from the revision tracker, not the HDLBits website's or
 | 129 | [Adder 2](https://hdlbits.01xz.net/wiki/module_fadd) | [Note 11, pp. 2-3](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=2) |
 | 155 | [FSM: Sequence 1101 recognizer](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) | [Note 12, pp. 5-6](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=5) |
 | 158 | [If statement latches](https://hdlbits.01xz.net/wiki/always_if2) | [Note 12, pp. 2-4](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=2) |
+| 161 | [4-variable](https://hdlbits.01xz.net/wiki/kmap4) | [Note 13, pp. 2-3](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=2) |
+| 164 | [Minimum SOP and POS](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q2) | [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4) |
+| 168 | [Rule 90](https://hdlbits.01xz.net/wiki/rule90) | [Note 13, pp. 6-7](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=6) |
+| 172 | [Rule 110](https://hdlbits.01xz.net/wiki/rule110) | [Note 13, pp. 8-9](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=8) |
 
 The [Day 5 Markdown review](HDLBits_Day5_Original_Submissions_Review.md) is an alternative to Note 07 and has its own section index. Its historical submission appendix preserves the original evidence and dates.
 

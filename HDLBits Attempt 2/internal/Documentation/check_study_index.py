@@ -21,13 +21,16 @@ def anchors(text):
 def main():
     rows = tracker_rows()
     mapped, pages, bookmarks, internal_links = set(), 0, 0, 0
-    index = (ROOT/'DOCUMENT_INDEX.md').read_text()
+    index = (ROOT/'DOCUMENT_INDEX.md').read_text(encoding='utf-8')
     for meta in DOCS:
         path = ROOT/meta['filename']
         with fitz.open(path) as doc:
             assert len(doc) == len(meta['pages'])+1, path.name
             assert MARKER in doc.metadata['keywords'], path.name
             assert doc.metadata['author'] == 'Kapil Tripathi', path.name
+            cover_text = doc[0].get_text()
+            assert 'ALL NOTES + ENTRY INDEX' in cover_text, path.name
+            assert 'HDLBits problem collection' in cover_text, path.name
             for xref in {font[0] for page in doc for font in page.get_fonts()}:
                 assert doc.extract_font(xref)[3], (path.name,'font is not embedded',xref)
             toc = doc.get_toc()
@@ -43,6 +46,10 @@ def main():
                 links = pg.get_links()
                 assert any(l.get('uri') == INDEX_URL for l in links), (path.name,i+1,'all-notes link')
                 assert any(l['kind']==fitz.LINK_GOTO and l['page']==0 for l in links), (path.name,i+1,'contents link')
+                footer_links = [l for l in links if fitz.Rect(l['from']).y0 >= pg.rect.height-50]
+                assert len(footer_links) == 2, (path.name,i+1,'duplicate or missing footer links',footer_links)
+                assert sum(l['kind']==fitz.LINK_GOTO and l['page']==0 for l in footer_links) == 1, (path.name,i+1,'contents footer link')
+                assert sum(l.get('uri')==INDEX_URL for l in footer_links) == 1, (path.name,i+1,'all-notes footer link')
                 for link in links:
                     if link['kind'] == fitz.LINK_GOTO:
                         assert 0 <= link['page'] < len(doc), (path.name,link)
@@ -73,7 +80,7 @@ def main():
     markdown = list(ROOT.glob('*.md')) + [ROOT/'internal/Documentation/README.md', ROOT.parent/'LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md']
     checked = 0
     for file in markdown:
-        text = file.read_text()
+        text = file.read_text(encoding='utf-8')
         in_code = False
         widths = []
         for line in text.splitlines():
@@ -93,7 +100,7 @@ def main():
             dest = (file.parent/unquote(url.path)).resolve() if url.path else file
             assert dest.exists(), (file.name,target)
             if url.fragment and dest.suffix == '.md':
-                assert unquote(url.fragment) in anchors(dest.read_text()), (file.name,target,'missing anchor')
+                assert unquote(url.fragment) in anchors(dest.read_text(encoding='utf-8')), (file.name,target,'missing anchor')
             if url.fragment.startswith('page=') and dest.suffix == '.pdf':
                 with fitz.open(dest) as pdf:
                     assert 1 <= int(url.fragment[5:]) <= len(pdf), (file.name,target)

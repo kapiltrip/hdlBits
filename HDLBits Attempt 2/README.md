@@ -2,9 +2,9 @@
 
 **The questions behind the code - study notes by Kapil Tripathi.**
 
-Start with the **[document index](DOCUMENT_INDEX.md)**: find a topic, browse all 12 PDFs, or jump to the answer pages for any of the 45 tracker entries with discussion links. Each PDF has a reading cover, clickable contents, section and entry bookmarks, and consistent page numbering.
+Start with the **[document index](DOCUMENT_INDEX.md)**: find a topic, browse all 13 PDFs, or jump to the answer pages for any of the 49 tracker entries with discussion links. Each PDF has a reading cover, clickable contents, section and entry bookmarks, and consistent page numbering.
 
-Use the [tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) for problem order and progress. As of the saved 7 September 2026 checkpoint, it records **155 Done and 23 Pending out of 178 entries**. The [review record](DOCUMENT_REVIEW.md) documents earlier technical corrections and the current presentation checks.
+Use the [tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) for problem order and progress. As of the saved 8 September 2026 checkpoint, it records **170 Done and 8 Pending out of 178 entries**. The [review record](DOCUMENT_REVIEW.md) documents earlier technical corrections and the current presentation checks.
 
 The [LinkedIn posting plan](../LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md) contains the proposed 10-day series, draft captions, document choices and review checklist.
 
@@ -26,6 +26,7 @@ Note numbers identify this collection; they are separate from tracker entries an
 | 10 | [FSM widths and counter connections](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf) | 7 |
 | 11 | [Wire, reg and reset behavior](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 6 |
 | 12 | [Missing assignments and the 1101 FSM](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf) | 6 |
+| 13 | [K-map operators, Boolean forms and cellular automata](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf) | 9 |
 
 The [Day 5 Markdown review](HDLBits_Day5_Original_Submissions_Review.md) has its own entry index and remains the destination of its existing tracker links.
 
@@ -37,8 +38,10 @@ For a LinkedIn document attachment, use the title on the PDF cover. These are fu
 
 ## Verification
 
-The [document review](DOCUMENT_REVIEW.md) separates earlier local RTL simulations from the current checks of PDF content, links, page references and layout. The indexing update preserves the original technical pages and all progress statuses. It updates only the two Day 9 page labels in the tracker to match the additional contents page.
+The [document review](DOCUMENT_REVIEW.md) separates earlier local RTL simulations from the current checks of PDF content, links, page references and layout. The indexing update preserves the earlier technical body pages while rebuilding consistent covers and navigation. In the current tracker update, only entries 168 and 172 changed status; entries 161, 164, 168 and 172 now link to their exact pages in the combined Day 10 note.
 
 ## Completion records
 
-The HDLBits website is the authority for platform acceptance. Earlier checkpoints support entries 1-98; Kapil's explicit current-pass completion reports support entries 99-122, with matching Chrome tabs and saved-success records used as evidence. Entries 124-127 and 129-130 are supported by their current Chrome simulation result panels inspected on 5 September 2026; entries 123, 128, 131, 132, 134-140, and 142-144 by their current success panels inspected on 6 September 2026; and entries 133, 146-150, and 152-158 by their current success panels inspected on 7 September 2026. Local simulation is a separate check and was run only where source or a reusable testbench is preserved in this directory; it is not claimed as a local rerun of all accepted submissions. Entries 141, 145, 151, and 159-178 remain Pending.
+On 8 September, entries **167, 169, 173, 174, and 178** were marked Done after Kapil identified these exact second-attempt completions and their latest saved submissions were verified as successful on 7 September. Later, entries **171 and 176** were marked Done after Kapil's explicit completion report: Always_casez had a saved success dated 7 September, and Always_nolatches showed a current `Status: Success!` result panel. Entries **168 (Rule 90)** and **172 (Rule 110)** were then marked Done after their current compile-and-simulate panels were rechecked and showed `Status: Success!`. These updates supersede their Pending status in the earlier checkpoint below. Entries **141, 145, 151, 165, 166, 170, 175, and 177** remain Pending.
+
+The HDLBits website is the authority for platform acceptance. Earlier checkpoints support entries 1-98; Kapil's explicit current-pass completion reports support entries 99-122, with matching Chrome tabs and saved-success records used as evidence. Entries 124-127 and 129-130 are supported by their current Chrome simulation result panels inspected on 5 September 2026; entries 123, 128, 131, 132, 134-140, and 142-144 by their current success panels inspected on 6 September 2026; entries 133, 146-150, 152-164 by their current success panels inspected on 7 September 2026; and entries 168 and 172 by their current success panels rechecked on 8 September 2026. Local simulation is a separate check and was run only where source or a reusable testbench is preserved in this directory; it is not claimed as a local rerun of all accepted submissions. Entries 141, 145, 151, 165, 166, 170, 175, and 177 remain Pending. Historical first-attempt successes do not establish second-attempt completion.

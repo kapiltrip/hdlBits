@@ -14,17 +14,69 @@ Added [Day 9 discussion](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf), with lin
 
 Local Icarus checks passed for all eight Always_if2 input combinations, shutdown recovery and the arrival latch trace. The cleaned recognizer passed all 4,096 twelve-bit streams against a sliding-window reference, plus sticky detection and synchronous reset checks. All five PDF pages and the updated tracker views were rendered and visually checked. The workbook comparison found only the four requested status cells, their discussion cells and the two progress totals changed; unrelated workbook package parts were preserved.
 
+## Entries 159-162 and the Kmap4 operator note - 7 September 2026
+
+Marked entries 159-162 Done after inspecting each current Chrome result panel and confirming `Status: Success!`: Shift register, FSM: Enable shift register, Kmap4, and Case statement.
+
+Entry 161 is now covered on [Note 13, pp. 2-3](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=2). It explains that `|` is Verilog OR, `+` is arithmetic addition, and a paper Boolean-algebra `+` must be translated to `|` in Verilog. The source screenshot and a small `1 | 1` versus `1 + 1` comparison make the distinction concrete. An exhaustive 16-row check also explains the subtle point: `+` can accidentally match this exact expression because its four product terms are mutually exclusive, but it still communicates the wrong operation.
+
+## Entry 163 - 7 September 2026
+
+Marked entry 163, 3-input LUT, Done after inspecting its current Chrome result panel and confirming `Status: Success!`.
+
+## Entry 164 and the SOP/POS note - 7 September 2026
+
+Marked entry 164, Minimum SOP and POS, Done after inspecting its current Chrome result panel and confirming `Status: Success!`. The tracker now records **161 Done and 17 Pending**.
+
+Entry 164 is now covered on [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4). The note defines SOP, POS and De Morgan's law, explains why each is needed, and applies them to the accepted expressions. It explicitly separates the distributive-law step used to convert the accepted SOP to POS from De Morgan's law. It also corrects an imprecise sentence from the earlier short note: SOP is derived by grouping output-1 cells and POS by grouping output-0 cells, but both forms implement the same Boolean function.
+
+## Correction to the later Day 10 update - 7 September 2026
+
+Reverted the incorrect completion marks for entries 165 and 167-178 and cleared the added `No questions asked` text. The inspected `Last success` dates belonged to earlier work and did not prove second-attempt completion. The tracker is restored to **161 Done and 17 Pending**. Entries 141, 145, 151, and 165-178 remain Pending until second-attempt completion is established.
+
 ## Publication and indexing update
 
-All **12 study PDFs** now use a consistent cover and reading index, author attribution, section and tracker-entry bookmarks, clickable contents rows, and **Contents / All notes** links on every page. The collection has **121 pages**. The [document index](DOCUMENT_INDEX.md) adds topic routes and an exact mapping for all **45 linked tracker entries**, including entries 155 and 158 that were missing from the earlier detailed review table.
+### Five confirmed second-attempt completions - 8 September 2026
 
-Nine existing cover pages were replaced. The Day 5 submission review, Day 8 notes and Day 9 notes each gained one contents page because their original first pages contain technical material. Those three PDFs therefore use old page + 1; the other nine keep their original page numbers. The posting plan, Markdown indexes, Day 9 internal page reference and the tracker's two Day 9 page labels have been updated together. Progress, problem ordering and completion evidence are unchanged.
+Kapil explicitly identified these five problems as completed on the second attempt. Their latest saved successes are dated 7 September 2026, later than each respective last non-success. Times below are displayed by Chrome.
+
+| Entry | Problem | Last successful submission |
+|---|---|---|
+| 167 | Always_case2 — Priority encoder | 7 September 2026, 9:34:45 PM |
+| 169 | Exams/m2014_q3 — Karnaugh map | 7 September 2026, 9:36:41 PM |
+| 173 | Exams/2012_q1g — Karnaugh map | 7 September 2026, 9:27:15 PM |
+| 174 | Tb/tff — T flip-flop | 7 September 2026, 9:45:11 PM |
+| 178 | Exams/ece241_2014_q3 — K-map implemented with a multiplexer | 7 September 2026, 10:37:02 PM |
+
+Only these five entries were marked Done, bringing the tracker to **166 Done and 12 Pending**.
+
+### Two further second-attempt completions - 8 September 2026
+
+Kapil explicitly identified Always_casez and Always_nolatches as complete. Entry 171, Priority encoder with casez, had a saved success displayed as 7 September 2026, 9:41:14 PM, newer than its last non-success on 24 June. Entry 176, Avoiding latches, showed `Status: Success!` in its current compile-and-simulate result panel. Its previous-submission dropdown still displayed June dates, so the current result panel, not that old saved-success label, was used as evidence.
+
+Only entries 171 and 176 were changed from Pending to Done in this update. The tracker now records **168 Done and 10 Pending**. Existing problem links and other entry statuses were preserved.
+
+### Rules 90 and 110 completion and Day 10 consolidation - 8 September 2026
+
+Entry 168, Rule 90, was marked Done after its current compile-and-simulate panel was rechecked and showed `Status: Success!`. The exact editor code uses a combinational `nextVal` vector and a clocked `q` register.
+
+Entry 172, Rule 110, was then marked Done after its current compile-and-simulate panel was rechecked and also showed `Status: Success!`. Its accepted code and the successful seed-1 trace were used to preserve the important vector direction: `q[i+1]` is the left neighbour and `q[i-1]` is the right neighbour in that implementation.
+
+The two short Day 10 PDFs were replaced by one nine-page [K-map operators, Boolean forms and cellular automata](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf). Pages 6-7 explain Rule 90's XOR neighbourhood rule, zero-valued boundaries, simultaneous state update, and why `nextVal` was used. `nextVal` is the combinational candidate for the next 512-bit generation; `q` stores the current generation. It is helpful for the chosen current-state/next-state structure and waveform debugging, but is not mathematically required: the same XOR network can be written directly in the clocked assignment without adding another cycle or register bank. Pages 8-9 derive the accepted Rule 110 expression, explain its asymmetric neighbour direction and reduce both boundary assignments from the same truth-table rule.
+
+This update brings the tracker to **170 Done and 8 Pending**. Only entries 168 and 172 were newly closed in this combined update; every other Pending entry was left unchanged. The combined note now holds the related short explanations for entries 161, 164, 168 and 172 in one reader-facing document.
+
+### Earlier publication checks
+
+All **13 study PDFs** now use a consistent cover and reading index, author attribution, section and tracker-entry bookmarks, clickable contents rows, and **Contents / All notes** links on every page. The collection has **130 pages**. The [document index](DOCUMENT_INDEX.md) adds topic routes and an exact mapping for all **49 linked tracker entries**, including entries 161, 164, 168 and 172 in the combined Day 10 note.
+
+Nine existing cover pages were replaced. The Day 5 submission review, Day 8 notes, Day 9 notes and combined Day 10 note each use an added contents page because their original first pages contain technical material. The Day 10 note has two answer pages per topic: Kmap4 at pages 2-3, SOP/POS at pages 4-5, Rule 90 at pages 6-7, and Rule 110 at pages 8-9. The posting plan, Markdown indexes, Day 9 internal page reference and tracker discussion labels remain aligned with the displayed PDF pages.
 
 The original body text, code, diagrams, source links and historical submission records were retained. Two overlong Day 5 verification-log lines were wrapped inside the page margins. The Day 5 Markdown review gained direct section links; literal operator pipes in its tables are escaped so GitHub keeps the columns aligned. Its PDF introduction now points readers to the Markdown companion correctly.
 
 Fonts are embedded throughout the collection. A second renderer exposed substitution and spacing problems with the original unembedded fonts; embedding corrected that display while keeping text searchable. The embedding pass checks that text, bookmarks and link destinations survive, and does not downsample images.
 
-Validation passed for all **190 bookmarks**, **182 internal PDF links**, **45 tracker mappings** and **208 local Markdown links**. The 109 technical body pages were checked for content and source-link preservation; intentional prose edits correct navigation references and explicitly label the older Day 5 progress count as historical. The tracker's only changed cells are `E160` and `E163`; every other cell and workbook package part is preserved. Covers and selected code, diagram and table pages were rendered for visual inspection. These are document checks, separate from the earlier RTL test results below. No new HDLBits acceptance or complete RTL rerun is claimed.
+Validation passed for all **205 bookmarks**, **195 internal PDF links**, **49 tracker mappings** and **225 local Markdown links** across the rebuilt 13-PDF collection. Every combined-note page and all 13 collection covers were rendered with Poppler and visually inspected; the duplicate-footer-link check also requires exactly one Contents link and one All notes link on every page. For this combined update, workbook edits are limited to the two summary totals, status cells for entries 168 and 172, and combined-note links for entries 161, 164, 168 and 172 (`B3`, `D3`, `D173`, `D177`, `E166`, `E169`, `E173`, and `E177`). No other status cell was changed. These are document and tracker checks, separate from the earlier RTL test results below. The current HDLBits success panels are used as acceptance evidence for entries 168 and 172; no complete local RTL rerun is claimed.
 
 The reproducible builder and maintenance instructions are in [internal/Documentation](internal/Documentation/README.md).
 
@@ -91,12 +143,18 @@ The [document index](DOCUMENT_INDEX.md#find-a-tracker-entry) is the main entry l
 | 129 | Day 8 | Adder 2 | [Note 11, pp. 2-3](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=2) |
 | 155 | Day 9 | FSM: Sequence 1101 recognizer | [Note 12, pp. 5-6](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=5) |
 | 158 | Day 9 | If statement latches | [Note 12, pp. 2-4](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=2) |
+| 161 | Day 10 | 4-variable | [Note 13, pp. 2-3](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=2) |
+| 164 | Day 10 | Minimum SOP and POS | [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4) |
+| 168 | Day 10 | Rule 90 | [Note 13, pp. 6-7](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=6) |
+| 172 | Day 10 | Rule 110 | [Note 13, pp. 8-9](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=8) |
 
 ## What was tested
 
 The saved Icarus tests passed for entries 74, 75, 77, 80-85, 87, 89 and 90. The HDLC source passed 1,022 post-edge reference checks. The serial-loop test reproduced the original one-edge failure and checked the eight-edge capture. The original Mealy trace reproduced the early discard pulse.
 
 Additional tests used code extracted from the revised PDFs: 131,072 mux selections, 1,000 randomized byte reversals, 100 back-to-back PS/2 packets, a full 86,400-second clock cycle with reset/enable checks, and falls from 19 through 70 cycles. Odd-parity arithmetic was checked for all 256 bytes and both parity choices.
+
+For the combined Day 10 note, all 16 Kmap4 input combinations were checked against four-input parity and for mutual exclusivity of the submitted product terms. The entry 164 SOP and POS were compared for all 16 inputs and checked against every specified 0/1 row. Rule 90's eight neighbourhoods and the loop/vector implementations were compared on representative 512-bit states, including both boundaries. Rule 110's accepted expression was checked against all eight neighbourhoods, both boundary reductions and the ten-value seed-1 trace shown by the successful HDLBits simulation.
 
 These are local RTL/example checks. Complete historical submissions are not saved for every tracker entry, so this review does not claim to have rerun all 151 completed problems or searched unsaved editor comments. The water-level snippet is conceptual. Vendor DDR examples still require the selected device's libraries and timing constraints for implementation checks.
 
@@ -106,5 +164,6 @@ These are local RTL/example checks. Complete historical submissions are not save
 - [Lemmings 4](https://hdlbits.01xz.net/wiki/Lemmings4).
 - [Serial receiver](https://hdlbits.01xz.net/wiki/Fsm_serial), [datapath](https://hdlbits.01xz.net/wiki/Fsm_serialdata), and [parity](https://hdlbits.01xz.net/wiki/Fsm_serialdp).
 - [BCD clock](https://hdlbits.01xz.net/wiki/Count_clock), [counter 1-12](https://hdlbits.01xz.net/wiki/Exams/ece241_2014_q7a), and [water-level FSM](https://hdlbits.01xz.net/wiki/Exams/ece241_2013_q4).
+- [Kmap4](https://hdlbits.01xz.net/wiki/Kmap4), [minimum SOP and POS](https://hdlbits.01xz.net/wiki/Exams/ece241_2013_q2), [Rule 90](https://hdlbits.01xz.net/wiki/Rule90), and [Rule 110](https://hdlbits.01xz.net/wiki/Rule110).
 
 The edge-detector example was checked against [the official 8-bit interface](https://hdlbits.01xz.net/wiki/Edgedetect) and kept at its correct width.
