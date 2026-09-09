@@ -74,9 +74,18 @@ def main():
             pages += len(doc)
             bookmarks += len(toc)
     assert mapped == {n for n,r in rows.items() if str(r['discussion']).startswith('=HYPERLINK(')}
-    # The only tracker labels with explicit page ranges must match their PDFs.
-    assert '(pp. 5-6)' in rows[155]['discussion']
+    # Current discussion labels that display the newest answer-page references.
+    assert '(pp. 3-6)' in rows[141]['discussion']
+    assert '(pp. 7-9)' in rows[145]['discussion']
+    assert '(pp. 10-11)' in rows[151]['discussion']
+    assert '(pp. 2-7)' in rows[177]['discussion']
+    assert '(p. 3)' in rows[144]['discussion']
+    assert '(pp. 4-5)' in rows[149]['discussion']
+    assert '(p. 6)' in rows[155]['discussion']
     assert '(pp. 2-4)' in rows[158]['discussion']
+    assert '(p. 7)' in rows[160]['discussion']
+    assert '(pp. 8-11)' in rows[165]['discussion']
+    assert '(pp. 12-15)' in rows[170]['discussion']
     markdown = list(ROOT.glob('*.md')) + [ROOT/'internal/Documentation/README.md', ROOT.parent/'LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md']
     checked = 0
     for file in markdown:

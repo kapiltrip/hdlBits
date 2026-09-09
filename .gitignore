@@ -3,6 +3,9 @@
 **/internal/tmp/
 **/node_modules/
 *.inspect.ndjson
+.codex-artifact/
+.codex_tmp/
+**/__pycache__/
 
 # Microsoft Office lock files
 ~$*.xlsx

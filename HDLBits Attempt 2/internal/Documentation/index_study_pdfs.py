@@ -144,7 +144,7 @@ DOCS = [
          [(1, "Entry 158: complete combinational assignments", "1"), (2, "The missing else and a latch timing trace", "2"),
           (3, "Defaults, Boolean forms and operator details", "3"), (4, "Entry 155: complete 1101 recognizer RTL", "4"),
           (5, "State meanings, overlap and sticky detection", "5")],
-         ["Complete combinational assignments", "Missing else and latch trace", "Defaults and Boolean alternatives", "Complete 1101 recognizer", "Five states, overlap and sticky detection"], {155:"4-5",158:"1-3"}, True),
+         ["Complete combinational assignments", "Missing else and latch trace", "Defaults and Boolean alternatives", "Complete 1101 recognizer", "Five states, overlap and sticky detection"], {158:"1-3"}, True),
     spec("HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf", "K-map operators, Boolean\nforms and cellular automata",
          "Connect four Day 10 questions: operator intent in Kmap4, equivalent SOP/POS forms, and simultaneous next-state logic in Rules 90 and 110.",
          "Use | to combine Boolean alternatives, derive SOP from 1-cells and POS from 0-cells, and keep each automaton's current state separate from its next state.",
@@ -157,6 +157,58 @@ DOCS = [
           "One whole generation changes at a time", "Why nextVal is used - and whether it is required",
           "Rule 110 uses left, center and right", "Why the Rule 110 expression works"],
          {161:"1-2", 164:"3-4", 168:"5-6", 172:"7-8"}, True),
+    spec("HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf", "Timer-series FSMs and\nnext-state timing",
+         "Build the Review 2015 timer from its counter, shift register and controller, with a precise guide to state, next_state, nonblocking assignments and register ownership.",
+         "Use state for work belonging to the current phase. Use next_state only for an intentional reaction to the chosen transition; use both to detect a one-edge entry or exit.",
+         [(1, "Series map and questions answered", "1"),
+          (2, "Entry 144: the 0-to-999 timing primitive", "2"),
+          (3, "Entry 149: MSB-first shift/down datapath", "3-4"),
+          (5, "Entry 155: 1101 recognition and transition timing", "5"),
+          (6, "Entry 160: four-cycle enable and multiple drivers", "6"),
+          (7, "Entry 165: the complete controller", "7-8"),
+          (9, "When a clocked block should inspect state or next_state", "9-10"),
+          (11, "Entry 170: capture and exact timer duration", "11-14")],
+         ["One timer, six connected ideas", "Count 0 through 999, then wrap",
+          "MSB-first input still shifts toward the MSB", "Two true enables: the last assignment wins",
+          "The repeated question that unlocks the series", "Exactly four cycles, with one owner per register",
+          "Search, capture, count, notify, acknowledge", "Yes, the capture counter must be re-armed",
+          "state is now; next_state is the chosen destination", "When to use state, next_state, or both",
+          "The fourth bit uses old delay plus current data", "Two nested counters implement (delay + 1) x 1000",
+          "Controller and next-state logic", "Datapath, outputs and a final audit"],
+         {144:"2", 149:"3-4", 155:"5", 160:"6", 165:"7-10", 170:"11-14"}, True),
+    spec("HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf", "LFSR taps, shifts and\nold-value timing",
+         "Connect the 5-bit, schematic-based 3-bit and 32-bit LFSRs through one method: derive next-bit equations from old state, translate one-based taps, then verify the cycle.",
+         "Treat every LFSR as simultaneous next-state equations. Convert tap position k to q[k-1], keep one clocked owner, and never seed an XOR-feedback LFSR with zero.",
+         [(1, "Series map and questions answered", "1"),
+          (2, "Shared LFSR model and state-space limits", "2"),
+          (3, "One-based tap positions versus Verilog indices", "3"),
+          (4, "Entry 141: five-bit Galois implementation", "4-5"),
+          (6, "Entry 145: schematic, board mapping and RTL", "6-8"),
+          (9, "Entry 151: 32-bit taps and nonblocking overrides", "9-10"),
+          (11, "Verification and debugging reference", "11")],
+         ["Three LFSRs, one translation method",
+          "An LFSR is a state machine written as bit equations",
+          "Tap position k maps to Verilog index k-1",
+          "The five-bit Galois solution", "Old values produce the 31-state cycle",
+          "Read the schematic as three D-input equations", "Load has explicit priority over feedback",
+          "Seven nonzero states prove the recurrence",
+          "The 32-bit solution is the five-bit pattern scaled up",
+          "The XORs read old q, never a partly shifted q",
+          "Use equations first, code second"],
+         {141:"2-5", 145:"6-8", 151:"9-10"}, True),
+    spec("HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf", "Conway: grid indexing\nand next-state timing",
+         "Derive row * 16 + col, wrap both coordinates, count eight old-state neighbors and advance the complete board on one clock edge.",
+         "Calculate every next cell from the same old grid. Wrap row and column separately, and let load override evolution at the rising edge.",
+         [(1, "Row/column indexing and inverse mapping", "1"),
+          (2, "Toroidal boundaries and eight neighbors", "2"),
+          (3, "Rules, old state and next-state timing", "3"),
+          (4, "Complete Verilog solution", "4"),
+          (5, "Loops, arithmetic width and storage", "5"),
+          (6, "Boundary trace and revision checks", "6")],
+         ["Why the index is row * 16 + col", "Wrap coordinates before flattening",
+          "Every cell reads the same old generation", "The complete two-process solution",
+          "What the loops and assignments mean in hardware", "Trace the boundary, then test the whole grid"],
+         {177:"1-6"}, True),
 ]
 
 
@@ -229,15 +281,25 @@ def cover(meta, number, total, shift):
 
 
 def tracker_rows():
-    workbook = openpyxl.load_workbook(ROOT / "HDLBits_Attempt_2_Tracker_Simple.xlsx", read_only=True, data_only=False)
+    # Normal mode exposes native cell hyperlinks. Formula-based hyperlinks in
+    # older rows remain supported while new discussion links use native XLSX
+    # relationships so preview engines can show their friendly text.
+    workbook = openpyxl.load_workbook(ROOT / "HDLBits_Attempt_2_Tracker_Simple.xlsx", read_only=False, data_only=False)
     rows = {}
-    for values in workbook["Tracker"].iter_rows(values_only=True):
+    for cells in workbook["Tracker"].iter_rows():
+        values = [cell.value for cell in cells]
         if not values or not isinstance(values[0], int):
             continue
         n, day, problem, status, discussion = values
+        problem_link = cells[2].hyperlink.target if cells[2].hyperlink else None
+        if problem_link:
+            problem = f'=HYPERLINK("{problem_link}","{problem}")'
         match = re.fullmatch(r'=HYPERLINK\("([^"]+)","([^"]+)"\)', problem)
         if not match:
             raise ValueError(f"Unexpected problem formula for {n}")
+        discussion_link = cells[4].hyperlink.target if cells[4].hyperlink else None
+        if discussion_link:
+            discussion = f'=HYPERLINK("{discussion_link}","{discussion}")'
         rows[n] = dict(day=day, problem=match[2], url=match[1], status=status, discussion=discussion)
     workbook.close()
     return rows
@@ -414,7 +476,10 @@ def embed_fonts(source, destination):
 
 
 def write_index(rows, results):
-    mapping_count = sum(len(meta["entries"]) for meta in DOCS)
+    # Entry 155 is intentionally discussed in both Note 12 and Note 14.  Count
+    # unique tracker destinations while allowing the newer series note to be
+    # the primary lookup target below.
+    mapping_count = len({n for meta in DOCS for n in meta["entries"]})
     text = f"""# HDLBits Attempt 2 - document index
 
 **Kapil Tripathi | Verilog and digital design**
@@ -444,6 +509,14 @@ def write_index(rows, results):
         ("What are SOP, POS and De Morgan's law, and why do I need them?",12,"4-5"),
         ("Why did I use nextVal in Rule 90, and is it required?",12,"6-7"),
         ("How does the Rule 110 expression match its truth table?",12,"8-9"),
+        ("When should a clocked block inspect state, next_state, or both?",13,"10-11"),
+        ("Why does assign plus a clocked assignment create multiple drivers?",13,"7"),
+        ("How do four captured bits become an exact (delay + 1) x 1000 timer?",13,"12-15"),
+        ("Why does tap position k become Verilog bit q[k-1]?",14,"4-6"),
+        ("Why do nonblocking LFSR assignments all read old q?",14,"5-11"),
+        ("How do I translate the Mt2015 LFSR schematic into RTL?",14,"7-9"),
+        ("Why is Conway's cell index row * 16 + col, and how do boundaries wrap?",15,"2-3"),
+        ("Why does Conway calculate next_q before the clocked q update?",15,"4-7"),
         ("Which small mistakes explain sticky capture and one-hot encoding?",6,"5-7"),
     ]
     for question, i, pages in questions:
@@ -497,7 +570,7 @@ def main():
     results = [build_pdf(meta,i,rows) for i,meta in enumerate(DOCS,1)]
     write_index(rows,results)
     (WORK/"build_summary.json").write_text(json.dumps(results,indent=2))
-    mapping_count = sum(len(meta["entries"]) for meta in DOCS)
+    mapping_count = len({n for meta in DOCS for n in meta["entries"]})
     print(f"Indexed {len(results)} PDFs, {sum(r['pages'] for r in results)} pages and {mapping_count} linked tracker entries.")
 
 

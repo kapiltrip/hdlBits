@@ -1,5 +1,11 @@
 # Attempt 2 document review
 
+## Final completion checkpoint - 9 September 2026
+
+The saved tracker now records **178 Done, 0 Pending**. Kapil explicitly confirmed Testbench2 (entry 166) and the entire second attempt complete. Chrome's latest stored successful Testbench2 submission, dated **28 June 2026 at 11:14:42 PM**, was loaded and its complete code inspected. It is later than the last non-success at **11:14:00 PM** on that date. The saved record verifies an accepted implementation; Kapil's present confirmation establishes the current-pass completion. No new submission was made, and the June date is not presented as September evidence. Entry 166 now reads Done / No questions asked. Earlier counts below are historical checkpoints.
+
+The accepted testbench starts clk at 0 and toggles it every five time units. The in/s pairs are 0/2 at time 0, 0/6 at 10, 1/2 at 20, 0/7 at 30, 1/0 at 40 and 0/0 at 70. It instantiates q7 with named clk, in, s and out connections.
+
 Reviewed on 7 September 2026 against the saved tracker, all ten existing PDFs, the Day 5 Markdown review, the available Verilog and testbenches, and the relevant HDLBits problem statements.
 
 At the initial review checkpoint, the tracker had 178 entries: 151 Done and 27 Pending. All 43 document links resolved to existing files and led to material for the matching entry. Of these links, 38 opened PDFs and five opened the Day 5 Markdown review. A PDF version of that review was added too. The remaining 108 completed entries said `No questions asked`; pending entries did not require invented question notes.
@@ -66,21 +72,43 @@ The two short Day 10 PDFs were replaced by one nine-page [K-map operators, Boole
 
 This update brings the tracker to **170 Done and 8 Pending**. Only entries 168 and 172 were newly closed in this combined update; every other Pending entry was left unchanged. The combined note now holds the related short explanations for entries 161, 164, 168 and 172 in one reader-facing document.
 
+### Review 2015 timer series and next-state timing - 9 September 2026
+
+Added the fifteen-page [timer-series FSM and next-state note](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf). It treats entries 144, 149, 155, 160, 165 and 170 as one learning sequence: the period-1000 counter; the MSB-first shift/down register; 1101 recognition; an exact four-cycle shift enable; the complete controller; and the complete timer. Entry 155 is intentionally explained again even though Note 12 already contains a cleanup, because the transition out of 1101 recognition determines when the following delay bits begin.
+
+Pages 3-7 cover the component exercises, including four-bit underflow, two nonblocking assignments in one process, the `next_state` question from the 1101 recognizer, and why a continuous `assign count = 0` would conflict with the clocked owner of `count`. Pages 8-11 build the full controller and give a precise decision table for using `state`, `next_state`, or both inside clocked logic. Pages 12-15 trace fourth-bit capture, derive the exact `(delay + 1) * 1000` duration, explain what `count` represents, and provide a complete reference implementation.
+
+The current HDLBits result panels for entries 165, 170 and 175 showed `Status: Success!`, so those three statuses were changed from Pending to Done. Entry 175, the basic one-hot-equations exercise, is deliberately not part of the PDF and is recorded as `No questions asked`. The tracker now records **173 Done and 5 Pending**; entries 141, 145, 151, 166 and 177 remain Pending.
+
+The note builder checks the 998,999,0,1 counter boundary, MSB-first capture of 1001, four-bit decrement underflow, recognition of 1101, the incorrect delay value caused by consuming the recognizer's final bit, and every delay from 0 through 15 for exact duration and 1000-cycle output plateaus. These model checks support the explanations; the successful HDLBits panels remain the authority for exercise acceptance.
+
 ### Earlier publication checks
 
-All **13 study PDFs** now use a consistent cover and reading index, author attribution, section and tracker-entry bookmarks, clickable contents rows, and **Contents / All notes** links on every page. The collection has **130 pages**. The [document index](DOCUMENT_INDEX.md) adds topic routes and an exact mapping for all **49 linked tracker entries**, including entries 161, 164, 168 and 172 in the combined Day 10 note.
+All **14 study PDFs** now use a consistent cover and reading index, author attribution, section and tracker-entry bookmarks, clickable contents rows, and **Contents / All notes** links on every page. The collection has **145 pages**. The [document index](DOCUMENT_INDEX.md) adds topic routes and an exact mapping for all **54 linked tracker entries**, including the six Review 2015 series entries in Note 14.
 
-Nine existing cover pages were replaced. The Day 5 submission review, Day 8 notes, Day 9 notes and combined Day 10 note each use an added contents page because their original first pages contain technical material. The Day 10 note has two answer pages per topic: Kmap4 at pages 2-3, SOP/POS at pages 4-5, Rule 90 at pages 6-7, and Rule 110 at pages 8-9. The posting plan, Markdown indexes, Day 9 internal page reference and tracker discussion labels remain aligned with the displayed PDF pages.
+Nine existing cover pages were replaced. The Day 5 submission review, Day 8 notes, Day 9 notes, combined Day 10 note and Review 2015 timer note each use an added contents page because their original first pages contain technical material. The Day 10 note has two answer pages per topic: Kmap4 at pages 2-3, SOP/POS at pages 4-5, Rule 90 at pages 6-7, and Rule 110 at pages 8-9. Note 14's tracker labels use its final physical pages 3-15. The posting plan's historical snapshot, Markdown indexes, internal page references and current tracker discussion labels remain aligned with their stated PDF pages.
 
 The original body text, code, diagrams, source links and historical submission records were retained. Two overlong Day 5 verification-log lines were wrapped inside the page margins. The Day 5 Markdown review gained direct section links; literal operator pipes in its tables are escaped so GitHub keeps the columns aligned. Its PDF introduction now points readers to the Markdown companion correctly.
 
 Fonts are embedded throughout the collection. A second renderer exposed substitution and spacing problems with the original unembedded fonts; embedding corrected that display while keeping text searchable. The embedding pass checks that text, bookmarks and link destinations survive, and does not downsample images.
 
-Validation passed for all **205 bookmarks**, **195 internal PDF links**, **49 tracker mappings** and **225 local Markdown links** across the rebuilt 13-PDF collection. Every combined-note page and all 13 collection covers were rendered with Poppler and visually inspected; the duplicate-footer-link check also requires exactly one Contents link and one All notes link on every page. For this combined update, workbook edits are limited to the two summary totals, status cells for entries 168 and 172, and combined-note links for entries 161, 164, 168 and 172 (`B3`, `D3`, `D173`, `D177`, `E166`, `E169`, `E173`, and `E177`). No other status cell was changed. These are document and tracker checks, separate from the earlier RTL test results below. The current HDLBits success panels are used as acceptance evidence for entries 168 and 172; no complete local RTL rerun is claimed.
+Validation passed for all **227 bookmarks**, **218 internal PDF links**, **54 tracker mappings** and **241 local Markdown links** across the rebuilt 14-PDF collection. Every page of Note 14 and all 14 collection covers were rendered with Poppler for visual inspection; the duplicate-footer-link check also requires exactly one Contents link and one All notes link on every page. The current workbook's logical edits are the two summary totals; status cells for entries 165, 170 and 175; Note 14 links for entries 144, 149, 155, 160, 165 and 170; and `No questions asked` for entry 175 (`B3`, `D3`, `D170`, `D175`, `D180`, `E149`, `E154`, `E160`, `E165`, `E170`, `E175`, and `E180`). These are document and tracker checks, separate from the earlier RTL test results below.
 
 The reproducible builder and maintenance instructions are in [internal/Documentation](internal/Documentation/README.md).
 
 ## Corrections and additions
+
+### LFSR and Conway additions - 9 September 2026
+
+The current collection has **16 PDFs, 164 pages and 58 linked tracker entries**. The tracker records **177 Done and 1 Pending**; entry 166 (Testbench2) remains unconfirmed. Entries 141, 145, 151 and 177 were marked Done from their current Chrome `Status: Success!` panels, not historical first-attempt dates.
+
+[Note 15](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf) covers all three LFSRs: one-based taps, bit-index conversion, schematic and board-pin mapping, complete RTL, nonblocking old-value behavior, exact small-state cycles and the 32-bit polynomial check. [Note 16](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf) preserves the Conway editor's indexing question and discusses the complete solution: row/column flattening, toroidal neighbors, eight-neighbor counting, next-grid storage, loop execution, widths and boundary traces. The earlier timer-series note continues to cover repeated questions within the series and when a sequential block should inspect `state`, `next_state`, or both. The basic one-hot exercise remains excluded from that document as requested.
+
+All 236 tracker links (178 problem links and 58 discussion links) now use native hyperlinks and friendly blue text. Existing destinations and labels are preserved, apart from the new LFSR/Conway discussion labels. Long discussion text wraps within its cell. The saved workbook was reimported and visually checked at the beginning, middle, LFSR rows and end; its formula-error and hyperlink-fallback scan found no matches. Structure, validation, panes and unrelated cell values were compared with the pre-edit workbook.
+
+All 19 pages of the two new notes and all collection covers were rendered with Poppler and visually checked. The collection checker validates the 254 bookmarks, 250 internal PDF links, 58 tracker mappings, embedded fonts, page boundaries, footer links and local Markdown destinations. The prior 14-PDF figures above remain the historical timer checkpoint.
+
+The LFSR builder checks the 31-state and seven-state cycles, first 32-bit transition and primitive-polynomial order. The saved Conway RTL passed **1,638 post-edge full-grid Icarus checks**, including all 512 center/neighbor patterns, 100 random five-generation runs, still-life and seam-crossing oscillator patterns, loading priority, consecutive loads and no state change between clock edges. These checks are separate from platform acceptance.
 
 - Corrected the entry 13 mux polarity: `sel=0` selects `a`, and `sel=1` selects `b`. Updated the code and truth table together.
 - Expanded entry 30's explanation of why carry signals are wires, and corrected the Norgate row's description to two-input NOR.
@@ -141,12 +169,21 @@ The [document index](DOCUMENT_INDEX.md#find-a-tracker-entry) is the main entry l
 | 123 | Day 7 | 12-hour clock | [Note 11, pp. 5-6](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=5) |
 | 127 | Day 8 | 4-bit shift register | [Note 11, pp. 4](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=4) |
 | 129 | Day 8 | Adder 2 | [Note 11, pp. 2-3](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=2) |
-| 155 | Day 9 | FSM: Sequence 1101 recognizer | [Note 12, pp. 5-6](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=5) |
+| 141 | Day 8 | 5-bit LFSR | [Note 15, pp. 3-6](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=3) |
+| 144 | Day 9 | Counter with period 1000 | [Note 14, p. 3](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=3) |
+| 145 | Day 9 | 3-bit LFSR | [Note 15, pp. 7-9](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=7) |
+| 149 | Day 9 | 4-bit shift register and down counter | [Note 14, pp. 4-5](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=4) |
+| 151 | Day 9 | 32-bit LFSR | [Note 15, pp. 10-11](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=10) |
+| 155 | Day 9 | FSM: Sequence 1101 recognizer | [Note 14, p. 6](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=6) |
 | 158 | Day 9 | If statement latches | [Note 12, pp. 2-4](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=2) |
+| 160 | Day 9 | FSM: Enable shift register | [Note 14, p. 7](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=7) |
 | 161 | Day 10 | 4-variable | [Note 13, pp. 2-3](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=2) |
 | 164 | Day 10 | Minimum SOP and POS | [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4) |
+| 165 | Day 10 | FSM: The complete FSM | [Note 14, pp. 8-11](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=8) |
 | 168 | Day 10 | Rule 90 | [Note 13, pp. 6-7](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=6) |
+| 170 | Day 10 | The complete timer | [Note 14, pp. 12-15](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=12) |
 | 172 | Day 10 | Rule 110 | [Note 13, pp. 8-9](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=8) |
+| 177 | Day 10 | Conway's Game of Life 16x16 | [Note 16, pp. 2-7](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf#page=2) |
 
 ## What was tested
 
@@ -156,14 +193,19 @@ Additional tests used code extracted from the revised PDFs: 131,072 mux selectio
 
 For the combined Day 10 note, all 16 Kmap4 input combinations were checked against four-input parity and for mutual exclusivity of the submitted product terms. The entry 164 SOP and POS were compared for all 16 inputs and checked against every specified 0/1 row. Rule 90's eight neighbourhoods and the loop/vector implementations were compared on representative 512-bit states, including both boundaries. Rule 110's accepted expression was checked against all eight neighbourhoods, both boundary reductions and the ten-value seed-1 trace shown by the successful HDLBits simulation.
 
+For the Review 2015 timer note, executable model checks cover the period-1000 boundary, four-bit serial order and underflow, 1101-to-capture transition, the state-versus-next-state delay-bit counterexample, and all sixteen legal delay values. Each value is held for exactly 1000 modeled counting cycles, including the final zero block.
+
 These are local RTL/example checks. Complete historical submissions are not saved for every tracker entry, so this review does not claim to have rerun all 151 completed problems or searched unsaved editor comments. The water-level snippet is conceptual. Vendor DDR examples still require the selected device's libraries and timing constraints for implementation checks.
 
 ## Sources for the corrections
+
+- [5-bit LFSR](https://hdlbits.01xz.net/wiki/Lfsr5), [3-bit LFSR circuit](https://hdlbits.01xz.net/wiki/Mt2015_lfsr), [32-bit LFSR](https://hdlbits.01xz.net/wiki/Lfsr32), and [Conway's Game of Life](https://hdlbits.01xz.net/wiki/Conwaylife).
 
 - [HDLBits two-input mux](https://hdlbits.01xz.net/wiki/Bugs_mux2) and [four-input mux](https://hdlbits.01xz.net/wiki/Bugs_mux4).
 - [Lemmings 4](https://hdlbits.01xz.net/wiki/Lemmings4).
 - [Serial receiver](https://hdlbits.01xz.net/wiki/Fsm_serial), [datapath](https://hdlbits.01xz.net/wiki/Fsm_serialdata), and [parity](https://hdlbits.01xz.net/wiki/Fsm_serialdp).
 - [BCD clock](https://hdlbits.01xz.net/wiki/Count_clock), [counter 1-12](https://hdlbits.01xz.net/wiki/Exams/ece241_2014_q7a), and [water-level FSM](https://hdlbits.01xz.net/wiki/Exams/ece241_2013_q4).
 - [Kmap4](https://hdlbits.01xz.net/wiki/Kmap4), [minimum SOP and POS](https://hdlbits.01xz.net/wiki/Exams/ece241_2013_q2), [Rule 90](https://hdlbits.01xz.net/wiki/Rule90), and [Rule 110](https://hdlbits.01xz.net/wiki/Rule110).
+- Review 2015 timer series: [period-1000 counter](https://hdlbits.01xz.net/wiki/Exams/review2015_count1k), [shift/down register](https://hdlbits.01xz.net/wiki/Exams/review2015_shiftcount), [1101 recognizer](https://hdlbits.01xz.net/wiki/Exams/review2015_fsmseq), [four-cycle enable](https://hdlbits.01xz.net/wiki/Exams/review2015_fsmshift), [complete controller](https://hdlbits.01xz.net/wiki/Exams/review2015_fsm), and [complete timer](https://hdlbits.01xz.net/wiki/Exams/review2015_fancytimer).
 
 The edge-detector example was checked against [the official 8-bit interface](https://hdlbits.01xz.net/wiki/Edgedetect) and kept at its correct width.

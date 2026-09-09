@@ -2,7 +2,7 @@
 
 **Kapil Tripathi | Verilog and digital design**
 
-13 study PDFs explain the questions behind this second pass through HDLBits. Start with a topic below, browse the collection, or jump to one of the **49 tracker entries with discussion links**. These are study notes based on HDLBits exercises; the original problem statements belong to HDLBits.
+16 study PDFs explain the questions behind this second pass through HDLBits. Start with a topic below, browse the collection, or jump to one of the **58 tracker entries with discussion links**. These are study notes based on HDLBits exercises; the original problem statements belong to HDLBits.
 
 [Browse all PDFs](#the-complete-collection) · [Find an entry](#find-a-tracker-entry) · [Tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) · [Review record](DOCUMENT_REVIEW.md) · [LinkedIn plan](../LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md)
 
@@ -25,6 +25,14 @@
 - **What are SOP, POS and De Morgan's law, and why do I need them?** [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4).
 - **Why did I use nextVal in Rule 90, and is it required?** [Note 13, pp. 6-7](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=6).
 - **How does the Rule 110 expression match its truth table?** [Note 13, pp. 8-9](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=8).
+- **When should a clocked block inspect state, next_state, or both?** [Note 14, pp. 10-11](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=10).
+- **Why does assign plus a clocked assignment create multiple drivers?** [Note 14, pp. 7](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=7).
+- **How do four captured bits become an exact (delay + 1) x 1000 timer?** [Note 14, pp. 12-15](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=12).
+- **Why does tap position k become Verilog bit q[k-1]?** [Note 15, pp. 4-6](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=4).
+- **Why do nonblocking LFSR assignments all read old q?** [Note 15, pp. 5-11](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=5).
+- **How do I translate the Mt2015 LFSR schematic into RTL?** [Note 15, pp. 7-9](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=7).
+- **Why is Conway's cell index row * 16 + col, and how do boundaries wrap?** [Note 16, pp. 2-3](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf#page=2).
+- **Why does Conway calculate next_q before the clocked q update?** [Note 16, pp. 4-7](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf#page=4).
 - **Which small mistakes explain sticky capture and one-hot encoding?** [Note 07, pp. 5-7](HDLBits_Day5_Original_Submissions_Review.pdf#page=5).
 
 ## The complete collection
@@ -46,6 +54,9 @@ Note numbers are catalogue identifiers, separate from tracker entries and postin
 | 11 | [Wire, reg and reset behavior](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 6 | Distinguish a continuous connection from initialization, follow a carry wire, and check shift-register and BCD-clock reset. |
 | 12 | [Missing assignments and the 1101 FSM](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf) | 6 | Trace the latch created by a missing assignment, then follow a five-state recognizer with detection held until reset. |
 | 13 | [K-map operators, Boolean forms and cellular automata](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf) | 9 | Connect four Day 10 questions: operator intent in Kmap4, equivalent SOP/POS forms, and simultaneous next-state logic in Rules 90 and 110. |
+| 14 | [Timer-series FSMs and next-state timing](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf) | 15 | Build the Review 2015 timer from its counter, shift register and controller, with a precise guide to state, next_state, nonblocking assignments and register ownership. |
+| 15 | [LFSR taps, shifts and old-value timing](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf) | 12 | Connect the 5-bit, schematic-based 3-bit and 32-bit LFSRs through one method: derive next-bit equations from old state, translate one-based taps, then verify the cycle. |
+| 16 | [Conway: grid indexing and next-state timing](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf) | 7 | Derive row * 16 + col, wrap both coordinates, count eight old-state neighbors and advance the complete board on one clock edge. |
 
 Each PDF has a clickable contents page, section and tracker-entry bookmarks, embedded fonts, a consistent page counter, and **Contents / All notes** links in the footer. Text and diagrams remain searchable/vector content where present in the source. Page numbers here match the printed counter and physical PDF page.
 
@@ -100,12 +111,21 @@ Entry numbers below come from the revision tracker, not the HDLBits website's or
 | 123 | [12-hour clock](https://hdlbits.01xz.net/wiki/count_clock) | [Note 11, pp. 5-6](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=5) |
 | 127 | [4-bit shift register](https://hdlbits.01xz.net/wiki/shift4) | [Note 11, pp. 4](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=4) |
 | 129 | [Adder 2](https://hdlbits.01xz.net/wiki/module_fadd) | [Note 11, pp. 2-3](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf#page=2) |
-| 155 | [FSM: Sequence 1101 recognizer](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) | [Note 12, pp. 5-6](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=5) |
+| 141 | [5-bit LFSR](https://hdlbits.01xz.net/wiki/lfsr5) | [Note 15, pp. 3-6](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=3) |
+| 144 | [Counter with period 1000](https://hdlbits.01xz.net/wiki/exams/review2015_count1k) | [Note 14, pp. 3](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=3) |
+| 145 | [3-bit LFSR](https://hdlbits.01xz.net/wiki/mt2015_lfsr) | [Note 15, pp. 7-9](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=7) |
+| 149 | [4-bit shift register and down counter](https://hdlbits.01xz.net/wiki/exams/review2015_shiftcount) | [Note 14, pp. 4-5](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=4) |
+| 151 | [32-bit LFSR](https://hdlbits.01xz.net/wiki/lfsr32) | [Note 15, pp. 10-11](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf#page=10) |
+| 155 | [FSM: Sequence 1101 recognizer](https://hdlbits.01xz.net/wiki/exams/review2015_fsmseq) | [Note 14, pp. 6](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=6) |
 | 158 | [If statement latches](https://hdlbits.01xz.net/wiki/always_if2) | [Note 12, pp. 2-4](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf#page=2) |
+| 160 | [FSM: Enable shift register](https://hdlbits.01xz.net/wiki/exams/review2015_fsmshift) | [Note 14, pp. 7](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=7) |
 | 161 | [4-variable](https://hdlbits.01xz.net/wiki/kmap4) | [Note 13, pp. 2-3](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=2) |
 | 164 | [Minimum SOP and POS](https://hdlbits.01xz.net/wiki/exams/ece241_2013_q2) | [Note 13, pp. 4-5](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=4) |
+| 165 | [FSM: The complete FSM](https://hdlbits.01xz.net/wiki/exams/review2015_fsm) | [Note 14, pp. 8-11](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=8) |
 | 168 | [Rule 90](https://hdlbits.01xz.net/wiki/rule90) | [Note 13, pp. 6-7](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=6) |
+| 170 | [The complete timer](https://hdlbits.01xz.net/wiki/exams/review2015_fancytimer) | [Note 14, pp. 12-15](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf#page=12) |
 | 172 | [Rule 110](https://hdlbits.01xz.net/wiki/rule110) | [Note 13, pp. 8-9](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf#page=8) |
+| 177 | [Conway's Game of Life 16x16](https://hdlbits.01xz.net/wiki/conwaylife) | [Note 16, pp. 2-7](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf#page=2) |
 
 The [Day 5 Markdown review](HDLBits_Day5_Original_Submissions_Review.md) is an alternative to Note 07 and has its own section index. Its historical submission appendix preserves the original evidence and dates.
 
