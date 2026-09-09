@@ -36,6 +36,9 @@ def main():
             toc = doc.get_toc()
             assert len(toc) == len(meta['pages'])+len(meta['entries'])+3, path.name
             assert all(1 <= item[2] <= len(doc) for item in toc), path.name
+            assert toc[2:2+len(meta['pages'])] == [
+                [2,title,i+2] for i,title in enumerate(meta['pages'])
+            ], (path.name,'section bookmark labels or destinations')
             shift = int(meta['prepend'])
             destinations = [l['page'] for l in doc[0].get_links() if l['kind'] == fitz.LINK_GOTO and l['page'] != 0]
             assert destinations == [g[0]+shift-1 for g in meta['groups']], (path.name,destinations)
@@ -65,6 +68,8 @@ def main():
                 assert n not in mapped, n
                 mapped.add(n)
                 target = int(re.search(r'\d+',location)[0])+shift
+                assert [2,f"Entry {n}: {rows[n]['problem']}",target] in toc, (
+                    path.name,n,'entry bookmark destination')
                 expected = f"[Note {DOCS.index(meta)+1:02d}, pp. {shift_range(location,shift)}]({path.name}#page={target})"
                 assert expected in index, (n,expected)
                 formula = rows[n]['discussion']
@@ -73,6 +78,13 @@ def main():
                 assert (ROOT/target_file).exists(), target_file
             pages += len(doc)
             bookmarks += len(toc)
+            if 'Day9_QA' in path.name:
+                assert 'clocked FSM on page 5' in ' '.join(doc[3].get_text(sort=True).split())
+                assert 'A cleaner 1101 recognizer' in doc[4].get_text()
+            if 'Fsm_hdlc' in path.name:
+                assert any(d['fill'] and d['fill'][0]>.99
+                           and .97<d['fill'][1]<1 and .88<d['fill'][2]<.92
+                           for d in doc[7].get_drawings()), 'Missing semantic yellow state'
     assert mapped == {n for n,r in rows.items() if str(r['discussion']).startswith('=HYPERLINK(')}
     # Current discussion labels that display the newest answer-page references.
     assert '(pp. 3-6)' in rows[141]['discussion']

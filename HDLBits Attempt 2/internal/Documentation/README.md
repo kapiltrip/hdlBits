@@ -4,7 +4,7 @@ The current reading collection is built by [index_study_pdfs.py](index_study_pdf
 
 ## Rebuild
 
-Use Python with PyMuPDF, ReportLab and openpyxl available. Ghostscript (`gs` or `gswin64c`) is optional: when it is absent, the builder accepts output only after confirming that every font is already embedded. On Kapil's Codex setup, the scripts automatically add the bundled Python package directory, so the commands below also work from the normal system Python. The tracker is read only in this builder.
+Use Python with PyMuPDF, ReportLab, pypdf and openpyxl available. Ghostscript (`gs` or `gswin64c`) is optional: when it is absent, the builder accepts output only after confirming that every font is already embedded. On Kapil's Codex setup, the scripts automatically add the bundled Python package directory, so the commands below also work from the normal system Python. The tracker is read only in this builder.
 
 ```bash
 python "HDLBits Attempt 2/internal/Documentation/index_study_pdfs.py"
@@ -16,6 +16,12 @@ The PDF metadata marker identifies an already indexed file. A repeat build repla
 When Ghostscript is available, the final pass re-embeds fonts to prevent substitution and spacing differences between viewers. It uses no image-downsampling preset and verifies text, bookmarks and link destinations before accepting the result. Without Ghostscript, the generated Arial/Consolas cover and footer fonts and the preserved body fonts must already be embedded or the build stops. See the [Ghostscript PDF output documentation](https://ghostscript.readthedocs.io/en/latest/VectorDevices.html) for embedding and preservation controls.
 
 ## When a document changes
+
+The indexer calls [standardize_pdf_palette.py](standardize_pdf_palette.py) after font embedding. It changes only inventoried authored colors and decorative full-bleed top rules, preserves meaningful diagram colors, and compares text, image bytes, geometry and navigation before accepting the result. [audit_pdf_palette.py](audit_pdf_palette.py) inventories text and vector-fill colors without changing a PDF.
+
+`verify_pdf_preservation.py bc5bc09` compares the full collection with the completion commit before the presentation audit. It requires unchanged text, image bytes, page geometry, bookmarks and link destinations, allowing only the documented Day 9 page-reference correction. Use that baseline for this audit; a later content revision needs its own explicitly reviewed change set.
+
+For a full visual review, run `python "HDLBits Attempt 2/internal/Documentation/render_collection_review.py"`. This uses Poppler and Pillow to render every page and assemble numbered four-page review sheets plus a manifest under ignored `internal/tmp/collection_review_20260909/`. Inspect all pages; re-render any page changed during review. Rendered images are QA intermediates, not substitutes for the vector/searchable reader PDFs.
 
 1. Edit or regenerate the relevant technical note, keeping source references and historical evidence attached.
 2. Update its `DOCS` manifest entry: filename, title, summary, takeaway, contents groups, body-page labels and tracker-entry answer pages. The manifest's ranges use the original page numbers, before the added cover in notes marked `prepend=True`.

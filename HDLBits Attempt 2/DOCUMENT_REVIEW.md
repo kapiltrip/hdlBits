@@ -6,6 +6,18 @@ The saved tracker now records **178 Done, 0 Pending**. Kapil explicitly confirme
 
 The accepted testbench starts clk at 0 and toggles it every five time units. The in/s pairs are 0/2 at time 0, 0/6 at 10, 1/2 at 20, 0/7 at 30, 1/0 at 40 and 0/0 at 70. It instantiates q7 with named clk, in, s and out connections.
 
+## Full collection presentation audit - 9 September 2026
+
+After the completion commit, all **16 PDFs / 164 pages** were rendered with Poppler and visually inspected, including every front page and all body pages. The covers use white backgrounds, a thin navy rule, precise titles, linked contents and a consistent reading guide. Decorative teal accents and strong yellow highlights were replaced with navy or neutral gray. Blue hyperlinks and meaningful diagram/result colors were retained. In particular, the HDLC diagram's pale-yellow FLAG_PULSE state was preserved because its caption explicitly identifies it by color.
+
+The review corrected the Day 9 note's stale prose reference: its clocked FSM is now correctly identified as **page 5**, after the added cover. Code, source screenshots, technical figures and historical evidence were preserved. The palette pass checks that text, image bytes, page geometry and navigation remain unchanged. The intentional page-reference correction is separately checked and its final page was re-rendered and inspected.
+
+Navigation checks cover all **254 bookmarks, 250 internal PDF links and 58 tracker-to-document mappings**, including the actual destination page for each cover row and section/entry bookmark. Every page has one Contents link and one All notes link, and all fonts are embedded. The saved tracker was separately reopened and checked at **178 Done / 0 Pending**, with all **236 native hyperlinks** intact.
+
+The published GitHub Markdown index was opened and its next-state link resolved to the correct timer PDF with `#page=10`. GitHub then reported `Unable to render code block`; this is a preview limitation, not evidence that the PDF's contents links failed. Browser policy prevented opening a local PDF for an interactive click test. PDF destinations were therefore verified from the saved files, and layout from Poppler renders. Open the downloaded PDF in a link-capable PDF reader for its built-in contents and bookmarks; the index already explains the preview limitation.
+
+## Initial collection review - 7 September 2026
+
 Reviewed on 7 September 2026 against the saved tracker, all ten existing PDFs, the Day 5 Markdown review, the available Verilog and testbenches, and the relevant HDLBits problem statements.
 
 At the initial review checkpoint, the tracker had 178 entries: 151 Done and 27 Pending. All 43 document links resolved to existing files and led to material for the matching entry. Of these links, 38 opened PDFs and five opened the Day 5 Markdown review. A PDF version of that review was added too. The remaining 108 completed entries said `No questions asked`; pending entries did not require invented question notes.

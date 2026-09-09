@@ -43,7 +43,7 @@ ROOT = Path(__file__).resolve().parents[2]
 WORK = ROOT / "internal/tmp/portfolio_index"
 MARKER = "attempt2-reading-index-v1"
 INDEX_URL = "https://github.com/kapiltrip/hdlBits/blob/main/HDLBits%20Attempt%202/DOCUMENT_INDEX.md"
-NAVY, TEAL, INK, MUTED = "#162235", "#087F8C", "#233246", "#566579"
+NAVY, TEAL, INK, MUTED = "#162235", "#002060", "#233246", "#566579"
 ARIAL = Path(r"C:/Windows/Fonts/arial.ttf")
 ARIAL_BOLD = Path(r"C:/Windows/Fonts/arialbd.ttf")
 CONSOLAS = Path(r"C:/Windows/Fonts/consola.ttf")
@@ -229,8 +229,8 @@ def cover(meta, number, total, shift):
     stream = io.BytesIO()
     c = canvas.Canvas(stream, pagesize=(595.276, 841.89), invariant=1)
     w, h = 595.276, 841.89
-    c.setFillColor(HexColor("#F7F5F0")); c.rect(0, 0, w, h, stroke=0, fill=1)
-    c.setFillColor(HexColor(TEAL)); c.rect(0, h-12, w, 12, stroke=0, fill=1)
+    c.setFillColor(HexColor("#FFFFFF")); c.rect(0, 0, w, h, stroke=0, fill=1)
+    c.setFillColor(HexColor(TEAL)); c.rect(0, h-2, w, 2, stroke=0, fill=1)
     paragraph(c, "HDLBITS  /  ATTEMPT 2", 48, 790, 350, 10, TEAL, True)
     paragraph(c, f"NOTE {number:02d} / {len(DOCS):02d}", 436, 790, 112, 10, TEAL, True)
     y = paragraph(c, meta["title"], 48, 755, 500, 28, NAVY, True)
@@ -341,7 +341,7 @@ def fix_known_page_references(doc, meta):
                 if result < 0:
                     raise ValueError('Historical checkpoint paragraph does not fit')
                 break
-    # This note has one prose reference to its own original page ranges.
+    # Keep prose references aligned with the physical pages after the cover.
     if "Day9_QA" in meta["filename"]:
         pg = doc[1]
         for b in pg.get_text("blocks"):
@@ -354,6 +354,17 @@ def fix_known_page_references(doc, meta):
                 if result < 0:
                     raise ValueError("Day 9 cross-reference does not fit")
                 break
+        pg = doc[3]
+        for box in pg.search_for('clocked FSM on page 4'):
+            digit = pg.search_for('4', clip=box)[0]
+            span = next(s for b in pg.get_text('dict')['blocks'] if b['type']==0
+                        for line in b['lines'] for s in line['spans']
+                        if 'clocked FSM on page 4' in s['text'])
+            pg.add_redact_annot(digit, fill=False)
+            pg.apply_redactions(images=0, graphics=0)
+            pg.insert_text(
+                (digit.x0, span['origin'][1]), '5', fontsize=span['size'],
+                fontname='ArialFix', fontfile=str(ARIAL), color=(0,0,0))
 
 
 def build_pdf(meta, number, rows):
@@ -431,6 +442,8 @@ def build_pdf(meta, number, rows):
     output.save(temporary, garbage=4, deflate=True)
     output.close()
     embed_fonts(temporary, path)
+    from standardize_pdf_palette import normalize_pdf_palette
+    normalize_pdf_palette(path)
     return dict(file=path.name, pages=total, note=number, entries=len(meta["entries"]))
 
 
