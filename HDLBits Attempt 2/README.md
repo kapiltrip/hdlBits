@@ -2,7 +2,7 @@
 
 **The questions behind the code - study notes by Kapil Tripathi.**
 
-Start with the **[document index](DOCUMENT_INDEX.md)**: find a topic, browse all 16 PDFs, or jump to the answer pages for any of the 58 tracker entries with discussion links. Each PDF has a reading cover, clickable contents, section and entry bookmarks, and consistent page numbering.
+Start with the **[question-led index](DOCUMENT_INDEX.md)**: choose the question you want answered, open one of the **10 day-wise PDFs**, or look up an entry. Related short notes are combined. Each PDF has a reading cover, clickable question contents, section and entry bookmarks, and continuous page numbering.
 
 Use the [tracker](HDLBits_Attempt_2_Tracker_Simple.xlsx) for problem order and progress. At the final 9 September 2026 completion checkpoint, it records **178 Done and 0 Pending out of 178 entries**. The [review record](DOCUMENT_REVIEW.md) documents the evidence, earlier technical corrections and presentation checks.
 
@@ -10,38 +10,34 @@ The [LinkedIn posting plan](../LinkedIn_Attempt_2_Posting_Plan_and_Ideas.md) con
 
 ## Study PDFs
 
-Note numbers identify this collection; they are separate from tracker entries and posting days. Existing filenames are retained, including their older review-day labels.
+These are the primary reading files: **one PDF per day**. Reading days follow the review sequence, including later revisits; the tracker's original day labels and submission dates remain unchanged. All the later series are together on Day 10.
 
-| Note | Read this | Pages |
+| Day | Read this | Pages |
 |---|---|---:|
-| 01 | [Serial input needs real clock edges](HDLBits_Fsm_serialdata_For_Loops_vs_Clock_Cycles.pdf) | 11 |
-| 02 | [Loops, muxes and storage](HDLBits_Combined_Questions_and_Day2_Review.pdf) | 12 |
-| 03 | [HDLC: get the output cycle right](HDLBits_Fsm_hdlc_Mealy_to_Moore_Deep_Dive.pdf) | 16 |
-| 04 | [States, sampled edges and operators](HDLBits_Recovered_Code_Questions_54_74_75_77.pdf) | 6 |
-| 05 | [Bytes, flip-flops and PS/2 packets](HDLBits_Day4_Questions_Vector_DFF_PS2.pdf) | 6 |
-| 06 | [Two's complement, one bit at a time](HDLBits_Entry80_Moore_Serial_Twos_Complement_Deep_Dive.pdf) | 8 |
-| 07 | [Small RTL mistakes, explained](HDLBits_Day5_Original_Submissions_Review.pdf) | 12 |
-| 08 | [Dual-edge sampling and waveform reasoning](HDLBits_Day6_Non_FSM_QA_Dualedge_and_Circuit5.pdf) | 19 |
-| 09 | [Three samples, no wasted cycle](HDLBits_Entry90_Exams_2014_Q3FSM_Three_Sample_Window_Deep_Dive.pdf) | 12 |
-| 10 | [FSM widths and counter connections](HDLBits_Day7_QA_FSM_Warnings_and_Counter_Interface.pdf) | 7 |
-| 11 | [Wire, reg and reset behavior](HDLBits_Day8_QA_Wire_Reg_and_Shift_Reset.pdf) | 6 |
-| 12 | [Missing assignments and the 1101 FSM](HDLBits_Day9_QA_Latches_and_Sequence_FSM.pdf) | 6 |
-| 13 | [K-map operators, Boolean forms and cellular automata](HDLBits_Day10_Kmaps_Boolean_Forms_and_Rules90_110.pdf) | 9 |
-| 14 | [Timer-series FSMs and next-state timing](HDLBits_Day11_Review2015_Timer_Series_and_Next_State.pdf) | 15 |
-| 15 | [LFSR taps, shifts and old-value timing](HDLBits_Day12_LFSR_Taps_Shifts_and_Old_Value_Timing.pdf) | 12 |
-| 16 | [Conway: grid indexing and next-state timing](HDLBits_Day12_Conway_Grid_Indexing_and_Next_State.pdf) | 7 |
+| 01 | [Serial reception and HDLC timing](output/pdf/HDLBits_Day_01.pdf) | 27 |
+| 02 | [Loops, muxes and Verilog operators](output/pdf/HDLBits_Day_02.pdf) | 11 |
+| 03 | [Latch storage and state history](output/pdf/HDLBits_Day_03.pdf) | 3 |
+| 04 | [Vectors, flip-flops and PS/2 packets](output/pdf/HDLBits_Day_04.pdf) | 6 |
+| 05 | [Sampled edges, serial complement and RTL questions](output/pdf/HDLBits_Day_05.pdf) | 24 |
+| 06 | [Dual-edge sampling and three-sample FSMs](output/pdf/HDLBits_Day_06.pdf) | 31 |
+| 07 | [FSM widths and counter connections](output/pdf/HDLBits_Day_07.pdf) | 7 |
+| 08 | [Wire, reg and reset behavior](output/pdf/HDLBits_Day_08.pdf) | 6 |
+| 09 | [Missing assignments and the 1101 FSM](output/pdf/HDLBits_Day_09.pdf) | 6 |
+| 10 | [Boolean forms, timers, LFSRs and Conway](output/pdf/HDLBits_Day_10.pdf) | 45 |
 
-The [Day 5 Markdown review](HDLBits_Day5_Original_Submissions_Review.md) has its own entry index and remains the destination of its existing tracker links.
+The [Day 5 Markdown review](HDLBits_Day5_Original_Submissions_Review.md) remains an alternative companion. All 58 tracker discussion links now open the corresponding day-wise PDF at its answer page. The original 16 PDFs remain unchanged at their existing paths so historical links and evidence continue to work; they are source notes, not a second primary reading list.
 
 ## Reading and sharing
 
-Open a PDF's contents page or bookmarks to jump to a section. Every footer links back to **Contents** and **All notes**. The [topic and entry index](DOCUMENT_INDEX.md) provides exact answer pages and original HDLBits problem links. In a preview that ignores links, use the printed page numbers or download the PDF.
+Open a PDF's question contents or bookmarks to jump to an explanation. Every footer links back to **Contents** and **All days**. The [question and entry index](DOCUMENT_INDEX.md) provides exact answer pages and original HDLBits problem links. In a preview that ignores links, use the printed page numbers or download the PDF.
+
+Day 10's [clocked state/next_state decision guide](output/pdf/HDLBits_Day_10.pdf#page=21) is on page 21. Its final [LFSR definitions and revision reference](output/pdf/HDLBits_Day_10.pdf#page=43), pages 43-45, explains the acronym, state, seed, taps, feedback forms, maximum period, zero lockup, applications and limitations. Earlier code, traces and complete solutions remain in the preceding chapters.
 
 For a LinkedIn document attachment, use the title on the PDF cover. These are full study notes; the posting plan suggests focused pages for each post. Source references, original questions and dated submission records remain with their explanations.
 
 ## Verification
 
-The [document review](DOCUMENT_REVIEW.md) separates earlier local RTL simulations from the current checks of PDF content, links, page references and layout. The indexing update preserves the earlier technical body pages while rebuilding consistent covers and navigation. Note 14 links the six Review 2015 timer-series entries. Note 15 links entries 141, 145 and 151 to the 5-bit, schematic-based 3-bit and 32-bit LFSR explanations. Note 16 answers entry 177's indexing and complete-solution questions, including toroidal neighbors, old-versus-next generation timing, loop execution, arithmetic widths and the seed-7 boundary trace.
+The [document review](DOCUMENT_REVIEW.md) separates earlier local RTL simulations from checks of PDF content, links, page references and layout. The day-wise set preserves all **148 original technical pages**, adds **3 LFSR reference pages**, and replaces the old front matter with **15 cover/index pages**: **166 pages total**. Source images remain byte-identical; text is preserved apart from the recorded navigation-reference edits. Original note numbers in the historical records below refer to the retained source PDFs, not the ten new reading-day files.
 
 ## Completion records
 

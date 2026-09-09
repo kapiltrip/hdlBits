@@ -574,6 +574,8 @@ For revision, try the linked problem before opening the explanation. Then check 
 
 
 def main():
+    if (ROOT / 'internal/Documentation/daily_collection_manifest.json').exists() and '--source-only' not in sys.argv:
+        raise SystemExit('The current index is day-wise. Use build_daily_collection.py, or --source-only to rebuild the retained source PDFs without replacing the day-wise index.')
     WORK.mkdir(parents=True, exist_ok=True)
     rows = tracker_rows()
     expected = {m["filename"] for m in DOCS}
@@ -581,7 +583,8 @@ def main():
     if expected != actual:
         raise ValueError(f"Update manifest for added/removed PDFs: {expected ^ actual}")
     results = [build_pdf(meta,i,rows) for i,meta in enumerate(DOCS,1)]
-    write_index(rows,results)
+    if '--source-only' not in sys.argv:
+        write_index(rows,results)
     (WORK/"build_summary.json").write_text(json.dumps(results,indent=2))
     mapping_count = len({n for meta in DOCS for n in meta["entries"]})
     print(f"Indexed {len(results)} PDFs, {sum(r['pages'] for r in results)} pages and {mapping_count} linked tracker entries.")

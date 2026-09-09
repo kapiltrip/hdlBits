@@ -4,13 +4,13 @@ This review explains the saved code for entries 81-85 and keeps the earlier ques
 
 Entries 81-85 are all Done in the tracker. The main fixes are Boolean OR, the two padding bits in a concatenation, sticky edge capture, the ring/vibrate condition, and one-hot Mealy state encoding. Entry 80 has its own detailed Moore explanation.
 
-The [PDF version](HDLBits_Day5_Original_Submissions_Review.pdf) contains this review and its historical submission table. The existing tracker links still open this Markdown version.
+The [combined Day 5 PDF](output/pdf/HDLBits_Day_05.pdf#page=14) contains this review and its historical submission table, following the recovered questions and Moore complementer. Tracker discussion links now open the relevant pages of that combined PDF. The [original PDF version](HDLBits_Day5_Original_Submissions_Review.pdf) is retained so historical source references remain valid.
 
 The saved records show success through entry 93 at the original checkpoint. Entries 86-93 were confirmed by Kapil on 3 September. A matching tab alone does not show that its current editor contents pass; later experiments can differ from an earlier successful submission.
 
 ## Reading index
 
-[All Attempt 2 notes](DOCUMENT_INDEX.md) · [PDF with contents and bookmarks](HDLBits_Day5_Original_Submissions_Review.pdf)
+[All Attempt 2 questions](DOCUMENT_INDEX.md) · [Combined Day 5 PDF](output/pdf/HDLBits_Day_05.pdf)
 
 - **Earlier questions:** [54 - state history](#entry-54), [74 - sampled edges](#entry-74), [75 - asynchronous reset](#entry-75), [77 - operators](#entry-77).
 - **Submission explanations:** [80 - Moore complementer](#entry-80), [81 - OR versus addition](#entry-81), [82 - concatenation width](#entry-82), [83 - sticky edges](#entry-83), [84 - ring/vibrate](#entry-84), [85 - one-hot Mealy encoding](#entry-85).

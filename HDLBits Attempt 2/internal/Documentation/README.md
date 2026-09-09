@@ -1,14 +1,33 @@
-# Maintain the Attempt 2 document index
+# Maintain the Attempt 2 day-wise collection
 
-The current reading collection is built by [index_study_pdfs.py](index_study_pdfs.py). It updates all 16 PDF covers, PDF bookmarks, page counters and footer links, then regenerates [DOCUMENT_INDEX.md](../../DOCUMENT_INDEX.md) from the document manifest and the tracker. Original technical pages stay at their native quality.
+The primary reading set is **10 day-wise PDFs** under `output/pdf/`, built by [build_daily_collection.py](build_daily_collection.py). [daily_questions.py](daily_questions.py) maps each preserved technical page to a specific reader question. The generated [manifest](daily_collection_manifest.json) records every source page, final page, contents target, entry mapping and intentional prose-reference edit. All later series and the new LFSR reference are in Day 10.
+
+## Current workflow
+
+```bash
+python "HDLBits Attempt 2/internal/Documentation/build_daily_collection.py"
+python "HDLBits Attempt 2/internal/Documentation/check_daily_collection.py"
+python "HDLBits Attempt 2/internal/Documentation/render_daily_collection.py"
+```
+
+Inspect every rendered page for a full rebuild. The current set is 166 pages: 148 original body pages, 3 new LFSR reference pages and 15 cover/index pages. Larger volumes have a detailed question index. The checker compares source text, image bytes and geometry, allowing only documented reference changes and running-header/footer replacement. It also verifies question bookmarks, contents links, page counts, embedded fonts, local index targets, all 58 entry mappings and the LFSR examples.
+
+The original 16 PDFs remain unchanged at their existing paths to preserve historical links. They supply vector source pages for consolidation. The older source indexer below now requires `--source-only` when a day-wise manifest exists, preventing an accidental overwrite of the primary index.
+
+To refresh the tracker's 58 discussion labels and native links after pagination changes, use `daily_tracker_links.py prepare`, `update_daily_tracker.mjs --edit`, and `daily_tracker_links.py apply`, in that order. Run the JavaScript with the bundled Node runtime and a local ignored `node_modules` junction to the bundled packages. Artifact Tool authors the friendly labels. The native-link pass changes only those payloads and existing hyperlink relationship targets in the original workbook package. Every other ZIP part and all unrelated cells, styles, day labels, validation, panes and dimensions must remain unchanged. Use `update_daily_tracker.mjs --preview` before editing and `--verify` afterward to inspect the saved file and representative beginning/middle/end ranges.
+
+Before another update, deliberately select a new before snapshot if the ignored `internal/tmp/daily_collection/tracker_before.xlsx` belongs to a different change set; do not silently overwrite its baseline. Temporary work and review renders are kept under ignored `internal/tmp/daily_collection/`. The primary workbook stays in the Attempt 2 directory so its relative PDF links resolve.
+
+## Retained source-note workflow
+
+[index_study_pdfs.py](index_study_pdfs.py) maintains covers/navigation for the retained 16 source PDFs. It is not the day-wise index writer. The following older workflow and its baseline remain useful for reproducing the pre-consolidation presentation audit.
 
 ## Rebuild
 
 Use Python with PyMuPDF, ReportLab, pypdf and openpyxl available. Ghostscript (`gs` or `gswin64c`) is optional: when it is absent, the builder accepts output only after confirming that every font is already embedded. On Kapil's Codex setup, the scripts automatically add the bundled Python package directory, so the commands below also work from the normal system Python. The tracker is read only in this builder.
 
 ```bash
-python "HDLBits Attempt 2/internal/Documentation/index_study_pdfs.py"
-python "HDLBits Attempt 2/internal/Documentation/check_study_index.py"
+python "HDLBits Attempt 2/internal/Documentation/index_study_pdfs.py" --source-only
 ```
 
 The PDF metadata marker identifies an already indexed file. A repeat build replaces its cover and recreates its navigation; it does not add another contents page. Intermediate output goes under the ignored `internal/tmp/portfolio_index/` directory. The PDFs themselves remain the source for their preserved body pages; Git history retains earlier versions.
